@@ -1,7 +1,4 @@
-# qcss
-
-Qualified CSS
--------------
+# qcss (Qualified CSS)
 
 A simple group of minimalized css to use as an easy out-of-the-box css framework without hassling with LESS,LASS and whatsoever by using the good old html creative class group naming approach.
 
