@@ -3,7 +3,7 @@
 Qualified CSS
 -------------
 
-A simple group of minimalized css to use as an easy out-of-the-box css framework without hassling with LESS,LASS and whatsoever by unsing the good old html class approach. It makes you independed from any compiler and can do the so called "sliding" changes often asked for by companies without rewamping the whole LESS/SASS stack. It uses a smart class group concept good to remember and simply to define and you always know what comes from where.
+A simple group of minimalized css to use as an easy out-of-the-box css framework without hassling with LESS,LASS and whatsoever by using the good old html creative class group naming approach.
 
 It includes
 -----------
@@ -18,6 +18,11 @@ Slogan
 ------
 
 Back to basics. Make your work independend from toys. Use the html class attribute what it is made for. And use it much, and right.
+
+Why
+---
+
+QCSS keeps the project independed from any compiler or other concepts than html/css and can do the so called "sliding" changes often asked for by companies, what other layered dev stalc concepts suffer from, without rewamping the whole LESS/SASS stack or other concepts which need many additional concept overthinking while editing. These modern doubtless helpful additonal layers all have the one big disadvantage that their suffer from the ability to keep up consistency and colligation when making direct minimalist changes in a little corner of a project. QCSS uses a smart class group concept, easy to remember after some wokring with it and simply to define. And you always know what comes from where.
 
 Roadmap
 -------
