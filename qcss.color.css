@@ -1,0 +1,70 @@
+/*
+ * QQ color uses 8 class groups plus black and white in a mixed scheme raster
+ * to reflect all ranges in the color wheel (RGB + CMYK + W)
+ * R = RED, G = GREEN, B = BLUE, C = CYAN, M = MAGENTA, Y = YELLOW, B, W
+ * All of them have 3 shades to take the optical difference of size in account
+*/
+
+.c-ft-wt            {color: #fefefe !important;}
+.c-bg-wt {background-color: #fefefe !important;}
+.c-br-wt     {border-color: #fefefe !important;}
+
+.c-ft-lg            {color: #898989 !important;}
+.c-bg-lg {background-color: #898989 !important;}
+.c-br-lg     {border-color: #898989 !important;}
+
+.c-ft-dg            {color: #292929 !important;}
+.c-bg-dg {background-color: #292929 !important;}
+.c-br-dg     {border-color: #292929 !important;}
+
+.c-ft-bk            {color: #141414 !important;}
+.c-bg-bk {background-color: #141414 !important;}
+.c-br-bk     {border-color: #141414 !important;}
+
+.c-ft-r1            {color: #a72528 !important;}
+.c-bg-r1 {background-color: #a72528 !important;}
+.c-br-r1     {border-color: #a72528 !important;}
+
+.c-ft-r2            {color: #a73f51 !important;}
+.c-bg-r2 {background-color: #a73f51 !important;}
+.c-br-r2     {border-color: #a73f51 !important;}
+
+.c-ft-r3            {color: #5d1516 !important;}
+.c-bg-r3 {background-color: #5d1516 !important;}
+.c-br-r3     {border-color: #5d1516 !important;}
+
+.c-ft-g1            {color: #80694b !important;}
+.c-bg-g1 {background-color: #80694b !important;}
+.c-br-g1     {border-color: #80694b !important;}
+
+.c-ft-g2            {color: #806e23 !important;}
+.c-bg-g2 {background-color: #806e23 !important;}
+.c-br-g2     {border-color: #806e23 !important;}
+
+.c-ft-g3            {color: #404423 !important;}
+.c-bg-g3 {background-color: #404423 !important;}
+.c-br-g3     {border-color: #404423 !important;}
+
+.c-ft-b1            {color: #262732 !important;}
+.c-bg-b1 {background-color: #262732 !important;}
+.c-br-b1     {border-color: #262732 !important;}
+
+.c-ft-b2            {color: #142132 !important;}
+.c-bg-b2 {background-color: #142132 !important;}
+.c-br-b2     {border-color: #142132 !important;}
+
+.c-ft-b3            {color: #2a5c8f !important;}
+.c-bg-b3 {background-color: #2a5c8f !important;}
+.c-br-b3     {border-color: #2a5c8f !important;}
+
+.c-ft-y1            {color: #b97905 !important;}
+.c-bg-y1 {background-color: #b97905 !important;}
+.c-br-y1     {border-color: #b97905 !important;}
+
+.c-ft-y2            {color: #d08d00 !important;}
+.c-bg-y2 {background-color: #d08d00 !important;}
+.c-br-y2     {border-color: #d08d00 !important;}
+
+.c-ft-y3            {color: #bd775e !important;}
+.c-bg-y3 {background-color: #bd775e !important;}
+.c-br-y3     {border-color: #bd775e !important;}
