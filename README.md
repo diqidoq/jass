@@ -19,9 +19,13 @@ Back to basics. Make your work independend from toys. Use the html class attribu
 Why
 ---
 
-QCSS keeps the project independed from any compiler or other concepts than html/css and can do the so called "sliding" changes often asked for by companies, what other layered dev-stack concepts suffer from. Without revamping the whole LESS/SASS stack or other concepts which need many additional concept overthinking while editing. These modern doubtless helpful additonal layers all have the one big disadvantage that their suffer from the ability to keep up consistency and colligation when making direct minimalist changes in a little corner of a project or when "unchaining" of style groups is needed. QCSS uses a smart class group concept, easy to remember after some working with it, and simply to define. And you always know what comes from where.
+QCSS keeps the project independed from any compiler or other concepts than html/css and can do the so called "sliding" changes often asked for by companies, what other layered dev-stack concepts suffer from. Without revamping the whole LESS/SASS stack or other concepts which need many additional concept overthinking while editing. These modern doubtless helpful additonal layers all have the one big disadvantage that their suffer from the ability to keep up consistency and colligation when making direct minimalist changes in a little corner of a project or when "unchaining" of style groups is needed. QCSS uses a smart class group concept, easy to remember after some working with it and simple to define. And you always know what comes from where. 
 
-I partly uses the KISS and CoC principle in the way that you only alter the overall look in the grouped css, while you alter the affecting parts the good old way: by only changing the regarding classes in html. *"What do you mean with the other red, there is only one red, the red defined in CSS"...*
+I often stated *"Do not put more on the table than you can eat."* or *"Don't chain longer than you'll be able to survey."*
+
+Read stories like [this](https://qz.com/646467/how-one-programmer-broke-the-internet-by-deleting-a-tiny-piece-of-code/) to undestand what minimalists like me and low level enthusiasts like emacs and vim users come from and why they often take up position against overblown GUI applications, too long chains of depending software and non CoC designed code.
+
+QCSS partly uses the KISS and CoC principle in the way that you only alter the overall look in the grouped css, while you alter the affecting parts the good old way: by only changing the regarding classes in html. *"What do you mean with the other red, there is only one red, the red defined in CSS"...*
 
 Roadmap
 -------
