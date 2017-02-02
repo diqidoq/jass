@@ -1,10 +1,4 @@
 /* QCSS spacing © https://github.com/diqidoq/qcss under GPL 3 */
-.m0 {
-    margin-top: 0 !important;
-    margin-bottom: 0 !important;
-    margin-left: 0 !important;
-    margin-right: 0 !important
-}
 
 .mt0 {
     margin-top: 0 !important
@@ -20,13 +14,6 @@
 
 .mr0 {
     margin-right: 0 !important
-}
-
-.p0 {
-    padding-top: 0 !important;
-    padding-bottom: 0 !important;
-    padding-left: 0 !important;
-    padding-right: 0 !important
 }
 
 .pt0 {
@@ -45,13 +32,6 @@
     padding-right: 0 !important
 }
 
-.m1 {
-    margin-top: 5px !important;
-    margin-bottom: 5px !important;
-    margin-left: 5px !important;
-    margin-right: 5px !important
-}
-
 .mt1 {
     margin-top: 5px !important
 }
@@ -66,13 +46,6 @@
 
 .mr1 {
     margin-right: 5px !important
-}
-
-.p1 {
-    padding-top: 5px !important;
-    padding-bottom: 5px !important;
-    padding-left: 5px !important;
-    padding-right: 5px !important
 }
 
 .pt1 {
@@ -91,13 +64,6 @@
     padding-right: 5px !important
 }
 
-.m2 {
-    margin-top: 10px !important;
-    margin-bottom: 10px !important;
-    margin-left: 10px !important;
-    margin-right: 10px !important
-}
-
 .mt2 {
     margin-top: 10px !important
 }
@@ -112,13 +78,6 @@
 
 .mr2 {
     margin-right: 10px !important
-}
-
-.p2 {
-    padding-top: 10px !important;
-    padding-bottom: 10px !important;
-    padding-left: 10px !important;
-    padding-right: 10px !important
 }
 
 .pt2 {
@@ -137,13 +96,6 @@
     padding-right: 10px !important
 }
 
-.m3 {
-    margin-top: 15px !important;
-    margin-bottom: 15px !important;
-    margin-left: 15px !important;
-    margin-right: 15px !important
-}
-
 .mt3 {
     margin-top: 15px !important
 }
@@ -158,13 +110,6 @@
 
 .mr3 {
     margin-right: 15px !important
-}
-
-.p3 {
-    padding-top: 15px !important;
-    padding-bottom: 15px !important;
-    padding-left: 15px !important;
-    padding-right: 15px !important
 }
 
 .pt3 {
@@ -183,13 +128,6 @@
     padding-right: 15px !important
 }
 
-.m4 {
-    margin-top: 30px !important;
-    margin-bottom: 30px !important;
-    margin-left: 30px !important;
-    margin-right: 30px !important
-}
-
 .mt4 {
     margin-top: 30px !important
 }
@@ -204,13 +142,6 @@
 
 .mr4 {
     margin-right: 30px !important
-}
-
-.p4 {
-    padding-top: 30px !important;
-    padding-bottom: 30px !important;
-    padding-left: 30px !important;
-    padding-right: 30px !important
 }
 
 .pt4 {
@@ -229,13 +160,6 @@
     padding-right: 30px !important
 }
 
-.m-1 {
-    margin-top: -5px !important;
-    margin-bottom: -5px !important;
-    margin-left: -5px !important;
-    margin-right: -5px !important
-}
-
 .mt-1 {
     margin-top: -5px !important
 }
@@ -250,13 +174,6 @@
 
 .mr-1 {
     margin-right: -5px !important
-}
-
-.p-1 {
-    padding-top: -5px !important;
-    padding-bottom: -5px !important;
-    padding-left: -5px !important;
-    padding-right: -5px !important
 }
 
 .pt-1 {
@@ -275,13 +192,6 @@
     padding-right: -5px !important
 }
 
-.m-2 {
-    margin-top: -10px !important;
-    margin-bottom: -10px !important;
-    margin-left: -10px !important;
-    margin-right: -10px !important
-}
-
 .mt-2 {
     margin-top: -10px !important
 }
@@ -296,13 +206,6 @@
 
 .mr-2 {
     margin-right: -10px !important
-}
-
-.p-2 {
-    padding-top: -10px !important;
-    padding-bottom: -10px !important;
-    padding-left: -10px !important;
-    padding-right: -10px !important
 }
 
 .pt-2 {
@@ -321,13 +224,6 @@
     padding-right: -10px !important
 }
 
-.m-3 {
-    margin-top: -15px !important;
-    margin-bottom: -15px !important;
-    margin-left: -15px !important;
-    margin-right: -15px !important
-}
-
 .mt-3 {
     margin-top: -15px !important
 }
@@ -344,12 +240,6 @@
     margin-right: -15px !important
 }
 
-.p-3 {
-    padding-top: -15px !important;
-    padding-bottom: -15px !important;
-    padding-left: -15px !important;
-    padding-right: -15px !important
-}
 
 .pt-3 {
     padding-top: -15px !important
@@ -367,13 +257,6 @@
     padding-right: -15px !important
 }
 
-.m-4 {
-    margin-top: -30px !important;
-    margin-bottom: -30px !important;
-    margin-left: -30px !important;
-    margin-right: -30px !important
-}
-
 .mt-4 {
     margin-top: -30px !important
 }
@@ -388,13 +271,6 @@
 
 .mr-4 {
     margin-right: -30px !important
-}
-
-.p-4 {
-    padding-top: -30px !important;
-    padding-bottom: -30px !important;
-    padding-left: -30px !important;
-    padding-right: -30px !important
 }
 
 .pt-4 {
