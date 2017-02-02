@@ -29,3 +29,8 @@ Reasons
 
 Inspired by the low level enthusiasts, the prior goal was to keep the creating, editing and after all the altering of the look of an html output as minimlistic and independend from any other "tools" as possible (chime in, change a nitpick and go) without losing too much of the advantages of all these fancy "tools" out there, triggered by the experience that many of the new fancy web development stuff becomes old very soon or changes their concept very often and keeps web dev teams always hussling with them rendering their advantages obsolete again.
  
+ 
+ Licensed under GPL 3
+ --------------------
+ 
+ https://github.com/diqidoq/qcss/blob/master/LICENSE
