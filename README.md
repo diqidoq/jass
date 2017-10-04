@@ -1,4 +1,5 @@
 # qcss (Qualified CSS)
+(Development supported by www.maroqqo.com)
 
 A simple group of minimalized css to use as an easy out-of-the-box css framework without hassling with LESS,LASS and whatsoever by using the good old html creative class group naming approach.
 
