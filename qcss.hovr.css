@@ -1,8 +1,8 @@
 /**
- * QQ css effects try to solve some issues on available effect libraries out there
+ * QCSS effects try to solve some issues on available effect libraries out there
  * It is css only (no js / jQuery) and not designed with fixed style type groups
  * in mind like others, since it misses the flexibility in classifying elemens
- * QQCE is rather sorted by sub characteristics to be able for creativity in classes
+ * QCSS is rather sorted by sub characteristics to be able for creativity in classes
  * to be able mix sub characteristics for a most optional end result with
  * all of them available in a certain back and forth state where we prevent
  * unnecessary styles by smart cross classifying to achieve this back and forth
