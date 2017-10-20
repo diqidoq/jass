@@ -8,7 +8,7 @@
  * unnecessary styles by smart cross classifying to achieve this back and forth
  */
 
-*[class*="hovr"], .page-node .node-article div.ltxt-body p {
+*[class*="hovr"] {
   -webkit-transition: all 600ms cubic-bezier(0.270, 0.795, 0.465, 1.195);
   -moz-transition: all 600ms cubic-bezier(0.270, 0.795, 0.465, 1.195);
   -ms-transition: all 600ms cubic-bezier(0.270, 0.795, 0.465, 1.195);
