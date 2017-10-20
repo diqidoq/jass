@@ -1,5 +1,5 @@
 /*
- * QQ color uses 8 class groups plus black and white in a mixed scheme raster
+ * QCSS color uses 8 class groups plus black and white in a mixed scheme raster
  * to reflect all ranges in the color wheel (RGB + CMYK + W)
  * R = RED, G = GREEN, B = BLUE, C = CYAN, M = MAGENTA, Y = YELLOW, B, W
  * All of them have 3 shades to take the optical difference of size in account
