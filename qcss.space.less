@@ -1,0 +1,57 @@
+/* QCSS spacing © https://github.com/diqidoq/qcss under GPL 3 */
+/* HINT: use the line-height of your system for @space to create vertical rythm */
+
+@space: 5px;
+.generate-steps(6);
+
+.generate-steps(@n, @i: 0) when (@i =< @n) {
+  .mt@{i} {
+    margin-top: (@space * @i) !important;
+  }
+  .mt-@{i} when (@i > 0) {
+    margin-top: -(@space * @i) !important;
+  }
+  .mr@{i} {
+    margin-right: (@space * @i) !important;
+  }
+  .mr-@{i} when (@i > 0) {
+    margin-right: -(@space * @i) !important;
+  }
+  .mb@{i} {
+    margin-bottom: (@space * @i) !important;
+  }
+  .mb-@{i} when (@i > 0) {
+    margin-bottom: -(@space * @i) !important;
+  }
+  .ml@{i} {
+    margin-left: (@space * @i) !important;
+  }
+  .ml-@{i} when (@i > 0){
+    margin-left: -(@space * @i) !important;
+  }
+  .pt@{i} {
+    padding-top: (@space * @i) !important;
+  }
+  .pt-@{i} when (@i > 0) {
+    padding-top: -(@space * @i) !important;
+  }
+  .pr@{i} {
+    padding-right: (@space * @i) !important;
+  }
+  .pr-@{i} when (@i > 0) {
+    padding-right: -(@space * @i) !important;
+  }
+  .pb@{i} {
+    padding-bottom: (@space * @i) !important;
+  }
+  .pb-@{i} when (@i > 0) {
+    padding-bottom: -(@space * @i) !important;
+  }
+  .pl@{i} {
+    padding-left: (@space * @i) !important;
+  }
+  .pl-@{i} when (@i > 0){
+    padding-left: -(@space * @i) !important;
+  }
+  .generate-steps(@n, (@i + 1));
+}
