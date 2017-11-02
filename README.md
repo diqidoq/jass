@@ -3,14 +3,12 @@
 
 A simple group of minimalized css (and Less) to use as an easy out-of-the-box "naliing" framework of required overrides without hassling with your CMS or HTML creating system by using a creative class group naming approach.
 
-It includes
+Requirements
 -----------
 
- + color classes concept
- + spacing classes concept
- + ratio classes concept
- + typo classes concept
- + hover classes concept
+ + less (lessc)
+ + less plugin clean-css ()
+ + less plugin Autoprefixer ()
 
 Slogan
 ------

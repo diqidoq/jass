@@ -1,0 +1,46 @@
+/* QCSS © https://github.com/diqidoq/qcss under GPL 3 */
+
+@step: 1px;
+
+.generate-steps(8);
+
+.generate-steps(@n, @i: 0) when (@i =< @n) {
+  .b@{i} {
+    border-width: (@step * @i) !important;
+  }
+  .bt@{i} {
+    border-width-top: (@step * @i) !important;
+  }
+  .br@{i} {
+    border-width-right: (@step * @i) !important;
+  }
+  .bb@{i} {
+    border-width-bottom: (@step * @i) !important;
+  }
+  .bl@{i} {
+    border-width-left: (@step * @i) !important;
+  }
+  .r@{i} {
+    border-radius: (@step * @i) !important;
+  }
+  .rt@{i} {
+    border-radius-top: (@step * @i) !important;
+  }
+  .rb-@{i} when (@i > 0) {
+    border-radius-top: -(@step * @i) !important;
+  }
+  .rtr@{i} {
+    border-radius-right: (@step * @i) !important;
+  }
+  .pbr@{i} when (@i > 0) {
+    border-radius-right: -(@step * @i) !important;
+  }
+  .rbl@{i} {
+    border-radius-bottom: (@step * @i) !important;
+  }
+  .rtl@{i} when (@i > 0) {
+    border-radius-bottom: -(@step * @i) !important;
+  }
+  .generate-steps(@n, (@i + 1));
+}
+
