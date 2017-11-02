@@ -5,6 +5,12 @@
 .generate-steps(8);
 
 .generate-steps(@n, @i: 0) when (@i =< @n) {
+  .m@{i} {
+    margin-top: (@space * @i) !important;
+    margin-right: (@space * @i) !important;
+    margin-bottom: (@space * @i) !important;
+    margin-left: (@space * @i) !important;
+  }
   .mt@{i} {
     margin-top: (@space * @i) !important;
   }
@@ -28,6 +34,12 @@
   }
   .ml-@{i} when (@i > 0){
     margin-left: -(@space * @i) !important;
+  }
+  .p@{i} {
+    padding-top: (@space * @i) !important;
+    padding-right: (@space * @i) !important;
+    padding-bottom: (@space * @i) !important;
+    padding-left: (@space * @i) !important;
   }
   .pt@{i} {
     padding-top: (@space * @i) !important;
