@@ -1,8 +1,8 @@
 /* QCSS spacing © https://github.com/diqidoq/qcss under GPL 3 */
-/* HINT: use the line-height of your system for @space to create vertical rythm */
 
-@space: 5px;
-.generate-steps(6);
+@space: 6px;
+@min-height: 43px;
+.generate-steps(8);
 
 .generate-steps(@n, @i: 0) when (@i =< @n) {
   .mt@{i} {
@@ -50,8 +50,33 @@
   .pl@{i} {
     padding-left: (@space * @i) !important;
   }
-  .pl-@{i} when (@i > 0){
+  .pl-@{i} when (@i > 0) {
     padding-left: -(@space * @i) !important;
   }
+  /* min-height steps */
+  .mh@{i} when (@i > 0) {
+    min-height: (@min-height + (@i * 15)) !important;
+  }
+  /* max-height steps */
+  .xh@{i} when (@i > 0) {
+    max-height: (@min-height + (@i * 15)) !important;
+    height: (@min-height + (@i * 15)) !important;
+    overflow: hidden;
+  }
   .generate-steps(@n, (@i + 1));
+}
+
+.center-width {
+  margin: 0 auto !important;
+  float: none !important;
+}
+
+.center-height-parent {
+  position: relative !important;
+}
+
+.center-height {
+  position: absolute !important;
+  top: 50% !important;
+  transform: translateY(-50%) !important;
 }
