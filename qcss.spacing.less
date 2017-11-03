@@ -1,10 +1,10 @@
-/* QCSS spacing © https://github.com/diqidoq/qcss under GPL 3 */
+// QCSS spacing © https://github.com/diqidoq/qcss under GPL 3
 
 @space: 6px;
 @min-height: 43px;
-.generate-steps(8);
+.generate-spacing-steps(8);
 
-.generate-steps(@n, @i: 0) when (@i =< @n) {
+.generate-spacing-steps(@n, @i: 0) when (@i =< @n) {
   .m@{i} {
     margin-top: (@space * @i) !important;
     margin-right: (@space * @i) !important;
@@ -65,17 +65,17 @@
   .pl-@{i} when (@i > 0) {
     padding-left: -(@space * @i) !important;
   }
-  /* min-height steps */
+  // min-height steps
   .mh@{i} when (@i > 0) {
     min-height: (@min-height + (@i * 15)) !important;
   }
-  /* max-height steps */
+  // max-height steps
   .xh@{i} when (@i > 0) {
     max-height: (@min-height + (@i * 15)) !important;
     height: (@min-height + (@i * 15)) !important;
     overflow: hidden;
   }
-  .generate-steps(@n, (@i + 1));
+  .generate-spacing-steps(@n, (@i + 1));
 }
 
 .center-width {

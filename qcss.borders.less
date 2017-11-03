@@ -1,46 +1,47 @@
-/* QCSS © https://github.com/diqidoq/qcss under GPL 3 */
+// QCSS borders © https://github.com/diqidoq/qcss under GPL 3
 
 @step: 1px;
 
-.generate-steps(8);
+.generate-border-steps(8);
 
-.generate-steps(@n, @i: 0) when (@i =< @n) {
-  .b@{i} {
-    border-width: (@step * @i) !important;
+.generate-border-steps(@m, @j: 0) when (@j =< @m) {
+  .b@{j} {
+    border-width: (@step * @j) !important;
   }
-  .bt@{i} {
-    border-width-top: (@step * @i) !important;
+  .bt@{j} {
+    border-width-top: (@step * @j) !important;
   }
-  .br@{i} {
-    border-width-right: (@step * @i) !important;
+  .br@{j} {
+    border-width-right: (@step * @j) !important;
   }
-  .bb@{i} {
-    border-width-bottom: (@step * @i) !important;
+  .bb@{j} {
+    border-width-bottom: (@step * @j) !important;
   }
-  .bl@{i} {
-    border-width-left: (@step * @i) !important;
+  .bl@{j} {
+    border-width-left: (@step * @j) !important;
   }
-  .r@{i} {
-    border-radius: (@step * @i) !important;
+  .r@{j} {
+    border-radius: (@step * @j) !important;
   }
-  .rt@{i} {
-    border-radius-top: (@step * @i) !important;
+  .rt@{j} {
+    border-radius-top-left: (@step * @j) !important;
+    border-radius-top-right: (@step * @j) !important;
   }
-  .rb-@{i} when (@i > 0) {
-    border-radius-top: -(@step * @i) !important;
+  .rb@{j} {
+    border-radius-bottom-left: (@step * @j) !important;
+    border-radius-bottom-right: (@step * @j) !important;
   }
-  .rtr@{i} {
-    border-radius-right: (@step * @i) !important;
+  .rtr@{j} {
+    border-radius-top-right: (@step * @j) !important;
   }
-  .pbr@{i} when (@i > 0) {
-    border-radius-right: -(@step * @i) !important;
+  .pbr@{j} {
+    border-radius-bottom-right: (@step * @j) !important;
   }
-  .rbl@{i} {
-    border-radius-bottom: (@step * @i) !important;
+  .rbl@{j} {
+    border-radius-bottom-left: (@step * @j) !important;
   }
-  .rtl@{i} when (@i > 0) {
-    border-radius-bottom: -(@step * @i) !important;
+  .rtl@{j} {
+    border-radius-top-left: (@step * @j) !important;
   }
-  .generate-steps(@n, (@i + 1));
+  .generate-border-steps(@m, (@j + 1));
 }
-
