@@ -7,6 +7,7 @@ Requirements
 -----------
 
  + less (lessc)
+ + uglifycss (or similar)
  + less plugin clean-css ()
  + less plugin Autoprefixer ()
 
@@ -30,6 +31,13 @@ Roadmap
 -------
 
 We want to see where it goes and if it expands well after further development and maybe some contribution of other ideas. We agree about that if it does not work out well, we accept the missed challenge. But until then we will try our best.
+
+Notes for global usage in npm enviroment
+----------------------------------------
+sudo npm install -g uglifycss
+sudo npm install -g less
+sudo npm install -g less-plugin-clean-css
+sudo npm install -g less-plugin-autoprefixer
 
 Reasons
 -------
