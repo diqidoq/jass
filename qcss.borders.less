@@ -4,44 +4,72 @@
 
 .generate-border-steps(8);
 
+.styles() {
+  border-style: solid;
+  &.solid {
+    border-style: solid !important;
+  }
+  &.dashed {
+    border-style: dashed !important;
+  }
+  &.double {
+    border-style: double !important;
+  }
+  &.dotted {
+    border-style: dotted !important;
+  }
+}
+
 .generate-border-steps(@m, @j: 0) when (@j =< @m) {
   .b@{j} {
+   .styles();
     border-width: (@step * @j) !important;
   }
   .bt@{j} {
-    border-width-top: (@step * @j) !important;
+   .styles();
+    border-top-width: (@step * @j) !important;
   }
   .br@{j} {
-    border-width-right: (@step * @j) !important;
+   .styles();
+    border-right-width: (@step * @j) !important;
   }
   .bb@{j} {
-    border-width-bottom: (@step * @j) !important;
+   .styles();
+    border-bottom-width: (@step * @j) !important;
   }
   .bl@{j} {
-    border-width-left: (@step * @j) !important;
+   .styles();
+    border-left-width: (@step * @j) !important;
   }
   .r@{j} {
+   .styles();
     border-radius: (@step * @j) !important;
   }
   .rt@{j} {
-    border-radius-top-left: (@step * @j) !important;
-    border-radius-top-right: (@step * @j) !important;
+   .styles();
+    border-top-left-radius: (@step * @j) !important;
+    border-top-right-radius: (@step * @j) !important;
   }
   .rb@{j} {
-    border-radius-bottom-left: (@step * @j) !important;
-    border-radius-bottom-right: (@step * @j) !important;
+   .styles();
+    border-bottom-left-radius: (@step * @j) !important;
+    border-bottom-right-radius: (@step * @j) !important;
   }
   .rtr@{j} {
-    border-radius-top-right: (@step * @j) !important;
+   .styles();
+    border-top-right-radius: (@step * @j) !important;
   }
   .pbr@{j} {
-    border-radius-bottom-right: (@step * @j) !important;
+   .styles();
+    border-bottom-right-radius: (@step * @j) !important;
   }
   .rbl@{j} {
-    border-radius-bottom-left: (@step * @j) !important;
+   .styles();
+    border-bottom-left-radius: (@step * @j) !important;
   }
   .rtl@{j} {
-    border-radius-top-left: (@step * @j) !important;
+   .styles();
+    border-top-left-radius: (@step * @j) !important;
   }
   .generate-border-steps(@m, (@j + 1));
 }
