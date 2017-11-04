@@ -4,7 +4,7 @@
 
 .generate-border-steps(8);
 
-.styles() {
+.border-style() {
   border-style: solid;
   &.solid {
     border-style: solid !important;
@@ -20,55 +20,75 @@
   }
 }
 
+.border-color() {
+  border-color: @dark;
+  &.primary {
+    border-color: @primary !important;
+  }
+  &.secondary {
+    border-color: @secondary !important;
+  }
+  &.ruddy {
+    border-color: @ruddy !important;
+  }
+  &.bluey {
+    border-color: @bluey !important;
+  }
+  &.yellowy {
+    border-color: @yellowy !important;
+  }
+  &.greeny {
+    border-color: @greeny !important;
+  }
+}
+
 .generate-border-steps(@m, @j: 0) when (@j =< @m) {
   .b@{j} {
-   .styles();
+   .border-style();
+   .border-color();
     border-width: (@step * @j) !important;
   }
   .bt@{j} {
-   .styles();
+   .border-style();
+   .border-color();
     border-top-width: (@step * @j) !important;
   }
   .br@{j} {
-   .styles();
+   .border-style();
+   .border-color();
     border-right-width: (@step * @j) !important;
   }
   .bb@{j} {
-   .styles();
+   .border-style();
+   .border-color();
     border-bottom-width: (@step * @j) !important;
   }
   .bl@{j} {
-   .styles();
+   .border-style();
+   .border-color();
     border-left-width: (@step * @j) !important;
   }
   .r@{j} {
-   .styles();
     border-radius: (@step * @j) !important;
   }
   .rt@{j} {
-   .styles();
     border-top-left-radius: (@step * @j) !important;
     border-top-right-radius: (@step * @j) !important;
   }
   .rb@{j} {
-   .styles();
     border-bottom-left-radius: (@step * @j) !important;
     border-bottom-right-radius: (@step * @j) !important;
   }
   .rtr@{j} {
-   .styles();
     border-top-right-radius: (@step * @j) !important;
   }
   .pbr@{j} {
-   .styles();
     border-bottom-right-radius: (@step * @j) !important;
   }
   .rbl@{j} {
-   .styles();
     border-bottom-left-radius: (@step * @j) !important;
   }
   .rtl@{j} {
-   .styles();
     border-top-left-radius: (@step * @j) !important;
   }
   .generate-border-steps(@m, (@j + 1));
