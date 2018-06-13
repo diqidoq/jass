@@ -1,7 +1,7 @@
 # qcss (Qualified CSS)
 (Development supported by www.maroqqo.com since 2014)
 
-A simple group of minimalized css (and Less) to use as an easy out-of-the-box "naliing" framework of required overrides without hassling with your CMS or HTML creating system by using a creative class group naming approach.
+A simple group of minimalized css (and Less) to use as an easy out-of-the-box "nailing" framework of required overrides without hassling with your CSS framework, CMS or HTML templates creating systems by using a creative class group naming approach easy to learn and to reuse for each project. For example: Adds the missing feature to Boostrap 3 to override some spaces with simple and understandable CSS classes.
 
 Requirements
 ------------
