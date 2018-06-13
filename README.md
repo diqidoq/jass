@@ -1,5 +1,5 @@
 # qcss (Qualified CSS)
-(Development supported by www.maroqqo.com)
+(Development supported by www.maroqqo.com since 2014)
 
 A simple group of minimalized css (and Less) to use as an easy out-of-the-box "naliing" framework of required overrides without hassling with your CMS or HTML creating system by using a creative class group naming approach.
 
@@ -43,7 +43,8 @@ Main class group identifiers
 ----------------------------
 b = border, m = margin, p = paddiing, r = radius, s = shadow
  
-Licensed under GPL 3
---------------------
+Licensed under GPL 3 since 2012 under crediting the original author
+---------------------------------------------------------------------
+
 https://github.com/diqidoq/qcss/blob/master/LICENSE
 
