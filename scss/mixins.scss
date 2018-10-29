@@ -1,0 +1,4 @@
+@mixin circle {
+ @include border-radius(100%);
+}
+
