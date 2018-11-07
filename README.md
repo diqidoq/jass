@@ -1,14 +1,20 @@
-# qcss (Qualified CSS) | early Alpha 1 ...
+# qcss (Qualified CSS)
 (Development supported by www.maroqqo.com since 2014)
 
-A simple group of minimalized css (and Less) to use as an easy out-of-the-box "nailing" framework of required overrides without hassling with your CSS framework, CMS or HTML templates creating systems by using a creative class group naming approach easy to learn and to reuse for each project. For example: Adds the missing feature to Boostrap 3 to override some spaces with simple and understandable CSS classes.
+A simple group of minimalized css (and Less/Sass) to use as an easy out-of-the-box "nailing" minimal framework of required framewoek overrides or stand-alone "look" without hassling with your CSS framework, CMS or HTML templates creating systems by using a creative class group naming approach easy to learn and to reuse for each project. For example: Adds the missing feature to Boostrap 3 to override some spaces with simple and understandable CSS classes for individual html blocks.
+
+Development status
+------------------
+Early **alpha** state. We use it already in production but with custom tweaks on each project. But a more generally usable base version is not ready yet. See the milestones if you are willing to help.
 
 Requirements
 ------------
- + less (lessc)
+ + None for CSS only, otherwise:
+ + Less (lessc)
  + uglifycss (or similar)
  + less plugin clean-css ()
  + less plugin Autoprefixer ()
+ + Sass and similar plugins
 
 Slogan
 ------
