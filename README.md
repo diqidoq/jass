@@ -59,8 +59,9 @@ b = border, m = margin, p = paddiing, r = radius, s = shadow
 HTML code example using QCSS
 ----------------------------
 
-`div class="m1 p1 b1 r3">Some div with margin, padding and a 3px rounded border</div>`
-`div class="mr1 pl1 b1 r4">Some div with margin-right, padding-left and a 4px rounded border</div>`
+ `<div class="m1 p1 b1 r3">Some div with margin, padding and a 3px rounded border</div>`
+ 
+ `<div class="mr1 pl1 b1 r4">Some div with margin-right, padding-left and a 4px rounded border</div>`
  
 Licensed under GPL 3 since 2012 under crediting the original author
 ---------------------------------------------------------------------
