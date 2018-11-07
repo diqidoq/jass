@@ -1,0 +1,86 @@
+/* QCSS spacing © https://github.com/diqidoq/qcss under GPL 3 */
+
+@space: 6px;
+/**
+ for Bootstrap from variables.less line 65
+ @line-height-computed: floor((@font-size-base * @line-height-base)); // ~20px
+*/
+@min-height: (@line-height-computed * 2) + 2;
+.generate-spacings(12);
+
+.generate-spacings(@n, @i: 0) when (@i =< @n) {
+  .mt@{i} {
+    margin-top: (@space * @i) !important;
+  }
+  .mt-@{i} when (@i > 0) {
+    margin-top: -(@space * @i) !important;
+  }
+  .mr@{i} {
+    margin-right: (@space * @i) !important;
+  }
+  .mr-@{i} when (@i > 0) {
+    margin-right: -(@space * @i) !important;
+  }
+  .mb@{i} {
+    margin-bottom: (@space * @i) !important;
+  }
+  .mb-@{i} when (@i > 0) {
+    margin-bottom: -(@space * @i) !important;
+  }
+  .ml@{i} {
+    margin-left: (@space * @i) !important;
+  }
+  .ml-@{i} when (@i > 0){
+    margin-left: -(@space * @i) !important;
+  }
+  .pt@{i} {
+    padding-top: (@space * @i) !important;
+  }
+  .pt-@{i} when (@i > 0) {
+    padding-top: -(@space * @i) !important;
+  }
+  .pr@{i} {
+    padding-right: (@space * @i) !important;
+  }
+  .pr-@{i} when (@i > 0) {
+    padding-right: -(@space * @i) !important;
+  }
+  .pb@{i} {
+    padding-bottom: (@space * @i) !important;
+  }
+  .pb-@{i} when (@i > 0) {
+    padding-bottom: -(@space * @i) !important;
+  }
+  .pl@{i} {
+    padding-left: (@space * @i) !important;
+  }
+  .pl-@{i} when (@i > 0) {
+    padding-left: -(@space * @i) !important;
+  }
+  /* min-height steps */
+  .mh@{i} when (@i > 0) {
+    min-height: floor(@min-height + (@i * floor(@line-height-computed/2))) !important;
+  }
+  /* max-height steps */
+  .xh@{i} when (@i > 0) {
+    max-height: floor(@min-height + (@i * floor(@line-height-computed/2))) !important;
+    height: floor(@min-height + (@i * floor(@line-height-computed/2))) !important;
+    overflow: hidden;
+  }
+  .generate-spacings(@n, (@i + 1));
+}
+
+.center-width {
+  margin: 0 auto !important;
+  float: none !important;
+}
+
+.center-height-parent {
+  position: relative !important;
+}
+
+.center-height {
+  position: absolute !important;
+  top: 50% !important;
+  transform: translateY(-50%) !important;
+}
