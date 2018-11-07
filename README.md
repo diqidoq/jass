@@ -19,13 +19,13 @@ Requirements
  + None for CSS only, otherwise:
  + Less (lessc)
  + uglifycss (or similar)
- + less plugin clean-css ()
- + less plugin Autoprefixer ()
+ + less plugin clean-css
+ + less plugin Autoprefixer
  + Sass and similar plugins
 
 Slogan
 ------
-Back to basics. Write HTML and use classes to make the playing right. Make your work independend from toys. Use the HTML class attribute what it is made for. And use it much, and right.
+Back to basics. Write HTML and use understandable classes to make the playing right. Make your work independend from toys. Use the HTML class attribute what it is made for. And use it much, and right.
 
 Why
 ---
@@ -55,6 +55,12 @@ Inspired by the low level enthusiasts, the prior goal was to keep the creating, 
 Main class group identifiers
 ----------------------------
 b = border, m = margin, p = paddiing, r = radius, s = shadow
+
+HTML code example using QCSS
+----------------------------
+
+`div class="m1 p1 b1 r3">Some div with margin, padding and a 3px rounded border</div>`
+`div class="mr1 pl1 b1 r4">Some div with margin-right, padding-left and a 4px rounded border</div>`
  
 Licensed under GPL 3 since 2012 under crediting the original author
 ---------------------------------------------------------------------
