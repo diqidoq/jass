@@ -1,11 +1,18 @@
 # qcss (Qualified CSS)
 (Development supported by www.maroqqo.com | started (c) 2014)
 
-A simple group of minimalized css (and Less/Sass) to use as an easy out-of-the-box "nailing" minimal framework of required framewoek overrides or stand-alone "look" without hassling with your CSS framework, CMS or HTML templates creating systems by using a creative class group naming approach easy to learn and to reuse for each project. For example: Adds the missing feature to Boostrap 3 to override some spaces with simple and understandable CSS classes for individual html blocks.
+A simple group of minimalized css (and Less/Sass) to use as an easy out-of-the-box "nailing" minimal framework of required framework overrides or stand-alone "look"-setups without hassling with your main CSS framework, main CMS or HTML-template-creating systems by using a creative class group naming approach easy to learn and to reuse for each project. For example: Adds the missing feature to Boostrap 3 to override some spaces with simple and understandable CSS classes for individual html blocks inherited or not-inherited from the given Bootstrap rythm.
 
 Development status
 ------------------
 Early **alpha** state. We use it already in production but with custom tweaks on each project. But a more generally usable base version is not ready yet. See the [milestones](https://github.com/diqidoq/qcss/milestones) if you are willing to help.
+
+Credits
+-------
+List of developers working on QCSS (frequently updated):
+ + diqidoq
+ + jbitdrop
+ + ocb
 
 Requirements
 ------------
