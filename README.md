@@ -1,7 +1,9 @@
 # qcss (Qualified CSS)
-(Development supported by www.maroqqo.com | started (c) 2014)
+(Development supported by www.maroqqo.com | started (c) 2012)
 
 A simple group of minimalized css (and Less/Sass) to use as an easy out-of-the-box "nailing" minimal framework of required framework overrides or stand-alone "look"-setups without hassling with your main CSS framework, main CMS or HTML-template-creating systems by using a creative class group naming approach easy to learn and to reuse for each project. For example: Adds the missing feature to Boostrap 3 to override some spaces with simple and understandable CSS classes for individual html blocks inherited or not-inherited from the given Bootstrap rythm.
+
+[!] Note: Great to see that the margin padding alterting classes based on the grid space has found its way into Bootstrap v4.
 
 Development status
 ------------------
