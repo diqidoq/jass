@@ -43,8 +43,8 @@ Roadmap
 -------
 We want to see where it goes and if it expands well after further development and maybe some contribution of other ideas. We agree about that if it does not work out well, we accept the missed challenge. But until then we will try our best.
 
-Notes for global usage in npm enviroment
-----------------------------------------
+Useful additional packages for global usage in a npm enviroment
+---------------------------------------------------------------
 sudo npm install -g uglifycss
 sudo npm install -g less
 sudo npm install -g less-plugin-clean-css
@@ -54,16 +54,20 @@ Reasons
 -------
 Inspired by the low level enthusiasts, the prior goal was to keep the creating, editing and after all the altering of the look of an html output as minimlistic and independend from any other "tools" as possible (chime in, change a nitpick and go) without losing too much of the advantages of all these fancy "tools" out there, triggered by the experience that many of the new fancy web development stuff becomes old very soon or changes their concept very often and keeps web dev teams always hussling with them rendering their advantages obsolete again.
 
-Main class group identifiers
-----------------------------
-b = border, m = margin, p = paddiing, r = radius, s = shadow
+Main class group and value identifiers
+--------------------------------------
+Every class is a combination of a main group identifier and a positive or negative (-) value.
+
+    b = border, m = margin, p = padding, r = radius, s = shadow, w = width, h = height
+    followed by a number = positive value in the rhythm
+    or followed by - minus and a number = negative number of steps in the rhythm
 
 HTML code example using QCSS
 ----------------------------
 
  `<div class="m1 p1 b1 r3">Some div with margin, padding and a 3px rounded border</div>`
  
- `<div class="mr1 pl1 b1 r4">Some div with margin-right, padding-left and a 4px rounded border</div>`
+ `<div class="mr-1 pl1 b1 r4">Some div with a negative margin-right, padding-left and a 4px rounded border</div>`
  
 Licensed under GPL 3 since 2012 under crediting the original author
 ---------------------------------------------------------------------
