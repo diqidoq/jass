@@ -66,11 +66,11 @@ Every class is a combination of a main group identifier and a positive or negati
 
     <div class="m1 p1 b1 r3"></div>
 
-*Some div with margin, padding and a 3px rounded border*
+*Some div with margin, padding and a 1px thick and 3px radius wide rounded border*
  
-    <div class="mr-1 pl1 b1 r4"></div>
+    <div class="mr-1 pl1 b2 r4"></div>
 
-*Some div with a negative margin-right, padding-left and a 4px rounded border*
+*Some div with a negative margin-right, padding-left and a 2px thick and 4px wide radius rounded border*
  
 Licensed under GPL 3 since 2012 under crediting the original author
 ---------------------------------------------------------------------
