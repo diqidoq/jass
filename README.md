@@ -62,12 +62,15 @@ Every class is a combination of a main group identifier and a positive or negati
     followed by a number = positive value in the rhythm
     or followed by - minus and a number = negative number of steps in the rhythm
 
-HTML code example using QCSS
-----------------------------
+### HTML code example
 
- `<div class="m1 p1 b1 r3">Some div with margin, padding and a 3px rounded border</div>`
+    <div class="m1 p1 b1 r3"></div>
+
+*Some div with margin, padding and a 3px rounded border*
  
- `<div class="mr-1 pl1 b1 r4">Some div with a negative margin-right, padding-left and a 4px rounded border</div>`
+    <div class="mr-1 pl1 b1 r4"></div>
+
+*Some div with a negative margin-right, padding-left and a 4px rounded border*
  
 Licensed under GPL 3 since 2012 under crediting the original author
 ---------------------------------------------------------------------
