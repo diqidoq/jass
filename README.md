@@ -3,11 +3,11 @@
 
 A simple group of minimalized css (and Less/Sass) to use as an easy out-of-the-box "nailing" minimal framework of required framework overrides or stand-alone "look"-setups without hassling with your main CSS framework, main CMS or HTML-template-creating systems by using a creative class group naming approach easy to learn and to reuse for each project. For example: Adds the missing feature to Boostrap 3 to override some spaces with simple and understandable CSS classes for individual html blocks inherited or not-inherited from the given Bootstrap rythm.
 
-_[!] NOTE: Great to see that the margin/padding altering extension classes (e.g. mr1, pr2) based on the grid space have found its way into Bootstrap v4! Just would have been nice to credit it somewhere. :)_
+[!] NOTE: Great to see that the margin/padding altering extension classes (e.g. mr1, pr2) based on the grid space have found its way into Bootstrap v4 and v5. Just would have been nice to credit it somewhere. I published this space qcss framework in 2012. :)
 
 Development status
 ------------------
-Early **alpha** state. We use it already in production but with custom tweaks on each project. But a more generally usable base version is not ready yet. See the [milestones](https://github.com/diqidoq/qcss/milestones) if you are willing to help.
+I keep it in early **alpha** state because I do not like unfullfilled promises. We use it already in production but with custom tweaks on each project. But a more generally usable base version is not ready yet. See the [milestones](https://github.com/diqidoq/qcss/milestones) if you are willing to help.
 
 Credits
 -------
