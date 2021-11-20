@@ -1,4 +1,5 @@
-/* integrate speech bubble imessage css */
+/* integrate diqidoq/speech_bubble_imessage_css and make it Drupal private message compatible */
+
 .imessage {
   background-color: #fff;
   border: 1px solid #e5e5ea;
@@ -28,20 +29,20 @@
   position: absolute;
 }
 
-p.from-me {
+p.from-me, div.private-message-author-self {
   align-self: flex-end;
   background-color: #248bf5;
   color: #fff;
 }
 
-p.from-me::before {
+p.from-me::before, div.private-message-author-self::before {
   border-bottom-left-radius: 0.8rem 0.7rem;
   border-right: 1rem solid #248bf5;
   right: -0.35rem;
   transform: translate(0, -0.1rem);
 }
 
-p.from-me::after {
+p.from-me::after, div.private-message-author-self::after {
   background-color: #fff;
   border-bottom-left-radius: 0.5rem;
   right: -40px;
@@ -112,7 +113,7 @@ p[class^="from-"].emoji::before {
   margin-top: 1rem !important;
 }
 
-body {
+.imessage {
   font-family: Arial, 
     BlinkMacSystemFont,
     "Segoe UI",
@@ -155,7 +156,7 @@ h2 {
 }
 
 @media screen and (max-width: 800px) {
-  body {
+  .imessage {
     margin: 0 0.5rem;
   }
 
