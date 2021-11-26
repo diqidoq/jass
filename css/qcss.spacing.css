@@ -578,15 +578,19 @@
   height: 163px !important;
   overflow: hidden;
 }
-.center-width {
-  margin: 0 auto !important;
+.center-v {
+  margin-left: auto !important;
+  margin-right: auto !important;
   float: none !important;
 }
-.center-height-parent {
+.center-h-parent {
   position: relative !important;
+  height: 100%;
+  min-height: 100%;
 }
-.center-height {
+.center-h {
   position: absolute !important;
   top: 50% !important;
+  -ms-transform: translateY(-50%) !important;
   transform: translateY(-50%) !important;
 }
