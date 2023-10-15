@@ -1,0 +1,91 @@
+// QCSS spacing © https://github.com/diqidoq/qcss under GPL 3
+// Settings will be made in the source qcss.less
+
+.spacing-steps(@n, @i: 0) when (@i =< @n) {
+  .m@{i} {
+    margin-top: (@init-spacing * @i) !important;
+    margin-right: (@init-spacing * @i) !important;
+    margin-bottom: (@init-spacing * @i) !important;
+    margin-left: (@init-spacing * @i) !important;
+  }
+  .mt@{i} {
+    margin-top: (@init-spacing * @i) !important;
+  }
+  .mt-@{i} when (@i > 0) {
+    margin-top: -(@init-spacing * @i) !important;
+  }
+  .mr@{i} {
+    margin-right: (@init-spacing * @i) !important;
+  }
+  .mr-@{i} when (@i > 0) {
+    margin-right: -(@init-spacing * @i) !important;
+  }
+  .mb@{i} {
+    margin-bottom: (@init-spacing * @i) !important;
+  }
+  .mb-@{i} when (@i > 0) {
+    margin-bottom: -(@init-spacing * @i) !important;
+  }
+  .ml@{i} {
+    margin-left: (@init-spacing * @i) !important;
+  }
+  .ml-@{i} when (@i > 0){
+    margin-left: -(@init-spacing * @i) !important;
+  }
+  .p@{i} {
+    padding-top: (@init-spacing * @i) !important;
+    padding-right: (@init-spacing * @i) !important;
+    padding-bottom: (@init-spacing * @i) !important;
+    padding-left: (@init-spacing * @i) !important;
+  }
+  .pt@{i} {
+    padding-top: (@init-spacing * @i) !important;
+  }
+  .pt-@{i} when (@i > 0) {
+    padding-top: -(@init-spacing * @i) !important;
+  }
+  .pr@{i} {
+    padding-right: (@init-spacing * @i) !important;
+  }
+  .pr-@{i} when (@i > 0) {
+    padding-right: -(@init-spacing * @i) !important;
+  }
+  .pb@{i} {
+    padding-bottom: (@init-spacing * @i) !important;
+  }
+  .pb-@{i} when (@i > 0) {
+    padding-bottom: -(@init-spacing * @i) !important;
+  }
+  .pl@{i} {
+    padding-left: (@init-spacing * @i) !important;
+  }
+  .pl-@{i} when (@i > 0) {
+    padding-left: -(@init-spacing * @i) !important;
+  }
+  // min-height steps
+  .minh@{i} when (@i > 0) {
+    min-height: (@init-height + (@i * 15)) !important;
+  }
+  // max-height steps
+  .maxh@{i} when (@i > 0) {
+    max-height: (@init-height + (@i * 15)) !important;
+    height: (@init-height + (@i * 15)) !important;
+    overflow: hidden;
+  }
+  .spacing-steps(@n, (@i + 1));
+}
+
+.center-width {
+  margin: 0 auto !important;
+  float: none !important;
+}
+
+.center-height-parent {
+  position: relative !important;
+}
+
+.center-height {
+  position: absolute !important;
+  top: 50% !important;
+  transform: translateY(-50%) !important;
+}

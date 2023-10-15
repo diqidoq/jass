@@ -1,9 +1,5 @@
 // QCSS borders © https://github.com/diqidoq/qcss under GPL 3
 
-@step: 1px;
-
-.generate-border-steps(8);
-
 .border-style() {
   border-style: solid;
   &.solid {
@@ -42,54 +38,54 @@
   }
 }
 
-.generate-border-steps(@m, @j: 0) when (@j =< @m) {
+.steps(@m, @j: 0) when (@j =< @m) {
   .b@{j} {
    .border-style();
    .border-color();
-    border-width: (@step * @j) !important;
+    border-width: (@init * @j) !important;
   }
   .bt@{j} {
    .border-style();
    .border-color();
-    border-top-width: (@step * @j) !important;
+    border-top-width: (@init * @j) !important;
   }
   .br@{j} {
    .border-style();
    .border-color();
-    border-right-width: (@step * @j) !important;
+    border-right-width: (@init * @j) !important;
   }
   .bb@{j} {
    .border-style();
    .border-color();
-    border-bottom-width: (@step * @j) !important;
+    border-bottom-width: (@init * @j) !important;
   }
   .bl@{j} {
    .border-style();
    .border-color();
-    border-left-width: (@step * @j) !important;
+    border-left-width: (@init * @j) !important;
   }
   .r@{j} {
-    border-radius: (@step * @j) !important;
+    border-radius: (@init * @j) !important;
   }
   .rt@{j} {
-    border-top-left-radius: (@step * @j) !important;
-    border-top-right-radius: (@step * @j) !important;
+    border-top-left-radius: (@init * @j) !important;
+    border-top-right-radius: (@init * @j) !important;
   }
   .rb@{j} {
-    border-bottom-left-radius: (@step * @j) !important;
-    border-bottom-right-radius: (@step * @j) !important;
+    border-bottom-left-radius: (@init * @j) !important;
+    border-bottom-right-radius: (@init * @j) !important;
   }
   .rtr@{j} {
-    border-top-right-radius: (@step * @j) !important;
+    border-top-right-radius: (@init * @j) !important;
   }
   .pbr@{j} {
-    border-bottom-right-radius: (@step * @j) !important;
+    border-bottom-right-radius: (@init * @j) !important;
   }
   .rbl@{j} {
-    border-bottom-left-radius: (@step * @j) !important;
+    border-bottom-left-radius: (@init * @j) !important;
   }
   .rtl@{j} {
-    border-top-left-radius: (@step * @j) !important;
+    border-top-left-radius: (@init * @j) !important;
   }
-  .generate-border-steps(@m, (@j + 1));
+  .steps(@m, (@j + 1));
 }
