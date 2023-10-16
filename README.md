@@ -1,4 +1,4 @@
-# qcss (Qualified CSS)
+# QCSS (Qualified CSS)
 <sup> Development started in 2012, first released in 2015 & supported by www.maroqqo.com </sup>
 
  > _Stop learning frameworks. Start building web apps._ :+1:
