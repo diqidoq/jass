@@ -62,13 +62,15 @@ What QCSS tries to avoid
 ------------------------
 
 ### Short
-No Javascript| No SVG | No custom CSS --var | no display:grid or flex
+**No** Javascript | **No** SVG | **No** custom CSS --var | **No** display:grid or flex
 
 ### Long
 1. QCSS do not use Javascript. A CSS framework should not use Javascript. Period. It uses smart CSS only solutions for the common Javasript parts like popups or other hidden/toggle features by using hidden checkboxes. Same goes for animations which can be perfectly integrated with Animate.css
 2. Yes, QCSS is using external libraries as extension in the _full out of the box package_ of the framework, like fontawesome icons and such, but it do not uses the latest "hot" things for the very important reason to be backwards compatible as much as possible. We should not forget that not all people in the world have access to the latest and most modern browsers and powerful laptops or smartphones. That means that we carefully check the _CAN I USE_ sites and if there is too much red, we avoid it.
 3. So, that means, SVG (as much as I like it personally a lot and work with it a lot) will not be used or linked to in QCSS. Of course you are free to use it with QCSS in your modified package.
 4. QCSS do not use custom CSS properties (--var). For us it is absolutely NOT understandable why using such not 98% compatible feature when a CSS framework has been compiled by preprocessors, which have been made exactly for that purpose?
+
+ > _You think a far way backwards compatible CSS framework without Javascript and without latest CSS gimmigs can't strike? Yeah, that's what they tell you. Check our example pages upcoming soon._
 
 Roadmap
 -------
