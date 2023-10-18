@@ -1,7 +1,7 @@
 // QCSS spacing © https://github.com/diqidoq/qcss under GPL 3
 // Settings will be made in the source qcss.less
 
-.spacing-steps(@n, @i: 0) when (@i =< @n) {
+.steps(@n, @i: 0) when (@i =< @n) {
   .m@{i} {
     margin-top: (@init-spacing * @i) @override;
     margin-right: (@init-spacing * @i) @override;
@@ -60,5 +60,5 @@
     height: (@init-height + (@i * 15)) @override;
     overflow: hidden;
   }
-  .spacing-steps(@n, (@i + 1));
+  .steps(@n, (@i + 1));
 }
