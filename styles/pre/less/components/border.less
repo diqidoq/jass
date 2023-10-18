@@ -3,38 +3,38 @@
 .border-style() {
   border-style: solid;
   &.solid {
-    border-style: solid !important;
+    border-style: solid @override;
   }
   &.dashed {
-    border-style: dashed !important;
+    border-style: dashed @override;
   }
   &.double {
-    border-style: double !important;
+    border-style: double @override;
   }
   &.dotted {
-    border-style: dotted !important;
+    border-style: dotted @override;
   }
 }
 
 .border-color() {
   border-color: @dark;
   &.primary {
-    border-color: @primary !important;
+    border-color: @primary @override;
   }
   &.secondary {
-    border-color: @secondary !important;
+    border-color: @secondary @override;
   }
   &.ruddy {
-    border-color: @ruddy !important;
+    border-color: @ruddy @override;
   }
   &.bluey {
-    border-color: @bluey !important;
+    border-color: @bluey @override;
   }
   &.yellowy {
-    border-color: @yellowy !important;
+    border-color: @yellowy @override;
   }
   &.greeny {
-    border-color: @greeny !important;
+    border-color: @greeny @override;
   }
 }
 
@@ -42,50 +42,50 @@
   .b@{j} {
    .border-style();
    .border-color();
-    border-width: (@init * @j) !important;
+    border-width: (@init * @j) @override;
   }
   .bt@{j} {
    .border-style();
    .border-color();
-    border-top-width: (@init * @j) !important;
+    border-top-width: (@init * @j) @override;
   }
   .br@{j} {
    .border-style();
    .border-color();
-    border-right-width: (@init * @j) !important;
+    border-right-width: (@init * @j) @override;
   }
   .bb@{j} {
    .border-style();
    .border-color();
-    border-bottom-width: (@init * @j) !important;
+    border-bottom-width: (@init * @j) @override;
   }
   .bl@{j} {
    .border-style();
    .border-color();
-    border-left-width: (@init * @j) !important;
+    border-left-width: (@init * @j) @override;
   }
   .r@{j} {
-    border-radius: (@init * @j) !important;
+    border-radius: (@init * @j) @override;
   }
   .rt@{j} {
-    border-top-left-radius: (@init * @j) !important;
-    border-top-right-radius: (@init * @j) !important;
+    border-top-left-radius: (@init * @j) @override;
+    border-top-right-radius: (@init * @j) @override;
   }
   .rb@{j} {
-    border-bottom-left-radius: (@init * @j) !important;
-    border-bottom-right-radius: (@init * @j) !important;
+    border-bottom-left-radius: (@init * @j) @override;
+    border-bottom-right-radius: (@init * @j) @override;
   }
   .rtr@{j} {
-    border-top-right-radius: (@init * @j) !important;
+    border-top-right-radius: (@init * @j) @override;
   }
   .pbr@{j} {
-    border-bottom-right-radius: (@init * @j) !important;
+    border-bottom-right-radius: (@init * @j) @override;
   }
   .rbl@{j} {
-    border-bottom-left-radius: (@init * @j) !important;
+    border-bottom-left-radius: (@init * @j) @override;
   }
   .rtl@{j} {
-    border-top-left-radius: (@init * @j) !important;
+    border-top-left-radius: (@init * @j) @override;
   }
   .steps(@m, (@j + 1));
 }
