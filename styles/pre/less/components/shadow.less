@@ -1,3 +1,8 @@
+// Box shadow reset
+.noshadow, .ns {
+  .box-shadow(none) @override;
+}
+
 .box-shadow (@string) {
 	-webkit-box-shadow: @string;
 	-moz-box-shadow:    @string;
@@ -10,4 +15,4 @@
 	box-shadow:		@x @y @blur @spread rgba(0, 0, 0, @alpha);
 }
 
-/* for each loop missing */
+/* @todo for each loop missing */
