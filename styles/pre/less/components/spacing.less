@@ -41,26 +41,14 @@
   .pt@{i} {
     padding-top: (@init-spacing * @i) !important;
   }
-  .pt-@{i} when (@i > 0) {
-    padding-top: -(@init-spacing * @i) !important;
-  }
   .pr@{i} {
     padding-right: (@init-spacing * @i) !important;
-  }
-  .pr-@{i} when (@i > 0) {
-    padding-right: -(@init-spacing * @i) !important;
   }
   .pb@{i} {
     padding-bottom: (@init-spacing * @i) !important;
   }
-  .pb-@{i} when (@i > 0) {
-    padding-bottom: -(@init-spacing * @i) !important;
-  }
   .pl@{i} {
     padding-left: (@init-spacing * @i) !important;
-  }
-  .pl-@{i} when (@i > 0) {
-    padding-left: -(@init-spacing * @i) !important;
   }
   // min-height steps
   .minh@{i} when (@i > 0) {
@@ -75,16 +63,16 @@
   .spacing-steps(@n, (@i + 1));
 }
 
-.center-width {
+.center-x {
   margin: 0 auto !important;
   float: none !important;
 }
 
-.center-height-parent {
+.center-y-parent {
   position: relative !important;
 }
 
-.center-height {
+.center-y {
   position: absolute !important;
   top: 50% !important;
   transform: translateY(-50%) !important;
