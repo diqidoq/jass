@@ -13,8 +13,14 @@
 @init: 1px; .steps(16);
 @import "@{dir}/border";
 
-// Columns
-@count-of-bars: 24; .grid() { small-width: 960px, medium-width: 1440px, large-width: 1920px; }
+// Layout
+@count-of-bars: 24;
+.grid() {
+  small-width: 960px;
+  medium-width: 1440px;
+  large-width: 1920px;
+  full-width: 100%;
+}
 @import "@{dir}/layout";
 
 // Margin and Padding and Min/Max Height
