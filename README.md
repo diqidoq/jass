@@ -65,6 +65,7 @@ What QCSS tries to avoid
 
 ### Short
 **No** Javascript | **No** SVG | **No** custom CSS --var | **No** display:grid or flex
+Full cross browser compatibility including IE 8 / 9 and below. Yes there are pure people out there, please beware this.
 
 ### Long
 1. QCSS do not use Javascript. A CSS framework should not use Javascript. Period. It uses smart CSS only solutions for the common Javasript parts like popups or other hidden/toggle features by using hidden checkboxes. Same goes for animations which can be perfectly integrated with Animate.css
