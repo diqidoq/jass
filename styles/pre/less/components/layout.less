@@ -18,6 +18,13 @@ each(.grid() {
     min-width: @value / @count-of-bars;
     max-width: @value / @count-of-bars;
   }
+  .bars(@count-of-bars);
+  .bars(@n, @i: 1) when (@i =< @n) {
+    ._@{i}bars {
+      width: (@value / @count-of-bars) * @i;
+    }
+  .bars(@n, (@i + 1));
+  }
 }
 });
 .inline, .fl, .fr {
