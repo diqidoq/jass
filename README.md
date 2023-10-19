@@ -32,14 +32,16 @@ If you do not want to use the prebuild CSS you can recompile it with LESS and in
  + uglifycss (or similar)
  + less plugin clean-css
  + less plugin Autoprefixer
+ + less plugin lists
 
 Which can be installed with npm like:
 
 ```
-sudo npm install -g uglifycss
-sudo npm install -g less
-sudo npm install -g less-plugin-clean-css
-sudo npm install -g less-plugin-autoprefixer
+npm install -g uglifycss
+npm install -g less
+npm install -g less-plugin-clean-css
+npm install -g less-plugin-autoprefixer
+npm install -g less-plugin-lists
 ```
 
 Why
