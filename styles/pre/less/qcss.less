@@ -1,3 +1,6 @@
+// choose where the different LESS components are located.
+@dir: "components/"
+
 @override:;
 // Uncomment this line if you require !important to all statements (on top of other frameworks).
 // @override: !important;
@@ -8,18 +11,18 @@
 
 // Border and Radius
 @init: 1px; .steps(16);
-@import "components/border";
+@import "@{dir}/border";
 
 // Columns
 @count-of-bars: 24; @grid: small-width: 960px, medium-width: 1440px, large-width: 1920px; 
-@import "components/layout";
+@import "@{dir}/layout";
 
 // Margin and Padding and Min/Max Height
 @init: 4px; @init-height: 40px; .steps(16);
-@import "components/spacing";
+@import "@{dir}/spacing";
 
 // Shadows and Shadow Effects 
-@import "components/shadow";
+@import "@{dir}/shadow";
 
 // Helper Classes
-@import "components/helper";
+@import "@{dir}/helper";
