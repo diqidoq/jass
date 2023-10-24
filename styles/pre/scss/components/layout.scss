@@ -1,4 +1,15 @@
-[class*="grid"], [class*="inside-bar"], .cfx {
+@use "sass:math";
+@use "sass:list";
+@use "sass:string";
+@use "sass:map";
+@use "sass:meta";
+@use "sass:selector";
+
+[class*="set"], [class*="inside-bar"] {
+  margin: 0;
+  padding: 0;
+}
+.cfx, [class*="set"], [class*="inside-bar"] {
   display: block;
   clear: both;
   float: none;
@@ -8,26 +19,40 @@
     display: table;
   }
 }
-each(.grid() {
-.grid-@{key} {
-  width: @value;
-  min-width: @value;
-  max-width: @value;
-  &[class*="bar"] {
-    width: @value / @count-of-bars;
-    min-width: @value / @count-of-bars;
-    max-width: @value / @count-of-bars;
-  }
-  .bars(@count-of-bars);
-  .bars(@n, @i: 1) when (@i =< @n) {
-    ._@{i}bars {
-      width: (@value / @count-of-bars) * @i;
+
+$elements: 24;
+$sets-fixed: 960px, 1440px, 1920px;
+$sets-fluid: 80, 90, 100;
+
+@each $set in $sets-fixed {
+  .set-fixed-#{$set} {
+    @media (min-width: $set) {
+      width: $set;
+      & [class*="bar"] {
+        width: math.div($set, $elements);
+      }
+      @for $i from 1 through $elements {
+        & ._#{$i}bars {
+          width: math.div($set, $elements) * $i;
+        }
+      }
     }
-  .bars(@n, (@i + 1));
   }
 }
-});
-.inline, .fl, .fr {
+@each $set in $sets-fluid {
+  .set-fluid-#{$set} {
+      width: #{$set}+0%;
+      & [class*="bar"] {
+        width: math.div($set, $elements) + 0%;
+      }
+      @for $i from 1 through $elements {
+        & ._#{$i}bars {
+          width: math.div($set, $elements) * $i + 0%;
+        }
+    }
+  }
+}
+.inline {
   display: inline;
 }
 .fl {
