@@ -13,9 +13,10 @@ $override:;
 $init: 1px; @include steps(16);
 @import "${dir}/border";
 
-// Layout
-// Flexible - feel free to add/replace with your own layouts.
+// Layouts (sets - we do not use the term grid. [README])
+// Fixed and Fluid - feel free to add/replace with your own layouts.
 // Width of elements is relative to set and count of elements.
+// in/de-crease the amount of elements to create different resolutions.
 $elements: 24; 
 $sets-fixed:
 576, // each elemements width in px: 24
