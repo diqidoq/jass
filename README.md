@@ -3,7 +3,7 @@
 
  > _Stop learning frameworks. Start building web apps._ :+1:
 
-A simple utility first type of "describe your style as class" tiny CSS framework started in 2012 to use as an easy out-of-the-box "nailing" and minimal framework, to use from the bottom up or, to use for required framework overrides without hassling with your main CSS framework, main CMS or HTML-template-creating systems like CMS' by using a creative class group naming approach easy to learn and to reuse for each project. For example: Adds the missing feature to Boostrap 3 to override some spaces with simple and understandable CSS classes for individual html blocks inherited or not-inherited from the given Bootstrap rythm.
+A simple utility first type of "describe your style as class" CSS framework started in 2012. Refactored in 2023 to keep being cross browser compatible back to 2009. As an easy out-of-the-box styling layer from the bottom up by using a creative class group naming approach easy to learn and to reuse for each project.
 
 > [!NOTE]
 > Great to see that the margin/padding altering extension classes (e.g. mr1, pr2) based on the grid space have found its way into **Bootstrap v4 and v5**. And great to see that a CSS framework like **tailwindcss** has taken over this utility first approach here into a fully-fledged CSS framework in 2017. Just would have been nice to credit it all somewhere. I published this qcss idea in 2012. :) Without maintaining it carefully enough. So it's OK ;-)
