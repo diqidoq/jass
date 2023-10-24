@@ -21,28 +21,6 @@
   }
 }
 
-.border-color() {
-  border-color: @dark;
-  &.primary {
-    border-color: @primary @override;
-  }
-  &.secondary {
-    border-color: @secondary @override;
-  }
-  &.ruddy {
-    border-color: @ruddy @override;
-  }
-  &.bluey {
-    border-color: @bluey @override;
-  }
-  &.yellowy {
-    border-color: @yellowy @override;
-  }
-  &.greeny {
-    border-color: @greeny @override;
-  }
-}
-
 .steps(@m, @j: 0) when (@j =< @m) {
   .b@{j} {
    .border-style();
