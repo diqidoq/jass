@@ -1,0 +1,36 @@
+// choose where the different LESS components are located.
+@dir: "components/"
+
+@override:;
+// Uncomment this line if you require !important to all statements (on top of other frameworks).
+// @override: !important;
+
+// Choose the components you want to use. Don't mix the order of setting lines.
+// Otherwise comment the components and its leading settings out (//).
+// Reduce the "step" settings to have a smaller footprint and less altering classes.
+
+// Border and Radius
+@init: 1px; .steps(16);
+@import "@{dir}/border";
+
+// Layout
+// Flexible - feel free to add your own layouts.
+// Width of bars is relative to grid and count.
+@count-of-bars: 24;
+.grid() {
+  small-width: 960px;
+  medium-width: 1440px;
+  large-width: 1920px;
+  full-width: 100%;
+}
+@import "@{dir}/layout";
+
+// Margin and Padding and Min/Max Height
+@init: 4px; @init-height: 40px; .steps(16);
+@import "@{dir}/spacing";
+
+// Shadows and Shadow Effects 
+@import "@{dir}/shadow";
+
+// Helper Classes
+@import "@{dir}/helper";

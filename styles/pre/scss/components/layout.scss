@@ -1,0 +1,38 @@
+[class*="grid"], [class*="inside-bar"], .cfx {
+  display: block;
+  clear: both;
+  float: none;
+  &::after {
+    content: " ";
+    clear: both;
+    display: table;
+  }
+}
+each(.grid() {
+.grid-@{key} {
+  width: @value;
+  min-width: @value;
+  max-width: @value;
+  &[class*="bar"] {
+    width: @value / @count-of-bars;
+    min-width: @value / @count-of-bars;
+    max-width: @value / @count-of-bars;
+  }
+  .bars(@count-of-bars);
+  .bars(@n, @i: 1) when (@i =< @n) {
+    ._@{i}bars {
+      width: (@value / @count-of-bars) * @i;
+    }
+  .bars(@n, (@i + 1));
+  }
+}
+});
+.inline, .fl, .fr {
+  display: inline;
+}
+.fl {
+  float: left;
+}
+.fr {
+  float: right;
+}

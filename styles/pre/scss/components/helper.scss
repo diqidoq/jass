@@ -1,0 +1,29 @@
+.center-x {
+  margin: 0 auto @override;
+  float: none @override;
+}
+
+.center-y-parent {
+  position: relative @override;
+}
+
+.center-y {
+  position: absolute @override;
+  top: 50% @override;
+  transform: translateY(-50%) @override;
+}
+.pos-relative, .rel {
+  position: relative @override;
+}
+
+.fontsize-inherit, .fsi {
+  font-size: inherit @override;
+}
+
+.text-weight-normal, .txtn {
+  font-weight: normal @override;
+}
+
+.text-weight-bold, .txtb {
+  font-weight: bold @override;
+}

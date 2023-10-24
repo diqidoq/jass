@@ -1,0 +1,64 @@
+// QCSS spacing © https://github.com/diqidoq/qcss under GPL 3
+// Settings will be made in the source qcss.less
+
+.steps(@n, @i: 0) when (@i =< @n) {
+  .m@{i} {
+    margin-top: (@init-spacing * @i) @override;
+    margin-right: (@init-spacing * @i) @override;
+    margin-bottom: (@init-spacing * @i) @override;
+    margin-left: (@init-spacing * @i) @override;
+  }
+  .mt@{i} {
+    margin-top: (@init-spacing * @i) @override;
+  }
+  .mt-@{i} when (@i > 0) {
+    margin-top: -(@init-spacing * @i) @override;
+  }
+  .mr@{i} {
+    margin-right: (@init-spacing * @i) @override;
+  }
+  .mr-@{i} when (@i > 0) {
+    margin-right: -(@init-spacing * @i) @override;
+  }
+  .mb@{i} {
+    margin-bottom: (@init-spacing * @i) @override;
+  }
+  .mb-@{i} when (@i > 0) {
+    margin-bottom: -(@init-spacing * @i) @override;
+  }
+  .ml@{i} {
+    margin-left: (@init-spacing * @i) @override;
+  }
+  .ml-@{i} when (@i > 0){
+    margin-left: -(@init-spacing * @i) @override;
+  }
+  .p@{i} {
+    padding-top: (@init-spacing * @i) @override;
+    padding-right: (@init-spacing * @i) @override;
+    padding-bottom: (@init-spacing * @i) @override;
+    padding-left: (@init-spacing * @i) @override;
+  }
+  .pt@{i} {
+    padding-top: (@init-spacing * @i) @override;
+  }
+  .pr@{i} {
+    padding-right: (@init-spacing * @i) @override;
+  }
+  .pb@{i} {
+    padding-bottom: (@init-spacing * @i) @override;
+  }
+  .pl@{i} {
+    padding-left: (@init-spacing * @i) @override;
+  }
+  // min-height steps
+  .minh@{i} when (@i > 0) {
+    min-height: (@init-height + (@i * 15)) @override;
+  }
+  // max-height steps
+  .maxh@{i} when (@i > 0) {
+    max-height: (@init-height + (@i * 15)) @override;
+    height: (@init-height + (@i * 15)) @override;
+    overflow: hidden;
+  }
+  .steps(@n, (@i + 1));
+}

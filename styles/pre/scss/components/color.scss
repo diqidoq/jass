@@ -1,0 +1,142 @@
+// Set the primary curve of your theme in 3 points.
+// It is rarely recommended to use 100% black and white.
+// Consider these points like the black and white points of
+// professional image editing. Use it to create color tendency.
+// Using a warmer white or grey will turn higher colors warmer, etc.
+@black-point: #020202;
+@grey-point: #999999;
+@white-point: #fcfcfc;
+
+/* the 90 main web colors (default) */
+.web-colors() {
+alice-blue: #f0f8ff;
+amaranth: #e52b50;
+amber: #ffbf00;
+amethyst: #9966cc;
+apple-green: #8db600;
+apple-red: #be0032;
+apricot: #fbceb1;
+aquamarine: #7fffd4;
+azure: #007fff;
+baby-blue: #89cff0;
+beige: #f5f5dc;
+brick-red: #cb4154;
+black: #000000;
+blue: #0000ff;
+blue-green: #0095b6;
+blue-violet: #8a2be2;
+blush: #de5d83;
+bronze: #cd7f32;
+brown: #993300;
+burgundy: #800020;
+byzantium: #702963;
+carmine: #960018;
+cerise: #de3163;
+cerulean: #007ba7;
+champagne: #f7e7ce;
+chartreuse-green: #7fff00;
+chocolate: #7b3f00;
+cobalt-blue: #0047ab;
+coffee: #6f4e37;
+copper: #b87333;
+coral: #ff7f50;
+crimson: #dc143c;
+cyan: #00ffff;
+desert-sand: #edc9af;
+electric-blue: #7df9ff;
+emerald: #50c878;
+erin: #00ff3f;
+gold: #ffd700;
+gray: #808080;
+green: #008000;
+harlequin: #3fff00;
+indigo: #4b0082;
+ivory: #fffff0;
+jade: #00a86b;
+jungle-green: #29ab87;
+lavender: #b57edc;
+lemon: #fff700;
+lilac: #c8a2c8;
+lime: #bfff00;
+magenta: #ff00ff;
+magenta-rose: #ff00af;
+maroon: #800000;
+mauve: #e0b0ff;
+navy-blue: #000080;
+ochre: #cc7722;
+olive: #808000;
+orange: #ff6600;
+orange-red: #ff4500;
+orchid: #da70d6;
+peach: #ffe5b4;
+pear: #d1e231;
+periwinkle: #c3cde6;
+persian-blue: #1c39bb;
+pink: #ffc0cb;
+plum: #8e4585;
+prussian-blue: #003153;
+puce: #cc8899;
+purple: #6a0dad;
+raspberry: #e30b5c;
+red: #ff0000;
+red-violet: #c71585;
+rose: #ff007f;
+ruby: #e0115f;
+salmon: #fa8072;
+sangria: #92000a;
+sapphire: #0f52ba;
+scarlet: #ff2400;
+silver: #c0c0c0;
+slate-gray: #708090;
+spring-bud: #a7fc00;
+spring-green: #00ff7f;
+tan: #d2b48c;
+taupe: #483c32;
+teal: #008080;
+turquoise: #40e0d0;
+ultramarine: #3f00ff;
+violet: #8000ff;
+viridian: #40826d;
+white: #ffffff;
+yellow: #ffff00;
+}
+
+// Create your color profile.
+each(.web-colors(), {
+  .color-@{key} {
+    background-color: @value;
+  }
+  .text-color-@{key} {
+    color: @value;
+  }
+  .border-color-@{key} {
+    border-color: @value;
+  }
+  .color-@{key}-darker {
+    background-color: mix(@value,@black-point,50%);
+  }
+  .text-color-@{key}-darker {
+    color: mix(@value,@black-point,50%);
+  }
+  .border-color-@{key}-darker {
+    border-color: mix(@value,@black-point,50%);
+  }
+  .color-@{key}-greyer {
+    background-color: mix(@value,@grey-point,50%);
+  }
+  .text-color-@{key}-greyer {
+    color: mix(@value,@grey-point,50%);
+  }
+  .border-color-@{key}-greyer {
+    border-color: mix(@value,@grey-point,50%);
+  }
+  .color-@{key}-lighter {
+    background-color: mix(@value,@white-point,50%);
+  }
+  .text-color-@{key}-lighter {
+    color: mix(@value,@white-point,50%);
+  }
+  .border-color-@{key}-lighter {
+    border-color: mix(@value,@white-point,50%);
+  }
+});
