@@ -14,15 +14,21 @@ $init: 1px; @include steps(16);
 @import "${dir}/border";
 
 // Layout
-// Flexible - feel free to add your own layouts.
-// Width of bars is relative to grid and count.
-$count-of-bars: 24;
-@mixin grid(){
-  small-width: 960px;
-  medium-width: 1440px;
-  large-width: 1920px;
-  full-width: 100%;
-}
+// Flexible - feel free to add/replace with your own layouts.
+// Width of elements is relative to set and count of elements.
+$elements: 24; 
+$sets-fixed:
+576, // each elemements width in px: 24
+768, // each elemements width in px: 32
+960, // each elemements width in px: 40
+1200, // each elemements width in px: 50
+1440, // each elemements width in px: 60
+1680, // each elemements width in px: 70
+1920, // each elemements width in px: 80
+2160, // each elemements width in px: 90
+2400 // each elemements width in px: 100
+;
+$sets-fluid: 80, 90, 100;
 @import "${dir}/layout";
 
 // Margin and Padding and Min/Max Height
