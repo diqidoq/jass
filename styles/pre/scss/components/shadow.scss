@@ -1,3 +1,6 @@
+@use "sass:string";
+$override: !important;
+$black-point: #020202;
 // Box shadow reset
 .noshadow, .nsdw {
   -webkit-box-shadow: none $override;
@@ -12,11 +15,15 @@
           box-shadow: $x-axis $y-axis $blur $color;
 }
 
-$steps:2; $default:1;
+
+$shadows: "0-0-2","0-0-4","0-0-6","0-0-8","0-0-10";
 .sdw {
 @include sdw;
 }
-.sdw-2-2-2-dark {
-@include sdw(2px 2px 2px $black-point);
+
+@each $glow in $shadows { 
+  .sdw-#{$glow}-dark {
+    $value: string.split($glow, "-");
+    @include sdw(2px, 2px, 2px, $black-point);
+  }
 }
-/* @todo for each loop missing */
