@@ -1,74 +1,68 @@
-// QCSS borders © https://github.com/diqidoq/qcss under GPL 3
-
-// Border reset
 .noborder, .nb {
-  border: 0 none @override;
+  border: 0 none $override;
+}
+.solid {
+  border-style: solid $override;
+}
+.dashed {
+  border-style: dashed $override;
+}
+.double {
+  border-style: double $override;
+}
+.dotted {
+  border-style: dotted $override;
 }
 
-.border-style() {
-  border-style: solid;
-  &.solid {
-    border-style: solid @override;
+@each $unit in $border-units {
+  $value:  $unit +0px;
+  .b#{$unit} {
+    border-width: $value;
   }
-  &.dashed {
-    border-style: dashed @override;
+  .bt#{$unit} {
+    border-top-width: $value;
   }
-  &.double {
-    border-style: double @override;
+  .br#{$unit} {
+    border-right-width: $value;
   }
-  &.dotted {
-    border-style: dotted @override;
+  .bb#{$unit} {
+    border-bottom-width: $value;
+  }
+  .bl#{$unit} {
+    border-left-width: $value;
   }
 }
-
-.steps(@m, @j: 0) when (@j =< @m) {
-  .b@{j} {
-   .border-style();
-   .border-color();
-    border-width: (@init * @j) @override;
+@each $unit in $radius-units {
+  $value: $unit +0px;
+  .r#{$unit} {
+    border-radius: $value;
   }
-  .bt@{j} {
-   .border-style();
-   .border-color();
-    border-top-width: (@init * @j) @override;
+  .rt#{$unit} {
+    border-top-left-radius: $value;
+    border-top-right-radius: $value;
   }
-  .br@{j} {
-   .border-style();
-   .border-color();
-    border-right-width: (@init * @j) @override;
+  .rr#{$unit} {
+    border-top-right-radius: $value;
+    border-bottom-right-radius: $value;
   }
-  .bb@{j} {
-   .border-style();
-   .border-color();
-    border-bottom-width: (@init * @j) @override;
+  .rb#{$unit} {
+    border-bottom-left-radius: $value;
+    border-bottom-right-radius: $value;
   }
-  .bl@{j} {
-   .border-style();
-   .border-color();
-    border-left-width: (@init * @j) @override;
+  .rl#{$unit} {
+    border-top-left-radius: $value;
+    border-bottom-left-radius: $value;
   }
-  .r@{j} {
-    border-radius: (@init * @j) @override;
+  .rtr#{$unit} {
+    border-top-right-radius: $value;
   }
-  .rt@{j} {
-    border-top-left-radius: (@init * @j) @override;
-    border-top-right-radius: (@init * @j) @override;
+  .pbr#{$unit} {
+    border-bottom-right-radius: $value;
   }
-  .rb@{j} {
-    border-bottom-left-radius: (@init * @j) @override;
-    border-bottom-right-radius: (@init * @j) @override;
+  .rbl#{$unit} {
+    border-bottom-left-radius: $value;
   }
-  .rtr@{j} {
-    border-top-right-radius: (@init * @j) @override;
+  .rtl#{$unit} {
+    border-top-left-radius: $value;
   }
-  .pbr@{j} {
-    border-bottom-right-radius: (@init * @j) @override;
-  }
-  .rbl@{j} {
-    border-bottom-left-radius: (@init * @j) @override;
-  }
-  .rtl@{j} {
-    border-top-left-radius: (@init * @j) @override;
-  }
-  .steps(@m, (@j + 1));
 }
