@@ -34,6 +34,10 @@ $shadows:
 "0-2-2",
 "0-2-4"
 ;
+// Each shadow is present with and without color definition.
+// This way you can create shadows based on text color inheritance.
+// Usually you want to pass colors to shadow colors.
+// But feel free to change the color profile for shadows here.
 $shadow-colors: $colors;
 @import "${dir}/shadow";
 
