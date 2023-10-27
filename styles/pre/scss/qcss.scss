@@ -9,6 +9,34 @@ $override:;
 // Otherwise comment the components and its leading settings out (//).
 // Reduce the "step" settings to have a smaller footprint and less altering classes.
 
+// Use the first 3 items in list to define 
+// the black and white point tendency of your color profile.
+// It is recommended to use web safe color like 5599FF or 59F.
+// Expand or compress color theme like you want.
+// It is up to you how many colors you use.
+// Default is 5 color sets from dark, mid to bright.
+// c = background-color, tc = color, bc = border-color
+$colors: 
+  334, 99A, EEF, // grey
+  A18, F0C, EBF, // rose
+  15C, 69F, CDF, // blue
+  5A0, 8F0, CF9, // green
+  C05, F06, FBB, // red
+  940, D83, FED  // gold
+  ;
+@import "${dir}/color";
+
+// Shadows and Shadow Effects
+$shadows: 
+"0-0-2",
+"0-0-4",
+"0-0-6",
+"0-2-2",
+"0-2-4"
+;
+$shadow-colors: $colors;
+@import "${dir}/shadow";
+
 // Border and Radius
 $border-units: 1,2,3,4,5,6;
 $radius_units: 2,3,4,5,6,7,8,20,50,100;
@@ -36,9 +64,6 @@ $sets-fluid: 80, 90, 100;
 // Margin and Padding and Min/Max Height
 $init: 4px; $init-height: 40px; @include steps(16);
 @import "${dir}/spacing";
-
-// Shadows and Shadow Effects 
-@import "${dir}/shadow";
 
 // Helper Classes
 @import "${dir}/helper";
