@@ -1,29 +1,46 @@
 @use "sass:string";
-$override: !important;
-$black-point: #020202;
+
+@function str-split($string, $separator) {
+    // empty array/list
+    $split-arr: ();
+    // first index of separator in string
+    $index : str-index($string, $separator);
+    // loop through string
+    @while $index != null {
+        // get the substring from the first character to the separator
+        $item: str-slice($string, 1, $index - 1);
+        // push item to array
+        $split-arr: append($split-arr, #{$item}px);
+        // remove item and separator from string
+        $string: str-slice($string, $index + 1);
+        // find new index of separator
+        $index : str-index($string, $separator);
+    }
+    // add the remaining string to list (the last item)
+    $split-arr: append($split-arr, #{$string}px);
+    @return $split-arr;
+}
+
 // Box shadow reset
 .noshadow, .nsdw {
   -webkit-box-shadow: none $override;
      -moz-box-shadow: none $override;
           box-shadow: none $override;
 }
-
-// Box shadow with defaults
-@mixin sdw($x-axis: 0, $y-axis: 1px, $blur: 2px, $color: $black-point) {
-  -webkit-box-shadow: $x-axis $y-axis $blur $color;
-     -moz-box-shadow: $x-axis $y-axis $blur $color;
-          box-shadow: $x-axis $y-axis $blur $color;
-}
-
-
-$shadows: "0-0-2","0-0-4","0-0-6","0-0-8","0-0-10";
-.sdw {
-@include sdw;
-}
-
-@each $glow in $shadows { 
-  .sdw-#{$glow}-dark {
-    $value: string.split($glow, "-");
-    @include sdw(2px, 2px, 2px, $black-point);
+$i: 1;
+@each $color in $shadow-colors {
+  @each $shadow in $shadows {
+     $values: str-split($shadow, "-");
+    .sdw-#{$shadow} {
+      -webkit-box-shadow: $values;
+         -moz-box-shadow: $values;
+              box-shadow: $values;
+    }
+    .sdw-#{$shadow}-c#{$color}, .sdw-#{$shadow}-c#{$i} {
+      -webkit-box-shadow: $values ##{$color};
+         -moz-box-shadow: $values ##{$color};
+              box-shadow: $values ##{$color};
+    }
   }
+$i: $i + 1;
 }
