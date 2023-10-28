@@ -48,21 +48,22 @@ $radius_units: 2,3,4,5,6,7,8,20,50,100;
 
 // Layouts (sets - we do not use the term grid. [README])
 // Fixed and Fluid - feel free to add/replace with your own layouts.
-// Width of elements is relative to set and count of elements.
-// in/de-crease the amount of elements to create different resolutions.
-$elements: 24; 
+// Width of bars is relative to set and count of bars.
+// in/de-crease the amount of bars to create different resolutions.
+$bars: 24; // units of divisions inside
 $sets-fixed:
-576, // each elemements width in px: 24
-768, // each elemements width in px: 32
-960, // each elemements width in px: 40
-1200, // each elemements width in px: 50
-1440, // each elemements width in px: 60
-1680, // each elemements width in px: 70
-1920, // each elemements width in px: 80
-2160, // each elemements width in px: 90
-2400 // each elemements width in px: 100
+576, // each bars width in px: 24
+768, // each bars width in px: 32
+960, // each bars width in px: 40
+// 1200, // each bars width in px: 50
+1440, // each bars width in px: 60
+// 1680, // each bars width in px: 70
+1920, // each bars width in px: 80
+// 2160, // each bars width in px: 90
+// 2400 // each bars width in px: 100
 ;
 $sets-fluid: 80, 90, 100;
+$break-points: $sets-fixed;
 @import "${dir}/layout";
 
 // Margin and Padding and Min/Max Height
