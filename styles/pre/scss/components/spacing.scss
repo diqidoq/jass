@@ -1,41 +1,54 @@
-// QCSS spacing © https://github.com/diqidoq/qcss under GPL 3
-// Settings will be made in the source qcss.less
+@use 'sass:math';
 
-@for $i from 1 through $steps-spacing {
+$o: null;
+@if $override-spacing == yes {
+  $o: !important;
+}
+@for $i from 0 through $steps-spacing {
   $s: $init-spacing * $i;
   $v: $s + 0px;
-  .m#{$s} {   margin-top:     $v;
-              margin-right:   $v;
-              margin-bottom:  $v;
-              margin-left:    $v; }
-  .mt#{$s} {  margin-top:     $v; }
-  .mt-#{$s} { margin-top:    -$v; }
-  .mr#{$s} {  margin-right:   $v; }
-  .mr-#{$s} { margin-right:  -$v; }
-  .mb#{$s} {  margin-bottom:  $v; }
-  .mb-#{$s} { margin-bottom: -$v; }
-  .ml#{$s} {  margin-left:    $v; }
-  .ml-#{$s} { margin-left:   -$v; }
-  .p#{$s} {   padding-top:    $v;
-              padding-right:  $v;
-              padding-bottom: $v;
-              padding-left:   $v; }
-  .pt#{$s} {  padding-top:    $v; }
-  .pr#{$s} {  padding-right:  $v; }
-  .pb#{$s} {  padding-bottom: $v; }
-  .pl#{$s} {  padding-left:   $v; }
+  .m#{$s} {   margin-top:     $v$o;
+              margin-right:   $v$o;
+              margin-bottom:  $v$o;
+              margin-left:    $v$o; }
+  .mt#{$s} {  margin-top:     $v$o; }
+  .mt-#{$s} { margin-top:    -$v$o; }
+  .mr#{$s} {  margin-right:   $v$o; }
+  .mr-#{$s} { margin-right:  -$v$o; }
+  .mb#{$s} {  margin-bottom:  $v$o; }
+  .mb-#{$s} { margin-bottom: -$v$o; }
+  .ml#{$s} {  margin-left:    $v$o; }
+  .ml-#{$s} { margin-left:   -$v$o; }
+  .p#{$s} {   padding-top:    $v$o;
+              padding-right:  $v$o;
+              padding-bottom: $v$o;
+              padding-left:   $v$o; }
+  .pt#{$s} {  padding-top:    $v$o; }
+  .pr#{$s} {  padding-right:  $v$o; }
+  .pb#{$s} {  padding-bottom: $v$o; }
+  .pl#{$s} {  padding-left:   $v$o; }
+}
+
+$o: null;
+@if $override-sizing == yes {
+  $o: !important;
 }
 @for $i from 1 through $steps-sizing {
   $s: $init-sizing * $i;
-  $v: $s + px;
-  .h#{$s} {    height:     $v; }
-  .w#{$s} {    width:      $v; }
-  .hmin#{$s} { min-height: $v; }
-  .wmin#{$s} { min-width:  $v; }
-  .hmax#{$s} { max-height: $v; }
-  .wmax#{$s} { max-width:  $v; }
+  $v: $s + 0px;
+  .h#{$s} {    height:     $v$o; }
+  .w#{$s} {    width:      $v$o; }
+  .hmin#{$s} { min-height: $v$o; }
+  .wmin#{$s} { min-width:  $v$o; }
+  .hmax#{$s} { max-height: $v$o; }
+  .wmax#{$s} { max-width:  $v$o; }
 }
-.whalf { width:  50%;  }
-.hhalf { height: 50%;  }
-.wfull { width:  100%; }
-.hfull { height: 100%; }
+@each $p in $sizing-relative {
+  $v: $p * 1%;
+  .h#{$p}th {    height:     $v$o; }
+  .w#{$p}th {    width:      $v$o; }
+  .hmin#{$p}th { min-height: $v$o; }
+  .wmin#{$p}th { min-width:  $v$o; }
+  .hmax#{$p}th { max-height: $v$o; }
+  .wmax#{$p}th { max-width:  $v$o; }
+}
