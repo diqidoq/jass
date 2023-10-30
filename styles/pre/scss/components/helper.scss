@@ -31,3 +31,26 @@
 .oh, .overflow-hidden {
   overflow: hidden !imporant;
 }
+
+.inline, .di {
+  display: inline;
+}
+
+.fl {
+  float: left;
+}
+
+.fr {
+  float: right;
+}
+
+.cfx, .clearfix {
+  display: block !important;
+  clear: both !important;
+  float: none !important;
+  &::after {
+    content: " ";
+    clear: both !important;
+    display: table !important;
+  }
+}
