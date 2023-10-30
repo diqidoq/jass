@@ -1,34 +1,41 @@
 // QCSS spacing © https://github.com/diqidoq/qcss under GPL 3
 // Settings will be made in the source qcss.less
 
-for $i from 1 through $steps {
-  $spacing: $init-spacing * $i + 0px $override;
-  .m#{$i} {   margin-top:     $spacing;
-              margin-right:   $spacing;
-              margin-bottom:  $spacing;
-              margin-left:    $spacing; }
-  .mt#{$i} {  margin-top:     $spacing; }
-  .mt-#{$i} { margin-top:    -$spacing; }
-  .mr#{$i} {  margin-right:   $spacing; }
-  .mr-#{$i} { margin-right:  -$spacing; }
-  .mb#{$i} {  margin-bottom:  $spacing; }
-  .mb-#{$i} { margin-bottom: -$spacing; }
-  .ml#{$i} {  margin-left:    $spacing; }
-  .ml-#{$i} { margin-left:   -$spacing; }
-  .p#{$i} {   padding-top:    $spacing;
-              padding-right:  $spacing;
-              padding-bottom: $spacing;
-              padding-left:   $spacing; }
-  .pt#{$i} {  padding-top:    $spacing; }
-  .pr#{$i} {  padding-right:  $spacing; }
-  .pb#{$i} {  padding-bottom: $spacing; }
-  .pl#{$i} {  padding-left:   $spacing; }
-
-  $size: $init-sizing * $i + 0px @override;
-  .h#{$i} {    height:     $size; }
-  .w#{$i} {    width:      $size; }
-  .minh#{$i} { min-height: $size; }
-  .minw#{$i} { min-width:  $size; }
-  .maxh#{$i} { max-height: $size; }
-  .maxw#{$i} {  max-width: $size; }
+@for $i from 1 through $steps-spacing {
+  $s: $init-spacing * $i;
+  $v: $s + 0px;
+  .m#{$s} {   margin-top:     $v;
+              margin-right:   $v;
+              margin-bottom:  $v;
+              margin-left:    $v; }
+  .mt#{$s} {  margin-top:     $v; }
+  .mt-#{$s} { margin-top:    -$v; }
+  .mr#{$s} {  margin-right:   $v; }
+  .mr-#{$s} { margin-right:  -$v; }
+  .mb#{$s} {  margin-bottom:  $v; }
+  .mb-#{$s} { margin-bottom: -$v; }
+  .ml#{$s} {  margin-left:    $v; }
+  .ml-#{$s} { margin-left:   -$v; }
+  .p#{$s} {   padding-top:    $v;
+              padding-right:  $v;
+              padding-bottom: $v;
+              padding-left:   $v; }
+  .pt#{$s} {  padding-top:    $v; }
+  .pr#{$s} {  padding-right:  $v; }
+  .pb#{$s} {  padding-bottom: $v; }
+  .pl#{$s} {  padding-left:   $v; }
 }
+@for $i from 1 through $steps-sizing {
+  $s: $init-sizing * $i;
+  $v: $s + px;
+  .h#{$s} {    height:     $v; }
+  .w#{$s} {    width:      $v; }
+  .hmin#{$s} { min-height: $v; }
+  .wmin#{$s} { min-width:  $v; }
+  .hmax#{$s} { max-height: $v; }
+  .wmax#{$s} { max-width:  $v; }
+}
+.whalf { width:  50%;  }
+.hhalf { height: 50%;  }
+.wfull { width:  100%; }
+.hfull { height: 100%; }
