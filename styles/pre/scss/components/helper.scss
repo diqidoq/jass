@@ -4,17 +4,22 @@
   display: block;
 }
 
-.center-y-parent {
+.center-y-parent, .pos-relative, .rel {
   position: relative;
 }
 
-.center-y {
+.pos-absolute, .abs {
   position: absolute;
+}
+
+.pos-fixed, .fxd {
+  position: fixed;
+}
+
+.center-y {
+  position: absolute; // requires parent to be pos-relative
   top: 50% $override;
   transform: translateY(-50%);
-}
-.pos-relative, .rel {
-  position: relative;
 }
 
 .fontsize-inherit, .fsi {
