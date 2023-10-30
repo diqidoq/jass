@@ -1,29 +1,33 @@
 .center-x {
-  margin: 0 auto $override;
-  float: none $override;
+  margin: 0 auto;
+  float: none;
+  display: block;
 }
 
 .center-y-parent {
-  position: relative $override;
+  position: relative;
 }
 
 .center-y {
-  position: absolute $override;
+  position: absolute;
   top: 50% $override;
-  transform: translateY(-50%) $override;
+  transform: translateY(-50%);
 }
 .pos-relative, .rel {
-  position: relative $override;
+  position: relative;
 }
 
 .fontsize-inherit, .fsi {
-  font-size: inherit $override;
+  font-size: inherit;
 }
 
 .text-weight-normal, .txtn {
-  font-weight: normal $override;
+  font-weight: normal;
 }
 
 .text-weight-bold, .txtb {
-  font-weight: bold $override;
+  font-weight: bold;
+}
+.oh, .overflow-hidden {
+  overflow: hidden !imporant;
 }
