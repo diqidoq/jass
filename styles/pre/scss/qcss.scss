@@ -67,7 +67,10 @@ $break-points: $sets-fixed;
 @import "${dir}/layout";
 
 // Margin & Padding and Min/Max Height/Width helper classes
-$init-spacing: 4px; $init-sizing: 40px; @include steps(16);
+$init-spacing: 2;
+$init-sizing: 50; 
+$steps-spacing: 16; 
+$steps-sizing: 8;
 @import "${dir}/spacing";
 
 // Helper Classes
