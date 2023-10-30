@@ -66,8 +66,8 @@ $sets-fluid: 80, 90, 100;
 $break-points: $sets-fixed;
 @import "${dir}/layout";
 
-// Margin and Padding and Min/Max Height
-$init: 4px; $init-height: 40px; @include steps(16);
+// Margin & Padding and Min/Max Height/Width helper classes
+$init-spacing: 4px; $init-sizing: 40px; @include steps(16);
 @import "${dir}/spacing";
 
 // Helper Classes
