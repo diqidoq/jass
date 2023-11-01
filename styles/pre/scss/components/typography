@@ -1,0 +1,27 @@
+$font-sizes: 7,8,9,10,11,12,14,16,18,20,22;
+@each $fs in $font-sizes {
+  .fs#{$fs} {
+    font-size: $fs + 0px;
+  }
+}
+
+.fsi { font-size: inherit !important;}
+
+.bold {
+  font-weight: bold;
+}
+
+.italic {
+  font-style: italic;
+}
+
+$letter-spacing: 1,2,3,4,5;
+@each $fls in $letter-spacing {
+  .fls#{$fls} {
+    letter-spacing: $fls + 0px;
+  }
+}
+
+.tal {text-align: left !important;}
+.tar {text-align: right !important;}
+.tac {text-align: center !important;}
