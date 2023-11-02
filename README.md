@@ -1,7 +1,8 @@
 # JASS | _play Jasm CSS conducted by SASS._
-<sup> Development started in 2012 formerly named QCSS (with LESS), first released in 2015 and refactored to JASS (with SASS) in 2023. Supported by www.maroqqo.com </sup>
+<sup> Development started in 2012 formerly named QCSS (with LESS), first released in 2015 and refactored to JASS (with SASS) in 2023.
+**Supported by www.maroqqo.com** </sup>
 
- > _Stop learning frameworks. Start building web apps._ :+1:
+ > _Stop learning frameworks. Stop hacking styles. Start building web apps._ :+1:
 
 A simple utility first type of "describe your style as class" CSS framework with no stylesheet editing and no recompiling for new themes in mind. Refactored in 2023 and renamed to JASS to keep being cross browser compatible down  to 2009 while using SASS (SCSS) for the generator. As an easy out-of-the-box styling layer from the bottom up by using a creative class group naming approach easy to learn and to reuse for each project.
 
