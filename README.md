@@ -1,5 +1,5 @@
 # JASS | _play Jasm CSS conducted by SASS._
-<sup> Development started in 2012 formerly named QCSS (with LESS), first released in 2015 and refactored to JASS (with SASS) in 2023.
+<sup> Development started in 2012 formerly named QCSS (with LESS), first released in 2015 and refactored to JASS (with SASS) in 2023.<br>
 **Supported by www.maroqqo.com** </sup>
 
  > _Stop learning frameworks. Stop hacking styles. Start building web apps._ :+1:
