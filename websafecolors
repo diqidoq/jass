@@ -1,8 +1,58 @@
 #!/bin/bash
-for r in 0 3 6 9 c f ; do
-  for g in 0 3 6 9 c f ; do
-    for b in 0 3 6 9 c f ; do
-      echo "<div style='background-color:#$r$g$b'><code>#$r$g$b</code></div>"
-    done
-  done
+
+build-websafe-colors() {
+cat<<EOF
+<!DOCTYPE html>
+  <html lang="en">
+  <head>
+    <title>Web-safe colors</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+<style>
+div {
+  padding-bottom: 1em;
+}
+
+code {
+  background-color: black;
+  color: white;
+}
+
+@media only screen and (min-width:600px) {
+
+body {
+  display: grid;
+  grid-template-columns: repeat(6,1fr);
+  column-gap: 1em;
+  row-gap: 1em;
+}
+
+div {
+  padding-bottom: 3em;
+}
+
+}
+  </style>
+</head>
+</body>
+EOF
+
+for r in 0 1 2 3 4 5 6 7 8 9 a b c d e f ; do
+for g in 0 1 2 3 4 5 6 7 8 9 a b c d e f ; do
+for b in 0 1 2 3 4 5 6 7 8 9 a b c d e f ; do
+
+echo "<div
+style='background-color:#$r$g$b'><code>#$r$g$b</code></div>"
+
 done
+done
+done
+
+cat<<EOF
+
+</body>
+</html>
+EOF
+}
+
+build-websafe-colors > websafecolors.html
