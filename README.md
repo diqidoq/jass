@@ -23,33 +23,17 @@ List of developers who have helped:
 
 Requirements
 ------------
-None. (for CSS only)
+None.
 
 Optional requirements
 ---------------------
-If you do not want to use the prebuild CSS you can recompile it with LESS and in future also with SCSS (@todo). Example package list for LESS compiling:
-
- + Less (lessc) 
- + uglifycss (or similar)
- + less plugin clean-css
- + less plugin Autoprefixer
- + less plugin lists
-
-Which can be installed with npm like:
-
-```
-npm install -g uglifycss
-npm install -g less
-npm install -g less-plugin-clean-css
-npm install -g less-plugin-autoprefixer
-npm install -g less-plugin-lists
-```
+If you do not want to use the prebuild CSS you can recompile JASS with SCSS (SASS). 
 
 Why
 ---
- > Stop learning Frameworks. Start building web apps. 
+ > Stop learning Frameworks. Stop  hacking styles. Start building web apps. 
 
-Go back to the basics and write HTML with understandable classes to exactly know what you do and how to change it. Make your work independend from nested dependencies which can break your build from the bottom up. Use the HTML class attribute what it is made for. Or better sad: what it is intended for today. And use it much, and right. While classes usually have been intended to be what the name suggests: classes (groups), the simple grouping of similar styled elements turned to become limited for modern and complex mobile web. A class name like _headers_ do not tell enough today. And there can be very different _headers_ reacting different on narrowed mobile devices. You also have to go back to the headers section of your CSS to know what styles you do have used for it and to check of other things which have caused the unwanted look. That's why classes became more and more cluttered and confusing labels and frameworks started to misuse it and the nesting of html elements in combination of classes made the HTML almost unreadable. Today, classes should still be used what they are made for. But in an extended manner. Not to group such like _headers_ but such like _styles_. And voila you get a _header_ like this `<header class="fs2 b1 m1 maxh2"></header>` and you will know by reading the HTML that it has a font size of x2 and a minimal border, a minimal margin and a max-height of x2.
+Go back to the basics and write HTML with understandable classes or their shorthands to exactly know what you do and how to change it while keep being on the HTML side. Make your work independend from nested dependencies which can break your build from the bottom up. Use the HTML class attribute what it is made for. Or better sad: what it is intended for today. And use it much, and right. While classes usually have been intended to be what the name suggests: classes (groups), the simple grouping of similar styled elements turned to become limited for modern and complex mobile web. A class name like _headers_ do not tell enough today. And there can be very different _headers_ reacting different on narrowed mobile devices. You also have to go back to the headers section of your CSS to know what styles you do have used for it and to check of other things which have caused the unwanted look. That's why classes became more and more cluttered and confusing labels and frameworks started to misuse it and the nesting of html elements in combination of classes made the HTML almost unreadable. Today, classes should still be used what they are made for. But in an extended manner. Not to group such like _headers_ but such like _styles_. And voila you get a _header_ like this `<header class="fs2 b1 m1 maxh2"></header>` and you will know by reading the HTML that it has a font size of x2 and a minimal border, a minimal margin and a max-height of x2.
 
 QCSS keeps its concept independed from any other and can perfectly get integrated into other concepts because of its smart $override variable creating sheets with !important automatically for you. And you can do the so called "sliding" changes rapidly by changing numbers in classes. Without revamping the whole LESS/SASS stack or other concepts which need many additional concept overthinking while editing. These big frameworks rather behaving like apps by creating (doubtless helpful) additonal layers all have the one big disadvantage that they suffer from: the ability to keep up consistency and colligation when making direct minimalist changes in a little corner of a project or when "unchaining" of style groups is needed. QCSS uses a simple but smart class group concept (as one of the first in the web!) ;-). Easy to remember (after some working with it). And simple to define. And you always know what comes from where. 
 
