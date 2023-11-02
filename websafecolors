@@ -1,0 +1,8 @@
+#!/bin/bash
+for r in 0 3 6 9 c f ; do
+  for g in 0 3 6 9 c f ; do
+    for b in 0 3 6 9 c f ; do
+      echo "<div style='background-color:#$r$g$b'><code>#$r$g$b</code></div>"
+    done
+  done
+done
