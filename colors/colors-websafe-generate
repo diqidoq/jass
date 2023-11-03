@@ -37,6 +37,6 @@ cat <<EOF
 </html>
 EOF
 
-} >> websafecolors.html 2>&1
+} >> colors-websafe-demo.html 2>&1
 
 buildwebsafecolors
