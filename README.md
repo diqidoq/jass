@@ -11,7 +11,7 @@ A simple utility first type of _"describe your style as class"_ CSS framework wi
 
 Development status
 ------------------
-In the first time it was more an _"officially available but rather for our own use created project"_. Now I am more after making it production ready _"for all of us"_. So we started to make it more and more officially working lately because of the growing interest which surprised me. So the chance is high that you can use components already perfectly for your next project wihtout flaws.
+In the first time it was more something like _"public available, but rather for own use created project"_. Lately I started to make it more production ready _"for all of us"_. The reason therefor is the growing interest out htere. Which surprised me.
 
 Credits
 -------
