@@ -11,7 +11,7 @@ A simple utility first type of _"describe your style as class"_ CSS framework wi
 
 Development status
 ------------------
-I keep it in early **alpha** state because I do not like unfullfilled promises. We use it already in production but with custom tweaks on each project. But a more generally usable base version is not ready yet. See the [milestones](https://github.com/diqidoq/qcss/milestones) if you are willing to help.
+In the first time it was more an _"officially available but rather for our own use created project"_. Now I am more after making it production ready _"for all of us"_. So we started to make it more and more officially working lately because of the growing interest which surprised me. So the chance is high that you can use components already perfectly for your next project wihtout flaws.
 
 Credits
 -------
@@ -27,62 +27,54 @@ None.
 
 Optional requirements
 ---------------------
-If you do not want to use the prebuild CSS you can recompile JASS with SCSS (SASS). 
+If you do not want to use the prebuild CSS or need to change some of the settings we provide per default, you can recompile with SCSS (SASS). All you need to do is to edit the jass.scss file. Make sure you use latest SASS with most of the additional modules so that arrays, lists, conditions etc. work well. https://sass-lang.com/install
 
-Why
----
- > Stop learning Frameworks. Stop  hacking styles. Start building web apps. 
+How to use. And why JASS?
+-------------------------
 
-Go back to the basics and write HTML with understandable classes or their shorthands to exactly know what you do and how to change it while keep being on the HTML side. Make your work independend from nested dependencies which can break your build from the bottom up. Use the HTML class attribute what it is made for. Or better sad: what it is intended for today. And use it much, and right. While classes usually have been intended to be what the name suggests: classes (groups), the simple grouping of similar styled elements turned to become limited for modern and complex mobile web. A class name like _headers_ do not tell enough today. And there can be very different _headers_ reacting different on narrowed mobile devices. You also have to go back to the headers section of your CSS to know what styles you do have used for it and to check of other things which have caused the unwanted look. That's why classes became more and more cluttered and confusing labels and frameworks started to misuse it and the nesting of html elements in combination of classes made the HTML almost unreadable. Today, classes should still be used what they are made for. But in an extended manner. Not to group such like _headers_ but such like _styles_. And voila you get a _header_ like this `<header class="fs2 b1 m1 maxh2"></header>` and you will know by reading the HTML that it has a font size of x2 and a minimal border, a minimal margin and a max-height of x2.
+ > Stop learning Frameworks. Stop  hacking styles. Start building web apps.
 
-QCSS keeps its concept independed from any other and can perfectly get integrated into other concepts because of its smart $override variable creating sheets with !important automatically for you. And you can do the so called "sliding" changes rapidly by changing numbers in classes. Without revamping the whole LESS/SASS stack or other concepts which need many additional concept overthinking while editing. These big frameworks rather behaving like apps by creating (doubtless helpful) additonal layers all have the one big disadvantage that they suffer from: the ability to keep up consistency and colligation when making direct minimalist changes in a little corner of a project or when "unchaining" of style groups is needed. QCSS uses a simple but smart class group concept (as one of the first in the web!) ;-). Easy to remember (after some working with it). And simple to define. And you always know what comes from where. 
+Every CSS class is a combination of a main group identifier optional with a direction followed by a positive or negative (-) value. Each class exist as shorthand and as most readable version corresponding directly to the CSS property.
+
+Examples:
+
+    b = border, m = margin, p = padding, r = radius, s = shadow, w = width, h = height
+    <div class="b1 solid m20 pt10 s-2-2-8-333"> works exactly the same like <div class="border1 border-style-solid margin20 paddingtop10 shadow-2-2-8-333">
+    which corresponds to CSS like: margin: 20px; padding-top: 10px; border-width: 1px; border-style: solid; box-shadow: 2px 2px 8px #333
+
+All classes are available by useful increasing or decreasing values defined in the settings, and which can be changed for the own most common values or own rythm.
+
+And why JASS?
+
+Think twice before you decide on what Web is good for and how much time you want to invest. And how many dependencies you can manage over the years. Go back to the basics and write HTML with understandable classes or their shorthands to exactly know what you do and how to change it while keep being on the HTML side. Make your work independend from nested dependencies. Use the HTML class attribute what it is made for. Or better sad: what it is intended for today. And use it much, and right. While classes usually have been intended to be what the name suggests: classes (groups), the simple grouping of similar styled elements turned out to become limited for modern and complex mobile web. A class name like _headers_ do not tell enough today. And there can be very different _headers_ reacting different on narrowed mobile devices. You also have to go back to the headers section of your CSS to know what styles you do have used for it and to check of other things which have caused the unwanted look. That's why classes became more and more cluttered and confusing labels. And frameworks started to misuse it and the nesting of html elements in combination of classes made the HTML almost unreadable. Today, classes should still be used what they are made for. But in an extended manner. Not to group such like _headers_ but such like _styles_. And voila you get a _header_ like this `<header class="fontsize12 border1 margin10 hmax250"></header>` or in short `<header class="fsz12 b1 m1 hmax250"></header>` and you will know by reading the HTML that it has a font size of 12px and a border of 1px, a margin of 10px and a max-height of 250px.
+
+JASS keeps its concept independed from any other framework and avoids to make you depending on following JASS development. It is a ready to go and forget solution. And can perfectly get integrated into other concepts because of its smart $override variable creating component divided sheets with !important automatically for you, if you want it (disabled by default). And you can do the so called "sliding" changes rapidly by changing numbers in classes. Without revamping the whole LESS/SASS stack or other concepts which need many additional concept overthinking while editing. These big frameworks rather behaving like apps by creating (doubtless helpful) additonal layers all have the one big disadvantage that they suffer from: the ability to keep up consistency and colligation when making direct minimalist changes in a little corner of a project or when "unchaining" of style groups is needed. JASS uses a simple but smart class group concept (as one of the first in the web!) ;-). Easy to remember (after some working with it). And simple to define. And you always know what comes from where and can be re-generated in the way you like it.
 
 As I have often stated *"Do not put more on the table than you can eat."* or *"Don't chain longer than you'll be able to survey."*
 
-Read stories like [this](https://qz.com/646467/how-one-programmer-broke-the-internet-by-deleting-a-tiny-piece-of-code/) to undestand what minimalists like me and low level enthusiasts like emacs and vim users come from and why they often take up position against overblown GUI applications, too long chains of depending software and non CoC designed code.
+Read stories like [this](https://qz.com/646467/how-one-programmer-broke-the-internet-by-deleting-a-tiny-piece-of-code/) to undestand what minimalists like me and low level enthusiasts like emacs and vim users come from and why they often take up position against overblown and grown hogs, too long chains of depending software and non CoC designed code.
 
-QCSS partly uses the KISS and CoC principle in the way that you only alter the overall look in the grouped css, while you alter the affecting parts the good old way: by only changing the regarding classes in html.
+JASS partly uses the KISS and CoC principle in the way that you only alter the overall look in the grouped css, while you alter the affecting parts the good old way: by only changing the regarding classes in html.
 
 Inspired by the low level enthusiasts, the prior goal was to keep the creating, editing and after all the altering of the look of an html output as minimlistic and independend from any other "tools" as possible (chime in, change a nitpick and go) without losing too much of the advantages of all these fancy "tools" out there, triggered by the experience that many of the new fancy web development stuff becomes old very soon or changes their concept very often and keeps web dev teams always hussling with them rendering their advantages obsolete again.
 
-What QCSS tries to avoid
+What JASS tries to avoid
 ------------------------
 
 ### Short
-**No** Javascript | **No** SVG | **No** custom CSS --var | **No** display:grid or flex
-Full cross browser compatibility including IE 8 / 9 and below. Yes there are pure people out there, please beware this.
+**No** Javascript, **No** SVG support, **No** custom CSS --variables, **No** display:grid or flex, **No** ignorance against users of old browsers out there.
 
 ### Long
-1. QCSS do not use Javascript. A CSS framework should not use Javascript. Period. It uses smart CSS only solutions for the common Javasript parts like popups or other hidden/toggle features by using hidden checkboxes. Same goes for animations which can be perfectly integrated with Animate.css
-2. Yes, QCSS is using external libraries as extension in the _full out of the box package_ of the framework, like fontawesome icons and such, but it do not uses the latest "hot" things for the very important reason to be backwards compatible as much as possible. We should not forget that not all people in the world have access to the latest and most modern browsers and powerful laptops or smartphones. That means that we carefully check the _CAN I USE_ sites and if there is too much red, we avoid it.
-3. So, that means, SVG (as much as I like it personally a lot and work with it a lot) will not be used or linked to in QCSS. Of course you are free to use it with QCSS in your modified package.
-4. QCSS do not use custom CSS properties (--var). For us it is absolutely NOT understandable why using such not 98% compatible feature when a CSS framework has been compiled by preprocessors, which have been made exactly for that purpose?
+JASS will try to keep full cross browser compatibility including IE 8 / 9 and below and will provide CSS alternative solutions for common Javascript parts (like mobile nav, popup, etc.). Yes, you read right. There are pure people out there, please beware this. And there are still people out there disabling Javascript. And all you fighters against Browser flaws: There is no need to fight old browsers no more by pushing modern technologies. Because all modern browsers follow new technologies already. And this is great! I love all the new and often better possibilities of modern browsers. But there are browsers out there not developed no more but still used in pure corners of the world and I am not willing to ignore them. You care about accessibility? Then you should worry about those too. Just for an example: For me 1% or 2% of the world is still too much to ignore: Go and read [CAN I USE "flex"](https://caniuse.com/?search=flex)
+
+1. Why JASS do not use Javascript? A CSS(!) framework should not use Javascript. Period. It uses smart CSS only solutions for the common Javasript parts like popups or other hidden/toggle features by using hidden checkboxes. Same goes for animations which can be perfectly integrated with Animate.css - And while this is not supported by old browser it is not mandatory to make JASS work. And since JASS is component based you are free to disable them and use other JS based tools instead.
+2. JASS tries to be backwards compatible as much as possible. Again: We should not forget that not all people in the world have access to the latest and most modern browsers and powerful laptops or smartphones. That means that we carefully check the _CAN I USE_ sites and if there is too much red, we try avoiding it or only use it in not mandatory corners without breaking if not supported.
+3. So, that means, SVG (as much as I like it personally a lot and work with it a lot) will not be used or linked to in JASS. Of course you are free to use it with it in your modified package.
+4. JASS do not use custom CSS properties (--var). For us it is absolutely NOT understandable why using such not backwards compatible feature when a CSS framework has been compiled by preprocessors, which have been made exactly for that purpose?
+5. And last but not least a maybe shocking news for you: Out of the box JASS provides only websafe 3digit hex color code classes without opacity. You may say: _"Oh how can I have all the wonderful shaded color tunes I usually use then? This reads old fashioned."_ Well, let me tell you as somebody who works as a photographer, as a cinematographer, as a colorist and often even as a designer in the most modern scenarios: They tricked you. The new toys just make you lazy. Think one more time: how many colors and shades of them do you have in mind in that moment? And are you sure that you need transparency to blend them against the background? Really? Did you know that transparency makes scrolling very CPU hungry? Do you know how many colors you can generate from just 3 digits in 16 steps (0-F) variations? From #000 to #FFF? Well check out our websafecolor generator included in this package and you will be surprised. It is OVER 4000(!) color shades. And if you are not able to use them right to create the same effects which you solve today by using rgba, well, ... then maybe _it is not the tool, but the user_. And web safe colors garantee you the most compatibility and same look on all screens. Beware: the big impressive painters of the last centuries had only 10-50 colors they have produced from flowers and spice etc. You know have over 4000!
 
  > _You think a far way backwards compatible CSS framework without Javascript and without latest CSS gimmigs can't strike? Yeah, that's what they tell you. Check our example pages upcoming soon._
 
-Roadmap
--------
-We want to see where it goes and if it expands well after further development and maybe some contribution of other ideas. We agree about that if it does not work out well, we accept the missed challenge. But until then we will try our best.
-
-How to use
-----------
-Every CSS class is a combination of a main group identifier and optional with a direction and a positive or negative (-) value.
-
-    b = border, m = margin, p = padding, r = radius, s = shadow, w = width, h = height
-    followed by a number = positive value in the rhythm
-    or followed by - minus and a number = negative number of steps in the rhythm
-
-### HTML code example
-
-All classes have increasing numbers indicating the steps of increasing or decreasing values. Like m1 = margin step 1 (6px). These steps and how much steps exist can all be changed in the settings if you want to recomile QCSS.
-
-A html div element with a 1-step margin, padding and a 1-step thick and 3px radius wide rounded border.
-
-    <div class="m1 p1 b1 r3"></div>
- 
-A html div element with a negative margin-right, padding-left and a 2px thick border and 4px wide radius rounded.
-
-    <div class="mr-1 pl1 b2 r4"></div>
  
 Licensed under GPL 3 since 2012 under crediting the original author
 ---------------------------------------------------------------------
