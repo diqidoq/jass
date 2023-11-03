@@ -1,14 +1,24 @@
 $font-sizes: 7,8,9,10,11,12,14,16,18,20,22;
-@each $fs in $font-sizes {
-  .fs#{$fs} {
-    font-size: $fs + 0px;
+@each $fsz in $font-sizes {
+  .fontsize#{$fsz}, .fsz#{$fsz} {
+    font-size: $fsz + 0px;
   }
 }
+.fsz-ih { font-size: inherit;}
 
-.fsi { font-size: inherit !important;}
-
-.tb, .bold, .txtb {
-  font-weight: bold;
+.fwt {
+ &100  { font-weight: normal; font-weight: 100; }
+ &200  { font-weight: normal; font-weight: 200; }
+ &300  { font-weight: normal; font-weight: 300; }
+ &400, &n { font-weight: normal; font-weight: 400; }
+ &500  { font-weight: normal; font-weight: 500; }
+ &600  { font-weight: bold;   font-weight: 600; }
+ &700, &b { font-weight: bold;   font-weight: 700; }
+ &800  { font-weight: bold;   font-weight: 800; }
+ &900  { font-weight: bold;   font-weight: 900; }
+ &lr   { font-weight: lighter; }
+ &br   { font-weight: bolder; }
+ &-ih  { font-weight: inherit; }
 }
 
 .ti, .italic, .txti {
