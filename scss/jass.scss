@@ -7,19 +7,36 @@ $dir: "components/"
 
 // Use the first 3 items in list to define 
 // the black and white point tendency of your color profile.
-// It is recommended to use web safe color like 5599FF or 59F.
+// It is recommended to use web safe colors like 5599FF or 59F.
 // Expand or compress color theme like you want.
 // It is up to you how many colors you use.
-// Default is 5 color sets from dark, mid to bright.
+// Default is a preset of 5 color sets from dark, mid to bright.
 // c = background-color, tc = color, bc = border-color
-$colors: 
-  334, 99A, EEF, // grey
-  A18, F0C, EBF, // rose
-  15C, 69F, CDF, // blue
-  5A0, 8F0, CF9, // green
-  C05, F06, FBB, // red
-  940, D83, FED  // gold
+// Or enable full websafe color stack for testing.
+$enable-websafe-colors-fullstack: no; // 4100 3hex colors!
+$enable-websafe-colors-preset: yes; // recommended
+
+@if $enable-websafe-colors-preset == yes {
+  // Choose your ready websafe color preset
+  $websafe-colors-preset: 
+    334, 99A, EEF, // grey & blackpoint
+    A18, F0C, EBF, // rose
+    15C, 69F, CDF, // blue
+    5A0, 8F0, CF9, // green
+    C05, F06, FBB, // red
+    940, D83, FED  // gold
   ;
+}
+
+@if $enable-websafe-colors-fullstack == yes {
+  // Or make a full stack of websafe colors available by
+  // uncommenting here & choose the hex steps of each channel.
+  // Beware that the full list is over 4000! hex codes.
+  $red: (0 1 2 3 4 5 6 7 8 9 A B C D E F);
+  $green: (0 1 2 3 4 5 6 7 8 9 A B C D E F);
+  $blue: (0 1 2 3 4 5 6 7 8 9 A B C D E F);
+}
+
 $override: no; /* yes/no > !important */
 @import "${dir}/color";
 
