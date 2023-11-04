@@ -5,9 +5,6 @@
 @use "sass:meta";
 @use "sass:selector";
 
-// choose where the different LESS components are located.
-$dir: "components";
-
 // Choose the components you want to use. Don't mix the order of setting lines.
 // Otherwise comment the components and its leading settings out (//).
 // Reduce the "step" settings to have a smaller footprint and less altering classes.
@@ -23,7 +20,7 @@ $dir: "components";
 $enable-websafe-colors-fullstack: no; // 4100 3hex colors!
 $enable-websafe-colors-preset: yes; // recommended
 
-@if $enable-websafe-colors-preset == yes {
+// @if $enable-websafe-colors-preset == yes {
   // Choose your ready websafe color preset
   $websafe-colors-preset: 
     334, 99A, EEF, // grey & blackpoint
@@ -33,19 +30,19 @@ $enable-websafe-colors-preset: yes; // recommended
     C05, F06, FBB, // red
     940, D83, FED  // gold
   ;
-}
+// }
 
-@if $enable-websafe-colors-fullstack == yes {
+// @if $enable-websafe-colors-fullstack == yes {
   // Or make a full stack of websafe colors available by
   // uncommenting here & choose the hex steps of each channel.
   // Beware that the full list is over 4000! hex codes.
   $red: (0 1 2 3 4 5 6 7 8 9 A B C D E F);
   $green: (0 1 2 3 4 5 6 7 8 9 A B C D E F);
   $blue: (0 1 2 3 4 5 6 7 8 9 A B C D E F);
-}
+// }
 
 $override: no; /* yes/no > !important */
-@import "#{$dir}/color";
+@import "color";
 
 // Shadows and Shadow Effects
 $shadows: 
@@ -61,13 +58,13 @@ $shadows:
 // But feel free to change the color profile for shadows here.
 $shadow-colors: $websafe-colors-preset;
 $override: no; /* yes/no > !important */
-@import "#{$dir}/shadow";
+@import "shadow";
 
 // Border and Radius
 $border-width-units: 1,2,3,4,5,6,10,20;
 $border-radius_units: 2,3,4,5,6,7,8,20,50,100;
 $override: no; /* yes/no > !important */
-@import "#{$dir}/border";
+@import "border";
 
 // Layouts (sets - we do not use the term grid. [README])
 // Fixed and Fluid - feel free to add/replace with your own layouts.
@@ -88,7 +85,7 @@ $sets-fixed:
 $sets-fluid: 80, 90, 100;
 $break-points: $sets-fixed;
 $override: no; /* yes/no > !important */
-@import "#{$dir}/layout";
+@import "layout";
 
 // Margin & Padding and Min/Max Height/Width helper classes
 $override-spacing: no;
@@ -99,7 +96,7 @@ $steps-spacing: 16;
 $steps-sizing: 8;
 $sizing-relative: 25,50,75,100; // %
 $override: no; /* yes/no > !important */
-@import "#{$dir}/spacing";
+@import "spacing";
 
 // Helper Classes
-@import "${dir}/helper";
+@import "helper";

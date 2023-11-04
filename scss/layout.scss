@@ -5,7 +5,7 @@ $o: null;
 
 [class*="set"], [class*="inside-bar"] {
   margin: 0 $o;
-  padding: 0; $o
+  padding: 0 $o;
 }
 
 $elements: 24;
