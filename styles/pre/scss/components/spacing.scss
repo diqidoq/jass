@@ -4,6 +4,7 @@ $o: null;
 @if $override-spacing == yes {
   $o: !important;
 }
+
 @for $i from 0 through $steps-spacing {
   $s: $init-spacing * $i;
   $v: $s + 0px;
