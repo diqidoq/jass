@@ -1,61 +1,56 @@
+$o: null;
+@if $override == yes {
+  $o: !important;
+}
+
 .center-x {
-  margin: 0 auto !important;
-  float: none !important;
-  display: block !important;
+  margin: 0 auto $o;
+  float: none $o;
+  display: block $o;
 }
 
 .center-y-parent, .pos-relative, .rel {
-  position: relative;
+  position: relative $o;
 }
 
 .pos-absolute, .abs {
-  position: absolute;
+  position: absolute $o;
 }
 
 .pos-fixed, .fxd {
-  position: fixed;
+  position: fixed $o;
 }
 
 .center-y {
-  position: absolute; // requires parent to be pos-relative
-  top: 50% $override;
-  transform: translateY(-50%);
+  position: absolute $o; // requires parent to be pos-relative
+  top: 50% $o;
+  transform: translateY(-50%) $o;
 }
 
-.fontsize-inherit, .fsi {
-  font-size: inherit;
-}
-
-.text-weight-normal, .txtn {
-  font-weight: normal;
-}
-
-.text-weight-bold, .txtb {
-  font-weight: bold;
-}
 .oh, .overflow-hidden {
-  overflow: hidden !imporant;
+  overflow: hidden $o;
 }
 
 .inline, .di {
-  display: inline;
+  display: inline $o;
 }
 
 .fl {
-  float: left;
+  float: left $o;
 }
 
 .fr {
-  float: right;
+  float: right $o;
 }
 
-.cfx, .clearfix {
-  display: block !important;
-  clear: both !important;
-  float: none !important;
-  &::after {
-    content: " ";
-    clear: both !important;
-    display: table !important;
-  }
+.cfx {
+  display: block $o;
+  clear: both $o;
+  float: none $o;
 }
+
+.cfx-a::after {
+    content: " " $o;
+    clear: both $o;
+    display: table $o;
+  }
