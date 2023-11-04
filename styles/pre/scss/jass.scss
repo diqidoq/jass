@@ -1,10 +1,6 @@
 // choose where the different LESS components are located.
 $dir: "components/"
 
-$override:;
-// Uncomment this line if you require !important to all statements (on top of other frameworks).
-// $override: !important;
-
 // Choose the components you want to use. Don't mix the order of setting lines.
 // Otherwise comment the components and its leading settings out (//).
 // Reduce the "step" settings to have a smaller footprint and less altering classes.
@@ -24,6 +20,7 @@ $colors:
   C05, F06, FBB, // red
   940, D83, FED  // gold
   ;
+$override: no; /* yes/no > !important */
 @import "${dir}/color";
 
 // Shadows and Shadow Effects
@@ -39,11 +36,13 @@ $shadows:
 // Usually you want to pass colors to shadow colors.
 // But feel free to change the color profile for shadows here.
 $shadow-colors: $colors;
+$override: no; /* yes/no > !important */
 @import "${dir}/shadow";
 
 // Border and Radius
 $border-units: 1,2,3,4,5,6;
 $radius_units: 2,3,4,5,6,7,8,20,50,100;
+$override: no; /* yes/no > !important */
 @import "${dir}/border";
 
 // Layouts (sets - we do not use the term grid. [README])
@@ -64,6 +63,7 @@ $sets-fixed:
 ;
 $sets-fluid: 80, 90, 100;
 $break-points: $sets-fixed;
+$override: no; /* yes/no > !important */
 @import "${dir}/layout";
 
 // Margin & Padding and Min/Max Height/Width helper classes
@@ -74,6 +74,7 @@ $init-sizing: 50; // px
 $steps-spacing: 16;
 $steps-sizing: 8;
 $sizing-relative: 25,50,75,100; // %
+$override: no; /* yes/no > !important */
 @import "${dir}/spacing";
 
 // Helper Classes
