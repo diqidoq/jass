@@ -6,7 +6,7 @@
 @use "sass:selector";
 
 // choose where the different LESS components are located.
-$dir: "components/";
+$dir: "components";
 
 // Choose the components you want to use. Don't mix the order of setting lines.
 // Otherwise comment the components and its leading settings out (//).
@@ -45,7 +45,7 @@ $enable-websafe-colors-preset: yes; // recommended
 }
 
 $override: no; /* yes/no > !important */
-@import "${dir}/color";
+@import "#{$dir}/color";
 
 // Shadows and Shadow Effects
 $shadows: 
@@ -61,13 +61,13 @@ $shadows:
 // But feel free to change the color profile for shadows here.
 $shadow-colors: $colors;
 $override: no; /* yes/no > !important */
-@import "${dir}/shadow";
+@import "#{$dir}/shadow";
 
 // Border and Radius
 $border-width-units: 1,2,3,4,5,6,10,20;
 $border-radius_units: 2,3,4,5,6,7,8,20,50,100;
 $override: no; /* yes/no > !important */
-@import "${dir}/border";
+@import "#{$dir}/border";
 
 // Layouts (sets - we do not use the term grid. [README])
 // Fixed and Fluid - feel free to add/replace with your own layouts.
@@ -88,7 +88,7 @@ $sets-fixed:
 $sets-fluid: 80, 90, 100;
 $break-points: $sets-fixed;
 $override: no; /* yes/no > !important */
-@import "${dir}/layout";
+@import "#{$dir}/layout";
 
 // Margin & Padding and Min/Max Height/Width helper classes
 $override-spacing: no;
@@ -99,7 +99,7 @@ $steps-spacing: 16;
 $steps-sizing: 8;
 $sizing-relative: 25,50,75,100; // %
 $override: no; /* yes/no > !important */
-@import "${dir}/spacing";
+@import "#{$dir}/spacing";
 
 // Helper Classes
 @import "${dir}/helper";
