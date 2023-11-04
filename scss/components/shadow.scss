@@ -1,5 +1,3 @@
-@use "sass:string";
-
 $o: null;
 @if $override == yes {
   $o: !important;
