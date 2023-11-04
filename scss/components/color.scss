@@ -1,19 +1,28 @@
+@use 'sass:list';
+
 $o: null;
 @if $override == yes {
   $o: !important;
 }
 
-$i: 1;
-@each $color in $colors {
-    .c#{$color}, .c#{$i} {
-        background-color: ##{$color}$o;
-    }
-    .bc#{$color}, .bc#{$i} {
-        border-color: ##{$color}$o;
-    }
-    .tc#{$color}, .tc#{$i} {
-        color: ##{$color}$o;
-    }
-  @include: 
+@if $enable-websafe-colors-preset == yes {
+  $i: 1;
+  @each $color in $websafe-colors-preset {
+     .c#{$color}, .c#{$i}  { background-color: ##{$color}$o; }
+    .cb#{$color}, .cb#{$i} { border-color: ##{$color}$o; }
+    .ct#{$color}, .ct#{$i} { color: ##{$color}$o; }
     $i: $i + 1;
+  }
+}
+
+@if $enable-websafe-colors-fullstack == yes {
+  @each $r in $red {
+    @each $g in $green {
+      @each $b in $blue {
+         .c#{$r}#{$g}#{$b} { background-color: ##{$r}#{$g}#{$b}$o; }
+        .cb#{$r}#{$g}#{$b} { border-color: ##{$r}#{$g}#{$b}$o; }
+        .cb#{$r}#{$g}#{$b} { color: ##{$r}#{$g}#{$b}$o; }
+      }
+    }
+  }
 }
