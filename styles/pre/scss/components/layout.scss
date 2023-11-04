@@ -5,19 +5,14 @@
 @use "sass:meta";
 @use "sass:selector";
 
-[class*="set"], [class*="inside-bar"] {
-  margin: 0;
-  padding: 0;
+$o: null;
+@if $override == yes {
+  $o: !important;
 }
-.cfx, [class*="set"], [class*="inside-bar"] {
-  display: block;
-  clear: both;
-  float: none;
-  &::after {
-    content: " ";
-    clear: both;
-    display: table;
-  }
+
+[class*="set"], [class*="inside-bar"] {
+  margin: 0 $o;
+  padding: 0; $o
 }
 
 $elements: 24;
@@ -27,13 +22,15 @@ $sets-fluid: 80, 90, 100;
 @each $set in $sets-fixed {
   .set-fixed-#{$set} {
     @media (min-width: $set) {
-      width: $set;
+      width: $set$o;
       & [class*="bar"] {
-        width: math.div($set, $elements);
+        $v: math.div($set, $elements);
+        width: $v$o;
       }
       @for $i from 1 through $elements {
         & ._#{$i}bars {
-          width: math.div($set, $elements) * $i;
+          $v: math.div($set, $elements) * $i;
+          width: $v$o;
         }
       }
     }
@@ -41,13 +38,16 @@ $sets-fluid: 80, 90, 100;
 }
 @each $set in $sets-fluid {
   .set-fluid-#{$set} {
-      width: #{$set}+0%;
+    $v: #{$set}+0%;
+      width: $v$o;
       & [class*="bar"] {
-        width: math.div($set, $elements) + 0%;
+        $v: math.div($set, $elements) + 0%;
+        width: $v$o;
       }
       @for $i from 1 through $elements {
         & ._#{$i}bars {
-          width: math.div($set, $elements) * $i + 0%;
+          $v: math.div($set, $elements) * $i + 0%;
+          width: $v$o;
         }
     }
   }
