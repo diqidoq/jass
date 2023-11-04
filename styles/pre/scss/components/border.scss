@@ -3,71 +3,41 @@ $o: null;
   $o: !important;
 }
 
-.noborder, .nb {
-  border: 0 none $o;
-}
-.solid {
-  border-style: solid $o;
-}
-.dashed {
-  border-style: dashed $o;
-}
-.double {
-  border-style: double $o;
-}
-.dotted {
-  border-style: dotted $o;
+.border-, .b- {
+  &solid        { border-style: solid $o; }
+  &dashed       { border-style: dashed $o; }
+  &double       { border-style: double $o; }
+  &dotted       { border-style: dotted $o; }
+  &none         { border: 0 none $o; }
+  &inherit, &ih { border: inherit $o; }
 }
 
-@each $unit in $border-units {
-  $value:  $unit +0px;
-  .b#{$unit} {
-    border-width: $value$o;
+@each $unit in $border-width-units {
+  $v: $unit + 0px;
+  .border-width-, .b {
+    &#{$unit}  { border-width: $v$o; }
+    &t#{$unit} { border-top-width: $v$o; }
+    &r#{$unit} { border-right-width: $v$o; }
+    &b#{$unit} { border-bottom-width: $v$o; }
+    &l#{$unit} { border-left-width: $v$o; }
   }
-  .bt#{$unit} {
-    border-top-width: $value$o;
-  }
-  .br#{$unit} {
-    border-right-width: $value$o;
-  }
-  .bb#{$unit} {
-    border-bottom-width: $value$o;
-  }
-  .bl#{$unit} {
-    border-left-width: $value$o;
-  }
+  .border-width-inherit, .bih  { border-width: inherit $o; }
 }
-@each $unit in $radius-units {
-  $value: $unit +0px;
-  .r#{$unit} {
-    border-radius: $value$o;
-  }
-  .rt#{$unit} {
-    border-top-left-radius: $value$o;
-    border-top-right-radius: $value$o;
-  }
-  .rr#{$unit} {
-    border-top-right-radius: $value$o;
-    border-bottom-right-radius: $value$o;
-  }
-  .rb#{$unit} {
-    border-bottom-left-radius: $value$o;
-    border-bottom-right-radius: $value$o;
-  }
-  .rl#{$unit} {
-    border-top-left-radius: $value$o;
-    border-bottom-left-radius: $value$o;
-  }
-  .rtr#{$unit} {
-    border-top-right-radius: $value$o;
-  }
-  .pbr#{$unit} {
-    border-bottom-right-radius: $value$o;
-  }
-  .rbl#{$unit} {
-    border-bottom-left-radius: $value$o;
-  }
-  .rtl#{$unit} {
-    border-top-left-radius: $value$o;
+@each $unit in $border-radius-units {
+  $v: $unit + 0px;
+  .border-radius-, .br {
+    &#{$unit}   { border-radius: $v$o; }
+    &t#{$unit}  { border-top-left-radius: $v$o;
+                  border-top-right-radius: $v$o; }
+    &r#{$unit}  { border-top-right-radius: $v$o;
+                  border-bottom-right-radius: $v$o; }
+    &b#{$unit}  { border-bottom-left-radius: $v$o;
+                  border-bottom-right-radius: $v$o; }
+    &l#{$unit}  { border-top-left-radius: $v$o;
+                  border-bottom-left-radius: $v$o; }
+    &tr#{$unit} { border-top-right-radius: $v$o; }
+    &br#{$unit} { border-bottom-right-radius: $v$o; }
+    &bl#{$unit} { border-bottom-left-radius: $v$o; }
+    &tl#{$unit} { border-top-left-radius: $v$o; }
   }
 }
