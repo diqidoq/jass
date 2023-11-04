@@ -4,70 +4,70 @@ $o: null;
 }
 
 .noborder, .nb {
-  border: 0 none $override;
+  border: 0 none $o;
 }
 .solid {
-  border-style: solid $override;
+  border-style: solid $o;
 }
 .dashed {
-  border-style: dashed $override;
+  border-style: dashed $o;
 }
 .double {
-  border-style: double $override;
+  border-style: double $o;
 }
 .dotted {
-  border-style: dotted $override;
+  border-style: dotted $o;
 }
 
 @each $unit in $border-units {
   $value:  $unit +0px;
   .b#{$unit} {
-    border-width: $value;
+    border-width: $value$o;
   }
   .bt#{$unit} {
-    border-top-width: $value;
+    border-top-width: $value$o;
   }
   .br#{$unit} {
-    border-right-width: $value;
+    border-right-width: $value$o;
   }
   .bb#{$unit} {
-    border-bottom-width: $value;
+    border-bottom-width: $value$o;
   }
   .bl#{$unit} {
-    border-left-width: $value;
+    border-left-width: $value$o;
   }
 }
 @each $unit in $radius-units {
   $value: $unit +0px;
   .r#{$unit} {
-    border-radius: $value;
+    border-radius: $value$o;
   }
   .rt#{$unit} {
-    border-top-left-radius: $value;
-    border-top-right-radius: $value;
+    border-top-left-radius: $value$o;
+    border-top-right-radius: $value$o;
   }
   .rr#{$unit} {
-    border-top-right-radius: $value;
-    border-bottom-right-radius: $value;
+    border-top-right-radius: $value$o;
+    border-bottom-right-radius: $value$o;
   }
   .rb#{$unit} {
-    border-bottom-left-radius: $value;
-    border-bottom-right-radius: $value;
+    border-bottom-left-radius: $value$o;
+    border-bottom-right-radius: $value$o;
   }
   .rl#{$unit} {
-    border-top-left-radius: $value;
-    border-bottom-left-radius: $value;
+    border-top-left-radius: $value$o;
+    border-bottom-left-radius: $value$o;
   }
   .rtr#{$unit} {
-    border-top-right-radius: $value;
+    border-top-right-radius: $value$o;
   }
   .pbr#{$unit} {
-    border-bottom-right-radius: $value;
+    border-bottom-right-radius: $value$o;
   }
   .rbl#{$unit} {
-    border-bottom-left-radius: $value;
+    border-bottom-left-radius: $value$o;
   }
   .rtl#{$unit} {
-    border-top-left-radius: $value;
+    border-top-left-radius: $value$o;
   }
 }
