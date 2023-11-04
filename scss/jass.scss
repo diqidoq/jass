@@ -59,7 +59,7 @@ $shadows:
 // This way you can create shadows based on text color inheritance.
 // Usually you want to pass colors to shadow colors.
 // But feel free to change the color profile for shadows here.
-$shadow-colors: $colors;
+$shadow-colors: $websafe-colors-preset;
 $override: no; /* yes/no > !important */
 @import "#{$dir}/shadow";
 
