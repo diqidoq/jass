@@ -1,3 +1,8 @@
+$o: null;
+@if $override == yes {
+  $o: !important;
+}
+
 .noborder, .nb {
   border: 0 none $override;
 }
