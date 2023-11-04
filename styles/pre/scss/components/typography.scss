@@ -1,10 +1,31 @@
+.font-family-, .ff- {
+  &monospace, &m       { font-family: monopace; }
+  &sans-serif, &ns     { font-family: sans-serif; }
+  &serif, &s           { font-family: serif; }
+  &cursive, &c         { font-family: cursive; }
+  &fantasy, &f         { font-family: fantasy; }
+  &system-ui, &sys     { font-family: system-ui; }
+  &ui-serif, &us       { font-family: ui-serif; }
+  &ui-sans-serif, &uns { font-family: ui-sans-serif; }
+  &ui-monospace, &um   { font-family: ui-monospace; }
+  &ui-rounded, &ur     { font-family: ui-rounded; }
+  &emoji, &e           { font-family: emoji; }
+  &math, &m            { font-family: math; }
+  &fangsong, &f        { font-family: fangsong; }
+  &inherit, &ih        { font-family: inherit; }
+}
+
 $font-sizes: 7,8,9,10,11,12,14,16,18,20,22;
 @each $fsz in $font-sizes {
   .font-size-#{$fsz}, .fsz-#{$fsz} {
     font-size: $fsz + 0px;
   }
 }
-.font-size-inherit, .fsz-ih { font-size: inherit;}
+.font-size-, .fsz- {
+  &smaller, &smr { font-size: smaller; }
+  &larger, &lgr { font-size: larger; }
+  &-inherit, &-ih { font-size: inherit; }
+}
 
 $font-weights-normal-fallback: 100,200,300,400,500;
 $font-weights-bold-fallback: 600,700,800,900;
@@ -38,11 +59,21 @@ $font-weights-bold-fallback: 600,700,800,900;
 
 $letter-spacing: 1,2,3,4,5;
 @each $ls in $letter-spacing {
-  .letter-spacing-, .ls-#{$ls} {
+  .letter-spacing-#{$ls}, .ls-#{$ls} {
     letter-spacing: $ls + 0px;
   }
 }
 .letter-spacing-inherit, .ls-ih { letter-spacing: inherit; }
+
+.text-transform-, .ttf- {
+  &none, &n       { text-transform: none; }
+  &cap, &c        { text-transform: capitalize; }
+  &upper, &u      { text-transform: uppercase; }
+  &lower, &l      { text-transform: lowercase; }
+  &fullwidth, &fw { text-transform: full-width; }
+  &fullsize, &fs  { text-transform: full-size-kana; }
+  &inherit, &ih   { text-transform: inherit; }
+}
 
 .text-align-left, .tal {text-align: left !important;}
 .text-align-right, .tar {text-align: right !important;}
