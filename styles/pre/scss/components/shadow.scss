@@ -1,5 +1,10 @@
 @use "sass:string";
 
+$o: null;
+@if $override == yes {
+  $o: !important;
+}
+
 @function str-split($string, $separator) {
     // empty array/list
     $split-arr: ();
@@ -23,23 +28,24 @@
 
 // Box shadow reset
 .noshadow, .nsdw {
-  -webkit-box-shadow: none $override;
-     -moz-box-shadow: none $override;
-          box-shadow: none $override;
+  -webkit-box-shadow: none $o;
+     -moz-box-shadow: none $o;
+          box-shadow: none $o;
 }
 $i: 1;
 @each $color in $shadow-colors {
   @each $shadow in $shadows {
-     $values: str-split($shadow, "-");
+     $v: str-split($shadow, "-");
     .sdw-#{$shadow} {
-      -webkit-box-shadow: $values;
-         -moz-box-shadow: $values;
-              box-shadow: $values;
+      -webkit-box-shadow: $v$o;
+         -moz-box-shadow: $v$o;
+              box-shadow: $v$o;
     }
     .sdw-#{$shadow}-c#{$color}, .sdw-#{$shadow}-c#{$i} {
-      -webkit-box-shadow: $values ##{$color};
-         -moz-box-shadow: $values ##{$color};
-              box-shadow: $values ##{$color};
+        $v: $v ##{$color};
+      -webkit-box-shadow: $v$o;
+         -moz-box-shadow: $v$o;
+              box-shadow: $v$o;
     }
   }
 $i: $i + 1;
