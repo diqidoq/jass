@@ -6,7 +6,7 @@
 @use "sass:selector";
 
 // choose where the different LESS components are located.
-$dir: "components/"
+$dir: "components/";
 
 // Choose the components you want to use. Don't mix the order of setting lines.
 // Otherwise comment the components and its leading settings out (//).
