@@ -1,13 +1,18 @@
+$o: null;
+@if $override == yes {
+  $o: !important;
+}
+
 $i: 1;
 @each $color in $colors {
     .c#{$color}, .c#{$i} {
-        background-color: ##{$color};
+        background-color: ##{$color}$o;
     }
     .bc#{$color}, .bc#{$i} {
-        border-color: ##{$color};
+        border-color: ##{$color}$o;
     }
     .tc#{$color}, .tc#{$i} {
-        color: ##{$color};
+        color: ##{$color}$o;
     }
   @include: 
     $i: $i + 1;
