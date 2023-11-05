@@ -92,19 +92,22 @@ $override: no; /* yes/no > !important */
 @import "layout";
 
 // Margin & Padding and Min/Max Height/Width classes.
-$override-spacing: no;
-$override-sizing: no;
 $init-spacing: 2;  // px
 $init-sizing: 50; // px
 $steps-spacing: 16;
 $steps-sizing: 8;
 $sizing-relative: 25,50,75,100; // %
-$override: no; /* yes/no > !important */
+$enable-child-targets: no; // creates classes with trailing -c to target child elements.
+$override-spacing: no; /* yes/no > !important */
+$override-sizing: no; /* yes/no > !important */
 @import "spacing";
 
 // Anything around css text- and font- classes inkls sizes and weight and more.
+$override: no; /* yes/no > !important */
 @import "typography";
 
 // Tools is a collection of often used css in combination with other components.
 // Like: cfx (clearfix) or oh (overflow-hidden), fl float-left, center-x center-y etc.
+$enable-child-targets: no; // creates classes with trailing -c to target child elements.
+$override: no; /* yes/no > !important */
 @import "tools";
