@@ -6,40 +6,44 @@
 @use "sass:selector";
 
 // Choose the components you want to use. Don't mix the order of setting lines.
-// Otherwise comment the components and its leading settings out (//).
+// Comment the components and its leading settings out (//) if you do not need them.
 // Reduce the "step" settings to have a smaller footprint and less altering classes.
 
 // Use the first 3 items in list to define 
 // the black and white point tendency of your color profile.
 // It is recommended to use web safe colors like 5599FF or 59F.
 // Expand or compress color theme like you want.
-// It is up to you how many colors you use.
+// It is up to you how many colors you use and how you group them.
 // Default is a preset of 5 color sets from dark, mid to bright.
-// c = background-color, tc = color, bc = border-color
-// Or enable full websafe color stack for testing.
-$enable-websafe-colors-fullstack: no; // 4100 3hex colors!
+// c = background-color, tc = color, bc = border-color (width color id).
 $enable-websafe-colors-preset: yes; // recommended
+// Or enable full websafe color stack for testing.
+$enable-websafe-colors-fullstack: no; // by default 4100 3hex colors!
 
-// @if $enable-websafe-colors-preset == yes {
-  // Choose your ready websafe color preset
-  $websafe-colors-preset: 
-    334, 99A, EEF, // grey & blackpoint
-    A18, F0C, EBF, // rose
-    15C, 69F, CDF, // blue
-    5A0, 8F0, CF9, // green
-    C05, F06, FBB, // red
-    940, D83, FED  // gold
-  ;
-// }
+// if $enable-websafe-colors-preset: yes;
+// Feel free to extend or minify from 3 to 2 or 3 to 6, etc.
+// All colors will be available as incremented id like c1, c2
+// And as hex code class, like: .c334 which is .c1
+// .c1 and .c3 will be the bright and dark (blackpoint) of your color preset.
+$websafe-colors-preset: 
+  334, 99A, EEF, // grey (incl. blackpoint bright & dark)
+  A18, F0C, EBF, // rose
+  15C, 69F, CDF, // blue
+  5A0, 8F0, CF9, // green
+  C05, F06, FBB, // red
+  940, D83, FED  // gold
+;
 
-// @if $enable-websafe-colors-fullstack == yes {
-  // Or make a full stack of websafe colors available by
-  // uncommenting here & choose the hex steps of each channel.
-  // Beware that the full list is over 4000! hex codes.
-  $red: (0 1 2 3 4 5 6 7 8 9 A B C D E F);
-  $green: (0 1 2 3 4 5 6 7 8 9 A B C D E F);
-  $blue: (0 1 2 3 4 5 6 7 8 9 A B C D E F);
-// }
+// if $enable-websafe-colors-fullstack: yes; 
+// Make a full stack of websafe colors available.
+// Choose the hex steps of each channel.
+// Beware that the full list is over 4000! hex codes.
+// All colors will be available as incremented id like c1, c2
+// And as hex code class, like: .c334 which is .c1
+// .c1 and .c3 will be the bright and dark (blackpoint) of your color preset.
+$red: (0 1 2 3 4 5 6 7 8 9 A B C D E F);
+$green: (0 1 2 3 4 5 6 7 8 9 A B C D E F);
+$blue: (0 1 2 3 4 5 6 7 8 9 A B C D E F);
 
 $override: no; /* yes/no > !important */
 @import "color";
@@ -87,7 +91,7 @@ $break-points: $sets-fixed;
 $override: no; /* yes/no > !important */
 @import "layout";
 
-// Margin & Padding and Min/Max Height/Width helper classes
+// Margin & Padding and Min/Max Height/Width classes.
 $override-spacing: no;
 $override-sizing: no;
 $init-spacing: 2;  // px
@@ -98,5 +102,9 @@ $sizing-relative: 25,50,75,100; // %
 $override: no; /* yes/no > !important */
 @import "spacing";
 
-// Helper Classes
-@import "helper";
+// Anything around css text- and font- classes inkls sizes and weight and more.
+@import "typography";
+
+// Tools is a collection of often used css in combination with other components.
+// Like: cfx (clearfix) or oh (overflow-hidden) etc.
+@import "tools";
