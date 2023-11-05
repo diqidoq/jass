@@ -34,7 +34,7 @@ How to use. And why JASS?
 
  > Stop learning Frameworks. Stop  hacking styles. Start building web apps.
 
-Every CSS class is a combination of a main group identifier optional with a direction followed by a positive or negative (-) value. Each class exist as shorthand and as most readable version corresponding directly to the CSS property.
+As one of the very first with this attempt: In JASS every CSS class is just a combination of a main group identifier describing the css property with an optional direction followed by a positive or negative (-) value. Each class exist as shorthand and as most readable version corresponding directly to the CSS property at targeted. There are no classes for nav or like primary or right etc. Only CSS proeprties describing classes which you use to build your style on the HTML element. 
 
 Examples:
 
@@ -42,11 +42,11 @@ Examples:
     <div class="b1 solid m20 pt10 s-2-2-8-333"> works exactly the same like <div class="border1 border-style-solid margin20 paddingtop10 shadow-2-2-8-333">
     which corresponds to CSS like: margin: 20px; padding-top: 10px; border-width: 1px; border-style: solid; box-shadow: 2px 2px 8px #333
 
-All classes are available by useful increasing or decreasing values defined in the settings, and which can be changed for the own most common values or own rythm.
+All classes are expandable by useful increasing or decreasing values defined in the settings and which can be changed for the own most common values or own rythm in mind. But keep it Jazzy! ;-)
 
 And why JASS?
 
-Think twice before you decide on what Web is good for and how much time you want to invest. And how many dependencies you can manage over the years. Go back to the basics and write HTML with understandable classes or their shorthands to exactly know what you do and how to change it while keep being on the HTML side. Make your work independend from nested dependencies. Use the HTML class attribute what it is made for. Or better sad: what it is intended for today. And use it much, and right. 
+Think twice before you decide on what Web is good for and how much time you want to invest. And how many dependencies you can manage over the years. Stop building development stacks and go back to the basics. Write smart HTML with understandable classes or their shorthands to exactly know what you do and how to change it while keep being on the HTML side. Make your work independend from nested dependencies which will break in a unknown future. Use the HTML class attribute what it is made for. Or better sad: what it is intended for today. And use it much, and right. 
 
 While classes usually have been intended to be what the name suggests: classes (groups), the simple grouping of similar styled elements turned out to become limited for modern and complex mobile web. A class name like _headers_ do not tell enough today. And there can be very different _headers_ reacting different on narrowed mobile devices. You also have to go back to the headers section of your CSS to know what styles you do have used for it and to check of other things which have caused the unwanted look. 
 
