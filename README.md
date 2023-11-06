@@ -1,10 +1,20 @@
-# JASS  ·  _play Jasm CSS conducted by SASS._
+# JASS  ·  _"Play with Jasm CSS classes conducted by SASS."_
 <sup> Development started in 2012 formerly named QCSS (with LESS), first released in 2015 and refactored to JASS (with SASS) in 2023.<br>
 **Supported by www.maroqqo.com** </sup>
 
  > _Stop learning frameworks. Stop hacking styles. Start building web apps._ :+1:
 
-A simple utility first type of _"describe your style as class"_ CSS framework with no stylesheet editing and no recompiling for new themes in mind. Refactored in 2023 and renamed to JASS to keep being cross browser compatible down  to 2009 while using SASS (SCSS) for the generator. As an easy out-of-the-box styling layer from the bottom up by using a creative class group naming approach easy to learn and to reuse for each project.
+JASS: A simple utility first type of "describe your style as class" CSS framework with no stylesheet editing and no recompiling for new themes in mind. Development started in 2012 formerly named QCSS. Refactored in 2023 and renamed to JASS. Being cross browser compatible down to 2009 while using SASS (SCSS) for the generator (not required by default). As an easy out-of-the-box styling layer from the bottom up by using a creative class group naming approach easy to learn and to reuse for each project.
+
+Supported class naming components:
+
+    borders
+    extensive websafe color codes
+    layouts and grids
+    shadows
+    spacing tools
+    and extensive typography
+    tools
 
 > [!NOTE]
 > Great to see that the margin/padding altering extension classes (e.g. mr1, pr2) based on the grid space have found its way into **Bootstrap v4 and v5**. And great to see that a CSS framework like **tailwindcss** has taken over this utility first approach here into a fully-fledged CSS framework in 2017. Just would have been nice to credit it all somewhere. I published this qcss idea in 2012. :) Without maintaining it carefully enough. So it's OK ;-)
