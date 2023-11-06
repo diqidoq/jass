@@ -5,6 +5,26 @@
 @use "sass:meta";
 @use "sass:selector";
 
+$enable-targeting-childs: no; // yes/no - default no.
+$child-target-modifier: "__c > *";
+
+@function c($sel) {
+  @if $enable-targeting-childs == yes {
+    $sel: '.#{$sel},.#{#{$sel+$child-target-modifier}}';
+  } @else {
+    $sel: '.#{$sel}';
+  }
+  @return #{$sel};
+}
+@function sc($sel) {
+  @if $enable-targeting-childs == yes {
+    $sel: '&#{$sel},&#{$sel+$child-target-modifier}';
+  } @else {
+    $sel: '&#{$sel}';
+  }
+  @return #{$sel};
+}
+
 // Choose the components you want to use. Don't mix the order of setting lines.
 // Comment the components and its leading settings out (//) if you do not need them.
 // Reduce the "step" settings to have a smaller footprint and less altering classes.
@@ -93,11 +113,10 @@ $override: no; // yes/no > !important
 @import "layout";
 
 // Margin & Padding and Min/Max Height/Width classes.
-$init-spacing: 2;  // px
-$init-sizing: 50; // px
-$steps-spacing: 16;
-$steps-sizing: 8;
+$steps-spacing: 16; $init-spacing: 2; // px
+$steps-sizing: 8; $init-sizing: 50;  // px
 $sizing-relative: 25,50,75,100; // %
+
 $enable-child-targets: no; // creates classes with trailing --c to target child elements.
 $index-classes: yes; // makes additional classes like m1, m2 available.
 $override-spacing: no; // yes/no > !important
@@ -110,7 +129,7 @@ $override: no; // yes/no > !important
 
 // Tools is a collection of often used css in combination with other components.
 // Like: cfx (clearfix) or oh (overflow-hidden), fl float-left, center-x center-y etc.
-$enable-child-targets: yes; // creates classes with trailing --c to target child elements.
+$enable-child-targets: yes; // creates classes to target child elements.
 $z-indexes: -999,-1,1,2,3,4,5,6,7,8,9,100,300,999;
 $override: no; // yes/no > !important
 @import "tools";
