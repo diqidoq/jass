@@ -8,13 +8,14 @@ JASS: A simple utility first type of "describe your style as class" CSS framewor
 
 Supported class naming components:
 
-    borders
-    extensive websafe color codes
-    layouts and grids
-    shadows
-    spacing tools
-    and extensive typography
-    tools
+ - borders (width, radius, directions)
+ - colors (extensive websafe color codes)
+ - responsive layouts (without flex and grid to be accessible all over the workd)
+ - shadows
+ - spacing tools (choose your rythm)
+ - typography (most extensive typo classes available in web)
+ - tools (anything needed in combination with other components like floats, positions, order, etc.)
+ - override-switch (!important) and child target settings per components
 
 > [!NOTE]
 > Great to see that the margin/padding altering extension classes (e.g. mr1, pr2) based on the grid space have found its way into **Bootstrap v4 and v5**. And great to see that a CSS framework like **tailwindcss** has taken over this utility first approach here into a fully-fledged CSS framework in 2017. Just would have been nice to credit it all somewhere. I published this qcss idea in 2012. :) Without maintaining it carefully enough. So it's OK ;-)
