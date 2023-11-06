@@ -4,7 +4,9 @@
 
  > _Stop learning frameworks. Stop hacking styles. Start building web apps._ :+1:
 
-JASS: A simple utility first type of "describe your style as class" CSS framework with no stylesheet editing and no recompiling for new themes in mind. Development started in 2012 formerly named QCSS. Refactored in 2023 and renamed to JASS. Being cross browser compatible down to 2009 while using SASS (SCSS) for the generator (not required by default). As an easy out-of-the-box styling layer from the bottom up by using a creative class group naming approach easy to learn and to reuse for each project.
+JASS: A simple utility first type of "describe your style as class" CSS framework with no stylesheet editing and no recompiling for new themes in mind. Development started in 2012 formerly named QCSS. Refactored in 2023 and renamed to JASS. Being cross browser compatible down to 2009 while using SASS (SCSS) for the generator (not required by default). 
+
+An easy out-of-the-box styling layer from the bottom up by using a creative class group naming approach, easy to learn and to reuse for each project, with a footprint of only 50kb by default settings.
 
 Supported class naming components:
 
