@@ -50,7 +50,20 @@ $o: null;
 }
 
 .cfx-a::after {
-    content: " " $o;
-    clear: both $o;
-    display: table $o;
-  }
+  content: " " $o;
+  clear: both $o;
+  display: table $o;
+}
+
+@each $z in $z-indexes {
+  z#{$z} {z-index: $z$o; }
+}
+.z-inherit, .zih { z-index: inherit $o; }
+.z-auto, .za { z-index: auto $o; }
+
+.p-static, .pa    { position: static $o; }
+.p-relative, .pr  { position: relative $o; }
+.p-fixed, .pf     { position: fixed $o; }
+.p-absolute, .pa  { position: absolute $o; }
+.p-sticky, .pi    { position: sticky $o; }
+.p-inherit, .pih  { position: inherit $o; }
