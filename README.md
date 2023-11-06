@@ -53,13 +53,14 @@ How to use. And why JASS?
 
  > Stop learning Frameworks. Stop  hacking styles. Start building web apps.
 
-As one of the very first with this attempt: In JASS every CSS class is just a combination of a main group identifier describing the css property with an optional direction followed by a positive or negative (-) value. Each class exist as shorthand and as most readable version corresponding directly to the CSS property at targeted. There are no classes for nav or like primary or right etc. Only CSS proeprties describing classes which you use to build your style on the HTML element. 
+As one of the very first with this attempt: In JASS every CSS class is just a combination of a main group identifier describing the css property with an optional direction followed by a positive or negative (-) value. Each class exist as shorthand and as most readable version, corresponding directly to the CSS property at target. There are no classes misused as label groups like for "nav" or like "primary" or "right", "xxl" etc. Only CSS-property-describing classes plus values which you use to build your style on the HTML element. 
 
 Examples:
 
     b = border, m = margin, p = padding, r = radius, s = shadow, w = width, h = height
     <div class="b1 solid m20 pt10 s-2-2-8-333"> works exactly the same like <div class="border1 border-style-solid margin20 paddingtop10 shadow-2-2-8-333">
-    which corresponds to CSS like: margin: 20px; padding-top: 10px; border-width: 1px; border-style: solid; box-shadow: 2px 2px 8px #333
+
+Which corresponds to CSS like: margin: 20px; padding-top: 10px; border-width: 1px; border-style: solid; box-shadow: 2px 2px 8px #333.
 
 All classes are expandable by useful increasing or decreasing values defined in the settings and which can be changed for the own most common values or own rythm in mind. But keep it Jazzy! ;-)
 
