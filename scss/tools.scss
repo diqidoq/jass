@@ -3,28 +3,13 @@ $o: null;
   $o: !important;
 }
 
-$c: null;
-@if $enable-child-targets == yes {
-  $c: --c>*;
-}
-
 .center-, .c {
-  &x {
-  margin: 0 auto $o;
-  float: none $o;
-  display: block $o;
-  }
+  #{sc(x)} { margin: 0 auto $o;  float: none $o;  display: block $o; }
+  #{sc(y)} { position: absolute $o; top: 50% $o;  transform: translateY(-50%) $o; }
+  // y requires parent to be pos-relative
 }
 
-.center-, .c {
-  &y {
-  position: absolute $o; // requires parent to be pos-relative
-  top: 50% $o;
-  transform: translateY(-50%) $o;
-}
-}
-
-.oh, .overflow-hidden { overflow: hidden $o; }
+.overflow-hidden, .oh { overflow: hidden $o; }
 
 .display-inline, .di        { display: inline $o; }
 .display-inline-block, .dib { display: inline-block $o; }
