@@ -3,45 +3,38 @@ $o: null;
   $o: !important;
 }
 
-.center-x {
+$c: null;
+@if $enable-child-targets == yes {
+  $c: --c>*;
+}
+
+.center-, .c {
+  &x {
   margin: 0 auto $o;
   float: none $o;
   display: block $o;
+  }
 }
 
-.center-y-parent, .pos-relative, .rel {
-  position: relative $o;
-}
-
-.pos-absolute, .abs {
-  position: absolute $o;
-}
-
-.pos-fixed, .fxd {
-  position: fixed $o;
-}
-
-.center-y {
+.center-, .c {
+  &y {
   position: absolute $o; // requires parent to be pos-relative
   top: 50% $o;
   transform: translateY(-50%) $o;
 }
-
-.oh, .overflow-hidden {
-  overflow: hidden $o;
 }
 
-.inline, .di {
-  display: inline $o;
-}
+.oh, .overflow-hidden { overflow: hidden $o; }
 
-.fl {
-  float: left $o;
-}
+.display-inline, .di        { display: inline $o; }
+.display-inline-block, .dib { display: inline-block $o; }
+.display-none, .dn          { display: none $o; }
 
-.fr {
-  float: right $o;
-}
+.visibilizy-hidden, .vh { visibility: hidden; }
+
+.fl { float: left $o; }
+.fr { float: right $o; }
+.fn { float: none $o; }
 
 .cfx {
   display: block $o;
