@@ -99,7 +99,7 @@ $steps-spacing: 16;
 $steps-sizing: 8;
 $sizing-relative: 25,50,75,100; // %
 $enable-child-targets: no; // creates classes with trailing -c to target child elements.
-$index-classes: no; // makes additional classes like m1, m2 available.
+$index-classes: yes; // makes additional classes like m1, m2 available.
 $override-spacing: no; // yes/no > !important
 $override-sizing: no; // yes/no > !important
 @import "spacing";
