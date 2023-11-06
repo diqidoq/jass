@@ -23,6 +23,8 @@ Supported class naming components:
 
 Corresponding [Drupal CMS theme based on JASS](https://www.drupal.org/project/jass). 
 
+[!NOTE] Read more about the term "Jasm" and where Jazz Music comes from: https://en.wikipedia.org/wiki/Jazz_(word)
+
 <hr>
 
 > [!NOTE]
