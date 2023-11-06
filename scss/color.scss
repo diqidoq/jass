@@ -4,12 +4,19 @@ $o: null;
 }
 
 @if $enable-websafe-colors-preset == yes {
+@if $index-classes == yes {
   $i: 1;
   @each $color in $websafe-colors-preset {
      .c#{$color}, .c#{$i}  { background-color: ##{$color}$o; }
     .cb#{$color}, .cb#{$i} { border-color: ##{$color}$o; }
     .ct#{$color}, .ct#{$i} { color: ##{$color}$o; }
     $i: $i + 1;
+  }
+} @else {
+  @each $color in $websafe-colors-preset {
+     .c#{$color} { background-color: ##{$color}$o; }
+    .cb#{$color} { border-color: ##{$color}$o; }
+    .ct#{$color} { color: ##{$color}$o; }
   }
 }
 
