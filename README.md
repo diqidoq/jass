@@ -15,8 +15,9 @@ Supported class naming components:
  - spacing tools (choose your rythm)
  - typography (most extensive typo classes available in web)
  - tools (anything needed in combination with other components like floats, positions, order, etc.)
- - override-switch (!important)
- - child target settings per components (classes with trailing --c)
+ - optional override-switch per component (!important), default: no. (off)
+ - optional child target setting per component (classes with trailing --c), default: no. (off)
+ - optional print style setting per component (classes with trailing --p), default: no. (off)
 
 Corresponding [Drupal CMS theme based on JASS](https://www.drupal.org/project/jass). 
 
