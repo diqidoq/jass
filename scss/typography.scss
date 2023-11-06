@@ -82,6 +82,17 @@ $letter-spacing: 1,2,3,4,5;
   &inherit, &ih   { text-transform: inherit $o; }
 }
 
+.text-decoration-, .td- {
+  &none, &n          { text-decoration: none $o; }
+  &underline, &u     { text-decoration: underline $o; }
+  &overline, &o      { text-decoration: overline $o; }
+  &line-through, &l  { text-decoration: line-through $o; }
+  &wavy, &w          { text-decoration: wavy $o; }
+  &dotted, &d        { text-decoration: dotted $o; }
+  &double, &b        { text-decoration: double $o; }
+  &inherit, &ih      { text-decoration: inherit $o; }
+}
+
 .text-align-left, .tal {text-align: left !important $o;}
 .text-align-right, .tar {text-align: right !important $o;}
 .text-align-center, .tac {text-align: center !important $o;}
