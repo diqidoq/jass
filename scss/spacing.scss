@@ -27,6 +27,7 @@ $o: null;
   .pr#{$s}, .pr#{$i}   { padding-right:  $v$o; }
   .pb#{$s}, .pb#{$i}   { padding-bottom: $v$o; }
   .pl#{$s}, .pl#{$i}   { padding-left:   $v$o; }
+} 
 } @else {
 @for $i from 0 through $steps-spacing {
   $s: $init-spacing * $i;
