@@ -7,16 +7,18 @@ $o: null;
 @if $index-classes == yes {
   $i: 1;
   @each $color in $websafe-colors-preset {
-     .c#{$color}, .c#{$i}  { background-color: ##{$color}$o; }
-    .cb#{$color}, .cb#{$i} { border-color: ##{$color}$o; }
-    .ct#{$color}, .ct#{$i} { color: ##{$color}$o; }
+    .text-decoration-color-#{$color}, .cd#{$color}, .cd#{$i} { text-decoration-color: ##{$color}$o; }
+    .background-color-#{$color}, .c#{$color}, .c#{$i}        { background-color: ##{$color}$o; }
+    .border-color-#{$color}, .cb#{$color}, .cb#{$i}          { border-color: ##{$color}$o; }
+    .color-#{$color}, .ct#{$color}, .ct#{$i}                 { color: ##{$color}$o; }
     $i: $i + 1;
   }
 } @else {
   @each $color in $websafe-colors-preset {
-     .c#{$color} { background-color: ##{$color}$o; }
-    .cb#{$color} { border-color: ##{$color}$o; }
-    .ct#{$color} { color: ##{$color}$o; }
+    .text-decoration-color-#{$color}, .cd#{$color} { text-decoration-color: ##{$color}$o; }
+    .background-color-#{$color}, .c#{$color}       { background-color: ##{$color}$o; }
+    .border-color-#{$color}, .cb#{$color}          { border-color: ##{$color}$o; }
+    .color-#{$color}, .ct#{$color}                 { color: ##{$color}$o; }
   }
 }
 }
