@@ -18,7 +18,7 @@ Supported class naming components:
  - override-switch (!important)
  - child target settings per components (classes with trailing --c)
 
-Cooresponding [Drupal CMS theme based on JASS](https://www.drupal.org/project/jass). 
+Corresponding [Drupal CMS theme based on JASS](https://www.drupal.org/project/jass). 
 
 <hr>
 > [!NOTE]
