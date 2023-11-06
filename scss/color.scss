@@ -19,6 +19,7 @@ $o: null;
     .ct#{$color} { color: ##{$color}$o; }
   }
 }
+}
 
 @if $enable-websafe-colors-fullstack == yes {
   @each $r in $red {
