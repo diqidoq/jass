@@ -3,6 +3,31 @@ $o: null;
   $o: !important;
 }
 
+@if $index-classes == yes {
+@for $i from 0 through $steps-spacing {
+  $s: $init-spacing * $i;
+  $v: $s + 0px;
+  .m#{$s}, .m#{$i}     { margin-top:     $v$o;
+                         margin-right:   $v$o;
+                         margin-bottom:  $v$o;
+                         margin-left:    $v$o; }
+  .mt#{$s}, .mt#{$i}   { margin-top:     $v$o; }
+  .mt-#{$s}, .mt-#{$i} { margin-top:    -$v$o; }
+  .mr#{$s}, .mr#{$i}   { margin-right:   $v$o; }
+  .mr-#{$s}, .mr-#{$i} { margin-right:  -$v$o; }
+  .mb#{$s}, .mb#{$i}   { margin-bottom:  $v$o; }
+  .mb-#{$s}, .mb-#{$i} { margin-bottom: -$v$o; }
+  .ml#{$s}, .ml#{$i}   { margin-left:    $v$o; }
+  .ml-#{$s}, .ml-#{$i} { margin-left:   -$v$o; }
+  .p#{$s}, .p#{$i}     { padding-top:    $v$o;
+                         padding-right:  $v$o;
+                         padding-bottom: $v$o;
+                         padding-left:   $v$o; }
+  .pt#{$s}, .pt#{$i}   { padding-top:    $v$o; }
+  .pr#{$s}, .pr#{$i}   { padding-right:  $v$o; }
+  .pb#{$s}, .pb#{$i}   { padding-bottom: $v$o; }
+  .pl#{$s}, .pl#{$i}   { padding-left:   $v$o; }
+} @else {
 @for $i from 0 through $steps-spacing {
   $s: $init-spacing * $i;
   $v: $s + 0px;
@@ -26,6 +51,7 @@ $o: null;
   .pr#{$s} {  padding-right:  $v$o; }
   .pb#{$s} {  padding-bottom: $v$o; }
   .pl#{$s} {  padding-left:   $v$o; }
+}
 }
 
 $o: null;
