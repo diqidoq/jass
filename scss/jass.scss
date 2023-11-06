@@ -45,7 +45,8 @@ $red: (0 1 2 3 4 5 6 7 8 9 A B C D E F);
 $green: (0 1 2 3 4 5 6 7 8 9 A B C D E F);
 $blue: (0 1 2 3 4 5 6 7 8 9 A B C D E F);
 
-$override: no; /* yes/no > !important */
+$override: no; // yes/no > !important
+$index-classes: yes; // makes additional classes like c1, c2 available.
 @import "color";
 
 // Shadows and Shadow Effects
@@ -61,13 +62,13 @@ $shadows:
 // Usually you want to pass colors to shadow colors.
 // But feel free to change the color profile for shadows here.
 $shadow-colors: $websafe-colors-preset;
-$override: no; /* yes/no > !important */
+$override: no; // yes/no > !important
 @import "shadow";
 
 // Border and Radius
 $border-width-units: 1,2,3,4,5,6,10,20;
 $border-radius_units: 2,3,4,5,6,7,8,20,50,100;
-$override: no; /* yes/no > !important */
+$override: no; // yes/no > !important
 @import "border";
 
 // Layouts (sets - we do not use the term grid. [README])
@@ -88,7 +89,7 @@ $sets-fixed:
 ;
 $sets-fluid: 80, 90, 100;
 $break-points: $sets-fixed;
-$override: no; /* yes/no > !important */
+$override: no; // yes/no > !important
 @import "layout";
 
 // Margin & Padding and Min/Max Height/Width classes.
@@ -98,16 +99,17 @@ $steps-spacing: 16;
 $steps-sizing: 8;
 $sizing-relative: 25,50,75,100; // %
 $enable-child-targets: no; // creates classes with trailing -c to target child elements.
-$override-spacing: no; /* yes/no > !important */
-$override-sizing: no; /* yes/no > !important */
+$index-classes: no; // makes additional classes like m1, m2 available.
+$override-spacing: no; // yes/no > !important
+$override-sizing: no; // yes/no > !important
 @import "spacing";
 
 // Anything around css text- and font- classes inkls sizes and weight and more.
-$override: no; /* yes/no > !important */
+$override: no; // yes/no > !important
 @import "typography";
 
 // Tools is a collection of often used css in combination with other components.
 // Like: cfx (clearfix) or oh (overflow-hidden), fl float-left, center-x center-y etc.
 $enable-child-targets: no; // creates classes with trailing -c to target child elements.
-$override: no; /* yes/no > !important */
+$override: no; // yes/no > !important
 @import "tools";
