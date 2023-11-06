@@ -18,6 +18,9 @@ Supported class naming components:
  - override-switch (!important)
  - child target settings per components (classes with trailing --c)
 
+Cooresponding [Drupal CMS theme based on JASS](https://www.drupal.org/project/jass). 
+
+<hr>
 > [!NOTE]
 > Great to see that the margin/padding altering extension classes (e.g. mr1, pr2) based on the grid space have found its way into **Bootstrap v4 and v5**. And great to see that a CSS framework like **tailwindcss** has taken over this utility first approach here into a fully-fledged CSS framework in 2017. Just would have been nice to credit it all somewhere. I published this qcss idea in 2012. :) Without maintaining it carefully enough. So it's OK ;-)
 
