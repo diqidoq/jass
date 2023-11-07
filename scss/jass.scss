@@ -131,7 +131,7 @@ $override-sizing: no; // yes/no > !important
 // --------------------------------------------------//
 
 // Anything around css text- and font- classes inkls sizes and weight and more.
-$enable-child-selectors: no; // yes/no (default:no)
+$enable-child-selectors: yes; // yes/no (default:no)
 $override: no; // yes/no > !important
 @import "typography";
 
