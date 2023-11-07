@@ -5,29 +5,17 @@
 @use "sass:meta";
 @use "sass:selector";
 
-$enable-targeting-childs: no; // yes/no - default no.
-$child-target-modifier: "__c > *";
-
-@function c($sel) {
-  @if $enable-targeting-childs == yes {
-    $sel: '.#{$sel},.#{#{$sel+$child-target-modifier}}';
-  } @else {
-    $sel: '.#{$sel}';
-  }
-  @return #{$sel};
-}
-@function sc($sel) {
-  @if $enable-targeting-childs == yes {
-    $sel: '&#{$sel},&#{$sel+$child-target-modifier}';
-  } @else {
-    $sel: '&#{$sel}';
-  }
-  @return #{$sel};
-}
+// enable trailing class addition for child elements.
+// can be set for each component seperately, see below.
+$enable-child-selectors: no; // yes/no (default:no)
+$child-selector-extension: "--c > *"; // creates: "myclass--c > *"
 
 // Choose the components you want to use. Don't mix the order of setting lines.
 // Comment the components and its leading settings out (//) if you do not need them.
 // Reduce the "step" settings to have a smaller footprint and less altering classes.
+
+// ############ color component ############### //
+// ---------------------------------------------//
 
 // Use the first 3 items in list to define 
 // the black and white point tendency of your color profile.
@@ -65,9 +53,13 @@ $red: (0 1 2 3 4 5 6 7 8 9 A B C D E F);
 $green: (0 1 2 3 4 5 6 7 8 9 A B C D E F);
 $blue: (0 1 2 3 4 5 6 7 8 9 A B C D E F);
 
+$enable-child-selectors: no; // yes/no (default:no)
 $override: no; // yes/no > !important
 $index-classes: yes; // makes additional classes like c1, c2 available.
 @import "color";
+
+// ############ shadow component ############### //
+// ----------------------------------------------//
 
 // Shadows and Shadow Effects
 $shadows: 
@@ -82,14 +74,22 @@ $shadows:
 // Usually you want to pass colors to shadow colors.
 // But feel free to change the color profile for shadows here.
 $shadow-colors: $websafe-colors-preset;
+$enable-child-selectors: no; // yes/no (default:no)
 $override: no; // yes/no > !important
 @import "shadow";
+
+// ############ border component ############### //
+// ----------------------------------------------//
 
 // Border and Radius
 $border-width-units: 1,2,3,4,5,6,10,20;
 $border-radius_units: 2,3,4,5,6,7,8,20,50,100;
+$enable-child-selectors: no; // yes/no (default:no)
 $override: no; // yes/no > !important
 @import "border";
+
+// ############ layout component ############### //
+// ----------------------------------------------//
 
 // Layouts (sets - we do not use the term grid. [README])
 // Fixed and Fluid - feel free to add/replace with your own layouts.
@@ -109,27 +109,38 @@ $sets-fixed:
 ;
 $sets-fluid: 80, 90, 100;
 $break-points: $sets-fixed;
+$enable-child-selectors: no; // yes/no (default:no)
 $override: no; // yes/no > !important
 @import "layout";
+
+// ############ spacing component ############### //
+// -----------------------------------------------//
 
 // Margin & Padding and Min/Max Height/Width classes.
 $steps-spacing: 16; $init-spacing: 2; // px
 $steps-sizing: 8; $init-sizing: 50;  // px
 $sizing-relative: 25,50,75,100; // %
 
-$enable-child-targets: no; // creates classes with trailing --c to target child elements.
+$enable-child-selectors: no; // yes/no (default:no)
 $index-classes: yes; // makes additional classes like m1, m2 available.
 $override-spacing: no; // yes/no > !important
 $override-sizing: no; // yes/no > !important
 @import "spacing";
 
+// ############ typography component ############### //
+// --------------------------------------------------//
+
 // Anything around css text- and font- classes inkls sizes and weight and more.
+$enable-child-selectors: no; // yes/no (default:no)
 $override: no; // yes/no > !important
 @import "typography";
 
+// ############ tools component ############### //
+// ---------------------------------------------//
+
 // Tools is a collection of often used css in combination with other components.
-// Like: cfx (clearfix) or oh (overflow-hidden), fl float-left, center-x center-y etc.
-$enable-child-targets: yes; // creates classes to target child elements.
+// Like: cfx (clearfix) or oh (overflow-hidden), fl float-left, center-x, center-y etc.
+$enable-child-selectors: yes; // yes/no (default:no)
 $z-indexes: -999,-1,1,2,3,4,5,6,7,8,9,100,300,999;
 $override: no; // yes/no > !important
 @import "tools";
