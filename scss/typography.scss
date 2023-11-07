@@ -36,7 +36,7 @@ $font-sizes: 7,8,9,10,11,12,14,16,18,20,22;
 .font-size-, .fsz- {
   &smaller, &smr { font-size: smaller $o;  &#{$c} { @extend .fsz-smr; } }
   &larger, &lgr { font-size: larger $o;    &#{$c} { @extend .fsz-lgr; } }
-  &-inherit, &-ih { font-size: inherit $o; &#{$c} { @extend .fsz-ih; } }
+  &-inherit, &ih { font-size: inherit $o; &#{$c} { @extend .fsz-ih; } }
 }
 
 $font-weights-normal-fallback: 100,200,300,400,500;
