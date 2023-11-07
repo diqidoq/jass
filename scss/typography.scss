@@ -9,20 +9,20 @@ $c: null;
 }
 
 .font-family-, .ff {
-  &monospace, &ms      { font-family: monopace $o;      &#{$c} { @extend .ms; } }
-  &sans-serif, &sf     { font-family: sans-serif $o;    &#{$c} { @extend .sf; } }
-  &serif, &s           { font-family: serif $o;         &#{$c} { @extend .s; } }
-  &cursive, &c         { font-family: cursive $o;       &#{$c} { @extend .c; } }
-  &fantasy, &f         { font-family: fantasy $o;       &#{$c} { @extend .f; } }
-  &system-ui, &sys     { font-family: system-ui $o;     &#{$c} { @extend .sys; } }
-  &ui-serif, &us       { font-family: ui-serif $o;      &#{$c} { @extend .us; } }
-  &ui-sans-serif, &usf { font-family: ui-sans-serif $o; &#{$c} { @extend .usf; } }
-  &ui-monospace, &um   { font-family: ui-monospace $o;  &#{$c} { @extend .um; } }
-  &ui-rounded, &ur     { font-family: ui-rounded $o;    &#{$c} { @extend .ur; } }
-  &emoji, &e           { font-family: emoji $o;         &#{$c} { @extend .e; } }
-  &math, &mt           { font-family: math $o;          &#{$c} { @extend .mt; } }
-  &fangsong, &f        { font-family: fangsong $o;      &#{$c} { @extend .f; } }
-  &inherit, &ih        { font-family: inherit $o;       &#{$c} { @extend .ih; } }
+  &monospace, &ms      { font-family: monopace $o;      &#{$c} { @extend .ffms; } }
+  &sans-serif, &sf     { font-family: sans-serif $o;    &#{$c} { @extend .ffsf; } }
+  &serif, &s           { font-family: serif $o;         &#{$c} { @extend .ffs; } }
+  &cursive, &c         { font-family: cursive $o;       &#{$c} { @extend .ffc; } }
+  &fantasy, &fy         { font-family: fantasy $o;       &#{$c} { @extend .fffy; } }
+  &system-ui, &sys     { font-family: system-ui $o;     &#{$c} { @extend .ffsys; } }
+  &ui-serif, &us       { font-family: ui-serif $o;      &#{$c} { @extend .ffus; } }
+  &ui-sans-serif, &usf { font-family: ui-sans-serif $o; &#{$c} { @extend .ffusf; } }
+  &ui-monospace, &um   { font-family: ui-monospace $o;  &#{$c} { @extend .ffum; } }
+  &ui-rounded, &ur     { font-family: ui-rounded $o;    &#{$c} { @extend .ffur; } }
+  &emoji, &e           { font-family: emoji $o;         &#{$c} { @extend .ffe; } }
+  &math, &mt           { font-family: math $o;          &#{$c} { @extend .ffmt; } }
+  &fangsong, &fn        { font-family: fangsong $o;      &#{$c} { @extend .fffn; } }
+  &inherit, &ih        { font-family: inherit $o;       &#{$c} { @extend .ffih; } }
 }
 
 $font-sizes: 7,8,9,10,11,12,14,16,18,20,22;
@@ -34,39 +34,39 @@ $font-sizes: 7,8,9,10,11,12,14,16,18,20,22;
   }
 }
 .font-size-, .fsz- {
-  &smaller, &smr { font-size: smaller $o;  &#{$c} { @extend .smr; } }
-  &larger, &lgr { font-size: larger $o;    &#{$c} { @extend .lgr; } }
-  &-inherit, &-ih { font-size: inherit $o; &#{$c} { @extend .ih; } }
+  &smaller, &smr { font-size: smaller $o;  &#{$c} { @extend .fsz-smr; } }
+  &larger, &lgr { font-size: larger $o;    &#{$c} { @extend .fsz-lgr; } }
+  &-inherit, &-ih { font-size: inherit $o; &#{$c} { @extend .fsz-ih; } }
 }
 
 $font-weights-normal-fallback: 100,200,300,400,500;
 $font-weights-bold-fallback: 600,700,800,900;
 
 @each $fwt in $font-weights-normal-fallback {
-.font-weight-#{$fwt}, .fwt-#{$fwt} { font-weight: normal $o; font-weight: #{$fwt} $o; }
+.font-weight-#{$fwt}, .fwt-#{$fwt} { font-weight: normal $o; font-weight: #{$fwt} $o; &#{$c} { @extend .fwt-#{$fwt}; } }
 }
 @each $fwt in $font-weights-bold-fallback {
-.font-weight-#{$fwt}, .fwt-#{$fwt} { font-weight: bold $o; font-weight: #{$fwt} $o; }
+.font-weight-#{$fwt}, .fwt-#{$fwt} { font-weight: bold $o; font-weight: #{$fwt} $o; &#{$c} { @extend .fwt-#{$fwt}; } }
 }
 .font-weight-, .fwt- {
- &lighter, &lr  { font-weight: lighter $o; &#{$c} { @extend .lr; } }
- &bolder, &br   { font-weight: bolder $o;  &#{$c} { @extend .br; } }
- &inherit, &ih  { font-weight: inherit $o; &#{$c} { @extend .ih; } }
+ &lighter, &lr  { font-weight: lighter $o; &#{$c} { @extend .fwt-lr; } }
+ &bolder, &br   { font-weight: bolder $o;  &#{$c} { @extend .fwt-br; } }
+ &inherit, &ih  { font-weight: inherit $o; &#{$c} { @extend .fwt-ih; } }
 }
 
 .font-style-, .fst- {
-  &normal, &n   { font-style: normal $o;  &#{$c} { @extend .n; } }
-  &italic, &i   { font-style: italic $o;  &#{$c} { @extend .i; } }
-  &oblique, &o  { font-style: oblique $o; &#{$c} { @extend .o; } }
-  &inherit, &ih { font-style: inherit $o; &#{$c} { @extend .ih; } }
+  &normal, &n   { font-style: normal $o;  &#{$c} { @extend .fst-n; } }
+  &italic, &i   { font-style: italic $o;  &#{$c} { @extend .fst-i; } }
+  &oblique, &o  { font-style: oblique $o; &#{$c} { @extend .fst-o; } }
+  &inherit, &ih { font-style: inherit $o; &#{$c} { @extend .fst-ih; } }
 }
 
 .font-variant-, .fvt- {
-  &normal, &n          { font-variant: normal $o;                     &#{$c} { @extend .n; } }
-  &no-common-liga, &nl { font-variant: no-common-ligatures proportional-nums $o; &#{$c} { @extend .nl; } }
-  &slashed-zero, &sz   { font-variant-numeric: slashed-zero $o;       &#{$c} { @extend .sz; } }
-  &small-caps, &sc     { font-variant: small-caps $o;                 &#{$c} { @extend .sc; } }
-  &inherit, &ih        { font-variant: inherit $o;                    &#{$c} { @extend .ih; } }
+  &normal, &n          { font-variant: normal $o;                     &#{$c} { @extend .fvt-n; } }
+  &no-common-liga, &nl { font-variant: no-common-ligatures proportional-nums $o; &#{$c} { @extend .fvt-nl; } }
+  &slashed-zero, &sz   { font-variant-numeric: slashed-zero $o;       &#{$c} { @extend .fvt-sz; } }
+  &small-caps, &sc     { font-variant: small-caps $o;                 &#{$c} { @extend .fvt-sc; } }
+  &inherit, &ih        { font-variant: inherit $o;                    &#{$c} { @extend .fvt-ih; } }
 }
 
 $letter-spacing: 1,2,3,4,5;
@@ -80,24 +80,24 @@ $letter-spacing: 1,2,3,4,5;
 .letter-spacing-inherit, .ls-ih { letter-spacing: inherit $o; &#{$c} { @extend .ls-ih; } }
 
 .text-transform-, .ttf- {
-  &none, &n       { text-transform: none $o;           &#{$c} { @extend .n; } }
-  &cap, &c        { text-transform: capitalize $o;     &#{$c} { @extend .c; } }
-  &upper, &u      { text-transform: uppercase $o;      &#{$c} { @extend .u; } }
-  &lower, &l      { text-transform: lowercase $o;      &#{$c} { @extend .l; } }
-  &fullwidth, &fw { text-transform: full-width $o;     &#{$c} { @extend .fw; } }
-  &fullsize, &fs  { text-transform: full-size-kana $o; &#{$c} { @extend .fs; } }
-  &inherit, &ih   { text-transform: inherit $o;        &#{$c} { @extend .ih; } }
+  &none, &n       { text-transform: none $o;           &#{$c} { @extend .ttf-n; } }
+  &cap, &c        { text-transform: capitalize $o;     &#{$c} { @extend .ttf-c; } }
+  &upper, &u      { text-transform: uppercase $o;      &#{$c} { @extend .ttf-u; } }
+  &lower, &l      { text-transform: lowercase $o;      &#{$c} { @extend .ttf-l; } }
+  &fullwidth, &fw { text-transform: full-width $o;     &#{$c} { @extend .ttf-fw; } }
+  &fullsize, &fs  { text-transform: full-size-kana $o; &#{$c} { @extend .ttf-fs; } }
+  &inherit, &ih   { text-transform: inherit $o;        &#{$c} { @extend .ttf-ih; } }
 }
 
 .text-decoration-, .td- {
-  &none, &n          { text-decoration: none $o;         &#{$c} { @extend .n; } }
-  &underline, &u     { text-decoration: underline $o;    &#{$c} { @extend .u; } }
-  &overline, &o      { text-decoration: overline $o;     &#{$c} { @extend .o; } }
-  &line-through, &l  { text-decoration: line-through $o; &#{$c} { @extend .l; } }
-  &wavy, &w          { text-decoration: wavy $o;         &#{$c} { @extend .w; } }
-  &dotted, &d        { text-decoration: dotted $o;       &#{$c} { @extend .d; } }
-  &double, &b        { text-decoration: double $o;       &#{$c} { @extend .b; } }
-  &inherit, &ih      { text-decoration: inherit $o;      &#{$c} { @extend .ih; } }
+  &none, &n          { text-decoration: none $o;         &#{$c} { @extend .td-n; } }
+  &underline, &u     { text-decoration: underline $o;    &#{$c} { @extend .td-u; } }
+  &overline, &o      { text-decoration: overline $o;     &#{$c} { @extend .td-o; } }
+  &line-through, &l  { text-decoration: line-through $o; &#{$c} { @extend .td-l; } }
+  &wavy, &w          { text-decoration: wavy $o;         &#{$c} { @extend .td-w; } }
+  &dotted, &d        { text-decoration: dotted $o;       &#{$c} { @extend .td-d; } }
+  &double, &b        { text-decoration: double $o;       &#{$c} { @extend .td-b; } }
+  &inherit, &ih      { text-decoration: inherit $o;      &#{$c} { @extend .td-ih; } }
 }
 
 .text-align-left, .tal {text-align: left !important $o;      &#{$c} { @extend .tal; } }
