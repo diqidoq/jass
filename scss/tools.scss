@@ -1,47 +1,55 @@
+// enable trailing class addition for child elements.
+// can be set for each component seperately
+$enable-child-selectors: yes;
+$child-selector-extension: "--c > *"; // creates: "myclass--c > *"
+
+$z-indexes: -999,-1,1,2,3,4,5,6,7,8,9,100,300,999;
+$override: no; // yes/no > !important
+
 $o: null;
 @if $override == yes {
   $o: !important;
 }
 
+$c: null;
+@if $enable-child-selectors == yes {
+  $c: $child-selector-extension
+}
+
 .center-, .c {
-  #{sc(x)} { margin: 0 auto $o;  float: none $o;  display: block $o; }
-  #{sc(y)} { position: absolute $o; top: 50% $o;  transform: translateY(-50%) $o; }
+  &x { margin: 0 auto $o; float: none $o; display: block $o; &#{$c} { @extend .cx; }}
+  &y { position: absolute $o; top: 50% $o;  transform: translateY(-50%) $o; &#{$c} { @extend .cy; } }
   // y requires parent to be pos-relative
 }
 
-.overflow-hidden, .oh { overflow: hidden $o; }
-
-.display-inline, .di        { display: inline $o; }
-.display-inline-block, .dib { display: inline-block $o; }
-.display-none, .dn          { display: none $o; }
-
-.visibilizy-hidden, .vh { visibility: hidden; }
-
-.fl { float: left $o; }
-.fr { float: right $o; }
-.fn { float: none $o; }
+.overflow-hidden, .oh         { overflow: hidden $o;      &#{$c} { @extend .oh; } }
+.display-inline, .di          { display: inline $o;       &#{$c} { @extend .di; } }
+.display-inline-block, .dib   { display: inline-block $o; &#{$c} { @extend .dib; } }
+.display-none, .dn            { display: none $o;         &#{$c} { @extend .dn; } }
+.visibility-hidden, .vh       { visibility: hidden;       &#{$c} { @extend .vh; } }
 
 .cfx {
-  display: block $o;
-  clear: both $o;
-  float: none $o;
+  display: block $o; clear: both $o; float: none $o;  &#{$c} { @extend .cfx; }
+  &a::after { content: " " $o; clear: both $o; display: table $o; }
 }
 
-.cfx-a::after {
-  content: " " $o;
-  clear: both $o;
-  display: table $o;
+.float-, .f {
+  &l { float: left $o;  &#{$c} { @extend .fl; } }
+  &r { float: right $o; &#{$c} { @extend .fr; } }
+  &n { float: none $o;  &#{$c} { @extend .fn; } }
 }
 
 @each $z in $z-indexes {
-  z#{$z} {z-index: $z$o; }
+  .z#{$z} { z-index: $z$o;  &#{$c} { @extend .z#{$z} } }
 }
-.z-inherit, .zih { z-index: inherit $o; }
-.z-auto, .za { z-index: auto $o; }
+.z-inherit, .zih { z-index: inherit $o;  &#{$c} { @extend .zih } }
+.z-auto, .za     { z-index: auto $o;     &#{$c} { @extend .za  } }
 
-.p-static, .pa    { position: static $o; }
-.p-relative, .pr  { position: relative $o; }
-.p-fixed, .pf     { position: fixed $o; }
-.p-absolute, .pa  { position: absolute $o; }
-.p-sticky, .pi    { position: sticky $o; }
-.p-inherit, .pih  { position: inherit $o; }
+.pos- , .p {
+  &static, &stc    { position: static $o; &#{$c} { @extend .pstc } }
+  &relative, &rel  { position: relative $o; &#{$c} { @extend .prel } }
+  &fixed, &fxd     { position: fixed $o; &#{$c} { @extend .pfxd } }
+  &absolute, &abs  { position: absolute $o; &#{$c} { @extend .pabs } }
+  &sticky, &sty    { position: sticky $o; &#{$c} { @extend .psty } }
+  &inherit, &ih  { position: inherit $o; &#{$c} { @extend .pih } }
+}
