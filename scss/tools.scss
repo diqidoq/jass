@@ -31,17 +31,35 @@ $c: null;
   &n { float: none $o;  &#{$c} { @extend .fn; } }
 }
 
-@each $z in $z-indexes {
-  .z#{$z} { z-index: $z$o;  &#{$c} { @extend .z#{$z} } }
-}
+@each $z in $z-indexes { .z#{$z} { z-index: $z$o;  &#{$c} { @extend .z#{$z} } } }
 .z-inherit, .zih { z-index: inherit $o;  &#{$c} { @extend .zih } }
 .z-auto, .za     { z-index: auto $o;     &#{$c} { @extend .za  } }
 
 .pos- , .p {
-  &static, &stc    { position: static $o; &#{$c} { @extend .pstc } }
+  &static, &stc    { position: static $o;   &#{$c} { @extend .pstc } }
   &relative, &rel  { position: relative $o; &#{$c} { @extend .prel } }
-  &fixed, &fxd     { position: fixed $o; &#{$c} { @extend .pfxd } }
+  &fixed, &fxd     { position: fixed $o;    &#{$c} { @extend .pfxd } }
   &absolute, &abs  { position: absolute $o; &#{$c} { @extend .pabs } }
-  &sticky, &sty    { position: sticky $o; &#{$c} { @extend .psty } }
-  &inherit, &ih  { position: inherit $o; &#{$c} { @extend .pih } }
+  &sticky, &sty    { position: sticky $o;   &#{$c} { @extend .psty } }
+  &inherit, &ih    { position: inherit $o;  &#{$c} { @extend .pih } }
+}
+
+.list-, .l {
+  &unstyled, &us { list-style : none $o;        &#{$c} { @extend .lus } }
+  &disc, &di     { list-style-type: disc $o;    &#{$c} { @extend .ldi } }
+  &circle, &cl   { list-style-type: circle $o;  &#{$c} { @extend .lcl } }
+  &square, &sq   { list-style-type: square $o;  &#{$c} { @extend .lsq } }
+  &decimal, &dc  { list-style-type: decimal $o; &#{$c} { @extend .ldc } }
+  &hyphen, &hp   { list-style-type: "-" $o;     &#{$c} { @extend .lhp } }
+  &plus, &pl     { list-style-type: "+" $o;     &#{$c} { @extend .lpl } }
+  &inline, &is   { list-style-position: "+" $o; &#{$c} { @extend .lis } }
+  &outline, &os  { list-style-position: "+" $o; &#{$c} { @extend .los } }
+  &inherit, &ih  { list-style: inherit $o;      &#{$c} { @extend .lih } }
+}
+
+.list-item- , .li {
+  &inline, &i { display: inline $o; &#{$c} { @extend .lii } }
+  &comma::after, &c::after { content: "," $o; &#{$c} { @extend .lic } }
+  &slash::after, &s::after { content: "/" $o; &#{$c} { @extend .lis } }
+  &pipe::after,  &p::after { content: "|" $o; &#{$c} { @extend .lip } }
 }
