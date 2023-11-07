@@ -4073,5 +4073,47 @@
 .pos-inherit, .pos-ih, .pinherit, .pih, .pos-inherit--c > *, .pos-ih--c > *, .pinherit--c > *, .pih--c > * {
   position: inherit;
 }
+.list-unstyled, .list-us, .lunstyled, .lus, .list-unstyled--c > *, .list-us--c > *, .lunstyled--c > *, .lus--c > * {
+  list-style: none;
+}
+.list-disc, .list-di, .ldisc, .ldi, .list-disc--c > *, .list-di--c > *, .ldisc--c > *, .ldi--c > * {
+  list-style-type: disc;
+}
+.list-circle, .list-cl, .lcircle, .lcl, .list-circle--c > *, .list-cl--c > *, .lcircle--c > *, .lcl--c > * {
+  list-style-type: circle;
+}
+.list-square, .list-sq, .lsquare, .lsq, .list-square--c > *, .list-sq--c > *, .lsquare--c > *, .lsq--c > * {
+  list-style-type: square;
+}
+.list-decimal, .list-dc, .ldecimal, .ldc, .list-decimal--c > *, .list-dc--c > *, .ldecimal--c > *, .ldc--c > * {
+  list-style-type: decimal;
+}
+.list-hyphen, .list-hp, .lhyphen, .lhp, .list-hyphen--c > *, .list-hp--c > *, .lhyphen--c > *, .lhp--c > * {
+  list-style-type: "-";
+}
+.list-plus, .list-pl, .lplus, .lpl, .list-plus--c > *, .list-pl--c > *, .lplus--c > *, .lpl--c > * {
+  list-style-type: "+";
+}
+.list-inline, .list-is, .linline, .lis, .list-item-slash::after--c > *, .list-item-s::after--c > *, .lislash::after--c > *, .lis::after--c > *, .list-inline--c > ::after--c > *, .list-is--c > ::after--c > *, .linline--c > ::after--c > *, .lis--c > ::after--c > *, .list-inline--c > *, .list-is--c > *, .linline--c > *, .lis--c > * {
+  list-style-position: "+";
+}
+.list-outline, .list-os, .loutline, .los, .list-outline--c > *, .list-os--c > *, .loutline--c > *, .los--c > * {
+  list-style-position: "+";
+}
+.list-inherit, .list-ih, .linherit, .lih, .list-inherit--c > *, .list-ih--c > *, .linherit--c > *, .lih--c > * {
+  list-style: inherit;
+}
+.list-item-inline, .list-item-i, .liinline, .lii, .list-item-inline--c > *, .list-item-i--c > *, .liinline--c > *, .lii--c > * {
+  display: inline;
+}
+.list-item-comma::after, .list-item-c::after, .licomma::after, .lic::after, .list-item-comma::after--c > ::after, .list-item-c::after--c > ::after, .licomma::after--c > ::after, .lic::after--c > ::after {
+  content: ",";
+}
+.list-item-slash::after, .list-item-s::after, .lislash::after, .lis::after, .list-item-slash::after--c > ::after, .list-item-s::after--c > ::after, .lislash::after--c > ::after, .lis::after--c > ::after, .list-inline--c > ::after--c > ::after, .list-is--c > ::after--c > ::after, .linline--c > ::after--c > ::after, .lis--c > ::after--c > ::after, .list-inline--c > ::after, .list-is--c > ::after, .linline--c > ::after, .lis--c > ::after {
+  content: "/";
+}
+.list-item-pipe::after, .list-item-p::after, .lipipe::after, .lip::after, .list-item-pipe::after--c > ::after, .list-item-p::after--c > ::after, .lipipe::after--c > ::after, .lip::after--c > ::after {
+  content: "|";
+}
 
 /*# sourceMappingURL=jass.css.map */
