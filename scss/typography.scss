@@ -3,21 +3,26 @@ $o: null;
   $o: !important;
 }
 
-.font-family-, .ff- {
-  &monospace, &m       { font-family: monopace $o; }
-  &sans-serif, &ns     { font-family: sans-serif $o; }
-  &serif, &s           { font-family: serif $o; }
-  &cursive, &c         { font-family: cursive $o; }
-  &fantasy, &f         { font-family: fantasy $o; }
-  &system-ui, &sys     { font-family: system-ui $o; }
-  &ui-serif, &us       { font-family: ui-serif $o; }
-  &ui-sans-serif, &uns { font-family: ui-sans-serif $o; }
-  &ui-monospace, &um   { font-family: ui-monospace $o; }
-  &ui-rounded, &ur     { font-family: ui-rounded $o; }
-  &emoji, &e           { font-family: emoji $o; }
-  &math, &m            { font-family: math $o; }
-  &fangsong, &f        { font-family: fangsong $o; }
-  &inherit, &ih        { font-family: inherit $o; }
+$c: null;
+@if $enable-child-selectors == yes {
+  $c: $child-selector-extension
+}
+
+.font-family-, .ff {
+  &monospace, &ms      { font-family: monopace $o;      &#{$c} { @extend .ms; } }
+  &sans-serif, &sf     { font-family: sans-serif $o;    &#{$c} { @extend .sf; } }
+  &serif, &s           { font-family: serif $o;         &#{$c} { @extend .s; } }
+  &cursive, &c         { font-family: cursive $o;       &#{$c} { @extend .c; } }
+  &fantasy, &f         { font-family: fantasy $o;       &#{$c} { @extend .f; } }
+  &system-ui, &sys     { font-family: system-ui $o;     &#{$c} { @extend .sys; } }
+  &ui-serif, &us       { font-family: ui-serif $o;      &#{$c} { @extend .us; } }
+  &ui-sans-serif, &usf { font-family: ui-sans-serif $o; &#{$c} { @extend .usf; } }
+  &ui-monospace, &um   { font-family: ui-monospace $o;  &#{$c} { @extend .um; } }
+  &ui-rounded, &ur     { font-family: ui-rounded $o;    &#{$c} { @extend .ur; } }
+  &emoji, &e           { font-family: emoji $o;         &#{$c} { @extend .e; } }
+  &math, &mt           { font-family: math $o;          &#{$c} { @extend .mt; } }
+  &fangsong, &f        { font-family: fangsong $o;      &#{$c} { @extend .f; } }
+  &inherit, &ih        { font-family: inherit $o;       &#{$c} { @extend .ih; } }
 }
 
 $font-sizes: 7,8,9,10,11,12,14,16,18,20,22;
@@ -25,42 +30,43 @@ $font-sizes: 7,8,9,10,11,12,14,16,18,20,22;
   .font-size-#{$fsz}, .fsz-#{$fsz} {
     $v: $fsz + 0px;
     font-size: $v$o;
+    &#{$c} { @extend .fsz-#{$fsz}; }
   }
 }
 .font-size-, .fsz- {
-  &smaller, &smr { font-size: smaller $o; }
-  &larger, &lgr { font-size: larger $o; }
-  &-inherit, &-ih { font-size: inherit $o; }
+  &smaller, &smr { font-size: smaller $o;  &#{$c} { @extend .smr; } }
+  &larger, &lgr { font-size: larger $o;    &#{$c} { @extend .lgr; } }
+  &-inherit, &-ih { font-size: inherit $o; &#{$c} { @extend .ih; } }
 }
 
 $font-weights-normal-fallback: 100,200,300,400,500;
 $font-weights-bold-fallback: 600,700,800,900;
 
 @each $fwt in $font-weights-normal-fallback {
-.font-weight-#{$fwt}, .fwt-#{$fwt} {font-weight: normal $o; font-weight: #{$fwt} $o; }
+.font-weight-#{$fwt}, .fwt-#{$fwt} { font-weight: normal $o; font-weight: #{$fwt} $o; }
 }
 @each $fwt in $font-weights-bold-fallback {
-.font-weight-#{$fwt}, .fwt-#{$fwt} {font-weight: bold $o; font-weight: #{$fwt} $o; }
+.font-weight-#{$fwt}, .fwt-#{$fwt} { font-weight: bold $o; font-weight: #{$fwt} $o; }
 }
 .font-weight-, .fwt- {
- &lighter, &lr  { font-weight: lighter $o; }
- &bolder, &br   { font-weight: bolder $o; }
- &inherit, &ih  { font-weight: inherit $o; }
+ &lighter, &lr  { font-weight: lighter $o; &#{$c} { @extend .lr; } }
+ &bolder, &br   { font-weight: bolder $o;  &#{$c} { @extend .br; } }
+ &inherit, &ih  { font-weight: inherit $o; &#{$c} { @extend .ih; } }
 }
 
 .font-style-, .fst- {
-  &normal, &n   { font-style: normal $o; }
-  &italic, &i   { font-style: italic $o; }
-  &oblique, &o  { font-style: oblique $o; }
-  &inherit, &ih { font-style: inherit $o; }
+  &normal, &n   { font-style: normal $o;  &#{$c} { @extend .n; } }
+  &italic, &i   { font-style: italic $o;  &#{$c} { @extend .i; } }
+  &oblique, &o  { font-style: oblique $o; &#{$c} { @extend .o; } }
+  &inherit, &ih { font-style: inherit $o; &#{$c} { @extend .ih; } }
 }
 
 .font-variant-, .fvt- {
-  &normal, &n   { font-variant: normal $o; }
-  &no-common-ligatures, &ncl   { font-variant: no-common-ligatures proportional-nums $o; }
-  &num-slashed-zero, &nsz  { font-variant-numeric: slashed-zero $o; }
-  &small-caps, &sc  { font-variant: small-caps $o; }
-  &inherit, &ih  { font-variant: inherit $o; }
+  &normal, &n          { font-variant: normal $o;                     &#{$c} { @extend .n; } }
+  &no-common-liga, &nl { font-variant: no-common-ligatures proportional-nums $o; &#{$c} { @extend .nl; } }
+  &slashed-zero, &sz   { font-variant-numeric: slashed-zero $o;       &#{$c} { @extend .sz; } }
+  &small-caps, &sc     { font-variant: small-caps $o;                 &#{$c} { @extend .sc; } }
+  &inherit, &ih        { font-variant: inherit $o;                    &#{$c} { @extend .ih; } }
 }
 
 $letter-spacing: 1,2,3,4,5;
@@ -68,31 +74,33 @@ $letter-spacing: 1,2,3,4,5;
   .letter-spacing-#{$ls}, .ls-#{$ls} {
     $v: $ls + 0px;
     letter-spacing: $v$o;
+    &#{$c} { @extend .ls-#{$ls}; }
   }
 }
-.letter-spacing-inherit, .ls-ih { letter-spacing: inherit $o; }
+.letter-spacing-inherit, .ls-ih { letter-spacing: inherit $o; &#{$c} { @extend .ls-ih; } }
 
 .text-transform-, .ttf- {
-  &none, &n       { text-transform: none $o; }
-  &cap, &c        { text-transform: capitalize $o; }
-  &upper, &u      { text-transform: uppercase $o; }
-  &lower, &l      { text-transform: lowercase $o; }
-  &fullwidth, &fw { text-transform: full-width $o; }
-  &fullsize, &fs  { text-transform: full-size-kana $o; }
-  &inherit, &ih   { text-transform: inherit $o; }
+  &none, &n       { text-transform: none $o;           &#{$c} { @extend .n; } }
+  &cap, &c        { text-transform: capitalize $o;     &#{$c} { @extend .c; } }
+  &upper, &u      { text-transform: uppercase $o;      &#{$c} { @extend .u; } }
+  &lower, &l      { text-transform: lowercase $o;      &#{$c} { @extend .l; } }
+  &fullwidth, &fw { text-transform: full-width $o;     &#{$c} { @extend .fw; } }
+  &fullsize, &fs  { text-transform: full-size-kana $o; &#{$c} { @extend .fs; } }
+  &inherit, &ih   { text-transform: inherit $o;        &#{$c} { @extend .ih; } }
 }
 
 .text-decoration-, .td- {
-  &none, &n          { text-decoration: none $o; }
-  &underline, &u     { text-decoration: underline $o; }
-  &overline, &o      { text-decoration: overline $o; }
-  &line-through, &l  { text-decoration: line-through $o; }
-  &wavy, &w          { text-decoration: wavy $o; }
-  &dotted, &d        { text-decoration: dotted $o; }
-  &double, &b        { text-decoration: double $o; }
-  &inherit, &ih      { text-decoration: inherit $o; }
+  &none, &n          { text-decoration: none $o;         &#{$c} { @extend .n; } }
+  &underline, &u     { text-decoration: underline $o;    &#{$c} { @extend .u; } }
+  &overline, &o      { text-decoration: overline $o;     &#{$c} { @extend .o; } }
+  &line-through, &l  { text-decoration: line-through $o; &#{$c} { @extend .l; } }
+  &wavy, &w          { text-decoration: wavy $o;         &#{$c} { @extend .w; } }
+  &dotted, &d        { text-decoration: dotted $o;       &#{$c} { @extend .d; } }
+  &double, &b        { text-decoration: double $o;       &#{$c} { @extend .b; } }
+  &inherit, &ih      { text-decoration: inherit $o;      &#{$c} { @extend .ih; } }
 }
 
-.text-align-left, .tal {text-align: left !important $o;}
-.text-align-right, .tar {text-align: right !important $o;}
-.text-align-center, .tac {text-align: center !important $o;}
+.text-align-left, .tal {text-align: left !important $o;      &#{$c} { @extend .tal; } }
+.text-align-right, .tar {text-align: right !important $o;    &#{$c} { @extend .tar; } }
+.text-align-center, .tac {text-align: center !important $o;  &#{$c} { @extend .tac; } }
+.text-align-inherit, .tih {text-align: center !important $o; &#{$c} { @extend .tih; } }
