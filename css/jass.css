@@ -4056,16 +4056,16 @@
   list-style-type: decimal;
 }
 .list-hyphen, .list-hp, .lhyphen, .lhp, .list-hyphen--c > *, .list-hp--c > *, .lhyphen--c > *, .lhp--c > * {
-  list-style-type: "-";
+  list-style-type: "- ";
 }
 .list-plus, .list-pl, .lplus, .lpl, .list-plus--c > *, .list-pl--c > *, .lplus--c > *, .lpl--c > * {
-  list-style-type: "+";
+  list-style-type: "+ ";
 }
-.list-inline, .list-is, .linline, .lis, .list-item-slash::after--c > *, .list-item-s::after--c > *, .lislash::after--c > *, .lis::after--c > *, .list-inline--c > ::after--c > *, .list-is--c > ::after--c > *, .linline--c > ::after--c > *, .lis--c > ::after--c > *, .list-inline--c > *, .list-is--c > *, .linline--c > *, .lis--c > * {
-  list-style-position: "+";
+.list-inside, .list-is, .linside, .lis, .list-item-slash::after--c > *, .list-item-s::after--c > *, .lislash::after--c > *, .lis::after--c > *, .list-inside--c > ::after--c > *, .list-is--c > ::after--c > *, .linside--c > ::after--c > *, .lis--c > ::after--c > *, .list-inside--c > *, .list-is--c > *, .linside--c > *, .lis--c > * {
+  list-style-position: inside;
 }
-.list-outline, .list-os, .loutline, .los, .list-outline--c > *, .list-os--c > *, .loutline--c > *, .los--c > * {
-  list-style-position: "+";
+.list-outside, .list-os, .loutside, .los, .list-outside--c > *, .list-os--c > *, .loutside--c > *, .los--c > * {
+  list-style-position: outside;
 }
 .list-inherit, .list-ih, .linherit, .lih, .list-inherit--c > *, .list-ih--c > *, .linherit--c > *, .lih--c > * {
   list-style: inherit;
@@ -4074,13 +4074,13 @@
   display: inline;
 }
 .list-item-comma::after, .list-item-c::after, .licomma::after, .lic::after, .list-item-comma::after--c > ::after, .list-item-c::after--c > ::after, .licomma::after--c > ::after, .lic::after--c > ::after {
-  content: ",";
+  content: ", ";
 }
-.list-item-slash::after, .list-item-s::after, .lislash::after, .lis::after, .list-item-slash::after--c > ::after, .list-item-s::after--c > ::after, .lislash::after--c > ::after, .lis::after--c > ::after, .list-inline--c > ::after--c > ::after, .list-is--c > ::after--c > ::after, .linline--c > ::after--c > ::after, .lis--c > ::after--c > ::after, .list-inline--c > ::after, .list-is--c > ::after, .linline--c > ::after, .lis--c > ::after {
-  content: "/";
+.list-item-slash::after, .list-item-s::after, .lislash::after, .lis::after, .list-item-slash::after--c > ::after, .list-item-s::after--c > ::after, .lislash::after--c > ::after, .lis::after--c > ::after, .list-inside--c > ::after--c > ::after, .list-is--c > ::after--c > ::after, .linside--c > ::after--c > ::after, .lis--c > ::after--c > ::after, .list-inside--c > ::after, .list-is--c > ::after, .linside--c > ::after, .lis--c > ::after {
+  content: " / ";
 }
 .list-item-pipe::after, .list-item-p::after, .lipipe::after, .lip::after, .list-item-pipe::after--c > ::after, .list-item-p::after--c > ::after, .lipipe::after--c > ::after, .lip::after--c > ::after {
-  content: "|";
+  content: " | ";
 }
 
 /*# sourceMappingURL=jass.css.map */
