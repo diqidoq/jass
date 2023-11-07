@@ -3962,143 +3962,115 @@
   text-align: center !important;
 }
 
-.center-x {
+.center-x, .cx, .center-x--c > *, .cx--c > * {
   margin: 0 auto;
   float: none;
   display: block;
 }
-
-.center-y-parent, .pos-relative, .rel {
-  position: relative;
-}
-
-.pos-absolute, .abs {
-  position: absolute;
-}
-
-.pos-fixed, .fxd {
-  position: fixed;
-}
-
-.center-y {
+.center-y, .cy, .center-y--c > *, .cy--c > * {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
 }
-
-.oh, .overflow-hidden {
+.overflow-hidden, .oh, .overflow-hidden--c > *, .oh--c > * {
   overflow: hidden;
 }
-
-.inline, .di {
+.display-inline, .di, .display-inline--c > *, .di--c > * {
   display: inline;
 }
-
-.fl {
-  float: left;
+.display-inline-block, .dib, .display-inline-block--c > *, .dib--c > * {
+  display: inline-block;
 }
-
-.fr {
-  float: right;
+.display-none, .dn, .display-none--c > *, .dn--c > * {
+  display: none;
 }
-
-.cfx {
+.visibility-hidden, .vh, .visibility-hidden--c > *, .vh--c > * {
+  visibility: hidden;
+}
+.cfx, .cfx--c > * {
   display: block;
   clear: both;
   float: none;
 }
-
-.cfx-a::after {
+.cfxa::after {
   content: " ";
   clear: both;
   display: table;
 }
 
-z-999 {
+.float-l, .fl, .float-l--c > *, .fl--c > * {
+  float: left;
+}
+.float-r, .fr, .float-r--c > *, .fr--c > * {
+  float: right;
+}
+.float-n, .fn, .float-n--c > *, .fn--c > * {
+  float: none;
+}
+.z-999, .z-999--c > * {
   z-index: -999;
 }
-
-z-1 {
+.z-1, .z-1--c > * {
   z-index: -1;
 }
-
-z1 {
+.z1, .z1--c > * {
   z-index: 1;
 }
-
-z2 {
+.z2, .z2--c > * {
   z-index: 2;
 }
-
-z3 {
+.z3, .z3--c > * {
   z-index: 3;
 }
-
-z4 {
+.z4, .z4--c > * {
   z-index: 4;
 }
-
-z5 {
+.z5, .z5--c > * {
   z-index: 5;
 }
-
-z6 {
+.z6, .z6--c > * {
   z-index: 6;
 }
-
-z7 {
+.z7, .z7--c > * {
   z-index: 7;
 }
-
-z8 {
+.z8, .z8--c > * {
   z-index: 8;
 }
-
-z9 {
+.z9, .z9--c > * {
   z-index: 9;
 }
-
-z100 {
+.z100, .z100--c > * {
   z-index: 100;
 }
-
-z300 {
+.z300, .z300--c > * {
   z-index: 300;
 }
-
-z999 {
+.z999, .z999--c > * {
   z-index: 999;
 }
-
-.z-inherit, .zih {
+.z-inherit, .zih, .z-inherit--c > *, .zih--c > * {
   z-index: inherit;
 }
-
-.z-auto, .za {
+.z-auto, .za, .z-auto--c > *, .za--c > * {
   z-index: auto;
 }
-
-.p-static, .pa {
+.pos-static, .pos-stc, .pstatic, .pstc, .pos-static--c > *, .pos-stc--c > *, .pstatic--c > *, .pstc--c > * {
   position: static;
 }
-
-.p-relative, .pr {
+.pos-relative, .pos-rel, .prelative, .prel, .pos-relative--c > *, .pos-rel--c > *, .prelative--c > *, .prel--c > * {
   position: relative;
 }
-
-.p-fixed, .pf {
+.pos-fixed, .pos-fxd, .pfixed, .pfxd, .pos-fixed--c > *, .pos-fxd--c > *, .pfixed--c > *, .pfxd--c > * {
   position: fixed;
 }
-
-.p-absolute, .pa {
+.pos-absolute, .pos-abs, .pabsolute, .pabs, .pos-absolute--c > *, .pos-abs--c > *, .pabsolute--c > *, .pabs--c > * {
   position: absolute;
 }
-
-.p-sticky, .pi {
+.pos-sticky, .pos-sty, .psticky, .psty, .pos-sticky--c > *, .pos-sty--c > *, .psticky--c > *, .psty--c > * {
   position: sticky;
 }
-
-.p-inherit, .pih {
+.pos-inherit, .pos-ih, .pinherit, .pih, .pos-inherit--c > *, .pos-ih--c > *, .pinherit--c > *, .pih--c > * {
   position: inherit;
 }
 
