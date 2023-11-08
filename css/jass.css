@@ -4070,27 +4070,27 @@
 .list-inherit, .list-ih, .linherit, .lih, .list-inherit--c > *, .list-ih--c > *, .linherit--c > *, .lih--c > * {
   list-style: inherit;
 }
-.list-item-comma::after, .lic::after {
+.list-item-comma + .list-item-comma::before, .lic + .lic::before {
   content: ", ";
 }
 
-.list-item-slash::after, .lis::after, .list-inside--c > ::after, .list-is--c > ::after, .linside--c > ::after, .lis--c > ::after {
+.list-item-slash + .list-item-slash::before, .lis + .lis::before, .list-inside--c > * + ::before, .list-is--c > * + ::before, .linside--c > * + ::before, .lis--c > * + ::before {
   content: " / ";
 }
 
-.list-item-pipe::after, .lip::after {
+.list-item-pipe + .list-item-pipe::before, .lip + .lip::before {
   content: " | ";
 }
 
-.list-item-comma--c > *::after, .lic--c > *::after {
+.list-item-comma--c > * + .list-item-comma--c > *::before, .lic--c > * + .lic--c > *::before {
   content: ", ";
 }
 
-.list-item-slash--c > *::after, .lis--c > *::after {
+.list-item-slash--c > * + .list-item-slash--c > *::before, .lis--c > * + .lis--c > *::before {
   content: " / ";
 }
 
-.list-item-pipe--c > *::after, .lip--c > *::after {
+.list-item-pipe--c > * + .list-item-pipe--c > *::before, .lip--c > * + .lip--c > *::before {
   content: " | ";
 }
 
