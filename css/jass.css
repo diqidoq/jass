@@ -4061,7 +4061,7 @@
 .list-plus, .list-pl, .lplus, .lpl, .list-plus--c > *, .list-pl--c > *, .lplus--c > *, .lpl--c > * {
   list-style-type: "+ ";
 }
-.list-inside, .list-is, .linside, .lis, .list-item-slash::after--c > *, .list-item-s::after--c > *, .lislash::after--c > *, .lis::after--c > *, .list-inside--c > ::after--c > *, .list-is--c > ::after--c > *, .linside--c > ::after--c > *, .lis--c > ::after--c > *, .list-inside--c > *, .list-is--c > *, .linside--c > *, .lis--c > * {
+.list-inside, .list-is, .linside, .lis, .list-inside--c > *, .list-is--c > *, .linside--c > *, .lis--c > * {
   list-style-position: inside;
 }
 .list-outside, .list-os, .loutside, .los, .list-outside--c > *, .list-os--c > *, .loutside--c > *, .los--c > * {
@@ -4070,17 +4070,28 @@
 .list-inherit, .list-ih, .linherit, .lih, .list-inherit--c > *, .list-ih--c > *, .linherit--c > *, .lih--c > * {
   list-style: inherit;
 }
-.list-item-inline, .list-item-i, .liinline, .lii, .list-item-inline--c > *, .list-item-i--c > *, .liinline--c > *, .lii--c > * {
-  display: inline;
+.list-item-comma::after, .lic::after {
+  content: "u002C ";
 }
-.list-item-comma::after, .list-item-c::after, .licomma::after, .lic::after, .list-item-comma::after--c > ::after, .list-item-c::after--c > ::after, .licomma::after--c > ::after, .lic::after--c > ::after {
-  content: ", ";
+
+.list-item-slash::after, .lis::after, .list-inside--c > ::after, .list-is--c > ::after, .linside--c > ::after, .lis--c > ::after {
+  content: " u002F ";
 }
-.list-item-slash::after, .list-item-s::after, .lislash::after, .lis::after, .list-item-slash::after--c > ::after, .list-item-s::after--c > ::after, .lislash::after--c > ::after, .lis::after--c > ::after, .list-inside--c > ::after--c > ::after, .list-is--c > ::after--c > ::after, .linside--c > ::after--c > ::after, .lis--c > ::after--c > ::after, .list-inside--c > ::after, .list-is--c > ::after, .linside--c > ::after, .lis--c > ::after {
-  content: " / ";
+
+.list-item-pipe::after, .lip::after {
+  content: " u007C ";
 }
-.list-item-pipe::after, .list-item-p::after, .lipipe::after, .lip::after, .list-item-pipe::after--c > ::after, .list-item-p::after--c > ::after, .lipipe::after--c > ::after, .lip::after--c > ::after {
-  content: " | ";
+
+.list-item-comma--c > *::after, .lic--c > *::after {
+  content: "u002C ";
+}
+
+.list-item-slash--c > *::after, .lis--c > *::after {
+  content: " u002F ";
+}
+
+.list-item-pipe--c > *::after, .lip--c > *::after {
+  content: " u007C ";
 }
 
 /*# sourceMappingURL=jass.css.map */
