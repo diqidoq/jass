@@ -57,12 +57,12 @@ $c: null;
   &inherit, &ih  { list-style: inherit $o;          &#{$c} { @extend .lih } }
 }
 
-.list-item-comma::after, .lic::after { content: "\, " $o; }
-.list-item-slash::after, .lis::after { content: " \/ " $o; }
-.list-item-pipe::after,  .lip::after { content: " \| " $o; }
+.list-item-comma + .list-item-comma::before, .lic + .lic::before { content: "\, " $o; }
+.list-item-slash + .list-item-slash::before, .lis + .lis::before { content: " \/ " $o; }
+.list-item-pipe  + .list-item-pipe::before,  .lip + .lip::before { content: " \| " $o; }
 
 @if $enable-child-selectors == yes {
-.list-item-comma#{$c}::after, .lic#{$c}::after { content: "\, " $o; }
-.list-item-slash#{$c}::after, .lis#{$c}::after { content: " \/ " $o; }
-.list-item-pipe#{$c}::after,  .lip#{$c}::after { content: " \| " $o; }
+.list-item-comma#{$c} + .list-item-comma#{$c}::before, .lic#{$c} + .lic#{$c}::before { content: "\, " $o; }
+.list-item-slash#{$c} + .list-item-slash#{$c}::before, .lis#{$c} + .lis#{$c}::before { content: " \/ " $o; }
+.list-item-pipe#{$c}  + .list-item-pipe#{$c}::before,  .lip#{$c} + .lip#{$c}::before { content: " \| " $o; }
 }
