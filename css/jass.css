@@ -4071,27 +4071,27 @@
   list-style: inherit;
 }
 .list-item-comma::after, .lic::after {
-  content: "u002C ";
+  content: ", ";
 }
 
 .list-item-slash::after, .lis::after, .list-inside--c > ::after, .list-is--c > ::after, .linside--c > ::after, .lis--c > ::after {
-  content: " u002F ";
+  content: " / ";
 }
 
 .list-item-pipe::after, .lip::after {
-  content: " u007C ";
+  content: " | ";
 }
 
 .list-item-comma--c > *::after, .lic--c > *::after {
-  content: "u002C ";
+  content: ", ";
 }
 
 .list-item-slash--c > *::after, .lis--c > *::after {
-  content: " u002F ";
+  content: " / ";
 }
 
 .list-item-pipe--c > *::after, .lip--c > *::after {
-  content: " u007C ";
+  content: " | ";
 }
 
 /*# sourceMappingURL=jass.css.map */
