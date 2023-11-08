@@ -57,9 +57,12 @@ $c: null;
   &inherit, &ih  { list-style: inherit $o;          &#{$c} { @extend .lih } }
 }
 
-.list-item- , .li {
-  &inline, &i { display: inline $o; &#{$c} { @extend .lii } }
-  &comma::after, &c::after { content: ", " $o; &#{$c} { @extend .lic } }
-  &slash::after, &s::after { content: " / " $o; &#{$c} { @extend .lis } }
-  &pipe::after,  &p::after { content: " | " $o; &#{$c} { @extend .lip } }
+.list-item-comma::after, .lic::after { content: "\u002C " $o; }
+.list-item-slash::after, .lis::after { content: " \u002F " $o; }
+.list-item-pipe::after,  .lip::after { content: " \u007C " $o; }
+
+@if $enable-child-selectors == yes {
+.list-item-comma#{$c}::after, .lic#{$c}::after { content: "\u002C " $o; }
+.list-item-slash#{$c}::after, .lis#{$c}::after { content: " \u002F " $o; }
+.list-item-pipe#{$c}::after,  .lip#{$c}::after { content: " \u007C " $o; }
 }
