@@ -7,51 +7,53 @@ $o: null;
 @for $i from 0 through $steps-spacing {
   $s: $init-spacing * $i;
   $v: $s + 0px;
-  .m#{$s}, .m#{$i}     { margin-top:     $v$o;
+  $m: ".m-";
+  $p: ".p-";
+  .m#{$v}, .m#{$i}     { margin-top:     $v$o;
                          margin-right:   $v$o;
                          margin-bottom:  $v$o;
                          margin-left:    $v$o; }
-  .mt#{$s}, .mt#{$i}   { margin-top:     $v$o; }
-  .mt-#{$s}, .mt-#{$i} { margin-top:    -$v$o; }
-  .mr#{$s}, .mr#{$i}   { margin-right:   $v$o; }
-  .mr-#{$s}, .mr-#{$i} { margin-right:  -$v$o; }
-  .mb#{$s}, .mb#{$i}   { margin-bottom:  $v$o; }
-  .mb-#{$s}, .mb-#{$i} { margin-bottom: -$v$o; }
-  .ml#{$s}, .ml#{$i}   { margin-left:    $v$o; }
-  .ml-#{$s}, .ml-#{$i} { margin-left:   -$v$o; }
-  .p#{$s}, .p#{$i}     { padding-top:    $v$o;
+  .mt#{$v}, .mt#{$i}   { margin-top:     $v$o; }
+  .mt-#{$v}, .mt-#{$i} { margin-top:    -$v$o; }
+  .mr#{$v}, .mr#{$i}   { margin-right:   $v$o; }
+  .mr-#{$v}, .mr-#{$i} { margin-right:  -$v$o; }
+  .mb#{$v}, .mb#{$i}   { margin-bottom:  $v$o; }
+  .mb-#{$v}, .mb-#{$i} { margin-bottom: -$v$o; }
+  .ml#{$v}, .ml#{$i}   { margin-left:    $v$o; }
+  .ml-#{$v}, .ml-#{$i} { margin-left:   -$v$o; }
+  .p#{$v}, .p#{$i}     { padding-top:    $v$o;
                          padding-right:  $v$o;
                          padding-bottom: $v$o;
                          padding-left:   $v$o; }
-  .pt#{$s}, .pt#{$i}   { padding-top:    $v$o; }
-  .pr#{$s}, .pr#{$i}   { padding-right:  $v$o; }
-  .pb#{$s}, .pb#{$i}   { padding-bottom: $v$o; }
-  .pl#{$s}, .pl#{$i}   { padding-left:   $v$o; }
+  .pt#{$v}, .pt#{$i}   { padding-top:    $v$o; }
+  .pr#{$v}, .pr#{$i}   { padding-right:  $v$o; }
+  .pb#{$v}, .pb#{$i}   { padding-bottom: $v$o; }
+  .pl#{$v}, .pl#{$i}   { padding-left:   $v$o; }
 } 
 } @else {
 @for $i from 0 through $steps-spacing {
   $s: $init-spacing * $i;
   $v: $s + 0px;
-  .m#{$s} {   margin-top:     $v$o;
+  .m#{$v} {   margin-top:     $v$o;
               margin-right:   $v$o;
               margin-bottom:  $v$o;
               margin-left:    $v$o; }
-  .mt#{$s} {  margin-top:     $v$o; }
-  .mt-#{$s} { margin-top:    -$v$o; }
-  .mr#{$s} {  margin-right:   $v$o; }
-  .mr-#{$s} { margin-right:  -$v$o; }
-  .mb#{$s} {  margin-bottom:  $v$o; }
-  .mb-#{$s} { margin-bottom: -$v$o; }
-  .ml#{$s} {  margin-left:    $v$o; }
-  .ml-#{$s} { margin-left:   -$v$o; }
-  .p#{$s} {   padding-top:    $v$o;
+  .mt#{$v} {  margin-top:     $v$o; }
+  .mt-#{$v} { margin-top:    -$v$o; }
+  .mr#{$v} {  margin-right:   $v$o; }
+  .mr-#{$v} { margin-right:  -$v$o; }
+  .mb#{$v} {  margin-bottom:  $v$o; }
+  .mb-#{$v} { margin-bottom: -$v$o; }
+  .ml#{$v} {  margin-left:    $v$o; }
+  .ml-#{$v} { margin-left:   -$v$o; }
+  .p#{$v} {   padding-top:    $v$o;
               padding-right:  $v$o;
               padding-bottom: $v$o;
               padding-left:   $v$o; }
-  .pt#{$s} {  padding-top:    $v$o; }
-  .pr#{$s} {  padding-right:  $v$o; }
-  .pb#{$s} {  padding-bottom: $v$o; }
-  .pl#{$s} {  padding-left:   $v$o; }
+  .pt#{$v} {  padding-top:    $v$o; }
+  .pr#{$v} {  padding-right:  $v$o; }
+  .pb#{$v} {  padding-bottom: $v$o; }
+  .pl#{$v} {  padding-left:   $v$o; }
 }
 }
 
@@ -59,16 +61,31 @@ $o: null;
 @if $override-sizing == yes {
   $o: !important;
 }
+
+@if $index-classes == yes {
 @for $i from 1 through $steps-sizing {
   $s: $init-sizing * $i;
   $v: $s + 0px;
-  .h#{$s} {    height:     $v$o; }
-  .w#{$s} {    width:      $v$o; }
-  .hmin#{$s} { min-height: $v$o; }
-  .wmin#{$s} { min-width:  $v$o; }
-  .hmax#{$s} { max-height: $v$o; }
-  .wmax#{$s} { max-width:  $v$o; }
+  .h#{$v}, .h#{$i}       { height:     $v$o; }
+  .w#{$v}, .w#{$i}       { width:      $v$o; }
+  .hmin#{$v}, .hmin#{$i} { min-height: $v$o; }
+  .wmin#{$v}, .wmin#{$i} { min-width:  $v$o; }
+  .hmax#{$v}, .hmax#{$i} { max-height: $v$o; }
+  .wmax#{$v}, .wmax#{$i} { max-width:  $v$o; }
 }
+} @else {
+  @for $i from 1 through $steps-sizing {
+  $s: $init-sizing * $i;
+  $v: $s + 0px;
+  .h#{$v} {    height:     $v$o; }
+  .w#{$v} {    width:      $v$o; }
+  .hmin#{$v} { min-height: $v$o; }
+  .wmin#{$v} { min-width:  $v$o; }
+  .hmax#{$v} { max-height: $v$o; }
+  .wmax#{$v} { max-width:  $v$o; }
+  }
+}
+
 @each $p in $sizing-relative {
   $v: $p * 1%;
   .h#{$p}th {    height:     $v$o; }
