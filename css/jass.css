@@ -1,288 +1,342 @@
-.text-decoration-color-334, .cd334, .cd1 {
+.link-decoration-color-334 a, .c-ld-334 a, .c-ld-1 a,
+.text-decoration-color-334, .c-td-334, .c-td-1 {
   text-decoration-color: #334;
 }
 
-.background-color-334, .c334, .c1 {
+.background-color-334, .c-bg-334, .c-bg-1 {
   background-color: #334;
 }
 
-.border-color-334, .cb334, .cb1 {
+.border-color-334, .c-b-334, .c-b-1 {
   border-color: #334;
 }
 
-.color-334, .ct334, .ct1 {
+.header-color-334 [class^=h], .c-h-334 [class^=h], .c-h-1 [class^=h],
+.link-color-334 a, .c-l-334 a, .c-l-1 a,
+.color-334, .c-334, .c-1 {
   color: #334;
 }
 
-.text-decoration-color-99A, .cd99A, .cd2 {
+.link-decoration-color-99A a, .c-ld-99A a, .c-ld-2 a,
+.text-decoration-color-99A, .c-td-99A, .c-td-2 {
   text-decoration-color: #99A;
 }
 
-.background-color-99A, .c99A, .c2 {
+.background-color-99A, .c-bg-99A, .c-bg-2 {
   background-color: #99A;
 }
 
-.border-color-99A, .cb99A, .cb2 {
+.border-color-99A, .c-b-99A, .c-b-2 {
   border-color: #99A;
 }
 
-.color-99A, .ct99A, .ct2 {
+.header-color-99A [class^=h], .c-h-99A [class^=h], .c-h-2 [class^=h],
+.link-color-99A a, .c-l-99A a, .c-l-2 a,
+.color-99A, .c-99A, .c-2 {
   color: #99A;
 }
 
-.text-decoration-color-EEF, .cdEEF, .cd3 {
+.link-decoration-color-EEF a, .c-ld-EEF a, .c-ld-3 a,
+.text-decoration-color-EEF, .c-td-EEF, .c-td-3 {
   text-decoration-color: #EEF;
 }
 
-.background-color-EEF, .cEEF, .c3 {
+.background-color-EEF, .c-bg-EEF, .c-bg-3 {
   background-color: #EEF;
 }
 
-.border-color-EEF, .cbEEF, .cb3 {
+.border-color-EEF, .c-b-EEF, .c-b-3 {
   border-color: #EEF;
 }
 
-.color-EEF, .ctEEF, .ct3 {
+.header-color-EEF [class^=h], .c-h-EEF [class^=h], .c-h-3 [class^=h],
+.link-color-EEF a, .c-l-EEF a, .c-l-3 a,
+.color-EEF, .c-EEF, .c-3 {
   color: #EEF;
 }
 
-.text-decoration-color-A18, .cdA18, .cd4 {
+.link-decoration-color-A18 a, .c-ld-A18 a, .c-ld-4 a,
+.text-decoration-color-A18, .c-td-A18, .c-td-4 {
   text-decoration-color: #A18;
 }
 
-.background-color-A18, .cA18, .c4 {
+.background-color-A18, .c-bg-A18, .c-bg-4 {
   background-color: #A18;
 }
 
-.border-color-A18, .cbA18, .cb4 {
+.border-color-A18, .c-b-A18, .c-b-4 {
   border-color: #A18;
 }
 
-.color-A18, .ctA18, .ct4 {
+.header-color-A18 [class^=h], .c-h-A18 [class^=h], .c-h-4 [class^=h],
+.link-color-A18 a, .c-l-A18 a, .c-l-4 a,
+.color-A18, .c-A18, .c-4 {
   color: #A18;
 }
 
-.text-decoration-color-F0C, .cdF0C, .cd5 {
+.link-decoration-color-F0C a, .c-ld-F0C a, .c-ld-5 a,
+.text-decoration-color-F0C, .c-td-F0C, .c-td-5 {
   text-decoration-color: #F0C;
 }
 
-.background-color-F0C, .cF0C, .c5 {
+.background-color-F0C, .c-bg-F0C, .c-bg-5 {
   background-color: #F0C;
 }
 
-.border-color-F0C, .cbF0C, .cb5 {
+.border-color-F0C, .c-b-F0C, .c-b-5 {
   border-color: #F0C;
 }
 
-.color-F0C, .ctF0C, .ct5 {
+.header-color-F0C [class^=h], .c-h-F0C [class^=h], .c-h-5 [class^=h],
+.link-color-F0C a, .c-l-F0C a, .c-l-5 a,
+.color-F0C, .c-F0C, .c-5 {
   color: #F0C;
 }
 
-.text-decoration-color-EBF, .cdEBF, .cd6 {
+.link-decoration-color-EBF a, .c-ld-EBF a, .c-ld-6 a,
+.text-decoration-color-EBF, .c-td-EBF, .c-td-6 {
   text-decoration-color: #EBF;
 }
 
-.background-color-EBF, .cEBF, .c6 {
+.background-color-EBF, .c-bg-EBF, .c-bg-6 {
   background-color: #EBF;
 }
 
-.border-color-EBF, .cbEBF, .cb6 {
+.border-color-EBF, .c-b-EBF, .c-b-6 {
   border-color: #EBF;
 }
 
-.color-EBF, .ctEBF, .ct6 {
+.header-color-EBF [class^=h], .c-h-EBF [class^=h], .c-h-6 [class^=h],
+.link-color-EBF a, .c-l-EBF a, .c-l-6 a,
+.color-EBF, .c-EBF, .c-6 {
   color: #EBF;
 }
 
-.text-decoration-color-15C, .cd15C, .cd7 {
+.link-decoration-color-15C a, .c-ld-15C a, .c-ld-7 a,
+.text-decoration-color-15C, .c-td-15C, .c-td-7 {
   text-decoration-color: #15C;
 }
 
-.background-color-15C, .c15C, .c7 {
+.background-color-15C, .c-bg-15C, .c-bg-7 {
   background-color: #15C;
 }
 
-.border-color-15C, .cb15C, .cb7 {
+.border-color-15C, .c-b-15C, .c-b-7 {
   border-color: #15C;
 }
 
-.color-15C, .ct15C, .ct7 {
+.header-color-15C [class^=h], .c-h-15C [class^=h], .c-h-7 [class^=h],
+.link-color-15C a, .c-l-15C a, .c-l-7 a,
+.color-15C, .c-15C, .c-7 {
   color: #15C;
 }
 
-.text-decoration-color-69F, .cd69F, .cd8 {
+.link-decoration-color-69F a, .c-ld-69F a, .c-ld-8 a,
+.text-decoration-color-69F, .c-td-69F, .c-td-8 {
   text-decoration-color: #69F;
 }
 
-.background-color-69F, .c69F, .c8 {
+.background-color-69F, .c-bg-69F, .c-bg-8 {
   background-color: #69F;
 }
 
-.border-color-69F, .cb69F, .cb8 {
+.border-color-69F, .c-b-69F, .c-b-8 {
   border-color: #69F;
 }
 
-.color-69F, .ct69F, .ct8 {
+.header-color-69F [class^=h], .c-h-69F [class^=h], .c-h-8 [class^=h],
+.link-color-69F a, .c-l-69F a, .c-l-8 a,
+.color-69F, .c-69F, .c-8 {
   color: #69F;
 }
 
-.text-decoration-color-CDF, .cdCDF, .cd9 {
+.link-decoration-color-CDF a, .c-ld-CDF a, .c-ld-9 a,
+.text-decoration-color-CDF, .c-td-CDF, .c-td-9 {
   text-decoration-color: #CDF;
 }
 
-.background-color-CDF, .cCDF, .c9 {
+.background-color-CDF, .c-bg-CDF, .c-bg-9 {
   background-color: #CDF;
 }
 
-.border-color-CDF, .cbCDF, .cb9 {
+.border-color-CDF, .c-b-CDF, .c-b-9 {
   border-color: #CDF;
 }
 
-.color-CDF, .ctCDF, .ct9 {
+.header-color-CDF [class^=h], .c-h-CDF [class^=h], .c-h-9 [class^=h],
+.link-color-CDF a, .c-l-CDF a, .c-l-9 a,
+.color-CDF, .c-CDF, .c-9 {
   color: #CDF;
 }
 
-.text-decoration-color-5A0, .cd5A0, .cd10 {
+.link-decoration-color-5A0 a, .c-ld-5A0 a, .c-ld-10 a,
+.text-decoration-color-5A0, .c-td-5A0, .c-td-10 {
   text-decoration-color: #5A0;
 }
 
-.background-color-5A0, .c5A0, .c10 {
+.background-color-5A0, .c-bg-5A0, .c-bg-10 {
   background-color: #5A0;
 }
 
-.border-color-5A0, .cb5A0, .cb10 {
+.border-color-5A0, .c-b-5A0, .c-b-10 {
   border-color: #5A0;
 }
 
-.color-5A0, .ct5A0, .ct10 {
+.header-color-5A0 [class^=h], .c-h-5A0 [class^=h], .c-h-10 [class^=h],
+.link-color-5A0 a, .c-l-5A0 a, .c-l-10 a,
+.color-5A0, .c-5A0, .c-10 {
   color: #5A0;
 }
 
-.text-decoration-color-8F0, .cd8F0, .cd11 {
+.link-decoration-color-8F0 a, .c-ld-8F0 a, .c-ld-11 a,
+.text-decoration-color-8F0, .c-td-8F0, .c-td-11 {
   text-decoration-color: #8F0;
 }
 
-.background-color-8F0, .c8F0, .c11 {
+.background-color-8F0, .c-bg-8F0, .c-bg-11 {
   background-color: #8F0;
 }
 
-.border-color-8F0, .cb8F0, .cb11 {
+.border-color-8F0, .c-b-8F0, .c-b-11 {
   border-color: #8F0;
 }
 
-.color-8F0, .ct8F0, .ct11 {
+.header-color-8F0 [class^=h], .c-h-8F0 [class^=h], .c-h-11 [class^=h],
+.link-color-8F0 a, .c-l-8F0 a, .c-l-11 a,
+.color-8F0, .c-8F0, .c-11 {
   color: #8F0;
 }
 
-.text-decoration-color-CF9, .cdCF9, .cd12 {
+.link-decoration-color-CF9 a, .c-ld-CF9 a, .c-ld-12 a,
+.text-decoration-color-CF9, .c-td-CF9, .c-td-12 {
   text-decoration-color: #CF9;
 }
 
-.background-color-CF9, .cCF9, .c12 {
+.background-color-CF9, .c-bg-CF9, .c-bg-12 {
   background-color: #CF9;
 }
 
-.border-color-CF9, .cbCF9, .cb12 {
+.border-color-CF9, .c-b-CF9, .c-b-12 {
   border-color: #CF9;
 }
 
-.color-CF9, .ctCF9, .ct12 {
+.header-color-CF9 [class^=h], .c-h-CF9 [class^=h], .c-h-12 [class^=h],
+.link-color-CF9 a, .c-l-CF9 a, .c-l-12 a,
+.color-CF9, .c-CF9, .c-12 {
   color: #CF9;
 }
 
-.text-decoration-color-C05, .cdC05, .cd13 {
+.link-decoration-color-C05 a, .c-ld-C05 a, .c-ld-13 a,
+.text-decoration-color-C05, .c-td-C05, .c-td-13 {
   text-decoration-color: #C05;
 }
 
-.background-color-C05, .cC05, .c13 {
+.background-color-C05, .c-bg-C05, .c-bg-13 {
   background-color: #C05;
 }
 
-.border-color-C05, .cbC05, .cb13 {
+.border-color-C05, .c-b-C05, .c-b-13 {
   border-color: #C05;
 }
 
-.color-C05, .ctC05, .ct13 {
+.header-color-C05 [class^=h], .c-h-C05 [class^=h], .c-h-13 [class^=h],
+.link-color-C05 a, .c-l-C05 a, .c-l-13 a,
+.color-C05, .c-C05, .c-13 {
   color: #C05;
 }
 
-.text-decoration-color-F06, .cdF06, .cd14 {
+.link-decoration-color-F06 a, .c-ld-F06 a, .c-ld-14 a,
+.text-decoration-color-F06, .c-td-F06, .c-td-14 {
   text-decoration-color: #F06;
 }
 
-.background-color-F06, .cF06, .c14 {
+.background-color-F06, .c-bg-F06, .c-bg-14 {
   background-color: #F06;
 }
 
-.border-color-F06, .cbF06, .cb14 {
+.border-color-F06, .c-b-F06, .c-b-14 {
   border-color: #F06;
 }
 
-.color-F06, .ctF06, .ct14 {
+.header-color-F06 [class^=h], .c-h-F06 [class^=h], .c-h-14 [class^=h],
+.link-color-F06 a, .c-l-F06 a, .c-l-14 a,
+.color-F06, .c-F06, .c-14 {
   color: #F06;
 }
 
-.text-decoration-color-FBB, .cdFBB, .cd15 {
+.link-decoration-color-FBB a, .c-ld-FBB a, .c-ld-15 a,
+.text-decoration-color-FBB, .c-td-FBB, .c-td-15 {
   text-decoration-color: #FBB;
 }
 
-.background-color-FBB, .cFBB, .c15 {
+.background-color-FBB, .c-bg-FBB, .c-bg-15 {
   background-color: #FBB;
 }
 
-.border-color-FBB, .cbFBB, .cb15 {
+.border-color-FBB, .c-b-FBB, .c-b-15 {
   border-color: #FBB;
 }
 
-.color-FBB, .ctFBB, .ct15 {
+.header-color-FBB [class^=h], .c-h-FBB [class^=h], .c-h-15 [class^=h],
+.link-color-FBB a, .c-l-FBB a, .c-l-15 a,
+.color-FBB, .c-FBB, .c-15 {
   color: #FBB;
 }
 
-.text-decoration-color-940, .cd940, .cd16 {
+.link-decoration-color-940 a, .c-ld-940 a, .c-ld-16 a,
+.text-decoration-color-940, .c-td-940, .c-td-16 {
   text-decoration-color: #940;
 }
 
-.background-color-940, .c940, .c16 {
+.background-color-940, .c-bg-940, .c-bg-16 {
   background-color: #940;
 }
 
-.border-color-940, .cb940, .cb16 {
+.border-color-940, .c-b-940, .c-b-16 {
   border-color: #940;
 }
 
-.color-940, .ct940, .ct16 {
+.header-color-940 [class^=h], .c-h-940 [class^=h], .c-h-16 [class^=h],
+.link-color-940 a, .c-l-940 a, .c-l-16 a,
+.color-940, .c-940, .c-16 {
   color: #940;
 }
 
-.text-decoration-color-D83, .cdD83, .cd17 {
+.link-decoration-color-D83 a, .c-ld-D83 a, .c-ld-17 a,
+.text-decoration-color-D83, .c-td-D83, .c-td-17 {
   text-decoration-color: #D83;
 }
 
-.background-color-D83, .cD83, .c17 {
+.background-color-D83, .c-bg-D83, .c-bg-17 {
   background-color: #D83;
 }
 
-.border-color-D83, .cbD83, .cb17 {
+.border-color-D83, .c-b-D83, .c-b-17 {
   border-color: #D83;
 }
 
-.color-D83, .ctD83, .ct17 {
+.header-color-D83 [class^=h], .c-h-D83 [class^=h], .c-h-17 [class^=h],
+.link-color-D83 a, .c-l-D83 a, .c-l-17 a,
+.color-D83, .c-D83, .c-17 {
   color: #D83;
 }
 
-.text-decoration-color-FED, .cdFED, .cd18 {
+.link-decoration-color-FED a, .c-ld-FED a, .c-ld-18 a,
+.text-decoration-color-FED, .c-td-FED, .c-td-18 {
   text-decoration-color: #FED;
 }
 
-.background-color-FED, .cFED, .c18 {
+.background-color-FED, .c-bg-FED, .c-bg-18 {
   background-color: #FED;
 }
 
-.border-color-FED, .cbFED, .cb18 {
+.border-color-FED, .c-b-FED, .c-b-18 {
   border-color: #FED;
 }
 
-.color-FED, .ctFED, .ct18 {
+.header-color-FED [class^=h], .c-h-FED [class^=h], .c-h-18 [class^=h],
+.link-color-FED a, .c-l-FED a, .c-l-18 a,
+.color-FED, .c-FED, .c-18 {
   color: #FED;
 }
 
