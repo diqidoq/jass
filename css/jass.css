@@ -1,5 +1,4 @@
-.link-decoration-color-334 a, .c-ld-334 a, .c-ld-1 a,
-.text-decoration-color-334, .c-td-334, .c-td-1 {
+.text-decoration-color-334, .c-td-334, .link-decoration-color-334 a, .c-ld-334 a, .c-ld-1 a, .c-td-1 {
   text-decoration-color: #334;
 }
 
@@ -11,14 +10,11 @@
   border-color: #334;
 }
 
-.header-color-334 [class^=h], .c-h-334 [class^=h], .c-h-1 [class^=h],
-.link-color-334 a, .c-l-334 a, .c-l-1 a,
-.color-334, .c-334, .c-1 {
+.color-334, .c-334, .header-color-334 h1, .header-color-334 h2, .header-color-334 h3, .header-color-334 h4, .c-h-334 h1, .c-h-334 h2, .c-h-334 h3, .c-h-334 h4, .c-h-1 h1, .c-h-1 h2, .c-h-1 h3, .c-h-1 h4, .link-color-334 a, .c-l-334 a, .c-l-1 a, .c-1 {
   color: #334;
 }
 
-.link-decoration-color-99A a, .c-ld-99A a, .c-ld-2 a,
-.text-decoration-color-99A, .c-td-99A, .c-td-2 {
+.text-decoration-color-99A, .c-td-99A, .link-decoration-color-99A a, .c-ld-99A a, .c-ld-2 a, .c-td-2 {
   text-decoration-color: #99A;
 }
 
@@ -30,14 +26,11 @@
   border-color: #99A;
 }
 
-.header-color-99A [class^=h], .c-h-99A [class^=h], .c-h-2 [class^=h],
-.link-color-99A a, .c-l-99A a, .c-l-2 a,
-.color-99A, .c-99A, .c-2 {
+.color-99A, .c-99A, .header-color-99A h1, .header-color-99A h2, .header-color-99A h3, .header-color-99A h4, .c-h-99A h1, .c-h-99A h2, .c-h-99A h3, .c-h-99A h4, .c-h-2 h1, .c-h-2 h2, .c-h-2 h3, .c-h-2 h4, .link-color-99A a, .c-l-99A a, .c-l-2 a, .c-2 {
   color: #99A;
 }
 
-.link-decoration-color-EEF a, .c-ld-EEF a, .c-ld-3 a,
-.text-decoration-color-EEF, .c-td-EEF, .c-td-3 {
+.text-decoration-color-EEF, .c-td-EEF, .link-decoration-color-EEF a, .c-ld-EEF a, .c-ld-3 a, .c-td-3 {
   text-decoration-color: #EEF;
 }
 
@@ -49,14 +42,11 @@
   border-color: #EEF;
 }
 
-.header-color-EEF [class^=h], .c-h-EEF [class^=h], .c-h-3 [class^=h],
-.link-color-EEF a, .c-l-EEF a, .c-l-3 a,
-.color-EEF, .c-EEF, .c-3 {
+.color-EEF, .c-EEF, .header-color-EEF h1, .header-color-EEF h2, .header-color-EEF h3, .header-color-EEF h4, .c-h-EEF h1, .c-h-EEF h2, .c-h-EEF h3, .c-h-EEF h4, .c-h-3 h1, .c-h-3 h2, .c-h-3 h3, .c-h-3 h4, .link-color-EEF a, .c-l-EEF a, .c-l-3 a, .c-3 {
   color: #EEF;
 }
 
-.link-decoration-color-A18 a, .c-ld-A18 a, .c-ld-4 a,
-.text-decoration-color-A18, .c-td-A18, .c-td-4 {
+.text-decoration-color-A18, .c-td-A18, .link-decoration-color-A18 a, .c-ld-A18 a, .c-ld-4 a, .c-td-4 {
   text-decoration-color: #A18;
 }
 
@@ -68,14 +58,11 @@
   border-color: #A18;
 }
 
-.header-color-A18 [class^=h], .c-h-A18 [class^=h], .c-h-4 [class^=h],
-.link-color-A18 a, .c-l-A18 a, .c-l-4 a,
-.color-A18, .c-A18, .c-4 {
+.color-A18, .c-A18, .header-color-A18 h1, .header-color-A18 h2, .header-color-A18 h3, .header-color-A18 h4, .c-h-A18 h1, .c-h-A18 h2, .c-h-A18 h3, .c-h-A18 h4, .c-h-4 h1, .c-h-4 h2, .c-h-4 h3, .c-h-4 h4, .link-color-A18 a, .c-l-A18 a, .c-l-4 a, .c-4 {
   color: #A18;
 }
 
-.link-decoration-color-F0C a, .c-ld-F0C a, .c-ld-5 a,
-.text-decoration-color-F0C, .c-td-F0C, .c-td-5 {
+.text-decoration-color-F0C, .c-td-F0C, .link-decoration-color-F0C a, .c-ld-F0C a, .c-ld-5 a, .c-td-5 {
   text-decoration-color: #F0C;
 }
 
@@ -87,14 +74,11 @@
   border-color: #F0C;
 }
 
-.header-color-F0C [class^=h], .c-h-F0C [class^=h], .c-h-5 [class^=h],
-.link-color-F0C a, .c-l-F0C a, .c-l-5 a,
-.color-F0C, .c-F0C, .c-5 {
+.color-F0C, .c-F0C, .header-color-F0C h1, .header-color-F0C h2, .header-color-F0C h3, .header-color-F0C h4, .c-h-F0C h1, .c-h-F0C h2, .c-h-F0C h3, .c-h-F0C h4, .c-h-5 h1, .c-h-5 h2, .c-h-5 h3, .c-h-5 h4, .link-color-F0C a, .c-l-F0C a, .c-l-5 a, .c-5 {
   color: #F0C;
 }
 
-.link-decoration-color-EBF a, .c-ld-EBF a, .c-ld-6 a,
-.text-decoration-color-EBF, .c-td-EBF, .c-td-6 {
+.text-decoration-color-EBF, .c-td-EBF, .link-decoration-color-EBF a, .c-ld-EBF a, .c-ld-6 a, .c-td-6 {
   text-decoration-color: #EBF;
 }
 
@@ -106,14 +90,11 @@
   border-color: #EBF;
 }
 
-.header-color-EBF [class^=h], .c-h-EBF [class^=h], .c-h-6 [class^=h],
-.link-color-EBF a, .c-l-EBF a, .c-l-6 a,
-.color-EBF, .c-EBF, .c-6 {
+.color-EBF, .c-EBF, .header-color-EBF h1, .header-color-EBF h2, .header-color-EBF h3, .header-color-EBF h4, .c-h-EBF h1, .c-h-EBF h2, .c-h-EBF h3, .c-h-EBF h4, .c-h-6 h1, .c-h-6 h2, .c-h-6 h3, .c-h-6 h4, .link-color-EBF a, .c-l-EBF a, .c-l-6 a, .c-6 {
   color: #EBF;
 }
 
-.link-decoration-color-15C a, .c-ld-15C a, .c-ld-7 a,
-.text-decoration-color-15C, .c-td-15C, .c-td-7 {
+.text-decoration-color-15C, .c-td-15C, .link-decoration-color-15C a, .c-ld-15C a, .c-ld-7 a, .c-td-7 {
   text-decoration-color: #15C;
 }
 
@@ -125,14 +106,11 @@
   border-color: #15C;
 }
 
-.header-color-15C [class^=h], .c-h-15C [class^=h], .c-h-7 [class^=h],
-.link-color-15C a, .c-l-15C a, .c-l-7 a,
-.color-15C, .c-15C, .c-7 {
+.color-15C, .c-15C, .header-color-15C h1, .header-color-15C h2, .header-color-15C h3, .header-color-15C h4, .c-h-15C h1, .c-h-15C h2, .c-h-15C h3, .c-h-15C h4, .c-h-7 h1, .c-h-7 h2, .c-h-7 h3, .c-h-7 h4, .link-color-15C a, .c-l-15C a, .c-l-7 a, .c-7 {
   color: #15C;
 }
 
-.link-decoration-color-69F a, .c-ld-69F a, .c-ld-8 a,
-.text-decoration-color-69F, .c-td-69F, .c-td-8 {
+.text-decoration-color-69F, .c-td-69F, .link-decoration-color-69F a, .c-ld-69F a, .c-ld-8 a, .c-td-8 {
   text-decoration-color: #69F;
 }
 
@@ -144,14 +122,11 @@
   border-color: #69F;
 }
 
-.header-color-69F [class^=h], .c-h-69F [class^=h], .c-h-8 [class^=h],
-.link-color-69F a, .c-l-69F a, .c-l-8 a,
-.color-69F, .c-69F, .c-8 {
+.color-69F, .c-69F, .header-color-69F h1, .header-color-69F h2, .header-color-69F h3, .header-color-69F h4, .c-h-69F h1, .c-h-69F h2, .c-h-69F h3, .c-h-69F h4, .c-h-8 h1, .c-h-8 h2, .c-h-8 h3, .c-h-8 h4, .link-color-69F a, .c-l-69F a, .c-l-8 a, .c-8 {
   color: #69F;
 }
 
-.link-decoration-color-CDF a, .c-ld-CDF a, .c-ld-9 a,
-.text-decoration-color-CDF, .c-td-CDF, .c-td-9 {
+.text-decoration-color-CDF, .c-td-CDF, .link-decoration-color-CDF a, .c-ld-CDF a, .c-ld-9 a, .c-td-9 {
   text-decoration-color: #CDF;
 }
 
@@ -163,14 +138,11 @@
   border-color: #CDF;
 }
 
-.header-color-CDF [class^=h], .c-h-CDF [class^=h], .c-h-9 [class^=h],
-.link-color-CDF a, .c-l-CDF a, .c-l-9 a,
-.color-CDF, .c-CDF, .c-9 {
+.color-CDF, .c-CDF, .header-color-CDF h1, .header-color-CDF h2, .header-color-CDF h3, .header-color-CDF h4, .c-h-CDF h1, .c-h-CDF h2, .c-h-CDF h3, .c-h-CDF h4, .c-h-9 h1, .c-h-9 h2, .c-h-9 h3, .c-h-9 h4, .link-color-CDF a, .c-l-CDF a, .c-l-9 a, .c-9 {
   color: #CDF;
 }
 
-.link-decoration-color-5A0 a, .c-ld-5A0 a, .c-ld-10 a,
-.text-decoration-color-5A0, .c-td-5A0, .c-td-10 {
+.text-decoration-color-5A0, .c-td-5A0, .link-decoration-color-5A0 a, .c-ld-5A0 a, .c-ld-10 a, .c-td-10 {
   text-decoration-color: #5A0;
 }
 
@@ -182,14 +154,11 @@
   border-color: #5A0;
 }
 
-.header-color-5A0 [class^=h], .c-h-5A0 [class^=h], .c-h-10 [class^=h],
-.link-color-5A0 a, .c-l-5A0 a, .c-l-10 a,
-.color-5A0, .c-5A0, .c-10 {
+.color-5A0, .c-5A0, .header-color-5A0 h1, .header-color-5A0 h2, .header-color-5A0 h3, .header-color-5A0 h4, .c-h-5A0 h1, .c-h-5A0 h2, .c-h-5A0 h3, .c-h-5A0 h4, .c-h-10 h1, .c-h-10 h2, .c-h-10 h3, .c-h-10 h4, .link-color-5A0 a, .c-l-5A0 a, .c-l-10 a, .c-10 {
   color: #5A0;
 }
 
-.link-decoration-color-8F0 a, .c-ld-8F0 a, .c-ld-11 a,
-.text-decoration-color-8F0, .c-td-8F0, .c-td-11 {
+.text-decoration-color-8F0, .c-td-8F0, .link-decoration-color-8F0 a, .c-ld-8F0 a, .c-ld-11 a, .c-td-11 {
   text-decoration-color: #8F0;
 }
 
@@ -201,14 +170,11 @@
   border-color: #8F0;
 }
 
-.header-color-8F0 [class^=h], .c-h-8F0 [class^=h], .c-h-11 [class^=h],
-.link-color-8F0 a, .c-l-8F0 a, .c-l-11 a,
-.color-8F0, .c-8F0, .c-11 {
+.color-8F0, .c-8F0, .header-color-8F0 h1, .header-color-8F0 h2, .header-color-8F0 h3, .header-color-8F0 h4, .c-h-8F0 h1, .c-h-8F0 h2, .c-h-8F0 h3, .c-h-8F0 h4, .c-h-11 h1, .c-h-11 h2, .c-h-11 h3, .c-h-11 h4, .link-color-8F0 a, .c-l-8F0 a, .c-l-11 a, .c-11 {
   color: #8F0;
 }
 
-.link-decoration-color-CF9 a, .c-ld-CF9 a, .c-ld-12 a,
-.text-decoration-color-CF9, .c-td-CF9, .c-td-12 {
+.text-decoration-color-CF9, .c-td-CF9, .link-decoration-color-CF9 a, .c-ld-CF9 a, .c-ld-12 a, .c-td-12 {
   text-decoration-color: #CF9;
 }
 
@@ -220,14 +186,11 @@
   border-color: #CF9;
 }
 
-.header-color-CF9 [class^=h], .c-h-CF9 [class^=h], .c-h-12 [class^=h],
-.link-color-CF9 a, .c-l-CF9 a, .c-l-12 a,
-.color-CF9, .c-CF9, .c-12 {
+.color-CF9, .c-CF9, .header-color-CF9 h1, .header-color-CF9 h2, .header-color-CF9 h3, .header-color-CF9 h4, .c-h-CF9 h1, .c-h-CF9 h2, .c-h-CF9 h3, .c-h-CF9 h4, .c-h-12 h1, .c-h-12 h2, .c-h-12 h3, .c-h-12 h4, .link-color-CF9 a, .c-l-CF9 a, .c-l-12 a, .c-12 {
   color: #CF9;
 }
 
-.link-decoration-color-C05 a, .c-ld-C05 a, .c-ld-13 a,
-.text-decoration-color-C05, .c-td-C05, .c-td-13 {
+.text-decoration-color-C05, .c-td-C05, .link-decoration-color-C05 a, .c-ld-C05 a, .c-ld-13 a, .c-td-13 {
   text-decoration-color: #C05;
 }
 
@@ -239,14 +202,11 @@
   border-color: #C05;
 }
 
-.header-color-C05 [class^=h], .c-h-C05 [class^=h], .c-h-13 [class^=h],
-.link-color-C05 a, .c-l-C05 a, .c-l-13 a,
-.color-C05, .c-C05, .c-13 {
+.color-C05, .c-C05, .header-color-C05 h1, .header-color-C05 h2, .header-color-C05 h3, .header-color-C05 h4, .c-h-C05 h1, .c-h-C05 h2, .c-h-C05 h3, .c-h-C05 h4, .c-h-13 h1, .c-h-13 h2, .c-h-13 h3, .c-h-13 h4, .link-color-C05 a, .c-l-C05 a, .c-l-13 a, .c-13 {
   color: #C05;
 }
 
-.link-decoration-color-F06 a, .c-ld-F06 a, .c-ld-14 a,
-.text-decoration-color-F06, .c-td-F06, .c-td-14 {
+.text-decoration-color-F06, .c-td-F06, .link-decoration-color-F06 a, .c-ld-F06 a, .c-ld-14 a, .c-td-14 {
   text-decoration-color: #F06;
 }
 
@@ -258,14 +218,11 @@
   border-color: #F06;
 }
 
-.header-color-F06 [class^=h], .c-h-F06 [class^=h], .c-h-14 [class^=h],
-.link-color-F06 a, .c-l-F06 a, .c-l-14 a,
-.color-F06, .c-F06, .c-14 {
+.color-F06, .c-F06, .header-color-F06 h1, .header-color-F06 h2, .header-color-F06 h3, .header-color-F06 h4, .c-h-F06 h1, .c-h-F06 h2, .c-h-F06 h3, .c-h-F06 h4, .c-h-14 h1, .c-h-14 h2, .c-h-14 h3, .c-h-14 h4, .link-color-F06 a, .c-l-F06 a, .c-l-14 a, .c-14 {
   color: #F06;
 }
 
-.link-decoration-color-FBB a, .c-ld-FBB a, .c-ld-15 a,
-.text-decoration-color-FBB, .c-td-FBB, .c-td-15 {
+.text-decoration-color-FBB, .c-td-FBB, .link-decoration-color-FBB a, .c-ld-FBB a, .c-ld-15 a, .c-td-15 {
   text-decoration-color: #FBB;
 }
 
@@ -277,14 +234,11 @@
   border-color: #FBB;
 }
 
-.header-color-FBB [class^=h], .c-h-FBB [class^=h], .c-h-15 [class^=h],
-.link-color-FBB a, .c-l-FBB a, .c-l-15 a,
-.color-FBB, .c-FBB, .c-15 {
+.color-FBB, .c-FBB, .header-color-FBB h1, .header-color-FBB h2, .header-color-FBB h3, .header-color-FBB h4, .c-h-FBB h1, .c-h-FBB h2, .c-h-FBB h3, .c-h-FBB h4, .c-h-15 h1, .c-h-15 h2, .c-h-15 h3, .c-h-15 h4, .link-color-FBB a, .c-l-FBB a, .c-l-15 a, .c-15 {
   color: #FBB;
 }
 
-.link-decoration-color-940 a, .c-ld-940 a, .c-ld-16 a,
-.text-decoration-color-940, .c-td-940, .c-td-16 {
+.text-decoration-color-940, .c-td-940, .link-decoration-color-940 a, .c-ld-940 a, .c-ld-16 a, .c-td-16 {
   text-decoration-color: #940;
 }
 
@@ -296,14 +250,11 @@
   border-color: #940;
 }
 
-.header-color-940 [class^=h], .c-h-940 [class^=h], .c-h-16 [class^=h],
-.link-color-940 a, .c-l-940 a, .c-l-16 a,
-.color-940, .c-940, .c-16 {
+.color-940, .c-940, .header-color-940 h1, .header-color-940 h2, .header-color-940 h3, .header-color-940 h4, .c-h-940 h1, .c-h-940 h2, .c-h-940 h3, .c-h-940 h4, .c-h-16 h1, .c-h-16 h2, .c-h-16 h3, .c-h-16 h4, .link-color-940 a, .c-l-940 a, .c-l-16 a, .c-16 {
   color: #940;
 }
 
-.link-decoration-color-D83 a, .c-ld-D83 a, .c-ld-17 a,
-.text-decoration-color-D83, .c-td-D83, .c-td-17 {
+.text-decoration-color-D83, .c-td-D83, .link-decoration-color-D83 a, .c-ld-D83 a, .c-ld-17 a, .c-td-17 {
   text-decoration-color: #D83;
 }
 
@@ -315,14 +266,11 @@
   border-color: #D83;
 }
 
-.header-color-D83 [class^=h], .c-h-D83 [class^=h], .c-h-17 [class^=h],
-.link-color-D83 a, .c-l-D83 a, .c-l-17 a,
-.color-D83, .c-D83, .c-17 {
+.color-D83, .c-D83, .header-color-D83 h1, .header-color-D83 h2, .header-color-D83 h3, .header-color-D83 h4, .c-h-D83 h1, .c-h-D83 h2, .c-h-D83 h3, .c-h-D83 h4, .c-h-17 h1, .c-h-17 h2, .c-h-17 h3, .c-h-17 h4, .link-color-D83 a, .c-l-D83 a, .c-l-17 a, .c-17 {
   color: #D83;
 }
 
-.link-decoration-color-FED a, .c-ld-FED a, .c-ld-18 a,
-.text-decoration-color-FED, .c-td-FED, .c-td-18 {
+.text-decoration-color-FED, .c-td-FED, .link-decoration-color-FED a, .c-ld-FED a, .c-ld-18 a, .c-td-18 {
   text-decoration-color: #FED;
 }
 
@@ -334,9 +282,7 @@
   border-color: #FED;
 }
 
-.header-color-FED [class^=h], .c-h-FED [class^=h], .c-h-18 [class^=h],
-.link-color-FED a, .c-l-FED a, .c-l-18 a,
-.color-FED, .c-FED, .c-18 {
+.color-FED, .c-FED, .header-color-FED h1, .header-color-FED h2, .header-color-FED h3, .header-color-FED h4, .c-h-FED h1, .c-h-FED h2, .c-h-FED h3, .c-h-FED h4, .c-h-18 h1, .c-h-18 h2, .c-h-18 h3, .c-h-18 h4, .link-color-FED a, .c-l-FED a, .c-l-18 a, .c-18 {
   color: #FED;
 }
 
