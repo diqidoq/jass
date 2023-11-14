@@ -1,11 +1,13 @@
-#!/bin/sh
+#!/bin/bash
+
 # feel free to change the steps here to reduce the count of shadees,
 # for example like: 1 3 5 7 9 B D F (leaving out each second step)
 # You can do it for all color channles or just for some.
 # Or if you want low contrast leave out 0 and F.
-red-steps=(0 1 2 3 4 5 6 7 8 9 A B C D E F)
-green-steps=(0 1 2 3 4 5 6 7 8 9 A B C D E F)
-blue-steps=(0 1 2 3 4 5 6 7 8 9 A B C D E F)
+
+red=(0 1 2 3 4 5 6 7 8 9 A B C D E F)
+green=(0 1 2 3 4 5 6 7 8 9 A B C D E F)
+blue=(0 1 2 3 4 5 6 7 8 9 A B C D E F)
 
 # After testing colors here you can use your chosen steps in the SASS settings
 # to generate the color shade classes for your setup.
@@ -31,9 +33,9 @@ p { font-family: monospace; margin: 0 auto; text-align: center; background-color
 </body>
 EOF
 
-for r in "${red-steps[@]}" ; do
-  for g in "${green-steps[@]}" ; do
-    for b in "${blue-steps[@]}" ; do
+for r in "${red[@]}" ; do
+  for g in "${green[@]}" ; do
+    for b in "${blue[@]}" ; do
 
       echo "<div style='background-color:#$r$g$b'><code>#$r$g$b</code></div>";
 
@@ -47,6 +49,6 @@ cat <<EOF
 </html>
 EOF
 
-} >> colors-websafe-demo.html 2>&1
+} >> colors-fullstack-demo.html 2>&1
 
 buildwebsafecolors

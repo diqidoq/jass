@@ -21,20 +21,20 @@ $child-selector-extension: "--c > *"; // creates: "myclass--c > *"
 // This minimizes the color palette and ccs color component file size.
 $enable-websafe-colors-preset: yes;
 // Choose your color palettes and shades of them.
-// Default is 3 (dark,mid,bright) of each nuance here.
-// Feel free to extend or minify from 3 to 2 or 3 to 6, etc.
-// Use the first 3 items in list to define 
-// the black and white point tendency of your color profile.
+// Default is 5 brightness shades of each nuance here.
+// Feel free to extend or minify from 5 to 2 or 3 to 6, etc.
+// Use the first row in list defines the 
+// black and white point tendency of your color profile.
 // It is recommended to use web safe colors like 5599FF or 59F.
 // It is up to you how many colors you use and how you group them.
-// Default is a preset of 6 color sets from dark, mid to bright.
+// Default is a preset of 6 color sets.
 $websafe-colors-preset: 
-  334, 99A, EEF, // grey (incl. blackpoint bright & dark)
-  A18, F0C, EBF, // rose
-  15C, 69F, CDF, // blue
-  5A0, 8F0, CF9, // green
-  C05, F06, FBB, // red
-  940, D83, FED  // gold
+222, 555, 999, CCC, FFF, // grey
+607, A0A, E0F, E5F, EAF, // rose
+029, 04B, 36E, 69F, BCF, // blue
+072, 5A0, 7E0, BF4, CF9, // green
+903, C05, F06, F68, FBC, // red
+630, 940, D83, FC7, EDC  // gold
 ;
 
 // Enable websafe colors full-stack.
