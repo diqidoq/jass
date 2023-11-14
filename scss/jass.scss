@@ -17,22 +17,17 @@ $child-selector-extension: "--c > *"; // creates: "myclass--c > *"
 // ############ color component ############### //
 // ---------------------------------------------//
 
+// Recommended! (instead of $enable-websafe-colors-fullstack below).
+// This minimizes the color palette and ccs color component file size.
+$enable-websafe-colors-preset: yes;
+// Choose your color palettes and shades of them.
+// Default is 3 (dark,mid,bright) of each nuance here.
+// Feel free to extend or minify from 3 to 2 or 3 to 6, etc.
 // Use the first 3 items in list to define 
 // the black and white point tendency of your color profile.
 // It is recommended to use web safe colors like 5599FF or 59F.
-// Expand or compress color theme like you want.
 // It is up to you how many colors you use and how you group them.
-// Default is a preset of 5 color sets from dark, mid to bright.
-// c = background-color, tc = color, bc = border-color (width color id).
-$enable-websafe-colors-preset: yes; // recommended
-// Or enable full websafe color stack for testing.
-$enable-websafe-colors-fullstack: no; // by default 4100 3hex colors!
-
-// if $enable-websafe-colors-preset: yes;
-// Feel free to extend or minify from 3 to 2 or 3 to 6, etc.
-// All colors will be available as incremented id like c1, c2
-// And as hex code class, like: .c334 which is .c1
-// .c1 and .c3 will be the bright and dark (blackpoint) of your color preset.
+// Default is a preset of 6 color sets from dark, mid to bright.
 $websafe-colors-preset: 
   334, 99A, EEF, // grey (incl. blackpoint bright & dark)
   A18, F0C, EBF, // rose
@@ -42,21 +37,38 @@ $websafe-colors-preset:
   940, D83, FED  // gold
 ;
 
-// if $enable-websafe-colors-fullstack: yes; 
-// Make a full stack of websafe colors available.
-// Choose the hex steps of each channel.
-// Beware that the full list is over 4000! hex codes.
-// All colors will be available as incremented id like c1, c2
-// And as hex code class, like: .c334 which is .c1
-// .c1 and .c3 will be the bright and dark (blackpoint) of your color preset.
-$red: (0 1 2 3 4 5 6 7 8 9 A B C D E F);
+// Enable websafe colors full-stack.
+// Note: this creates 4100 HEX color codes if all red green blue steps are chosen.
+// Disables $enable-websafe-colors-preset automatically.
+$enable-websafe-colors-fullstack: no; // Default: no.
+// Therefor you need to choose the HEX steps included per channel below.
+// Hint: modern websites barely use blacks below #222.
+// Be warned: each step creates many multiplying css lines.
+// Use full stack colors only for advanced projects or for color scheme testing.
+// Then switch back to $enable-websafe-colors-fullstack: no;
+// and make sure $enable-websafe-colors-preset: yes;
+$red: (0 1 2 3 4 5 6 7 8 9 A B C D E F); 
 $green: (0 1 2 3 4 5 6 7 8 9 A B C D E F);
 $blue: (0 1 2 3 4 5 6 7 8 9 A B C D E F);
 
-$colored-headers: 'h1,h2,h3,h4,h5,h6'; // color classes to target containing header elements.
+// Choose color classes to target containing header elements.
+// Creates additional header color classes with a trainling <h> element target
+// in the selector so that you can color all headers in the inner elements group.
+// Hint: small headers like h5, h6 barely stand out or need to be colored.
+$colored-headers: 'h1,h2,h3,h4';
+
+// Creates additional link color classes with a trainling <a> element target
+// in the selector so that you can color all links in the inner elements group.
+$colored-links: yes;
+
+// Not recommended settings for big components like color:
 $enable-child-selectors: no; // yes/no (default:no)
-$override: no; // yes/no > !important
-$index-classes: yes; // makes additional classes like c1, c2 available.
+$override: no; // yes/no > !important  (default:no)
+
+// Make additional classes with trailing index numbers available
+// for $websafe-colors-preset only (not for full-stack).
+// Useful to keep class names functioning by replacing color palettes.
+$index-classes: yes; // yes/no (default: yes)
 @import "color";
 
 // ############ shadow component ############### //
