@@ -3,44 +3,54 @@ $o: null;
   $o: !important;
 }
 
-@if $enable-websafe-colors-preset == yes {
-@if $index-classes == yes {
-  $i: 1;
-  @each $color in $websafe-colors-preset {
-    .link-decoration-color-#{$color} a, .c-ld-#{$color} a, .c-ld-#{$i} a,
-    .text-decoration-color-#{$color},   .c-td-#{$color},   .c-td-#{$i} { text-decoration-color: ##{$color}$o; }
-         .background-color-#{$color},   .c-bg-#{$color},   .c-bg-#{$i}      { background-color: ##{$color}$o; }
-             .border-color-#{$color},    .c-b-#{$color},    .c-b-#{$i}          { border-color: ##{$color}$o; }
-             .header-color-#{$color} [class^="h"], .c-h-#{$color} [class^="h"], .c-h-#{$i} [class^="h"],
-               .link-color-#{$color} a,  .c-l-#{$color} a,  .c-l-#{$i} a,
-                    .color-#{$color},      .c-#{$color},      .c-#{$i}                 { color: ##{$color}$o; }
-    $i: $i + 1;
-  }
-} @else {
-  @each $color in $websafe-colors-preset {
-    .link-decoration-color-#{$color} a, .c-ld-#{$color} a,
-    .text-decoration-color-#{$color},   .c-td-#{$color} { text-decoration-color: ##{$color}$o; }
-         .background-color-#{$color},   .c-bg-#{$color}      { background-color: ##{$color}$o; }
-             .border-color-#{$color},    .c-b-#{$color}          { border-color: ##{$color}$o; }
-             .header-color-#{$color} [class^="h"], .c-h-#{$color} [class^="h"],
-               .link-color-#{$color} a,  .c-l-#{$color} a,
-                    .color-#{$color},      .c-#{$color}                 { color: ##{$color}$o; }
-    }
-  }
+$ch: null;
+@if $colored-headers {
+  $ch: $colored-headers;
+}
+
+$cl: null;
+@if $colored-links == yes {
+  $cl: yes;
 }
 
 @if $enable-websafe-colors-fullstack == yes {
+  $enable-websafe-colors-preset: no;
   @each $r in $red {
     @each $g in $green {
       @each $b in $blue {
-        $color: #{$r}#{$g}#{$b};
-        .c-ld-#{$color} a,
-        .c-td-#{$color} { text-decoration-color: ##{$color}$o; }
-        .c-bg-#{$color}      { background-color: ##{$color}$o; }
-         .c-b-#{$color}          { border-color: ##{$color}$o; }
-         .c-l-#{$color} a,
-           .c-#{$color}                 { color: ##{$color}$o; }
+        $c: #{$r}#{$g}#{$b};
+          .c-td-#{$c}   { text-decoration-color: ##{$c}$o; }
+@if $cl { .c-ld-#{$c} a           { @extend .c-td-#{$c}; } }
+          .c-bg-#{$c}        { background-color: ##{$c}$o; }
+           .c-b-#{$c}            { border-color: ##{$c}$o; }
+             .c-#{$c}                   { color: ##{$c}$o; }
+@if $cl {  .c-l-#{$c} a              { @extend .c-#{$c}; } }
+@if $ch  { .c-h-#{$c}       { #{$ch} { @extend .c-#{$c}; } } }
       }
+    }
+  }
+} @else if $enable-websafe-colors-preset == yes {
+@if $index-classes == yes {
+  $i: 1;
+  @each $c in $websafe-colors-preset {
+            .text-decoration-color-#{$c},   .c-td-#{$c},   .c-td-#{$i} { text-decoration-color: ##{$c}$o; }
+  @if $cl { .link-decoration-color-#{$c} a, .c-ld-#{$c} a, .c-ld-#{$i} a         { @extend .c-td-#{$c}; } }
+                 .background-color-#{$c},   .c-bg-#{$c},   .c-bg-#{$i}      { background-color: ##{$c}$o; }
+                     .border-color-#{$c},    .c-b-#{$c},    .c-b-#{$i}          { border-color: ##{$c}$o; }
+                            .color-#{$c},      .c-#{$c},      .c-#{$i}                 { color: ##{$c}$o; }
+  @if $cl {            .link-color-#{$c} a,  .c-l-#{$c} a,  .c-l-#{$i} a            { @extend .c-#{$c}; } }
+  @if $ch {          .header-color-#{$c},    .c-h-#{$c},    .c-h-#{$i}     { #{$ch} { @extend .c-#{$c}; } } }
+  $i: $i + 1;
+  }
+} @else {
+  @each $c in $websafe-colors-preset {
+            .text-decoration-color-#{$c},   .c-td-#{$c}   { text-decoration-color: ##{$c}$o; }
+  @if $cl { .link-decoration-color-#{$c} a, .c-ld-#{$c} a           { @extend .c-td-#{$c}; } }   
+                 .background-color-#{$c},   .c-bg-#{$c}        { background-color: ##{$c}$o; }
+                     .border-color-#{$c},    .c-b-#{$c}            { border-color: ##{$c}$o; }
+                            .color-#{$c},      .c-#{$c}                   { color: ##{$c}$o; }
+  @if $cl {            .link-color-#{$c} a,  .c-l-#{$c} a              { @extend .c-#{$c}; } }
+  @if $ch {          .header-color-#{$c},    .c-h-#{$c}       { #{$ch} { @extend .c-#{$c}; } } }
     }
   }
 }
