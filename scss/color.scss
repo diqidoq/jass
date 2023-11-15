@@ -24,6 +24,14 @@ $cl: null;
   }
 }
 
+$ctd-sel: null;
+$cld-sel: null;
+$cbg-sel: null;
+ $cb-sel: null;
+  $c-sel: null;
+ $cl-sel: null;
+ $ch-sel: null;
+
 $i: 1;
 @each $c in $color-preset {
   @if $selectors == long {
@@ -36,22 +44,22 @@ $i: 1;
      $ch-sel:          ".header-color-#{$c}";
   }
   @if $selectors == short {
-    $ctd-sel: ".c-td-#{$c},   .c-td-#{$i}";
-    $cld-sel: ".c-ld-#{$c} a, .c-ld-#{$i} a";
-    $cbg-sel: ".c-bg-#{$c},   .c-bg-#{$i}";
-     $cb-sel:  ".c-b-#{$c},    .c-b-#{$i}";
-      $c-sel:    ".c-#{$c},      .c-#{$i}";
-     $cl-sel:  ".c-l-#{$c} a,  .c-l-#{$i} a";
-     $ch-sel:  ".c-h-#{$c},    .c-h-#{$i}";
+    $ctd-sel: ".c-td-#{$c}";
+    $cld-sel: ".c-ld-#{$c} a";
+    $cbg-sel: ".c-bg-#{$c}";
+     $cb-sel:  ".c-b-#{$c}";
+      $c-sel:    ".c-#{$c}";
+     $cl-sel:  ".c-l-#{$c} a";
+     $ch-sel:  ".c-h-#{$c}";
   }
   @if $index-classes == yes {
-    $ctd-sel: $ctd-sel + ".c-td-#{$i}";
-    $cld-sel: $cld-sel + ".c-ld-#{$i} a";
-    $cbg-sel: $cbg-sel + ".c-bg-#{$i}";
-     $cb-sel: $cb-sel  +  ".c-b-#{$i}";
-      $c-sel: $c-sel   +    ".c-#{$i}";
-     $cl-sel: $cl-sel  +  ".c-l-#{$i} a";
-     $ch-sel: $ch-sel  +  ".c-h-#{$i}";
+    $ctd-sel: $ctd-sel + ", .c-td-#{$i}";
+    $cld-sel: $cld-sel + ", .c-ld-#{$i} a";
+    $cbg-sel: $cbg-sel + ", .c-bg-#{$i}";
+     $cb-sel: $cb-sel  +  ", .c-b-#{$i}";
+      $c-sel: $c-sel   +    ", .c-#{$i}";
+     $cl-sel: $cl-sel  +  ", .c-l-#{$i} a";
+     $ch-sel: $ch-sel  +  ", .c-h-#{$i}";
   }
             #{$ctd-sel} { text-decoration-color: ##{$c}$o; }
   @if $cl { #{$cld-sel} {           @extend .c-td-#{$c}; } }   
@@ -63,4 +71,3 @@ $i: 1;
 
   $i: $i + 1;
 }
-
