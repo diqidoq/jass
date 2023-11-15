@@ -51,6 +51,6 @@ cat <<EOF
 </html>
 EOF
 
-} >> preset-demo.html 2>&1
+} > preset-demo.html 2>&1
 
 buildwebsafecolors

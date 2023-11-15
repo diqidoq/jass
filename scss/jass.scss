@@ -17,17 +17,19 @@ $child-selector-extension: "--c > *"; // creates: "myclass--c > *"
 // ############ color component ############### //
 // ---------------------------------------------//
 
-// This minimizes the color palette and ccs color component file size.
+// A custom color palette minimizes the colors present and ccs color component file size.
 // By building an own palette of color types and their shades.
-$enable-color-preset: no;
+// In comparision to the color-generator below.
+// But a color generator can help to build interesting complex palettes.
 
-// Default is 5 brightness shades of each nuance here.
+// Default custom demo palette here is 5 brightness shades of 6 colors.
 // Feel free to extend or minify from 5 to 2 or 3 to 6, etc.
-// Use the first row in list defines the 
+// Use the first row in list to define the 
 // black and white point tendency of your color profile.
 // It is recommended to use web safe colors like 5599FF or 59F.
 // It is up to you how many colors you use and how you group them.
-// Default is a preset of 6 color sets.
+// 
+// This gets overridden if $enable-color-generator: yes;
 $color-preset: 
 222, 555, 999, CCC, FFF, // grey
 607, A0A, E0F, E5F, EAF, // rose
@@ -37,31 +39,30 @@ $color-preset:
 630, 940, D83, FC7, EDC  // gold
 ;
 
-// Enable websafe colors full-stack.
-// Note: this creates 4100 HEX color codes if all red green blue steps are chosen.
-// Disables $enable-websafe-colors-preset automatically.
+// Enable color-generator (will override custom color-preset above)
+// Note: this creates many color code classes if all red green blue steps are chosen.
+// Overrides previous $color-preset and refills it with generated colors.
 $enable-color-generator: yes;
 // Therefor you need to choose the HEX steps included per channel below.
-// Hint: modern websites barely use blacks below #222.
+// Hint: modern websites barely use blacks below #111.
 // Be warned: each step creates many multiplying css lines.
-// Use full stack colors only for advanced projects or for color scheme testing.
-// Then switch back to $enable-websafe-colors-fullstack: no;
-// and make sure $enable-websafe-colors-preset: yes;
+// Use all 16 color bits only for advanced projects or for color scheme testing.
+// Then switch back to a custom palette or a minified version of the generator.
 
-// 3-digit hex code "Websmart" colors
-// Over 4000+ in 16 bit steps from 0 to F
-// Uncomment to enable and comment out websafe colros below.
+// Generator basis of 3-digit hex code "Websmart" color palette of
+// 4096 colors in 16 bit steps from 0 to F in 3 channels
+// Uncomment to enable this example and comment-out "websafe" colors below.
 // $red:   (0 1 2 3 4 5 6 7 8 9 A B C D E F); 
 // $green: (0 1 2 3 4 5 6 7 8 9 A B C D E F);
 // $blue:  (0 1 2 3 4 5 6 7 8 9 A B C D E F);
 
-// Traditional 3-digit hex code "Websafe" colors 
-// 256 colors in 6 bit steps from 0 to F.
+// Generator basis of Traditional 3-digit hex code "Websafe" color palette of
+// 216 colors in 6 bit steps from 0 to F in 3 channels.
 $red:   (0 3 6 9 C F);
 $green: (0 3 6 9 C F);
 $blue:  (0 3 6 9 C F);
 
-// Choose color classes to target containing header elements.
+// Choose if color classes should target containing header elements.
 // Creates additional header color classes with a trainling <h> element target
 // in the selector so that you can color all headers in the inner elements group.
 // Hint: small headers like h5, h6 barely stand out or need to be colored.
@@ -76,9 +77,9 @@ $enable-child-selectors: no; // yes/no (default:no)
 $override: no; // yes/no > !important  (default:no)
 
 // Make additional classes with trailing index numbers available
-// for $websafe-colors-preset only (not for full-stack).
 // Useful to keep class names functioning by replacing color palettes.
-$index-classes: yes; // yes/no (default: yes)
+// Should be off by color-generator ON since index classes make barely sense then.
+$index-classes: no; // yes/no
 @import "color";
 
 // ############ shadow component ############### //
@@ -94,9 +95,9 @@ $shadows:
 ;
 // Each shadow is present with and without color definition.
 // This way you can create shadows based on text color inheritance.
-// Usually you want to pass colors to shadow colors.
+// Usually you want to pass $color-preset to shadow colors.
 // But feel free to change the color profile for shadows here.
-$shadow-colors: $websafe-colors-preset;
+$shadow-colors: $color-preset;
 $enable-child-selectors: no; // yes/no (default:no)
 $override: no; // yes/no > !important
 @import "shadow";

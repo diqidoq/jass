@@ -14,22 +14,16 @@ $cl: null;
 }
 
 @if $enable-color-generator == yes {
-  $enable-color-preset: no;
+  $color-preset: ();
   @each $r in $red {
     @each $g in $green {
       @each $b in $blue {
-        $c: #{$r}#{$g}#{$b};
-          .c-td-#{$c}   { text-decoration-color: ##{$c}$o; }
-@if $cl { .c-ld-#{$c} a           { @extend .c-td-#{$c}; } }
-          .c-bg-#{$c}        { background-color: ##{$c}$o; }
-           .c-b-#{$c}            { border-color: ##{$c}$o; }
-             .c-#{$c}                   { color: ##{$c}$o; }
-@if $cl {  .c-l-#{$c} a              { @extend .c-#{$c}; } }
-@if $ch  { .c-h-#{$c}       { #{$ch} { @extend .c-#{$c}; } } }
+        $color-preset: append($color-preset, #{$r}#{$g}#{$b}, 'comma');
       }
     }
   }
-} @else if $enable-color-preset == yes {
+}
+
 @if $index-classes == yes {
   $i: 1;
   @each $c in $color-preset {
@@ -51,6 +45,6 @@ $cl: null;
                             .color-#{$c},      .c-#{$c}                   { color: ##{$c}$o; }
   @if $cl {            .link-color-#{$c} a,  .c-l-#{$c} a              { @extend .c-#{$c}; } }
   @if $ch {          .header-color-#{$c},    .c-h-#{$c}       { #{$ch} { @extend .c-#{$c}; } } }
-    }
   }
 }
+

@@ -37,7 +37,7 @@ for r in "${red[@]}" ; do
   for g in "${green[@]}" ; do
     for b in "${blue[@]}" ; do
 
-      echo "<div style='background-color:#$r$g$b'><code>#$r$g$b</code></div>";
+      echo "<div style='background-color:#$r$g$b'><p>#$r$g$b</p></div>";
 
     done
   done
@@ -49,6 +49,6 @@ cat <<EOF
 </html>
 EOF
 
-} >> websmart-demo.html 2>&1
+} > websmart-demo.html 2>&1
 
 buildwebsafecolors
