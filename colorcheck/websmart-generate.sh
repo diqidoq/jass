@@ -49,6 +49,6 @@ cat <<EOF
 </html>
 EOF
 
-} >> colors-fullstack-demo.html 2>&1
+} >> websmart-demo.html 2>&1
 
 buildwebsafecolors

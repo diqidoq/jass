@@ -17,10 +17,10 @@ $child-selector-extension: "--c > *"; // creates: "myclass--c > *"
 // ############ color component ############### //
 // ---------------------------------------------//
 
-// Recommended! (instead of $enable-websafe-colors-fullstack below).
 // This minimizes the color palette and ccs color component file size.
-$enable-websafe-colors-preset: yes;
-// Choose your color palettes and shades of them.
+// By building an own palette of color types and their shades.
+$enable-color-preset: no;
+
 // Default is 5 brightness shades of each nuance here.
 // Feel free to extend or minify from 5 to 2 or 3 to 6, etc.
 // Use the first row in list defines the 
@@ -28,7 +28,7 @@ $enable-websafe-colors-preset: yes;
 // It is recommended to use web safe colors like 5599FF or 59F.
 // It is up to you how many colors you use and how you group them.
 // Default is a preset of 6 color sets.
-$websafe-colors-preset: 
+$color-preset: 
 222, 555, 999, CCC, FFF, // grey
 607, A0A, E0F, E5F, EAF, // rose
 029, 04B, 36E, 69F, BCF, // blue
@@ -40,16 +40,26 @@ $websafe-colors-preset:
 // Enable websafe colors full-stack.
 // Note: this creates 4100 HEX color codes if all red green blue steps are chosen.
 // Disables $enable-websafe-colors-preset automatically.
-$enable-websafe-colors-fullstack: no; // Default: no.
+$enable-color-generator: yes;
 // Therefor you need to choose the HEX steps included per channel below.
 // Hint: modern websites barely use blacks below #222.
 // Be warned: each step creates many multiplying css lines.
 // Use full stack colors only for advanced projects or for color scheme testing.
 // Then switch back to $enable-websafe-colors-fullstack: no;
 // and make sure $enable-websafe-colors-preset: yes;
-$red: (0 1 2 3 4 5 6 7 8 9 A B C D E F); 
-$green: (0 1 2 3 4 5 6 7 8 9 A B C D E F);
-$blue: (0 1 2 3 4 5 6 7 8 9 A B C D E F);
+
+// 3-digit hex code "Websmart" colors
+// Over 4000+ in 16 bit steps from 0 to F
+// Uncomment to enable and comment out websafe colros below.
+// $red:   (0 1 2 3 4 5 6 7 8 9 A B C D E F); 
+// $green: (0 1 2 3 4 5 6 7 8 9 A B C D E F);
+// $blue:  (0 1 2 3 4 5 6 7 8 9 A B C D E F);
+
+// Traditional 3-digit hex code "Websafe" colors 
+// 256 colors in 6 bit steps from 0 to F.
+$red:   (0 3 6 9 C F);
+$green: (0 3 6 9 C F);
+$blue:  (0 3 6 9 C F);
 
 // Choose color classes to target containing header elements.
 // Creates additional header color classes with a trainling <h> element target

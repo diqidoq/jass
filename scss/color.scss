@@ -13,8 +13,8 @@ $cl: null;
   $cl: yes;
 }
 
-@if $enable-websafe-colors-fullstack == yes {
-  $enable-websafe-colors-preset: no;
+@if $enable-color-generator == yes {
+  $enable-color-preset: no;
   @each $r in $red {
     @each $g in $green {
       @each $b in $blue {
@@ -29,10 +29,10 @@ $cl: null;
       }
     }
   }
-} @else if $enable-websafe-colors-preset == yes {
+} @else if $enable-color-preset == yes {
 @if $index-classes == yes {
   $i: 1;
-  @each $c in $websafe-colors-preset {
+  @each $c in $color-preset {
             .text-decoration-color-#{$c},   .c-td-#{$c},   .c-td-#{$i} { text-decoration-color: ##{$c}$o; }
   @if $cl { .link-decoration-color-#{$c} a, .c-ld-#{$c} a, .c-ld-#{$i} a         { @extend .c-td-#{$c}; } }
                  .background-color-#{$c},   .c-bg-#{$c},   .c-bg-#{$i}      { background-color: ##{$c}$o; }
@@ -43,7 +43,7 @@ $cl: null;
   $i: $i + 1;
   }
 } @else {
-  @each $c in $websafe-colors-preset {
+  @each $c in $color-preset {
             .text-decoration-color-#{$c},   .c-td-#{$c}   { text-decoration-color: ##{$c}$o; }
   @if $cl { .link-decoration-color-#{$c} a, .c-ld-#{$c} a           { @extend .c-td-#{$c}; } }   
                  .background-color-#{$c},   .c-bg-#{$c}        { background-color: ##{$c}$o; }
