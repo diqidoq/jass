@@ -24,27 +24,43 @@ $cl: null;
   }
 }
 
-@if $index-classes == yes {
-  $i: 1;
-  @each $c in $color-preset {
-            .text-decoration-color-#{$c},   .c-td-#{$c},   .c-td-#{$i} { text-decoration-color: ##{$c}$o; }
-  @if $cl { .link-decoration-color-#{$c} a, .c-ld-#{$c} a, .c-ld-#{$i} a         { @extend .c-td-#{$c}; } }
-                 .background-color-#{$c},   .c-bg-#{$c},   .c-bg-#{$i}      { background-color: ##{$c}$o; }
-                     .border-color-#{$c},    .c-b-#{$c},    .c-b-#{$i}          { border-color: ##{$c}$o; }
-                            .color-#{$c},      .c-#{$c},      .c-#{$i}                 { color: ##{$c}$o; }
-  @if $cl {            .link-color-#{$c} a,  .c-l-#{$c} a,  .c-l-#{$i} a            { @extend .c-#{$c}; } }
-  @if $ch {          .header-color-#{$c},    .c-h-#{$c},    .c-h-#{$i}     { #{$ch} { @extend .c-#{$c}; } } }
+$i: 1;
+@each $c in $color-preset {
+  @if $selectors == long {
+    $ctd-sel: ".text-decoration-color-#{$c}";
+    $cld-sel: ".link-decoration-color-#{$c} a";
+    $cbg-sel:      ".background-color-#{$c}";
+     $cb-sel:          ".border-color-#{$c}";
+      $c-sel:                 ".color-#{$c}";
+     $cl-sel:            ".link-color-#{$c} a";
+     $ch-sel:          ".header-color-#{$c}";
+  }
+  @if $selectors == short {
+    $ctd-sel: ".c-td-#{$c},   .c-td-#{$i}";
+    $cld-sel: ".c-ld-#{$c} a, .c-ld-#{$i} a";
+    $cbg-sel: ".c-bg-#{$c},   .c-bg-#{$i}";
+     $cb-sel:  ".c-b-#{$c},    .c-b-#{$i}";
+      $c-sel:    ".c-#{$c},      .c-#{$i}";
+     $cl-sel:  ".c-l-#{$c} a,  .c-l-#{$i} a";
+     $ch-sel:  ".c-h-#{$c},    .c-h-#{$i}";
+  }
+  @if $index-classes == yes {
+    $ctd-sel: $ctd-sel + ".c-td-#{$i}";
+    $cld-sel: $cld-sel + ".c-ld-#{$i} a";
+    $cbg-sel: $cbg-sel + ".c-bg-#{$i}";
+     $cb-sel: $cb-sel  +  ".c-b-#{$i}";
+      $c-sel: $c-sel   +    ".c-#{$i}";
+     $cl-sel: $cl-sel  +  ".c-l-#{$i} a";
+     $ch-sel: $ch-sel  +  ".c-h-#{$i}";
+  }
+            #{$ctd-sel} { text-decoration-color: ##{$c}$o; }
+  @if $cl { #{$cld-sel} {           @extend .c-td-#{$c}; } }   
+            #{$cbg-sel} {      background-color: ##{$c}$o; }
+             #{$cb-sel} {          border-color: ##{$c}$o; }
+              #{$c-sel} {                 color: ##{$c}$o; }
+  @if $cl {  #{$cl-sel} {              @extend .c-#{$c}; } }
+  @if $ch {  #{$ch-sel} {     #{$ch} { @extend .c-#{$c}; } } }
+
   $i: $i + 1;
-  }
-} @else {
-  @each $c in $color-preset {
-            .text-decoration-color-#{$c},   .c-td-#{$c}   { text-decoration-color: ##{$c}$o; }
-  @if $cl { .link-decoration-color-#{$c} a, .c-ld-#{$c} a           { @extend .c-td-#{$c}; } }   
-                 .background-color-#{$c},   .c-bg-#{$c}        { background-color: ##{$c}$o; }
-                     .border-color-#{$c},    .c-b-#{$c}            { border-color: ##{$c}$o; }
-                            .color-#{$c},      .c-#{$c}                   { color: ##{$c}$o; }
-  @if $cl {            .link-color-#{$c} a,  .c-l-#{$c} a              { @extend .c-#{$c}; } }
-  @if $ch {          .header-color-#{$c},    .c-h-#{$c}       { #{$ch} { @extend .c-#{$c}; } } }
-  }
 }
 

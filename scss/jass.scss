@@ -26,23 +26,31 @@ $child-selector-extension: "--c > *"; // creates: "myclass--c > *"
 // Feel free to extend or minify from 5 to 2 or 3 to 6, etc.
 // Use the first row in list to define the 
 // black and white point tendency of your color profile.
-// It is recommended to use web safe colors like 5599FF or 59F.
+// It is recommended to use web safe or "web smart" colors like 5599FF or 59F.
 // It is up to you how many colors you use and how you group them.
 // 
 // This gets overridden if $enable-color-generator: yes;
-$color-preset: 
+$color-preset:
 222, 555, 999, CCC, FFF, // grey
-607, A0A, E0F, E5F, EAF, // rose
-029, 04B, 36E, 69F, BCF, // blue
-072, 5A0, 7E0, BF4, CF9, // green
-903, C05, F06, F68, FBC, // red
-630, 940, D83, FC7, EDC  // gold
+630, A51, D94, FC7, FEC, // gold
+903, C05, F06, F69, FCD, // red
+607, A0A, D0F, E5F, EAF, // rose
+408, 71B, A2F, B5F, CAF, // violett
+029, 04B, 26E, 59F, ACF, // blue
+072, 5B0, 5E0, AF4, CF9  // green
+// old default preset
+// 222, 555, 999, CCC, FFF, // grey
+// 607, A0A, E0F, E5F, EAF, // rose
+// 029, 04B, 36E, 69F, BCF, // blue
+// 072, 5A0, 7E0, BF4, CF9, // green
+// 903, C05, F06, F68, FBC, // red
+// 630, 940, D83, FC7, EDC  // gold
 ;
 
 // Enable color-generator (will override custom color-preset above)
 // Note: this creates many color code classes if all red green blue steps are chosen.
 // Overrides previous $color-preset and refills it with generated colors.
-$enable-color-generator: yes;
+$enable-color-generator: no;
 // Therefor you need to choose the HEX steps included per channel below.
 // Hint: modern websites barely use blacks below #111.
 // Be warned: each step creates many multiplying css lines.
@@ -66,7 +74,7 @@ $blue:  (0 3 6 9 C F);
 // Creates additional header color classes with a trainling <h> element target
 // in the selector so that you can color all headers in the inner elements group.
 // Hint: small headers like h5, h6 barely stand out or need to be colored.
-$colored-headers: 'h1,h2,h3,h4';
+$colored-headers: 'h1,h2,h3';
 
 // Creates additional link color classes with a trainling <a> element target
 // in the selector so that you can color all links in the inner elements group.
@@ -77,9 +85,11 @@ $enable-child-selectors: no; // yes/no (default:no)
 $override: no; // yes/no > !important  (default:no)
 
 // Make additional classes with trailing index numbers available
-// Useful to keep class names functioning by replacing color palettes.
+// Useful to keep class names functioning by replaced CSS values.
 // Should be off by color-generator ON since index classes make barely sense then.
 $index-classes: no; // yes/no
+
+$selectors: short; // short/long (long are better readable class names)
 @import "color";
 
 // ############ shadow component ############### //
