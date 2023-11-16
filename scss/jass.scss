@@ -31,16 +31,16 @@ $child-selector-extension: "--c > *"; // creates: "myclass--c > *"
 // 
 // This gets overridden if $enable-color-generator: yes;
 $color-preset: (
-  'grey'    (222, 555, 999, CCC, FFF),
-  'gold'    (630, A51, D94, FC7, FEC),
-  'orange'  (700, C30, F30, F63, FCB),
-  'red'     (903, C05, F06, F68, FCD),
-  'rose'    (607, A0A, E0F, E5F, EAF),
-  'violett' (408, 71B, A2F, B5F, CAF),
-  'blue'    (029, 04B, 26E, 59F, ACF),
-  'cyan'    (034, 056, 089, 0BC, 6EF),
-  'green'   (030, 060, 090, 0C0, 0F0),
-  'lime'    (260, 5B0, 5E0, AF4, CF9)
+  'grey'    ('222','555','999','CCC','FFF'),
+  'gold'    ('630','A51','D94','FC7','FEC'),
+  'orange'  ('700','C30','F30','F63','FCB'),
+  'red'     ('903','C05','F06','F68','FCD'),
+  'rose'    ('607','A0A','E0F','E5F','EAF'),
+  'violett' ('408','71B','A2F','B5F','CAF'),
+  'blue'    ('029','04B','26E','59F','ACF'),
+  'cyan'    ('034','056','089','0BC','6EF'),
+  'green'   ('030','060','090','0C0','0F0'),
+  'lime'    ('260','5B0','5E0','AF4','CF9')
 );
 // old default preset 1
 // 222, 555, 999, CCC, FFF, // grey
