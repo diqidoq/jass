@@ -30,25 +30,36 @@ $child-selector-extension: "--c > *"; // creates: "myclass--c > *"
 // It is up to you how many colors you use and how you group them.
 // 
 // This gets overridden if $enable-color-generator: yes;
-$color-preset:
-222, 555, 999, CCC, FFF, // grey
-630, A51, D94, FC7, FEC, // gold
-903, C05, F06, F69, FCD, // red
-607, A0A, D0F, E5F, EAF, // rose
-408, 71B, A2F, B5F, CAF, // violett
-029, 04B, 26E, 59F, ACF, // blue
-072, 5B0, 5E0, AF4, CF9  // green
-// old default preset
+$color-preset: (
+  'grey'    (222, 555, 999, CCC, FFF),
+  'gold'    (630, A51, D94, FC7, FEC),
+  'orange'  (700, C30, F30, F63, FCB),
+  'red'     (903, C05, F06, F68, FCD),
+  'rose'    (607, A0A, E0F, E5F, EAF),
+  'violett' (408, 71B, A2F, B5F, CAF),
+  'blue'    (029, 04B, 26E, 59F, ACF),
+  'cyan'    (034, 056, 089, 0BC, 6EF),
+  'green'   (030, 060, 090, 0C0, 0F0),
+  'lime'    (260, 5B0, 5E0, AF4, CF9)
+);
+// old default preset 1
+// 222, 555, 999, CCC, FFF, // grey
+// 630, A51, D94, FC7, FEC, // gold
+// 903, C05, F06, F69, FCD, // red
+// 607, A0A, D0F, E5F, EAF, // rose
+// 408, 71B, A2F, B5F, CAF, // violett
+// 029, 04B, 26E, 59F, ACF, // blue
+// 072, 5B0, 5E0, AF4, CF9  // green
+// old default preset 2
 // 222, 555, 999, CCC, FFF, // grey
 // 607, A0A, E0F, E5F, EAF, // rose
 // 029, 04B, 36E, 69F, BCF, // blue
 // 072, 5A0, 7E0, BF4, CF9, // green
 // 903, C05, F06, F68, FBC, // red
 // 630, 940, D83, FC7, EDC  // gold
-;
 
-// Enable color-generator (will override custom color-preset above)
-// Note: this creates many color code classes if all red green blue steps are chosen.
+// Enables color-generator (will override custom color-preset above)
+// Note: this creates many color code classes if all red green blue steps are chosen below.
 // Overrides previous $color-preset and refills it with generated colors.
 $enable-color-generator: no;
 // Therefor you need to choose the HEX steps included per channel below.
@@ -89,7 +100,8 @@ $override: no; // yes/no > !important  (default:no)
 // Should be off by color-generator ON since index classes make barely sense then.
 $index-classes: no; // yes/no
 
-$selectors: short; // short/long (long are better readable class names)
+$selectors: short; // short/long (long are better readable class names, short are faster)
+$colorlabel: name; // (name/code) 'name' creates c-blue-1, c-blue-2 / 'code' creates c-A06, c-F06 
 @import "color";
 
 // ############ shadow component ############### //
