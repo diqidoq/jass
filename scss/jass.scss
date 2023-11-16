@@ -95,25 +95,26 @@ $colored-links: yes;
 $enable-child-selectors: no; // yes/no (default:no)
 $override: no; // yes/no > !important  (default:no)
 
-// Make additional classes with trailing index numbers available
-// Useful to keep class names functioning by replaced CSS values.
-// Should be off by color-generator ON since index classes make barely sense then.
-$index-classes: no; // yes/no
-
 $selectors: short; // short/long (long are better readable class names, short are faster)
 $colorlabel: name; // (name/code) 'name' creates c-blue-1, c-blue-2 / 'code' creates c-A06, c-F06 
+
+// Turns class names from value based into incrementing index based.
+// Makes selector and colorlabel settings obsolete.
+$index-classes: no; // yes/no
+
 @import "color";
 
 // ############ shadow component ############### //
 // ----------------------------------------------//
 
-// Shadows and Shadow Effects
+// Shadow presets for x y and glow
 $shadows: 
 "0-0-2",
 "0-0-4",
 "0-0-6",
 "0-2-2",
-"0-2-4"
+"0-2-4",
+"0-4-8"
 ;
 // Each shadow is present with and without color definition.
 // This way you can create shadows based on text color inheritance.
@@ -122,6 +123,10 @@ $shadows:
 $shadow-colors: $color-preset;
 $enable-child-selectors: no; // yes/no (default:no)
 $override: no; // yes/no > !important
+
+// Settings for index-classes and color-label of previous color component
+// Inherits here for shadow colors.
+
 @import "shadow";
 
 // ############ border component ############### //
@@ -132,6 +137,7 @@ $border-width-units: 1,2,3,4,5,6,10,20;
 $border-radius_units: 2,3,4,5,6,7,8,20,50,100;
 $enable-child-selectors: no; // yes/no (default:no)
 $override: no; // yes/no > !important
+
 @import "border";
 
 // ############ layout component ############### //
@@ -157,6 +163,7 @@ $sets-fluid: 80, 90, 100;
 $break-points: $sets-fixed;
 $enable-child-selectors: no; // yes/no (default:no)
 $override: no; // yes/no > !important
+
 @import "layout";
 
 // ############ spacing component ############### //
@@ -168,9 +175,12 @@ $steps-sizing: 8; $init-sizing: 50;  // px
 $sizing-relative: 25,50,75,100; // %
 
 $enable-child-selectors: no; // yes/no (default:no)
-$index-classes: yes; // makes additional classes like m1, m2 available.
 $override-spacing: no; // yes/no > !important
 $override-sizing: no; // yes/no > !important
+
+// Turns class names from value based into incrementing index based.
+$index-classes: no; // yes/no
+
 @import "spacing";
 
 // ############ typography component ############### //
@@ -179,6 +189,7 @@ $override-sizing: no; // yes/no > !important
 // Anything around css text- and font- classes inkls sizes and weight and more.
 $enable-child-selectors: yes; // yes/no (default:no)
 $override: no; // yes/no > !important
+
 @import "typography";
 
 // ############ tools component ############### //
@@ -189,4 +200,5 @@ $override: no; // yes/no > !important
 $enable-child-selectors: yes; // yes/no (default:no)
 $z-indexes: -999,-1,1,2,3,4,5,6,7,8,9,100,300,999;
 $override: no; // yes/no > !important
+
 @import "tools";
