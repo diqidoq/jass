@@ -32,26 +32,33 @@ $cbg-sel: null;
  $cl-sel: null;
  $ch-sel: null;
 
+$n: null;
+$c: null;
 $i: 1;
-@each $c in $color-preset {
+@each $name, $hexcodes in $color-preset {
+  $j: 1;
+  @each $c in $hexcodes {
+    @if $colorlabel == name { $n: #{$name}-#{$j};
+     } @else if $colorlabel == code {  $n: #{$c};
+     } @else { @error "colorlabel setting must be either > name or > code.";
+    }
   @if $selectors == long {
-    $ctd-sel: ".text-decoration-color-#{$c}";
-    $cld-sel: ".link-decoration-color-#{$c} a";
-    $cbg-sel:      ".background-color-#{$c}";
-     $cb-sel:          ".border-color-#{$c}";
-      $c-sel:                 ".color-#{$c}";
-     $cl-sel:            ".link-color-#{$c} a";
-     $ch-sel:          ".header-color-#{$c}";
-  }
-  @if $selectors == short {
-    $ctd-sel: ".c-td-#{$c}";
-    $cld-sel: ".c-ld-#{$c} a";
-    $cbg-sel: ".c-bg-#{$c}";
-     $cb-sel:  ".c-b-#{$c}";
-      $c-sel:    ".c-#{$c}";
-     $cl-sel:  ".c-l-#{$c} a";
-     $ch-sel:  ".c-h-#{$c}";
-  }
+    $ctd-sel: ".text-decoration-color-#{$n}";
+    $cld-sel: ".link-decoration-color-#{$n} a";
+    $cbg-sel:      ".background-color-#{$n}";
+     $cb-sel:          ".border-color-#{$n}";
+      $c-sel:                 ".color-#{$n}";
+     $cl-sel:            ".link-color-#{$n} a";
+     $ch-sel:          ".header-color-#{$n}";
+  } @else if $selectors == short {
+    $ctd-sel: ".c-td-#{$n}";
+    $cld-sel: ".c-ld-#{$n} a";
+    $cbg-sel: ".c-bg-#{$n}";
+     $cb-sel:  ".c-b-#{$n}";
+      $c-sel:    ".c-#{$n}";
+     $cl-sel:  ".c-l-#{$n} a";
+     $ch-sel:  ".c-h-#{$n}";
+  } @else { @error "selectors setting must be either > long or > short"; }
   @if $index-classes == yes {
     $ctd-sel: $ctd-sel + ", .c-td-#{$i}";
     $cld-sel: $cld-sel + ", .c-ld-#{$i} a";
@@ -62,12 +69,14 @@ $i: 1;
      $ch-sel: $ch-sel  +  ", .c-h-#{$i}";
   }
             #{$ctd-sel} { text-decoration-color: ##{$c}$o; }
-  @if $cl { #{$cld-sel} {           @extend .c-td-#{$c}; } }   
+  @if $cl { #{$cld-sel} {           @extend .c-td-#{$n}; } }   
             #{$cbg-sel} {      background-color: ##{$c}$o; }
              #{$cb-sel} {          border-color: ##{$c}$o; }
               #{$c-sel} {                 color: ##{$c}$o; }
-  @if $cl {  #{$cl-sel} {              @extend .c-#{$c}; } }
-  @if $ch {  #{$ch-sel} {     #{$ch} { @extend .c-#{$c}; } } }
+  @if $cl {  #{$cl-sel} {              @extend .c-#{$n}; } }
+  @if $ch {  #{$ch-sel} {     #{$ch} { @extend .c-#{$n}; } } }
 
+  $j: $j + 1;
+}
   $i: $i + 1;
 }
