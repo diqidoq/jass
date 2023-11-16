@@ -9,8 +9,30 @@
 # It is up to you how many colors you use and how you group them.
 # Default is a preset of 6 color sets in 5 brightness steps.
 
-num_of_color_shades=5 # helps to group colors in preview 
-colors=(222 555 999 CCC FFF 630 A51 D94 FC7 FEC 903 C05 F06 F68 FCD 607 A0A E0F E5F EAF 408 71B A2F B5F CAF 029 04B 26E 59F ACF 072 5B0 5E0 AF4 CF9)
+rendercolors () {
+for c in "$@" ; do
+  colorgrid="
+    $colorgrid 
+    <div style='background-color:#${c}; color:#${c}'>
+     <p class="one">#${c}</p>
+     <p class="two">#${c}</p>
+     <p class="three">#${c}</p>
+    </div>";
+done
+}
+
+colors=(222 555 999 CCC FFF 630 A51 D94 FC7 FEC 700 C30 F30 F63 FCB 903 C05 F06 F68 FCD 607 A0A E0F E5F EAF 408 71B A2F B5F CAF 029 04B 26E 59F ACF 072 5B0 5E0 AF4 CF9)
+
+grey=(222 555 999 CCC FFF) ; rendercolors $grey
+gold=(630 A51 D94 FC7 FEC) ; rendercolors $gold
+orange=(700 C30 F30 F63 FCB) ; rendercolors $orange
+red=(903 C05 F06 F68 FCD) ; rendercolors $red
+rose=(607 A0A E0F E5F EAF) ; rendercolors $rose
+violett=(408 71B A2F B5F CAF) ; rendercolors $violett
+blue=(029 04B 26E 59F ACF) ; rendercolors $blue
+cyan=()
+green=()
+lime=(072 5B0 5E0 AF4 CF9) ; rendercolors $lime
 
 # After testing colors here you can use your chosen steps in the SASS settings
 # to generate the color shade classes for your setup.
@@ -35,15 +57,7 @@ p.three { background-color: #FFF; }
 </body>
 EOF
 
-for c in "${colors[@]}" ; do
-
-      echo "<div style='background-color:#${c}; color:#${c}'>
-       <p class="one">#${c}</p>
-       <p class="two">#${c}</p>
-       <p class="three">#${c}</p>
-      </div>";
-
-done
+echo $colorgrid
 
 cat <<EOF
 
