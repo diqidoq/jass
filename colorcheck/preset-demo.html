@@ -4,191 +4,23 @@
  <title>Web-safe colors</title>
  <meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
-body { display: grid; grid-template-columns: repeat(5,1fr); column-gap: 2em; row-gap: 2em;
-       background: rgb(0,0,0); background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(255,255,255,1) 100%); padding: 0 100px 0 100px; }
-div { padding-bottom: 3em; box-shadow: 0px 0px 0px; border: 1px solid; }
-p { font-family: monospace; font-size: 12px; margin: 0 auto; text-align: center; padding: 5px 0 5px 0; }
-p.one { background-color: #EEE; color: #222; }
+body {
+display: grid; grid-template-columns: repeat(5,1fr); column-gap: 1.5em; row-gap: 1.5em;
+background: rgb(255,255,255);
+background: -moz-linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(255,255,255,1) 13%, rgba(255,255,255,1) 20%, rgba(0,0,0,1) 33%, rgba(255,255,255,1) 46%, rgba(255,255,255,1) 54%, rgba(0,0,0,1) 68%, rgba(255,255,255,1) 81%, rgba(255,255,255,1) 86%, rgba(0,0,0,1) 100%);
+background: -webkit-linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(255,255,255,1) 13%, rgba(255,255,255,1) 20%, rgba(0,0,0,1) 33%, rgba(255,255,255,1) 46%, rgba(255,255,255,1) 54%, rgba(0,0,0,1) 68%, rgba(255,255,255,1) 81%, rgba(255,255,255,1) 86%, rgba(0,0,0,1) 100%);
+background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(255,255,255,1) 13%, rgba(255,255,255,1) 20%, rgba(0,0,0,1) 33%, rgba(255,255,255,1) 46%, rgba(255,255,255,1) 54%, rgba(0,0,0,1) 68%, rgba(255,255,255,1) 81%, rgba(255,255,255,1) 86%, rgba(0,0,0,1) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#000000",endColorstr="#000000",GradientType=1);        
+padding: 0 100px 0 100px; 
+}
+div { padding-bottom: 8%; box-shadow: 0px 0px 0px; border: 1px solid; }
+p { font-family: monospace; font-size: 12px; margin: 0 auto; text-align: center; padding: 3px 0 3px 0; }
+p.one { background-color: #EEE; }
 p.two { background-color: 0 none !important; color: #EEE; }
-p.three { background-color: #FFF; }
 </style>
 </head>
 </body>
-<div style='background-color:#222; color:#222'>
-       <p class=one>#222</p>
-       <p class=two>#222</p>
-       <p class=three>#222</p>
-      </div>
-<div style='background-color:#555; color:#555'>
-       <p class=one>#555</p>
-       <p class=two>#555</p>
-       <p class=three>#555</p>
-      </div>
-<div style='background-color:#999; color:#999'>
-       <p class=one>#999</p>
-       <p class=two>#999</p>
-       <p class=three>#999</p>
-      </div>
-<div style='background-color:#CCC; color:#CCC'>
-       <p class=one>#CCC</p>
-       <p class=two>#CCC</p>
-       <p class=three>#CCC</p>
-      </div>
-<div style='background-color:#FFF; color:#FFF'>
-       <p class=one>#FFF</p>
-       <p class=two>#FFF</p>
-       <p class=three>#FFF</p>
-      </div>
-<div style='background-color:#630; color:#630'>
-       <p class=one>#630</p>
-       <p class=two>#630</p>
-       <p class=three>#630</p>
-      </div>
-<div style='background-color:#A51; color:#A51'>
-       <p class=one>#A51</p>
-       <p class=two>#A51</p>
-       <p class=three>#A51</p>
-      </div>
-<div style='background-color:#D94; color:#D94'>
-       <p class=one>#D94</p>
-       <p class=two>#D94</p>
-       <p class=three>#D94</p>
-      </div>
-<div style='background-color:#FC7; color:#FC7'>
-       <p class=one>#FC7</p>
-       <p class=two>#FC7</p>
-       <p class=three>#FC7</p>
-      </div>
-<div style='background-color:#FEC; color:#FEC'>
-       <p class=one>#FEC</p>
-       <p class=two>#FEC</p>
-       <p class=three>#FEC</p>
-      </div>
-<div style='background-color:#903; color:#903'>
-       <p class=one>#903</p>
-       <p class=two>#903</p>
-       <p class=three>#903</p>
-      </div>
-<div style='background-color:#C05; color:#C05'>
-       <p class=one>#C05</p>
-       <p class=two>#C05</p>
-       <p class=three>#C05</p>
-      </div>
-<div style='background-color:#F06; color:#F06'>
-       <p class=one>#F06</p>
-       <p class=two>#F06</p>
-       <p class=three>#F06</p>
-      </div>
-<div style='background-color:#F68; color:#F68'>
-       <p class=one>#F68</p>
-       <p class=two>#F68</p>
-       <p class=three>#F68</p>
-      </div>
-<div style='background-color:#FCD; color:#FCD'>
-       <p class=one>#FCD</p>
-       <p class=two>#FCD</p>
-       <p class=three>#FCD</p>
-      </div>
-<div style='background-color:#607; color:#607'>
-       <p class=one>#607</p>
-       <p class=two>#607</p>
-       <p class=three>#607</p>
-      </div>
-<div style='background-color:#A0A; color:#A0A'>
-       <p class=one>#A0A</p>
-       <p class=two>#A0A</p>
-       <p class=three>#A0A</p>
-      </div>
-<div style='background-color:#E0F; color:#E0F'>
-       <p class=one>#E0F</p>
-       <p class=two>#E0F</p>
-       <p class=three>#E0F</p>
-      </div>
-<div style='background-color:#E5F; color:#E5F'>
-       <p class=one>#E5F</p>
-       <p class=two>#E5F</p>
-       <p class=three>#E5F</p>
-      </div>
-<div style='background-color:#EAF; color:#EAF'>
-       <p class=one>#EAF</p>
-       <p class=two>#EAF</p>
-       <p class=three>#EAF</p>
-      </div>
-<div style='background-color:#408; color:#408'>
-       <p class=one>#408</p>
-       <p class=two>#408</p>
-       <p class=three>#408</p>
-      </div>
-<div style='background-color:#71B; color:#71B'>
-       <p class=one>#71B</p>
-       <p class=two>#71B</p>
-       <p class=three>#71B</p>
-      </div>
-<div style='background-color:#A2F; color:#A2F'>
-       <p class=one>#A2F</p>
-       <p class=two>#A2F</p>
-       <p class=three>#A2F</p>
-      </div>
-<div style='background-color:#B5F; color:#B5F'>
-       <p class=one>#B5F</p>
-       <p class=two>#B5F</p>
-       <p class=three>#B5F</p>
-      </div>
-<div style='background-color:#CAF; color:#CAF'>
-       <p class=one>#CAF</p>
-       <p class=two>#CAF</p>
-       <p class=three>#CAF</p>
-      </div>
-<div style='background-color:#029; color:#029'>
-       <p class=one>#029</p>
-       <p class=two>#029</p>
-       <p class=three>#029</p>
-      </div>
-<div style='background-color:#04B; color:#04B'>
-       <p class=one>#04B</p>
-       <p class=two>#04B</p>
-       <p class=three>#04B</p>
-      </div>
-<div style='background-color:#26E; color:#26E'>
-       <p class=one>#26E</p>
-       <p class=two>#26E</p>
-       <p class=three>#26E</p>
-      </div>
-<div style='background-color:#59F; color:#59F'>
-       <p class=one>#59F</p>
-       <p class=two>#59F</p>
-       <p class=three>#59F</p>
-      </div>
-<div style='background-color:#ACF; color:#ACF'>
-       <p class=one>#ACF</p>
-       <p class=two>#ACF</p>
-       <p class=three>#ACF</p>
-      </div>
-<div style='background-color:#072; color:#072'>
-       <p class=one>#072</p>
-       <p class=two>#072</p>
-       <p class=three>#072</p>
-      </div>
-<div style='background-color:#5B0; color:#5B0'>
-       <p class=one>#5B0</p>
-       <p class=two>#5B0</p>
-       <p class=three>#5B0</p>
-      </div>
-<div style='background-color:#5E0; color:#5E0'>
-       <p class=one>#5E0</p>
-       <p class=two>#5E0</p>
-       <p class=three>#5E0</p>
-      </div>
-<div style='background-color:#AF4; color:#AF4'>
-       <p class=one>#AF4</p>
-       <p class=two>#AF4</p>
-       <p class=three>#AF4</p>
-      </div>
-<div style='background-color:#CF9; color:#CF9'>
-       <p class=one>#CF9</p>
-       <p class=two>#CF9</p>
-       <p class=three>#CF9</p>
-      </div>
+<div style="background-color:#222; color:#222"> <p class="one">#222 (grey)</p> <p class="two">#222</p> </div> <div style="background-color:#555; color:#555"> <p class="one">#555 (grey)</p> <p class="two">#555</p> </div> <div style="background-color:#999; color:#999"> <p class="one">#999 (grey)</p> <p class="two">#999</p> </div> <div style="background-color:#CCC; color:#CCC"> <p class="one">#CCC (grey)</p> <p class="two">#CCC</p> </div> <div style="background-color:#FFF; color:#FFF"> <p class="one">#FFF (grey)</p> <p class="two">#FFF</p> </div> <div style="background-color:#630; color:#630"> <p class="one">#630 (gold)</p> <p class="two">#630</p> </div> <div style="background-color:#A51; color:#A51"> <p class="one">#A51 (gold)</p> <p class="two">#A51</p> </div> <div style="background-color:#D94; color:#D94"> <p class="one">#D94 (gold)</p> <p class="two">#D94</p> </div> <div style="background-color:#FC7; color:#FC7"> <p class="one">#FC7 (gold)</p> <p class="two">#FC7</p> </div> <div style="background-color:#FEC; color:#FEC"> <p class="one">#FEC (gold)</p> <p class="two">#FEC</p> </div> <div style="background-color:#700; color:#700"> <p class="one">#700 (orange)</p> <p class="two">#700</p> </div> <div style="background-color:#C30; color:#C30"> <p class="one">#C30 (orange)</p> <p class="two">#C30</p> </div> <div style="background-color:#F30; color:#F30"> <p class="one">#F30 (orange)</p> <p class="two">#F30</p> </div> <div style="background-color:#F63; color:#F63"> <p class="one">#F63 (orange)</p> <p class="two">#F63</p> </div> <div style="background-color:#FCB; color:#FCB"> <p class="one">#FCB (orange)</p> <p class="two">#FCB</p> </div> <div style="background-color:#903; color:#903"> <p class="one">#903 (red)</p> <p class="two">#903</p> </div> <div style="background-color:#C05; color:#C05"> <p class="one">#C05 (red)</p> <p class="two">#C05</p> </div> <div style="background-color:#F06; color:#F06"> <p class="one">#F06 (red)</p> <p class="two">#F06</p> </div> <div style="background-color:#F68; color:#F68"> <p class="one">#F68 (red)</p> <p class="two">#F68</p> </div> <div style="background-color:#FCD; color:#FCD"> <p class="one">#FCD (red)</p> <p class="two">#FCD</p> </div> <div style="background-color:#607; color:#607"> <p class="one">#607 (rose)</p> <p class="two">#607</p> </div> <div style="background-color:#A0A; color:#A0A"> <p class="one">#A0A (rose)</p> <p class="two">#A0A</p> </div> <div style="background-color:#E0F; color:#E0F"> <p class="one">#E0F (rose)</p> <p class="two">#E0F</p> </div> <div style="background-color:#E5F; color:#E5F"> <p class="one">#E5F (rose)</p> <p class="two">#E5F</p> </div> <div style="background-color:#EAF; color:#EAF"> <p class="one">#EAF (rose)</p> <p class="two">#EAF</p> </div> <div style="background-color:#408; color:#408"> <p class="one">#408 (violett)</p> <p class="two">#408</p> </div> <div style="background-color:#71B; color:#71B"> <p class="one">#71B (violett)</p> <p class="two">#71B</p> </div> <div style="background-color:#A2F; color:#A2F"> <p class="one">#A2F (violett)</p> <p class="two">#A2F</p> </div> <div style="background-color:#B5F; color:#B5F"> <p class="one">#B5F (violett)</p> <p class="two">#B5F</p> </div> <div style="background-color:#CAF; color:#CAF"> <p class="one">#CAF (violett)</p> <p class="two">#CAF</p> </div> <div style="background-color:#029; color:#029"> <p class="one">#029 (blue)</p> <p class="two">#029</p> </div> <div style="background-color:#04B; color:#04B"> <p class="one">#04B (blue)</p> <p class="two">#04B</p> </div> <div style="background-color:#26E; color:#26E"> <p class="one">#26E (blue)</p> <p class="two">#26E</p> </div> <div style="background-color:#59F; color:#59F"> <p class="one">#59F (blue)</p> <p class="two">#59F</p> </div> <div style="background-color:#ACF; color:#ACF"> <p class="one">#ACF (blue)</p> <p class="two">#ACF</p> </div> <div style="background-color:#034; color:#034"> <p class="one">#034 (cyan)</p> <p class="two">#034</p> </div> <div style="background-color:#056; color:#056"> <p class="one">#056 (cyan)</p> <p class="two">#056</p> </div> <div style="background-color:#089; color:#089"> <p class="one">#089 (cyan)</p> <p class="two">#089</p> </div> <div style="background-color:#0BC; color:#0BC"> <p class="one">#0BC (cyan)</p> <p class="two">#0BC</p> </div> <div style="background-color:#6EF; color:#6EF"> <p class="one">#6EF (cyan)</p> <p class="two">#6EF</p> </div> <div style="background-color:#030; color:#030"> <p class="one">#030 (green)</p> <p class="two">#030</p> </div> <div style="background-color:#060; color:#060"> <p class="one">#060 (green)</p> <p class="two">#060</p> </div> <div style="background-color:#090; color:#090"> <p class="one">#090 (green)</p> <p class="two">#090</p> </div> <div style="background-color:#0C0; color:#0C0"> <p class="one">#0C0 (green)</p> <p class="two">#0C0</p> </div> <div style="background-color:#0F0; color:#0F0"> <p class="one">#0F0 (green)</p> <p class="two">#0F0</p> </div> <div style="background-color:#260; color:#260"> <p class="one">#260 (lime)</p> <p class="two">#260</p> </div> <div style="background-color:#5B0; color:#5B0"> <p class="one">#5B0 (lime)</p> <p class="two">#5B0</p> </div> <div style="background-color:#5E0; color:#5E0"> <p class="one">#5E0 (lime)</p> <p class="two">#5E0</p> </div> <div style="background-color:#AF4; color:#AF4"> <p class="one">#AF4 (lime)</p> <p class="two">#AF4</p> </div> <div style="background-color:#CF9; color:#CF9"> <p class="one">#CF9 (lime)</p> <p class="two">#CF9</p> </div>
 
 </body>
 </html>
