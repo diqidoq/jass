@@ -13,24 +13,36 @@ $cl: null;
   $cl: yes;
 }
 
+$ce: null;
+@if $colored-inline-elements {
+  $ce: $colored-inline-elements;
+}
+
+$cg: null;
 @if $enable-color-generator == yes {
+  $cg: yes;
+}
+
+@if $cg {
   $color-preset: ();
   @each $r in $red {
     @each $g in $green {
       @each $b in $blue {
-        $color-preset: append($color-preset, #{$r}#{$g}#{$b}, 'comma');
+        $color-preset: append($color-preset, 'gen' (#{$r}#{$g}#{$b}), 'comma');
       }
     }
   }
 }
 
-$ctd-sel: null;
-$cld-sel: null;
-$cbg-sel: null;
- $cb-sel: null;
-  $c-sel: null;
- $cl-sel: null;
- $ch-sel: null;
+  $c-sel:    null;
+  $c-sel-a:  null;
+  $c-sel-h:  null;
+  $c-sel-ht: null;
+  $c-sel-ie: null;
+ $cb-sel:    null;
+$cbg-sel:    null;
+$ctd-sel:    null;
+$ctd-sel-a:  null;
 
 $n: null;
 $c: null;
@@ -38,45 +50,66 @@ $i: 1;
 @each $name, $hexcodes in $color-preset {
   $j: 1;
   @each $c in $hexcodes {
-    @if $colorlabel == name { $n: #{$name}-#{$j};
-     } @else if $colorlabel == code {  $n: #{$c};
-     } @else { @error "colorlabel setting must be either > name or > code.";
+    @if $index-classes == yes {
+      @if $cg { $n: #{$i}; } @else { $n: #{$i}-#{$j}; }
+    } @else if $color-label == name { 
+      @if $cg { $n: #{$c}; } @else { $n: #{$name}#{$j}; }
+      } @else if $color-label == code {
+      $n: #{$c};
+      } @else { @error "colorlabel setting must be either > name or > code.";
     }
   @if $selectors == long {
-    $ctd-sel: ".text-decoration-color-#{$n}";
-    $cld-sel: ".link-decoration-color-#{$n} a";
-    $cbg-sel:      ".background-color-#{$n}";
-     $cb-sel:          ".border-color-#{$n}";
-      $c-sel:                 ".color-#{$n}";
-     $cl-sel:            ".link-color-#{$n} a";
-     $ch-sel:          ".header-color-#{$n}";
-  } @else if $selectors == short {
-    $ctd-sel: ".c-td-#{$n}";
-    $cld-sel: ".c-ld-#{$n} a";
-    $cbg-sel: ".c-bg-#{$n}";
-     $cb-sel:  ".c-b-#{$n}";
-      $c-sel:    ".c-#{$n}";
-     $cl-sel:  ".c-l-#{$n} a";
-     $ch-sel:  ".c-h-#{$n}";
-  } @else { @error "selectors setting must be either > long or > short"; }
-  @if $index-classes == yes {
-    $ctd-sel: $ctd-sel + ", .c-td-#{$i}";
-    $cld-sel: $cld-sel + ", .c-ld-#{$i} a";
-    $cbg-sel: $cbg-sel + ", .c-bg-#{$i}";
-     $cb-sel: $cb-sel  +  ", .c-b-#{$i}";
-      $c-sel: $c-sel   +    ", .c-#{$i}";
-     $cl-sel: $cl-sel  +  ", .c-l-#{$i} a";
-     $ch-sel: $ch-sel  +  ", .c-h-#{$i}";
+    $ctd-sel:   ".text-decoration-color-#{$n}";
+    $ctd-sel-a: ".text-decoration-color-#{$n}-a a";
+    $cbg-sel:        ".background-color-#{$n}";
+     $cb-sel:            ".border-color-#{$n}";
+      $c-sel:                   ".color-#{$n}";
+      $c-sel-a:                 ".color-#{$n}-a a";
+  @if $cl {
+     $c-sel-h:                  ".color-#{$n}-header";
+     $c-sel-ht:();
+     @each $ht in $ch {
+       $c-sel-ht: append($c-sel-ht,".color-#{$n}-#{$ht} #{$ht}",'comma');
+      }
+    }
+  @if $ce {
+       $c-sel-ie:();
+     @each $e in $ce {
+       $c-sel-ie: append($c-sel-ie,".color-#{$n}-#{$e} #{$e}",'comma');
+      }
+    }
+  }
+  @if $selectors == short {
+    $ctd-sel:   ".ctd-#{$n}";
+    $ctd-sel-a: ".ctd-#{$n}-a a";
+    $cbg-sel:   ".cbg-#{$n}";
+     $cb-sel:    ".cb-#{$n}";
+      $c-sel:     ".c-#{$n}";
+      $c-sel-a:   ".c-#{$n}-a a";
+  @if $cl {
+       $c-sel-h:  ".c-#{$n}-h";
+       $c-sel-ht:();
+     @each $ht in $ch {
+       $c-sel-ht: append($c-sel-ht,".c-#{$n}-#{$ht} #{$ht}",'comma');
+      }
+    }
+  @if $ce {
+       $c-sel-ie:();
+     @each $e in $ce {
+       $c-sel-ie: append($c-sel-ie,".c-#{$n}-#{$e} #{$e}",'comma');
+      }
+    }
   }
             #{$ctd-sel} { text-decoration-color: ##{$c}$o; }
-  @if $cl { #{$cld-sel} {           @extend .c-td-#{$n}; } }   
+  @if $cl { #{$ctd-sel-a} {           @extend #{$ctd-sel}; } }   
             #{$cbg-sel} {      background-color: ##{$c}$o; }
              #{$cb-sel} {          border-color: ##{$c}$o; }
               #{$c-sel} {                 color: ##{$c}$o; }
-  @if $cl {  #{$cl-sel} {              @extend .c-#{$n}; } }
-  @if $ch {  #{$ch-sel} {     #{$ch} { @extend .c-#{$n}; } } }
-
+  @if $cl {   #{$c-sel-a} {             @extend #{$c-sel}; } }
+  @if $ce {   #{$c-sel-ie} {            @extend #{$c-sel}; } }
+  @if $ch {   #{$c-sel-h} {    #{$ch} { @extend #{$c-sel}; } }
+              #{$c-sel-ht} {            @extend #{$c-sel}; } }
   $j: $j + 1;
-}
+  }
   $i: $i + 1;
 }
