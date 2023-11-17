@@ -85,21 +85,29 @@ $blue:  (0 3 6 9 C F);
 // Creates additional header color classes with a trainling <h> element target
 // in the selector so that you can color all headers in the inner elements group.
 // Hint: small headers like h5, h6 barely stand out or need to be colored.
-$colored-headers: 'h1,h2,h3';
+$colored-headers: ('h1','h2','h3');
 
 // Creates additional link color classes with a trainling <a> element target
 // in the selector so that you can color all links in the inner elements group.
 $colored-links: yes;
 
+// Creates additional inline element color classes with a trainling element target
+// in the selector so that you can color them in the inner elements group.
+$colored-inline-elements: ('strong', 'em', 'b', 'i', 'q', 'mark');
+
 // Not recommended settings for big components like color:
 $enable-child-selectors: no; // yes/no (default:no)
 $override: no; // yes/no > !important  (default:no)
 
-$selectors: short; // short/long (long are better readable class names, short are faster)
-$colorlabel: name; // (name/code) 'name' creates c-blue-1, c-blue-2 / 'code' creates c-A06, c-F06 
+// short/long (long are better readable class names, short are faster)
+$selectors: short;
+
+// (name/code) 'name' creates c-blue-1, c-blue-2 / 'code' creates c-A06, c-F06 
+// Takes only effect if $enable-color-generator: no;
+$color-label: name;
 
 // Turns class names from value based into incrementing index based.
-// Makes selector and colorlabel settings obsolete.
+// Makes selector and color-label settings obsolete.
 $index-classes: no; // yes/no
 
 @import "color";
