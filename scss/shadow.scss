@@ -24,27 +24,39 @@ $o: null;
     @return $split-arr;
 }
 
+@mixin shadow ($shadow) {
+  -webkit-box-shadow: $shadow;
+     -moz-box-shadow: $shadow;
+          box-shadow: $shadow;
+}
+
 // Box shadow reset
 .noshadow, .nsdw {
-  -webkit-box-shadow: none $o;
-     -moz-box-shadow: none $o;
-          box-shadow: none $o;
+  @include shadow (none $o)
 }
+
+$n: null;
+$c: null;
 $i: 1;
-@each $color in $shadow-colors {
-  @each $shadow in $shadows {
-     $v: str-split($shadow, "-");
-    .sdw-#{$shadow} {
-      -webkit-box-shadow: $v$o;
-         -moz-box-shadow: $v$o;
-              box-shadow: $v$o;
+@each $name, $hexcodes in $color-preset {
+  $j: 1;
+  @each $c in $hexcodes {
+    @if $index-classes == yes {
+      @if $cg { $n: c#{$i}; } @else { $n: c#{$i}-#{$j}; }
+    } @else if $color-label == name { 
+      @if $cg { $n: #{$c}; } @else { $n: #{$name}#{$j}; }
+      } @else if $color-label == code {
+      $n: #{$c};
+      } @else { @error "colorlabel setting must be either > name or > code.";
     }
-    .sdw-#{$shadow}-c#{$color}, .sdw-#{$shadow}-c#{$i} {
-        $v: $v ##{$color};
-      -webkit-box-shadow: $v$o;
-         -moz-box-shadow: $v$o;
-              box-shadow: $v$o;
-    }
+    @each $shadow in $shadows {
+      $v: str-split($shadow, "-");
+     .sdw-#{$shadow} { @include shadow ($v$o); }
+     .sdw-#{$shadow}-#{$n} {
+        $v: $v ##{$c}; @include shadow ($v$o);
+     }
+   }
+   $j: $j + 1;
   }
-$i: $i + 1;
+  $i: $i + 1;
 }
