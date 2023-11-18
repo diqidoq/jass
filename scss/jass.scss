@@ -199,6 +199,8 @@ $font-size-unit: px; // px/em (default: px - em is overrated nowadays)
 $font-sizes-px: 9,10,11,12,14,16,18,20,22,24,26;
 $font-sizes-em: 0.5,0.6,0.7,0.8,0.9,1,1.5,2,2.5;
 
+$selectors: short; // long/short class names
+
 $enable-child-selectors: yes; // yes/no (default:no)
 $override: no; // yes/no > !important
 
