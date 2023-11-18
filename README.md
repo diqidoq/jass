@@ -6,20 +6,22 @@
 
 JASS: A simple utility first type of "describe your style as class" CSS framework with no stylesheet editing and no recompiling for new themes in mind. Development started in 2012 formerly named QCSS. Refactored in 2023 and renamed to JASS. Being cross browser compatible down to 2009 while using SASS (SCSS) for the generator (not required by default). 
 
-An easy out-of-the-box styling layer from the bottom up by using a creative class group naming approach, easy to learn and to reuse for each project, with a footprint of only 60kb by default settings.
+An easy out-of-the-box styling layer from the bottom up by using a creative class group naming approach, easy to learn and to reuse for each project, with a footprint of only 60kb by default settings. _(Not to confuse with JSS, coupling Javascript with CSS.)_
 
-Supported class naming components:
+Components:
 
- - borders (width, radius, directions)
- - colors (extensive websafe color codes)
- - responsive layouts (without flex and grid to be accessible all over the workd)
- - shadows
- - spacing tools (choose your rythm)
- - typography (most extensive typo classes available in web)
- - tools (anything needed in combination with other components like floats, positions, order, etc.)
+ - borders: width, radius, directions and smart variations.
+ - colors: extensive color scheme options and target class options.
+ - responsive layouts, but without(!) using flex and grid, to be accessible in each corner of the world.
+ - shadows: no predefinded but smart extendable with auto generating class names.
+ - independend spacing tools (as one of the first frameworks in web!)
+ - typography: most extensive typo classes available
+ - extra tools (anything needed in combination with other components like floats, positions, order, etc.)
  - optional override-switch per component (!important), default: no. (off)
  - optional child target setting per component (classes with trailing --c), default: no. (off)
+ - optional class name settings for long and short, descriptive or index based class names.
  - optional print style setting per component (classes with trailing --p), default: no. (off)
+ - @todo: rtl support.
 
 Corresponding [Drupal CMS theme based on JASS](https://www.drupal.org/project/jass). 
 
@@ -32,7 +34,7 @@ Corresponding [Drupal CMS theme based on JASS](https://www.drupal.org/project/ja
 
 Development status
 ------------------
-In the first time it was more something like _"public available, but rather for own use created project"_. Lately I started to make it more production ready _"for all of us"_. The reason therefor is the growing interest out htere. Which surprised me.
+In the first time it was more something like _"public available, but rather for own use created project"_. Lately I started to make it more production ready _"for all of us"_. The reason therefor was the growing interest out there. Which surprised me, to be honest. Because this project lives outside of any uptodate trends.
 
 Credits
 -------
