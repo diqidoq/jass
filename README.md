@@ -29,7 +29,7 @@ Corresponding [Drupal CMS theme based on JASS](https://www.drupal.org/project/ja
 
  > Read more about the term "Jasm" and where the term Jazz (music) comes from: https://en.wikipedia.org/wiki/Jazz_(word)
 
-Why should someone go on developing a simple CCS toolset nowadays?
+Why should someone go on developing a simple CSS toolset nowadays?
 ------------------------------------------------------------------
 _"It is the simple things"_. More often than we admit. And: Because we need to rethink the massive overblown toolchain we use in web nowadays in the shadow of all the buzz about emission and wasted resources on our blue planet. Do we all really need huge overblown Javascript Apps to _"interact with our users"_? Javascript is great, but its _"solution for everything"_ trend is dangerous. Javascript in the way it is being used today is young and not resource optimized at all yet and wastes far more energy than PHP today. PHP has learned over the decades from its mistakes before to deal better/smarter with process handling. Also most Javascript web applications force users to use most modern web browsers and most modern computers to have a flawless experience. Which is another issue regarding enviromental responsibilty thinking. Do you maybe remember back in the days when you have started to think about a new laptop because new pages like YOUTUBE or Facebook didn't wanted to act right on your old machine? This is where the mistakes have been started. And today it became the go-to "faster bigger fresher" ... I strongly believe that this road has an end.
 
