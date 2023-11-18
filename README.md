@@ -4,7 +4,7 @@
 
  > _Stop learning frameworks. Stop hacking styles. Start building web apps._ :+1:
 
-![jass](https://github.com/diqidoq/jass/assets/7956667/d25c3e2c-6693-471d-a748-7e3d5c8c9ce8)
+![jass](https://github.com/diqidoq/jass/assets/7956667/67feeeba-cc91-444e-aae9-b118d91b75a0)
 
 JASS CSS: A simple utility first type of "describe your style as class out of the box" CSS toolset with no stylesheet editing and no recompiling for new themes in mind. We try to avoid  the misleading term "CSS framework". Development started in 2012 formerly named as QCSS. Refactored in 2023 and renamed to JASS. _(Not to confuse with JSS, Javascript driven CSS.)_ Being cross browser compatible down to 2009 while using SASS (SCSS) for the generator (not required by default). 
 
