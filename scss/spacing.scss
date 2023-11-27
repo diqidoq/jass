@@ -1,97 +1,181 @@
+$m: null; $p: null; $w: null; $h: null;
+$wmin: null; $wmax: null; $hmin: null; $hmax: null;
+$pos:'top','right','bottom','left';
+$spacings: null;
+$dimensions: null;
+$sfx: null;
+$unit: null;
+$i: null;
+
+@function str-replace($string, $search, $replace: '') {
+  $index: str-index($string, $search);
+  @if $index {
+    @return str-slice($string, 1, $index - 1) + $replace + str-replace(str-slice($string, $index + str-length($search)), $search, $replace);
+  }
+  @return $string;
+}
+
+@if $selectors == short { 
+     $m: '.m';             $p: '.p';             $w: '.w';              $h: '.h';
+  $wmin: '.hm';         $wmax: '.wx';         $hmin: '.hm';          $hmax: '.hx';
+} @else if $selectors == long {
+     $m: '.margin-';       $p: '.padding-';      $w: '.width-';         $h: '.height-';
+  $wmin: '.min-width-'; $wmax: '.max-width-'; $hmin: '.min-height-'; $hmax: '.max-height-';
+} @else { 
+  @error "Selectors value needs to be > long or > short.";
+}
+
+@if $primary-unit-type == em {
+  $spacings: $spacings-em;
+  $dimensions: $spacings-em;
+  $unit:em;
+}
+@else if $primary-unit-type == px { 
+  $spacings: $spacings-px;
+  $dimensions: $dimensions-px;
+  $unit:px;
+} @else { 
+    @error "$primary-unit-type must be one of > em or > px." ;
+}
+
+$c: null;
+@if $enable-child-selectors == yes {
+  $c: $child-selector-extension
+}
+
+// ############### spacings ################# //
+// ------------------------------------------ //
+
 $o: null;
 @if $override-spacing == yes {
   $o: !important;
 }
 
-@if $index-classes == yes {
-@for $i from 0 through $steps-spacing {
-  $s: $init-spacing * $i;
-  $v: $s + 0px;
-  $m: ".m-";
-  $p: ".p-";
-  .m#{$v}, .m#{$i}     { margin-top:     $v$o;
-                         margin-right:   $v$o;
-                         margin-bottom:  $v$o;
-                         margin-left:    $v$o; }
-  .mt#{$v}, .mt#{$i}   { margin-top:     $v$o; }
-  .mt-#{$v}, .mt-#{$i} { margin-top:    -$v$o; }
-  .mr#{$v}, .mr#{$i}   { margin-right:   $v$o; }
-  .mr-#{$v}, .mr-#{$i} { margin-right:  -$v$o; }
-  .mb#{$v}, .mb#{$i}   { margin-bottom:  $v$o; }
-  .mb-#{$v}, .mb-#{$i} { margin-bottom: -$v$o; }
-  .ml#{$v}, .ml#{$i}   { margin-left:    $v$o; }
-  .ml-#{$v}, .ml-#{$i} { margin-left:   -$v$o; }
-  .p#{$v}, .p#{$i}     { padding-top:    $v$o;
-                         padding-right:  $v$o;
-                         padding-bottom: $v$o;
-                         padding-left:   $v$o; }
-  .pt#{$v}, .pt#{$i}   { padding-top:    $v$o; }
-  .pr#{$v}, .pr#{$i}   { padding-right:  $v$o; }
-  .pb#{$v}, .pb#{$i}   { padding-bottom: $v$o; }
-  .pl#{$v}, .pl#{$i}   { padding-left:   $v$o; }
-} 
-} @else {
-@for $i from 0 through $steps-spacing {
-  $s: $init-spacing * $i;
-  $v: $s + 0px;
-  .m#{$v} {   margin-top:     $v$o;
-              margin-right:   $v$o;
-              margin-bottom:  $v$o;
-              margin-left:    $v$o; }
-  .mt#{$v} {  margin-top:     $v$o; }
-  .mt-#{$v} { margin-top:    -$v$o; }
-  .mr#{$v} {  margin-right:   $v$o; }
-  .mr-#{$v} { margin-right:  -$v$o; }
-  .mb#{$v} {  margin-bottom:  $v$o; }
-  .mb-#{$v} { margin-bottom: -$v$o; }
-  .ml#{$v} {  margin-left:    $v$o; }
-  .ml-#{$v} { margin-left:   -$v$o; }
-  .p#{$v} {   padding-top:    $v$o;
-              padding-right:  $v$o;
-              padding-bottom: $v$o;
-              padding-left:   $v$o; }
-  .pt#{$v} {  padding-top:    $v$o; }
-  .pr#{$v} {  padding-right:  $v$o; }
-  .pb#{$v} {  padding-bottom: $v$o; }
-  .pl#{$v} {  padding-left:   $v$o; }
-}
+// shortens position suffixes top, left. bottom, right in CSS properties
+@function s($xy) {
+  @if $selectors == short {
+    $xy: str-slice(#{$xy},1,1); 
+  } @else {$xy: $xy;}
+  
+  @return $xy;
 }
 
-$o: null;
-@if $override-sizing == yes {
-  $o: !important;
+@function get_unit_suffix($v) {
+  $sfx: null;
+  @if $primary-unit-type == em { $sfx: str-replace(#{$v},'.','_'); }
+  @else if $primary-unit-type == px { $sfx: #{$v}; }
+  @else { @error "$primary-unit-type must be one of > em or > px." ; }
+
+  @return $sfx;
 }
 
-@if $index-classes == yes {
-@for $i from 1 through $steps-sizing {
-  $s: $init-sizing * $i;
-  $v: $s + 0px;
-  .h#{$v}, .h#{$i}       { height:     $v$o; }
-  .w#{$v}, .w#{$i}       { width:      $v$o; }
-  .hmin#{$v}, .hmin#{$i} { min-height: $v$o; }
-  .wmin#{$v}, .wmin#{$i} { min-width:  $v$o; }
-  .hmax#{$v}, .hmax#{$i} { max-height: $v$o; }
-  .wmax#{$v}, .wmax#{$i} { max-width:  $v$o; }
+@mixin spacings ($sfx, $v, $i, $o) {
+  @if $index-classes == yes { $sfx: #{$i}; }
+  #{$p}#{$sfx} { @each $xy in $pos          { padding-#{$xy}: $v$o; &#{$c} { @extend #{$p}#{$sfx}; } } }
+  @each $xy in $pos { #{$p}#{s($xy)}#{$sfx} { padding-#{$xy}: $v$o; &#{$c} { @extend #{$p}#{s($xy)}#{$sfx}; } } }
+  #{$m}#{$sfx} { @each $xy in $pos           { margin-#{$xy}: $v$o; &#{$c} { @extend #{$m}#{$sfx}; } } }
+  @each $xy in $pos { #{$m}#{s($xy)}#{$sfx}  { margin-#{$xy}: $v$o; &#{$c} { @extend #{$m}#{s($xy)}#{$sfx}; } } }
 }
-} @else {
-  @for $i from 1 through $steps-sizing {
-  $s: $init-sizing * $i;
-  $v: $s + 0px;
-  .h#{$v} {    height:     $v$o; }
-  .w#{$v} {    width:      $v$o; }
-  .hmin#{$v} { min-height: $v$o; }
-  .wmin#{$v} { min-width:  $v$o; }
-  .hmax#{$v} { max-height: $v$o; }
-  .wmax#{$v} { max-width:  $v$o; }
+@mixin negative-spacings ($sfx, $v, $i, $o) {
+  @if $index-classes == yes { $sfx: #{$i}; }
+  @each $xy in $pos { #{$m}#{s($xy)}-#{$sfx} { margin-#{$xy}: -$v$o; &#{$c} { @extend #{$m}#{s($xy)}-#{$sfx}; } } }
+}
+
+@if $enable-spacing-generator == yes {
+  @include spacings (0, 0, 0, $o);
+  $i: null;
+  $sfx: null;
+  @for $i from 1 through $generator-spacing-steps {
+    $v: $generator-spacing-rythm * $i;
+    $v: #{$v}#{$primary-unit-type};
+    $sfx: get_unit_suffix($v);
+    @include spacings ($sfx,$v ,$i, $o);
+    @include negative-spacings ($sfx, $v, $i, $o);
+  }
+} @else if $spacing-preset == yes {
+  @include spacings (0, 0, 0, $o);
+  $i: 1;
+  $sfx: null;
+  @each $v in $spacings {
+    $v: #{$v}#{$primary-unit-type};
+    $sfx: get_unit_suffix($v);
+    @include spacings ($sfx, $v, $i, $o);
+    @include negative-spacings ($sfx, $v, $i, $o);
+    $i: $i + 1;
   }
 }
 
-@each $p in $sizing-relative {
-  $v: $p * 1%;
-  .h#{$p}th {    height:     $v$o; }
-  .w#{$p}th {    width:      $v$o; }
-  .hmin#{$p}th { min-height: $v$o; }
-  .wmin#{$p}th { min-width:  $v$o; }
-  .hmax#{$p}th { max-height: $v$o; }
-  .wmax#{$p}th { max-width:  $v$o; }
+// ############### dimensions ############### //
+// ------------------------------------------ //
+
+$o: null;
+@if $override-dimensions == yes {
+  $o: !important;
+}
+
+@mixin dimensions ($sfx, $v, $i, $o) {
+  @if $index-classes == yes { $sfx: #{$i}; }
+     #{$h}#{$sfx} {     height: $v$o; &#{$c} { @extend    #{$h}#{$sfx}; } }
+     #{$w}#{$sfx} {      width: $v$o; &#{$c} { @extend    #{$w}#{$sfx}; } }
+  #{$hmin}#{$sfx} { min-height: $v$o; &#{$c} { @extend #{$hmin}#{$sfx}; } }
+  #{$wmin}#{$sfx} {  min-width: $v$o; &#{$c} { @extend #{$wmin}#{$sfx}; } }
+  #{$hmax}#{$sfx} { max-height: $v$o; &#{$c} { @extend #{$hmax}#{$sfx}; } }
+  #{$wmax}#{$sfx} {  max-width: $v$o; &#{$c} { @extend #{$wmax}#{$sfx}; } }
+}
+
+@if $enable-dimension-generator == yes {
+  @include dimensions (0, 0, 0, $o);
+  $i: null;
+  $sfx: null;
+  @for $i from 1 through $generator-dimension-steps {
+    $v: $generator-dimension-rythm * $i;
+    $v: #{$v}#{$primary-unit-type};
+    $sfx: get_unit_suffix($v);
+    @include dimensions ($sfx, $v, $i, $o);
+  }
+} @else if $dimension-preset == yes {
+  @include dimensions (0, 0, 0, $o);
+  $i: 1;
+  $sfx: null;
+  @each $v in $dimensions {
+    $v: #{$v}#{$primary-unit-type};
+    $sfx: get_unit_suffix($v); 
+    @include dimensions ($sfx, $v, $i, $o);
+    $i: $i + 1;
+  }
+}
+
+@if $secondary-unit-type == percent {
+  @if $spacings-percent {
+    $i: 1;
+    $sfx: null;
+    $base: 100/$spacings-percent;
+    @for $d from 1 through $spacings-percent {
+       @if $d < $dimensions-percent {
+         $result: $base * $d;
+         $v: $result * 1%;
+         $sfx: #{$d}of#{$dimensions-percent};
+         @include spacings ($sfx, $v, $sfx, $o);
+      } @else {
+         @include spacings (full, 100%, null, $o);
+      }
+      $i: $i + 1;
+    }
+  }
+  @if $dimensions-percent {
+    $i: 1;
+    $sfx: null;
+    $base: 100/$dimensions-percent;
+    @for $d from 1 through $dimensions-percent {
+      @if $d < $dimensions-percent {
+        $result: $base * $d;
+        $v: $result * 1%;
+        $sfx: #{$d}of#{$dimensions-percent};
+        @include dimensions ($sfx, $v, $sfx, $o);
+      } @else {
+        @include dimensions (full, 100%, null, $o);
+      }
+      $i: $i + 1;
+    }
+  }
 }
