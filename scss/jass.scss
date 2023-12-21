@@ -192,7 +192,7 @@ $spacings-em: 0.25,0.5,0.75,1,1.5,2,3;
 
 $dimension-preset: yes; // yes/no (will be overriden by dimension-generator if on)
 // 0 (zero) not required to set (will always be available)
-$dimensions-px: 25,50,100,150,200,300,400,500;
+$dimensions-px: 25,50,100,150,200,250,300,400,500,600;
 $dimensions-em: 0.25,0.5,0.75,1,2,4,8,12;
 
 // set to null to deactivate
@@ -239,7 +239,7 @@ $override: no; // yes/no > !important
 // Tools is a collection of often used css in combination with other components.
 // Like: cfx (clearfix) or oh (overflow-hidden), fl float-left, center-x, center-y etc.
 $enable-child-selectors: yes; // yes/no (default:no)
-$z-indexes: -999,-1,1,2,3,4,5,6,7,8,9,100,300,999;
+$z-indexes: -999,-2,-1,1,2,3,4,5,6,7,8,9,100,300,999;
 $override: no; // yes/no > !important
 
 @import "tools";
