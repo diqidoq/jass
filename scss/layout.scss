@@ -3,10 +3,6 @@ $o: null;
   $o: !important;
 }
 
-$elements: 24;
-$sets-fixed: 960px, 1440px, 1920px;
-$sets-fluid: 80, 90, 100;
-
 @each $set in $sets-fixed {
   .set-fixed-#{$set} {
     @media (min-width: $set) {
