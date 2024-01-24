@@ -11,12 +11,8 @@ $sets-fluid: 80, 90, 100;
   .set-fixed-#{$set} {
     @media (min-width: $set) {
       width: $set$o;
-      & [class*="bar"] {
-        $v: math.div($set, $elements);
-        width: $v$o;
-      }
       @for $i from 1 through $elements {
-        & ._#{$i}of#{$elements}bars {
+        & .play#{$i}of#{$elements} {
           $v: math.div($set, $elements) * $i;
           width: $v$o;
         }
@@ -24,19 +20,17 @@ $sets-fluid: 80, 90, 100;
     }
   }
 }
+
 @each $set in $sets-fluid {
   .set-fluid-#{$set} {
-    $v: #$set + 0%;
-      width: $v$o;
-      & [class*="bar"] {
-        $v: math.div($set, $elements) + 0%;
-        width: $v$o;
-      }
-      @for $i from 1 through $elements {
-        & ._#{$i}of#{$elements}bars {
-          $v: math.div($set, $elements) * $i + 0%;
-          width: $v$o;
-        }
-    }
+    $v: $set + 0%;
+    width: $v$o;
+  }
+}
+
+@for $i from 1 through $elements {
+  [class*="set-fluid-"] .play#{$i}of#{$elements} {
+    $v: math.div(100%, $elements) * $i;
+    width: $v$o;
   }
 }
