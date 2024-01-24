@@ -3,11 +3,6 @@ $o: null;
   $o: !important;
 }
 
-[class*="set"], [class*="inside-bar"] {
-  margin: 0 $o;
-  padding: 0 $o;
-}
-
 $elements: 24;
 $sets-fixed: 960px, 1440px, 1920px;
 $sets-fluid: 80, 90, 100;
@@ -21,7 +16,7 @@ $sets-fluid: 80, 90, 100;
         width: $v$o;
       }
       @for $i from 1 through $elements {
-        & ._#{$i}bars {
+        & ._#{$i}of#{$elements}bars {
           $v: math.div($set, $elements) * $i;
           width: $v$o;
         }
@@ -31,14 +26,14 @@ $sets-fluid: 80, 90, 100;
 }
 @each $set in $sets-fluid {
   .set-fluid-#{$set} {
-    $v: #{$set}+0%;
+    $v: #$set + 0%;
       width: $v$o;
       & [class*="bar"] {
         $v: math.div($set, $elements) + 0%;
         width: $v$o;
       }
       @for $i from 1 through $elements {
-        & ._#{$i}bars {
+        & ._#{$i}of#{$elements}bars {
           $v: math.div($set, $elements) * $i + 0%;
           width: $v$o;
         }
