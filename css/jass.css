@@ -8442,7 +8442,7 @@
   max-width: 100%;
 }
 .font-family-monospace, .font-family-ms, .ff-monospace, .ff-ms, .font-family-monospace--c > *, .font-family-ms--c > *, .ff-monospace--c > *, .ff-ms--c > * {
-  font-family: monopace;
+  font-family: monospace;
 }
 .font-family-sans-serif, .font-family-sf, .ff-sans-serif, .ff-sf, .font-family-sans-serif--c > *, .font-family-sf--c > *, .ff-sans-serif--c > *, .ff-sf--c > * {
   font-family: sans-serif;

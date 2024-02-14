@@ -13,7 +13,7 @@ $c: null;
 }
 
 .font-family-, .ff- {
-  &monospace, &ms      { font-family: monopace $o;      &#{$c} { @extend .ff-ms; } }
+  &monospace, &ms      { font-family: monospace $o;     &#{$c} { @extend .ff-ms; } }
   &sans-serif, &sf     { font-family: sans-serif $o;    &#{$c} { @extend .ff-sf; } }
   &serif, &s           { font-family: serif $o;         &#{$c} { @extend .ff-s; } }
   &cursive, &c         { font-family: cursive $o;       &#{$c} { @extend .ff-c; } }
