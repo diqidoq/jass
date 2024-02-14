@@ -1,11 +1,15 @@
+@use 'jass_settings';
+@use 'typography_settings';
+@use "sass:math";
+
 $o: null;
-@if $override == yes {
+@if typography_settings.$override == yes {
   $o: !important;
 }
 
 $c: null;
-@if $enable-child-selectors == yes {
-  $c: $child-selector-extension
+@if typography_settings.$enable-child-selectors == yes {
+  $c: jass_settings.$child-selector-extension;
 }
 
 .font-family-, .ff- {
@@ -25,14 +29,30 @@ $c: null;
   &inherit, &ih        { font-family: inherit $o;       &#{$c} { @extend .ff-ih; } }
 }
 
-$font-sizes: 7,8,9,10,11,12,14,16,18,20,22;
-@each $fsz in $font-sizes {
-  .font-size-#{$fsz}, .fz-#{$fsz} {
-    $v: $fsz + 0px;
-    font-size: $v$o;
-    &#{$c} { @extend .fz-#{$fsz}; }
+@if typography_settings.$font-size-unit == px {
+  @each $fsz in typography_settings.$font-sizes-px {
+    .font-size-#{$fsz}, .fz-#{$fsz} {
+      $v: $fsz + 0px;
+      font-size: $v $o;
+
+      &#{$c} {
+        @extend .fz-#{$fsz};
+      }
+    }
+  }
+} @else if typography_settings.$font-size-unit == em {
+  @each $fsz in typography_settings.$font-sizes-px {
+    .font-size-#{$fsz}, .fz-#{$fsz} {
+      $v: $fsz + 0em;
+      font-size: $v $o;
+
+      &#{$c} {
+        @extend .fz-#{$fsz};
+      }
+    }
   }
 }
+
 .font-size-, .fz- {
   &smaller, &smr { font-size: smaller $o;  &#{$c} { @extend .fz-smr; } }
   &larger, &lgr  { font-size: larger $o;   &#{$c} { @extend .fz-lgr; } }
@@ -69,14 +89,22 @@ $font-weights-bold-fallback: 600,700,800,900;
   &inherit, &ih        { font-variant: inherit $o;                    &#{$c} { @extend .fv-ih; } }
 }
 
-$letter-spacing: 1,2,3,4,5;
-@each $ls in $letter-spacing {
-  .letter-spacing-#{$ls}, .ls-#{$ls} {
+@each $ls in typography_settings.$letter-spacings-px {
+  .letter-spacing-#{$ls}px, .ls-#{$ls}px {
     $v: $ls + 0px;
     letter-spacing: $v$o;
-    &#{$c} { @extend .ls-#{$ls}; }
+    &#{$c} { @extend .ls-#{$ls}px; }
   }
 }
+
+@each $ls in typography_settings.$letter-spacings-em {
+  .letter-spacing-00#{$ls}em, .ls-00#{$ls}em {
+    $v: math.div($ls, 100) + 0em;
+    letter-spacing: $v$o;
+    &#{$c} { @extend .ls-00#{$ls}em; }
+  }
+}
+
 .letter-spacing-inherit, .ls-ih { letter-spacing: inherit $o; &#{$c} { @extend .ls-ih; } }
 
 .text-transform-, .tt- {
@@ -100,7 +128,7 @@ $letter-spacing: 1,2,3,4,5;
   &inherit, &ih      { text-decoration: inherit $o;      &#{$c} { @extend .td-ih; } }
 }
 
-.text-align-left, .ta-l {text-align: left !important $o;       &#{$c} { @extend .ta-l; } }
-.text-align-right, .ta-r {text-align: right !important $o;     &#{$c} { @extend .ta-r; } }
-.text-align-center, .ta-c {text-align: center !important $o;   &#{$c} { @extend .ta-c; } }
-.text-align-inherit, .ta-ih {text-align: center !important $o; &#{$c} { @extend .ta-ih; } }
+.text-align-left, .ta-l {text-align: left $o;       &#{$c} { @extend .ta-l; } }
+.text-align-right, .ta-r {text-align: right $o;     &#{$c} { @extend .ta-r; } }
+.text-align-center, .ta-c {text-align: center $o;   &#{$c} { @extend .ta-c; } }
+.text-align-inherit, .ta-ih {text-align: center $o; &#{$c} { @extend .ta-ih; } }

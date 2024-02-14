@@ -1,0 +1,24 @@
+@use 'color_settings';
+
+// Shadow presets for x y and glow
+// Colors come from $color-preset without opacity
+// Color smart: opacity is a performance hog!
+$shadows:
+        'glow-2px'   ('0 0 3px -1px'),
+        'glow-4px'   ('0 0 5px -1px'),
+        'glow-6px'   ('0 0 7px -1px'),
+        'glow-b-2px' ('0 3px 3px -1px'),
+        'glow-b-4px' ('0 3px 5px -1px'),
+        'glow-b-8px' ('0 5px 9px -1px')
+;
+// Each shadow is present with and without color definition.
+// This way you can create shadows based on text color inheritance.
+// Usually you want to pass $color-preset to shadow colors.
+// But feel free to change the color profile for shadows here.
+$shadow-colors: color_settings.$color-preset;
+$enable-child-selectors: no; // yes/no (default:no)
+$override: no; // yes/no > !important
+
+// NOTE:
+// Settings for index-classes and color-label from
+// color component inherits here for shadow colors.

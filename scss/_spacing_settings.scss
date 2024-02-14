@@ -1,0 +1,40 @@
+// px/em (px or em - usually you wont mix them.)
+$primary-unit-type: px;
+// recommended to keep on for grid, otherwise set it to null.
+$secondary-unit-type: percent;
+// Recommended if multiple units are used and index classes are off.
+$unit-suffix: no; // yes/no
+
+// Consider presets fitting your settings in the layout component.
+// JASS do not force you to use x/y rhythm but if you want it you
+// have to set up layout and spacing components well with each other.
+// (will be overridden by spacing-generator if on)
+$spacing-preset: yes; // yes/no
+// 0 (zero) not required to set (will always be available)
+$spacings-px: 1,2,3,4,5,6,8,10,12,14,16,20,24,30,40,50,75,100,200;
+$spacings-em: 0.25,0.5,0.75,1,1.5,2,3;
+
+// Will be overridden by dimension-generator if on.
+$dimension-preset: yes; // yes/no
+// 0 (zero) not required to set (will always be available)
+$dimensions-px: 25,50,100,150,200,250,300,400,500,600;
+$dimensions-em: 0.25,0.5,0.75,1,2,4,8,12;
+
+// Set to null to deactivate
+// num of dividers: 100/1=100,/2=50,/3=33,33,...
+$spacings-percent: 24;
+$dimensions-percent: 24;
+
+// Generators affect only primary-unit types
+$enable-spacing-generator: no; // yes/no (overrides custom spacing-preset)
+$generator-spacing-steps: 16; $generator-spacing-rhythm: 4; // px 4,8,12,16...
+$enable-dimension-generator: no; // yes/no (overrides custom dimension-preset)
+$generator-dimension-steps: 8; $generator-dimension-rhythm: 50;  // px 50,100,150...
+
+// Turns class names from value based into incrementing index based.
+$index-classes: no; // yes/no
+$enable-child-selectors: no; // yes/no (default:no)
+$child-selector-extension: '--c > *';
+$selectors: short; // long/short
+$override-spacing: no; // yes/no > !important
+$override-dimensions: no; // yes/no > !important

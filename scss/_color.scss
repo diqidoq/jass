@@ -1,0 +1,110 @@
+@use 'jass_settings';
+@use 'color_settings';
+
+$o: null;
+@if color_settings.$override == yes {
+  $o: !important;
+}
+
+$preset: ();
+@if color_settings.$color-preset {
+  $preset: color_settings.$color_preset;
+}
+
+@if color_settings.$enable-generator == yes {
+  $preset: ();
+  @each $r in color_settings.$red {
+    @each $g in color_settings.$green {
+      @each $b in color_settings.$blue {
+        $preset: append(color_settings.$color-preset, 'gen' (#{$r}#{$g}#{$b}), 'comma');
+      }
+    }
+  }
+}
+
+  $c-sel:    null;
+  $c-sel-a:  null;
+  $c-sel-h:  null;
+  $c-sel-ht: null;
+  $c-sel-ie: null;
+ $cb-sel:    null;
+$cbg-sel:    null;
+$ctd-sel:    null;
+$ctd-sel-a:  null;
+
+$n: null;
+$c: null;
+$i: 1;
+@each $name, $hex-codes in $preset {
+  $j: 1;
+  @each $c in $hex-codes {
+    @if color_settings.$index-classes == yes {
+      @if color_settings.$enable-generator == yes {  $n: #{$i}; } @else { $n: #{$i}-#{$j}; }
+    } @else if color_settings.$color-label == name {
+      @if color_settings.$enable-generator == yes {  $n: #{$c}; } @else { $n: #{$name}#{$j}; }
+    } @else if color_settings.$color-label == code { $n: #{$c};
+    } @else {
+      @error "colorlabel setting must be either > name or > code.";
+    }
+  @if color_settings.$selectors == long {
+    $ctd-sel:   ".text-decoration-color-#{$n}";
+    $ctd-sel-a: ".text-decoration-color-#{$n}-a a";
+    $cbg-sel:        ".background-color-#{$n}";
+     $cb-sel:            ".border-color-#{$n}";
+      $c-sel:                   ".color-#{$n}";
+      $c-sel-a:                 ".color-#{$n}-a a";
+  @if color_settings.$colored-links == yes {
+     $c-sel-h:                  ".color-#{$n}-header";
+     $c-sel-ht:();
+     @each $ht in $ch {
+       $c-sel-ht: append($c-sel-ht,".color-#{$n}-#{$ht} #{$ht}",'comma');
+      }
+    }
+  @if color_settings.$colored-inline-elements {
+       $c-sel-ie:();
+     @each $e in color_settings.$colored-inline-elements {
+       $c-sel-ie: append($c-sel-ie,".color-#{$n}-#{$e} #{$e}",'comma');
+      }
+    }
+  }
+  @if color_settings.$selectors == short {
+    $ctd-sel:   ".ctd-#{$n}";
+    $ctd-sel-a: ".ctd-#{$n}-a a";
+    $cbg-sel:   ".cbg-#{$n}";
+     $cb-sel:    ".cb-#{$n}";
+      $c-sel:     ".c-#{$n}";
+      $c-sel-a:   ".c-#{$n}-a a";
+  @if color_settings.$colored-links == yes {
+       $c-sel-h:  ".c-#{$n}-h";
+       $c-sel-ht:();
+     @each $ht in color_settings.$colored-headers {
+       $c-sel-ht: append($c-sel-ht,".c-#{$n}-#{$ht} #{$ht}",'comma');
+      }
+    }
+  @if color_settings.$colored-inline-elements {
+       $c-sel-ie:();
+     @each $e in color_settings.$colored-inline-elements {
+       $c-sel-ie: append($c-sel-ie,".c-#{$n}-#{$e} #{$e}",'comma');
+      }
+    }
+  }
+  $c: #{"#" + $c}$o;
+            #{$ctd-sel} { text-decoration-color: $c; }
+  @if color_settings.$colored-links == yes {
+          #{$ctd-sel-a} {               @extend #{$ctd-sel}; } }
+            #{$cbg-sel} {       background-color: $c; }
+             #{$cb-sel} {           border-color: $c; }
+              #{$c-sel} {                  color: $c; }
+  @if color_settings.$colored-links == yes {
+              #{$c-sel-a} {             @extend #{$c-sel}; } }
+  @if color_settings.$colored-inline-elements {
+              #{$c-sel-ie} {            @extend #{$c-sel}; } }
+  @if color_settings.$colored-headers {
+              #{$c-sel-h} {
+                #{color_settings.$colored-headers} {
+                                        @extend #{$c-sel}; } }
+              #{$c-sel-ht} {            @extend #{$c-sel}; } }
+  $j: $j + 1;
+  }
+  $i: $i + 1;
+}

@@ -1,0 +1,14 @@
+// @use 'color_settings';
+
+// Border and Radius
+$border-width-units: 1,2,3,4,5,6,10,20;
+$border-radius_units: 2,3,4,5,6,7,8,20,50,100;
+$enable-child-selectors: no; // yes/no (default:no)
+$override: no; // yes/no > !important
+
+// Border color usually inherits from font color by default.
+// If required activate next settings (yes/no) and
+// uncomment @use 'color_settings' on top and $border-color.
+
+$enable-border-colors: no; //yes/no
+// $border-colors: $color-preset;

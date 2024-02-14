@@ -1,3 +1,7 @@
+@use 'jass_settings';
+@use 'layout_settings' as *;
+@use "sass:math";
+
 $o: null;
 @if $override == yes {
   $o: !important;
@@ -5,11 +9,12 @@ $o: null;
 
 @each $set in $sets-fixed {
   .set-fixed-#{$set} {
+    $set: $set + 0px;
     @media (min-width: $set) {
       width: $set$o;
-      @for $i from 1 through $elements {
-        & .play#{$i}of#{$elements} {
-          $v: math.div($set, $elements) * $i;
+      @for $i from 1 through $bars {
+        & .play#{$i}of#{$bars} {
+          $v: math.div($set, $bars) * $i;
           width: $v$o;
         }
       }
@@ -24,9 +29,9 @@ $o: null;
   }
 }
 
-@for $i from 1 through $elements {
-  [class*="set-fluid-"] .play#{$i}of#{$elements} {
-    $v: math.div(100%, $elements) * $i;
+@for $i from 1 through $bars {
+  [class*="set-fluid-"] .play#{$i}of#{$bars} {
+    $v: math.div(100%, $bars) * $i;
     width: $v$o;
   }
 }

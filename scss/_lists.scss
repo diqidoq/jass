@@ -1,0 +1,35 @@
+@use 'jass_settings';
+@use 'lists_settings';
+
+$o: null;
+@if lists_settings.$override == yes {
+  $o: !important;
+}
+
+$c: null;
+@if lists_settings.$enable-child-selectors == yes {
+  $c: jass_settings.$child-selector-extension
+}
+
+.list-, .l {
+  &unstyled, &us { list-style : none $o;            &#{$c} { @extend .lus } }
+  &disc, &di     { list-style-type: disc $o;        &#{$c} { @extend .ldi } }
+  &circle, &cl   { list-style-type: circle $o;      &#{$c} { @extend .lcl } }
+  &square, &sq   { list-style-type: square $o;      &#{$c} { @extend .lsq } }
+  &decimal, &dc  { list-style-type: decimal $o;     &#{$c} { @extend .ldc } }
+  &hyphen, &hp   { list-style-type: "- " $o;        &#{$c} { @extend .lhp } }
+  &plus, &pl     { list-style-type: "+ " $o;        &#{$c} { @extend .lpl } }
+  &inside, &is   { list-style-position: inside $o;  &#{$c} { @extend .lis } }
+  &outside, &os  { list-style-position: outside $o; &#{$c} { @extend .los } }
+  &inherit, &ih  { list-style: inherit $o;          &#{$c} { @extend .lih } }
+}
+
+.list-item-comma + .list-item-comma::before, .lic + .lic::before { content: "\, " $o; }
+.list-item-slash + .list-item-slash::before, .lis + .lis::before { content: " \/ " $o; }
+.list-item-pipe  + .list-item-pipe::before,  .lip + .lip::before { content: " \| " $o; }
+
+@if jass_settings.$child-selector-extension == yes {
+.list-item-comma#{$c} + .list-item-comma#{$c}::before, .lic#{$c} + .lic#{$c}::before { content: "\, " $o; }
+.list-item-slash#{$c} + .list-item-slash#{$c}::before, .lis#{$c} + .lis#{$c}::before { content: " \/ " $o; }
+.list-item-pipe#{$c}  + .list-item-pipe#{$c}::before,  .lip#{$c} + .lip#{$c}::before { content: " \| " $o; }
+}

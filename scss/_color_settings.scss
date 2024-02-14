@@ -1,0 +1,106 @@
+// enable trailing class addition for child elements.
+// can be set for each component separately, see below.
+$enable-child-selectors: no; // yes/no (default:no)
+
+// Choose the components you want to use. Don't mix the order of setting lines.
+// Comment the components and its leading settings out (//) if you do not need them.
+// Reduce the "step" settings to have a smaller footprint and less altering classes.
+
+// ############ color component ############### //
+// ---------------------------------------------//
+
+// A custom color palette minimizes the colors present and ccs color component file size.
+// By building an own palette of color types and their shades.
+// In comparison to the color-generator below.
+// But a color generator can help to build interesting complex palettes.
+
+// Default custom demo palette here is 5 brightness shades of 6 colors.
+// Feel free to extend or minify from 5 to 2 or 3 to 6, etc.
+// Use the first row in list to define the
+// black and white point tendency of your color profile.
+// It is recommended to use web safe or "web smart" colors like 5599FF or 59F.
+// It is up to you how many colors you use and how you group them.
+//
+// This gets overridden if $enable-generator: yes;
+$color-preset: (
+        'grey'     ('222','555','999','CCC','FFF'),
+        'gold'     ('630','A51','D94','FC7','FEC'),
+        'orange'   ('700','C30','F30','F63','FCB'),
+        'red'      ('903','C05','F06','F68','FCD'),
+        'rose'     ('607','A0A','E0F','E5F','EAF'),
+        'violet'   ('408','71B','A2F','B5F','CAF'),
+        'blue'     ('029','04B','26E','59F','ACF'),
+        'blue-sky' ('049','06B','28E','6AF','ADF'),
+        'cyan'     ('034','056','089','0BC','6EF'),
+        'green'    ('030','060','090','0C0','0F0'),
+        'lime'     ('260','5B0','5E0','AF4','CF9')
+);
+// old default preset 1
+// 222, 555, 999, CCC, FFF, // grey
+// 630, A51, D94, FC7, FEC, // gold
+// 903, C05, F06, F69, FCD, // red
+// 607, A0A, D0F, E5F, EAF, // rose
+// 408, 71B, A2F, B5F, CAF, // violet
+// 029, 04B, 26E, 59F, ACF, // blue
+// 072, 5B0, 5E0, AF4, CF9  // green
+// old default preset 2
+// 222, 555, 999, CCC, FFF, // grey
+// 607, A0A, E0F, E5F, EAF, // rose
+// 029, 04B, 36E, 69F, BCF, // blue
+// 072, 5A0, 7E0, BF4, CF9, // green
+// 903, C05, F06, F68, FBC, // red
+// 630, 940, D83, FC7, EDC  // gold
+
+// Enables color-generator (will override custom color-preset above)
+// Note: this creates many color code classes if all red green blue steps are chosen below.
+// Overrides previous $color-preset and refills it with generated colors.
+$enable-generator: no;
+// Therefor you need to choose the HEX steps included per channel below.
+// Hint: modern websites barely use blacks below #111.
+// Be warned: each step creates many multiplying css lines.
+// Use all 16 color bits only for advanced projects or for color scheme testing.
+// Then switch back to a custom palette or a minified version of the generator.
+
+// Generator basis of 3-digit hex code "Web smart" color palette of
+// 4096 colors in 16 bit steps from 0 to F in 3 channels
+// Uncomment to enable this example and comment-out "web safe" colors below.
+// $red:   (0 1 2 3 4 5 6 7 8 9 A B C D E F);
+// $green: (0 1 2 3 4 5 6 7 8 9 A B C D E F);
+// $blue:  (0 1 2 3 4 5 6 7 8 9 A B C D E F);
+
+// Generator basis of Traditional 3-digit hex code "Web safe" color palette of
+// 216 colors in 6 bit steps from 0 to F in 3 channels.
+$red:   (0 3 6 9 C F);
+$green: (0 3 6 9 C F);
+$blue:  (0 3 6 9 C F);
+
+// Choose if color classes should target containing header elements.
+// Creates additional header color classes with a trailing <h> element target
+// in the selector so that you can color all headers in the inner elements group.
+// Hint: small headers like h5, h6 barely stand out or need to be colored.
+// Use $colored-headers: null to turn it off.
+$colored-headers: ('h1','h2','h3');
+
+// Creates additional link color classes with a trailing <a> element target
+// in the selector so that you can color all links in the inner elements group.
+$colored-links: yes;
+
+// Creates additional inline element color classes with a trailing element target
+// in the selector so that you can color them in the inner elements group.
+// use $colored-inline-elements: null  to turn off.
+$colored-inline-elements: ('strong', 'em', 'b', 'i', 'q', 'mark');
+
+// Not recommended settings for big components like color:
+$enable-child-selectors: no; // yes/no (default:no)
+$override: no; // yes/no > !important  (default:no)
+
+// short/long (long are better readable class names, short are faster)
+$selectors: short;
+
+// (name/code) 'name' creates c-blue-1, c-blue-2 / 'code' creates c-A06, c-F06
+// Takes only effect if $enable-generator: no;
+$color-label: name;
+
+// Turns class names from value based into incrementing index based.
+// Makes selector and color-label settings obsolete.
+$index-classes: no; // yes/no

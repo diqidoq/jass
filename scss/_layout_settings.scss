@@ -1,0 +1,30 @@
+// Layouts (sets - we do not use the term grid. [README])
+// Fixed and Fluid - feel free to add/replace with your own layouts.
+// Width of bars is relative to set and count of bars.
+// in/de-crease the amount of bars to create different resolutions.
+
+// JASS decided to not use display:grid to support
+// environmentally conscious people, who use phones from 2017
+// https://caniuse.com/?search=display%3A%20grid
+
+$bars: 24; // units of divisions inside
+$sets-fixed:
+        576, // each bars width in px: 24
+        768, // each bars width in px: 32
+        960, // each bars width in px: 40
+        1200, // each bars width in px: 50
+        1440, // each bars width in px: 60
+          // 1680, // each bars width in px: 70
+        1920, // each bars width in px: 80
+          // 2160, // each bars width in px: 90
+        2400 // each bars width in px: 100
+;
+
+$sets-fluid: 80, 90, 100;
+
+// default: based on sets-fixed above, but can be set individually.
+// @TODO: breakpoints not yet fully implemented.
+$break-points: $sets-fixed;
+
+$enable-child-selectors: no; // yes/no (default:no)
+$override: no; // yes/no > !important

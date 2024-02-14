@@ -1,0 +1,48 @@
+@use 'jass_settings';
+@use 'display_settings';
+
+$o: null;
+@if display_settings.$override == yes {
+  $o: !important;
+}
+
+$c: null;
+@if display_settings.$enable-child-selectors == yes {
+  $c: jass_settings.$child-selector-extension
+}
+
+.center-, .c {
+  &x { margin: 0 auto $o; float: none $o; display: block $o; &#{$c} { @extend .cx; }}
+  &y { position: absolute $o; top: 50% $o;  transform: translateY(-50%) $o; &#{$c} { @extend .cy; } }
+  // y requires parent to be pos-relative
+}
+
+.overflow-hidden, .oh       { overflow: hidden $o;      &#{$c} { @extend .oh; } }
+.display-inline, .di        { display: inline $o;       &#{$c} { @extend .di; } }
+.display-inline-block, .dib { display: inline-block $o; &#{$c} { @extend .dib; } }
+.display-none, .dn          { display: none $o;         &#{$c} { @extend .dn; } }
+.visibility-hidden, .vh     { visibility: hidden $o;    &#{$c} { @extend .vh; } }
+
+.cfx {
+  display: block $o; clear: both $o; float: none $o;  &#{$c} { @extend .cfx; }
+  &a::after { content: " " $o; clear: both $o; display: table $o; }
+}
+
+.float-, .f {
+  &l { float: left $o;  &#{$c} { @extend .fl; } }
+  &r { float: right $o; &#{$c} { @extend .fr; } }
+  &n { float: none $o;  &#{$c} { @extend .fn; } }
+}
+
+@each $z in display_settings.$z-indexes { .z#{$z} { z-index: $z$o;  &#{$c} { @extend .z#{$z} } } }
+.z-inherit, .zih { z-index: inherit $o;  &#{$c} { @extend .zih } }
+.z-auto, .za     { z-index: auto $o;     &#{$c} { @extend .za  } }
+
+.pos-, .p {
+  &static, &stc   { position: static $o;   &#{$c} { @extend .pstc } }
+  &relative, &rel { position: relative $o; &#{$c} { @extend .prel } }
+  &fixed, &fxd    { position: fixed $o;    &#{$c} { @extend .pfxd } }
+  &absolute, &abs { position: absolute $o; &#{$c} { @extend .pabs } }
+  &sticky, &sty   { position: sticky $o;   &#{$c} { @extend .psty } }
+  &inherit, &ih   { position: inherit $o;  &#{$c} { @extend .pih } }
+}

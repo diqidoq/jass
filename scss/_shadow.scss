@@ -1,0 +1,52 @@
+@use 'jass_settings';
+@use 'shadow_settings';
+@use 'color_settings';
+
+$o: null;
+@if shadow_settings.$override == yes {
+  $o: !important;
+}
+
+@mixin shadow ($shadow) {
+  -webkit-box-shadow: $shadow;
+     -moz-box-shadow: $shadow;
+          box-shadow: $shadow;
+}
+
+// Box shadow reset
+.noshadow, .nsdw {
+  @include shadow (none $o)
+}
+
+$n: null;
+$c: null;
+$i: 1;
+@each $name, $hex-codes in shadow_settings.$shadow-colors {
+  $j: 1;
+  @each $c in $hex-codes {
+    @if color_settings.$index-classes == yes {
+      @if color_settings.$enable-generator == yes {
+        $n: c#{$i}; } @else {
+        $n: c#{$i}-#{$j};
+      }
+    } @else if color_settings.$color-label == name {
+      @if color_settings.$enable-generator == yes {
+        $n: #{$c}; } @else {
+        $n: #{$name}#{$j};
+      }
+      } @else if color_settings.$color-label == code {
+      $n: #{$c};
+      } @else {
+      @error "colorlabel setting must be either > name or > code.";
+    }
+    @each $name, $shadow in shadow_settings.$shadows {
+      $v: #{$shadow};
+     .sdw-#{$name} { @include shadow ($v$o); }
+     .sdw-#{$name}-#{$n} {
+        $v: $v #{"#" + $c}; @include shadow ($v$o);
+     }
+   }
+   $j: $j + 1;
+  }
+  $i: $i + 1;
+}

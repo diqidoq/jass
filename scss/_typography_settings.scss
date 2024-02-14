@@ -1,0 +1,15 @@
+$font-size-unit: px; // px/em (default: px - em is overrated nowadays)
+$letter-spacing-unit: em; // px/em (default: em - more fine tuning with em here possible)
+
+$font-sizes-px: 7,9,8,10,11,12,14,16,18,20,22,24,26;
+$font-sizes-em: 0.5,0.6,0.7,0.8,0.9,1,1.5,2,2.5;
+
+$letter-spacings-px: -1,1,2,3,4,5;
+
+// interpolates to a sub decimal like 0.01,0.02
+$letter-spacings-em: -1,2,-3,1,2,3,4,5;
+
+$selectors: short; // long/short class names
+
+$enable-child-selectors: yes; // yes/no (default:no)
+$override: no; // yes/no > !important

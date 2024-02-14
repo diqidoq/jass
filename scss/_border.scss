@@ -1,5 +1,8 @@
+@use 'jass_settings';
+@use 'border_settings';
+
 $o: null;
-@if $override == yes {
+@if border_settings.$override == yes {
   $o: !important;
 }
 
@@ -12,8 +15,8 @@ $o: null;
   &inherit, &ih { border: inherit $o; }
 }
 
-@each $unit in $border-width-units {
-  $v: $unit + 0px;
+@each $unit in border_settings.$border-width-units {
+  $v: jass_settings.px($unit);
   .border-width-, .b {
     &#{$unit}  { border-width: $v$o; }
     &t#{$unit} { border-top-width: $v$o; }
@@ -23,8 +26,8 @@ $o: null;
   }
   .border-width-inherit, .bih  { border-width: inherit $o; }
 }
-@each $unit in $border-radius-units {
-  $v: $unit + 0px;
+@each $unit in border_settings.$border-radius_units {
+  $v: jass_settings.px($unit);
   .border-radius-, .br {
     &#{$unit}   { border-radius: $v$o; }
     &t#{$unit}  { border-top-left-radius: $v$o;
@@ -41,3 +44,5 @@ $o: null;
     &tl#{$unit} { border-top-left-radius: $v$o; }
   }
 }
+
+// @TODO: loop for border colors if enabled in border_settings
