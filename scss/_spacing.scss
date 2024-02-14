@@ -2,6 +2,11 @@
 @use 'spacing_settings';
 @use "sass:math";
 
+$c: null;
+@if spacing_settings.$enable-child-selectors == yes {
+  $c: jass_settings.$child-selector-extension;
+}
+
 $m: null; $p: null; $w: null; $h: null;
 $wmin: null; $wmax: null; $hmin: null; $hmax: null;
 $pos:'top','right','bottom','left';
@@ -39,11 +44,6 @@ $i: null;
   $unit:px;
 } @else { 
     @error "$primary-unit-type must be one of > em or > px." ;
-}
-
-$c: null;
-@if spacing_settings.$enable-child-selectors == yes {
-  $c: jass_settings.$child-selector-extension;
 }
 
 // ############### spacings ################# //
