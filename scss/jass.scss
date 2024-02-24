@@ -1,5 +1,7 @@
 /* JASS - "Play with Jasm CSS classes conducted by SASS."  */
 /* Provided by http://jass.dev | 2016(c)dqd [diqidoq] GPL3 */
+
+@use 'node_modules/normalize.css/normalize.css';
 @use 'color';
 @use 'shadow';
 @use 'border';
@@ -8,3 +10,4 @@
 @use 'typography';
 @use 'display';
 @use 'lists';
+@use 'tools';
