@@ -1,22 +1,22 @@
-// px/em (px or em - usually you wont mix them.)
+// Choose between px or em - usually you won't mix them.
 $primary-unit-type: px;
 // recommended to keep on for grid, otherwise set it to null.
 $secondary-unit-type: percent;
-// Recommended if multiple units are used and index classes are off.
+// Recommended if multiple units are used, turns incrementing index class suffixes (e.g. p1,p2) off.
 $unit-suffix: no; // yes/no
 
 // Consider presets fitting your settings in the layout component.
 // JASS do not force you to use x/y rhythm but if you want it you
 // have to set up layout and spacing components well with each other.
-// (will be overridden by spacing-generator if on)
-$spacing-preset: yes; // yes/no
+// This will be overridden by spacing-generator if on. (yes/no)
+$spacing-preset: yes;
 // 0 (zero) not required to set (will always be available)
 $spacings-px: 1,2,3,4,5,6,8,10,12,14,16,20,24,30,40,50,75,100,200;
 $spacings-em: 0.25,0.5,0.75,1,1.5,2,3;
 
-// Will be overridden by dimension-generator if on.
-$dimension-preset: yes; // yes/no
-// 0 (zero) not required to set (will always be available)
+// Will be overridden by dimension-generator if on. (yes/no)
+$dimension-preset: yes;
+// 0 (zero) not required to set (will always be available).
 $dimensions-px: 25,50,100,150,200,250,300,400,500,600;
 $dimensions-em: 0.25,0.5,0.75,1,2,4,8,12;
 
