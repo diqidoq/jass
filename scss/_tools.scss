@@ -1,0 +1,134 @@
+html, body {
+  font-size: 16px;
+  letter-spacing: normal;
+}
+
+body {
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-smoothing: antialiased;
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  backface-visibility: hidden;
+  font-size: 1.06em;
+  letter-spacing: 0.03em;
+}
+
+/* ---
+  JASS wants to establish "fit" but add bootstrap class .img-fluid for historical reasons
+  */
+img.fit, .img-fluid {
+  width: 100%;
+  height: auto;
+}
+
+img.cover {
+  object-fit: cover;
+  object-position: center;
+}
+
+/* ---
+  # The semantic issue with breadcrumbs and nav elements generally:
+   - https://css-tricks.com/markup-for-breadcrumbs/
+   - https://css-tricks.com/navigation-in-lists-to-be-or-not-to-be/
+   - https://html.spec.whatwg.org/multipage/microdata.html
+
+   This is why no-list markup is preferable for breadcrumbs, but
+   JASS provides 2 CSS basic styles for breadcrumbs to support 2 HTML markups:
+   1.) nav > ol/ul > li > a 2.) nav > p > span > a > span.separator
+*/
+
+/* ---
+  Breadcrumb Markup Support 1 (ul/ol)
+*/
+
+.breadcrumb ul, .breadcrumb ol {
+  list-style-type: none;
+  padding: 0;
+  /* Simulate paragraph distance for vertical rhythm in comparison to no-list breadcrumb markup. */
+  margin: 1em 0;
+}
+
+.breadcrumb li {
+  display:inline;
+}
+
+/* ---
+ In case you won't use svg, use font CSS code \00BB for double right-pointing arrow,
+ increase font-size and add position and padding to center it nicely.
+
+ HTML inline elements create whitespace if linebreaks are used in HTML code.
+ This is why it is recommended to combine :after content "char" with a trailing whitespace.
+ So that it has a whitespace (\00a0) before and after (balanced look).
+*/
+.breadcrumb li:after {
+  content: "\00a0\00BB";
+  padding: 0 6px 0 4px;
+  font-weight: bold;
+  opacity: 40%;
+  position: relative;
+  /* find a good balance between position top and font-size. */
+  top: 6px;
+  font-size: 2em;
+
+  /* ---
+   In case you won't use CSS font code, use svg background for double right-pointing arrow instead.
+   and place \00a0 in content "" for empty space.
+ */
+  /*
+  content: "\00a0";
+  background-image: url("../breadcrumb_separator.svg");
+  background-size: 100%;
+  background-position: 50% 50%;
+  background-clip: content-box;
+  background-repeat: no-repeat;
+  margin: 0 6px 0 6px;
+  width: 20px;
+  */
+}
+
+/* Reset separator for last element */
+.breadcrumb li:last-child:after {
+  content: "";
+  background-image: none;
+}
+
+/* ---
+  Breadcrumb Markup Support 2 (span)
+*/
+.breadcrumb-item-separator {
+  opacity: 40%;
+  font-weight: bold;
+  font-size: 1.5em;
+  position: relative;
+  top: 2px;
+}
+
+/* ---
+  Link design
+*/
+a {
+  text-decoration: none;
+  position: relative;
+}
+
+/* Scale underline from center */
+a::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 0.1em;
+  background-color: hotpink;
+  transition: opacity 300ms, transform 300ms;
+  transform: scale(0);
+  transform-origin: center;
+}
+
+a:hover::after,
+a:focus::after{
+  transform: scale(1);
+}

@@ -1,3 +1,9 @@
+$fonts: (
+  'serif'       ('Mate'),
+  'sans-serif'  ('Raleway', 'Fustat', 'Urbanist-Regular'),
+  'monospace'   ('JetbrainsMono')
+);
+
 $font-size-unit: px; // px/em (default: px - em is overrated nowadays)
 $letter-spacing-unit: em; // px/em (default: em - more fine tuning with em here possible)
 
@@ -9,7 +15,19 @@ $letter-spacings-px: -1,1,2,3,4,5;
 // interpolates to a sub decimal like 0.01,0.02
 $letter-spacings-em: -1,2,-3,1,2,3,4,5;
 
+$line-heights:1.1,1.2,1.3,1.4,1.5,1.6;
+
 $selectors: short; // long/short class names
 
 $enable-child-selectors: yes; // yes/no (default:no)
 $override: no; // yes/no > !important
+
+/* --- Text decoration on links
+  @TODO: Choose if links should get underlines and if how.
+ */
+$link-text-decoration: no;
+
+/* --- Effects on links
+  @TODO: Stretch-Underline, Stretch-Overline, Glue, Recolor, NULL (no)
+ */
+$link-text-effect: no;

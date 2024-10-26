@@ -1,0 +1,15 @@
+// Creates classes with targeting inner html elements.
+// Useful for CMS like Drupal where it can be sometimes hard to access the inner element.
+// Creates pointing selectors like 'h1--c h1'
+// yes/no (default:no)
+$enable-child-selectors: yes;
+
+// Decide on the readability vs file size by length of class names
+// Long example: border-bottom-1 | short example: bb-1
+// If you are familiar with JASS short is recommended which can half
+// the size of the whole CSS framework all together
+// @values:  long/short (@TODO: -any-)
+$selectors: short;
+
+// yes/no > !important
+$override: no;

@@ -11,13 +11,13 @@ $unit-suffix: no; // yes/no
 // This will be overridden by spacing-generator if on. (yes/no)
 $spacing-preset: yes;
 // 0 (zero) not required to set (will always be available)
-$spacings-px: 1,2,3,4,5,6,8,10,12,14,16,20,24,30,40,50,75,100,200;
+$spacings-px: 1,2,3,4,5,6,8,10,20,40,80,120,200,300;
 $spacings-em: 0.25,0.5,0.75,1,1.5,2,3;
 
 // Will be overridden by dimension-generator if on. (yes/no)
 $dimension-preset: yes;
 // 0 (zero) not required to set (will always be available).
-$dimensions-px: 25,50,100,150,200,250,300,400,500,600;
+$dimensions-px: 10,20,30,40,50,60,80,120,200,300,400,500,600;
 $dimensions-em: 0.25,0.5,0.75,1,2,4,8,12;
 
 // Set to null to deactivate
@@ -31,10 +31,27 @@ $generator-spacing-steps: 16; $generator-spacing-rhythm: 4; // px 4,8,12,16...
 $enable-dimension-generator: no; // yes/no (overrides custom dimension-preset)
 $generator-dimension-steps: 8; $generator-dimension-rhythm: 50;  // px 50,100,150...
 
-// Turns class names from value based into incrementing index based.
-$index-classes: no; // yes/no
-$enable-child-selectors: no; // yes/no (default:no)
+// Turns class names from unit based (e.g. 10px) into incrementing index based (1,2,3)
+// yes/no - Default is yes. Better to remember and to discipline spacing rhythm.
+// Beware! Changing this requires to change all classes used already.
+$spacing-index-classes: yes;
+$dimension-index-classes: yes;
 
-$selectors: short; // long/short
-$override-spacing: no; // yes/no > !important
-$override-dimensions: no; // yes/no > !important
+// Creates classes with targeting inner html elements.
+// Useful for CMS like Drupal where it can be sometimes hard to access the inner element.
+// Creates pointing selectors like 'h1--c h1'
+// yes/no (default:no)
+$enable-child-selectors: yes;
+
+// Decide on the readability vs file size by length of class names
+// Long example: border-bottom-1 | short example: bb-1
+// If you are familiar with JASS short is recommended which can half
+// the size of the whole CSS framework all together
+// @values:  long/short (@TODO: -any-)
+$selectors: short;
+
+// yes/no > !important
+$override-spacing: no;
+
+// yes/no > !important
+$override-dimensions: no;

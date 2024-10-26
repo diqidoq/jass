@@ -29,6 +29,25 @@ $c: null;
   &inherit, &ih        { font-family: inherit $o;       &#{$c} { @extend .ff-ih; } }
 }
 
+@each $font-family-type, $font-families in typography_settings.$fonts {
+  $i: 1;
+  @each $ff in $font-families {
+    @if $ff != none {
+      @font-face {
+        font-family: #{$ff};
+        src: url('../fonts/#{$ff}.eot');
+        src: url('../fonts/#{$ff}.eot') format('embedded-opentype'),
+        url('../fonts/#{$ff}.woff2') format('woff2'),
+        url('../fonts/#{$ff}.woff') format('woff'),
+        url('../fonts/#{$ff}.ttf') format('truetype');
+        font-style: normal;
+      }
+      .ff-#{to-lower-case(#{$ff})} {font-family: "#{$ff}", #{$font-family-type} !important;}
+    }
+  }
+  $i: $i + 1;
+}
+
 @if typography_settings.$font-size-unit == px {
   @each $fsz in typography_settings.$font-sizes-px {
     .font-size-#{$fsz}, .fz-#{$fsz} {
@@ -106,6 +125,16 @@ $font-weights-bold-fallback: 600,700,800,900;
 }
 
 .letter-spacing-inherit, .ls-ih { letter-spacing: inherit $o; &#{$c} { @extend .ls-ih; } }
+
+$i: 1;
+@each $lh in typography_settings.$line-heights {
+  .line-height-#{$i}, .lh-#{$i} {
+    $v: $lh + 0em;
+    line-height: $v$o;
+    &#{$c} { @extend .lh-#{$i}; }
+  }
+  $i: $i + 1;
+}
 
 .text-transform-, .tt- {
   &none, &n       { text-transform: none $o;           &#{$c} { @extend .tt-n; } }

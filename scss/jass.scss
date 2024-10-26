@@ -1,8 +1,18 @@
-/* JASS - "Play with Jasm CSS classes conducted by SASS."  */
-/* Provided by http://jass.dev | 2016(c)dqd [diqidoq] GPL3 */
+/*! ---
+ JASS - "Play with Jasm CSS classes conducted by SASS."
+ Provided by http://jass.dev | 2016(c)dqd [diqidoq] GPL3
+ -------------------------------------------------------
+ */
 
-@use 'node_modules/normalize.css/normalize.css';
-@use 'color';
+/*! Normalize.css -  Start
+ ------------------------- */
+
+@use '../node_modules/normalize.css/normalize.css';
+
+/*! JASS - Start
+ --------------- */
+
+@use 'color'; // needs to be the first
 @use 'shadow';
 @use 'border';
 @use 'layout';
@@ -10,4 +20,5 @@
 @use 'typography';
 @use 'display';
 @use 'lists';
-@use 'tools';
+@use 'tools'; // needs to be the pre last
+@use 'animate'; // needs to be the last
