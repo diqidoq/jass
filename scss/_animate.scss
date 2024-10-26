@@ -1,0 +1,35 @@
+@use 'jass_settings';
+@use 'animate_settings';
+
+$o: null;
+@if animate_settings.$override == yes {
+  $o: !important;
+}
+
+// child-selectors (will be added via &#{$c} { @extend .class; }
+$c: null;
+@if animate_settings.$enable-child-selectors == yes {
+  $c: jass_settings.$child-selector-extension
+}
+
+.animate-, .an {
+  &underline--, &u-- {
+    &a a::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 0.1em;
+      background-color: hotpink; // @TODO use color variables and provide options in _animate_settings.scss
+      transition: opacity 300ms, transform 300ms;
+      transform: scale(0);
+      transform-origin: center;
+    }
+
+    &a a:hover::after,
+    &a a:focus::after{
+      transform: scale(1);
+    }
+  }
+}

@@ -1,2 +1,11 @@
+/* --- Lists
+  JASS considers anything which would listable in a text document also as lists in HTML.
+  This is recommended to make HTML pages readable with CSS and JS disabled.
+  JASS recommends to use lists for navs, tabs, contextual links, news grids, galleries, you name it.
+  This is why JASS has no navigation component. It is added here under lists.
+
+  To create a Bootstrap like nav it requires list classes like style-none inline and display classes like pos-fixed-top
+ */
+
 $enable-child-selectors: yes; // yes/no (default:no)
 $override: no; // yes/no > !important

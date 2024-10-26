@@ -1,55 +1,67 @@
-// enable trailing class addition for child elements.
-// can be set for each component separately, see below.
-$enable-child-selectors: no; // yes/no (default:no)
+/* --- Color settings
 
-// Choose the components you want to use. Don't mix the order of setting lines.
-// Comment the components and its leading settings out (//) if you do not need them.
-// Reduce the "step" settings to have a smaller footprint and less altering classes.
+  @required for _color.scss
 
-// ############ color component ############### //
-// ---------------------------------------------//
+  Choose the components you want to use.
+  Don't change the order of settings.
+  Comment out components if you do not need them.
+*/
 
-// A custom color palette minimizes the colors present and ccs color component file size.
-// By building an own palette of color types and their shades.
-// In comparison to the color-generator below.
-// But a color generator can help to build interesting complex palettes.
+/* --- Color palette
+  JASS destinguishes between a themes color palette and key colors.
+  - Key colors are what you may know from other frameworks (primary, secondary).
+    JASS does not define them fixed but gives you the option at hand to root target from the palette.
+  - The color palette is a more complete and not limited color preset and its shades.
+    JASS leaves it up to you how large the palette gets (interesting for CSS painting).
+ */
 
-// Default custom demo palette here is 5 brightness shades of 6 colors.
-// Feel free to extend or minify from 5 to 2 or 3 to 6, etc.
-// Use the first row in list to define the
-// black and white point tendency of your color profile.
-// It is recommended to use web safe or "web smart" colors like 5599FF or 59F.
-// It is up to you how many colors you use and how you group them.
-//
-// This gets overridden if $enable-generator: yes;
+/* --- Default color palette - 5 brightness shades/steps of each color channel.
+  Feel free to extend or minify from 5 to 2 or 3 to 6 steps per channel, etc.
+  Use the first row in list to define black and white point. Brightest would be your "white".
+  Helpful to define shades/steps per channel: http://scg.ar-ch.org/
+
+  It is recommended to use web safe or "web smart" colors like 5599FF or 59F (not mandatory).
+  It is up to you how many colors you use and how you group them in "channels".
+  This is an advanced example with many channels useful for interactive web applications with lots of tools.
+  For a simple blog or presentation website you can limit the channels to 3 or 6 primary colors.
+  ! Gets overridden if $enable-generator: yes;
+ */
 $color-preset: (
-        'grey'     ('222','555','999','CCC','FFF'),
-        'gold'     ('630','A51','D94','FC7','FEC'),
-        'orange'   ('700','C30','F30','F63','FCB'),
-        'red'      ('903','C05','F06','F68','FCD'),
-        'rose'     ('607','A0A','E0F','E5F','EAF'),
-        'violet'   ('408','71B','A2F','B5F','CAF'),
-        'blue'     ('029','04B','26E','59F','ACF'),
-        'blue-sky' ('049','06B','28E','6AF','ADF'),
-        'cyan'     ('034','056','089','0BC','6EF'),
-        'green'    ('030','060','090','0C0','0F0'),
-        'lime'     ('260','5B0','5E0','AF4','CF9')
+  'grey'     ('222','555','999','CCC','FFF'),
+  'gold'     ('630','A51','D94','FC7','FEC'),
+  'orange'   ('700','C30','F30','F75','FCB'),
+  'red'      ('803','C05','F06','F68','FCD'),
+  'rose'     ('607','A0A','E0F','E5F','EAF'),
+  'violet'   ('408','71B','A2F','B5F','CAF'),
+  'blue'     ('029','04B','26E','59F','ACF'),
+  'blue-sky' ('038','06B','28E','6AF','ADF'),
+  'cyan'     ('035','056','089','0BC','6EF'),
+  'green'    ('141','060','090','0C0','0F0'),
+  'lime'     ('350','4A0','5E0','AF4','CF9')
 );
-// old default preset 1
-// 222, 555, 999, CCC, FFF, // grey
-// 630, A51, D94, FC7, FEC, // gold
-// 903, C05, F06, F69, FCD, // red
-// 607, A0A, D0F, E5F, EAF, // rose
-// 408, 71B, A2F, B5F, CAF, // violet
-// 029, 04B, 26E, 59F, ACF, // blue
-// 072, 5B0, 5E0, AF4, CF9  // green
-// old default preset 2
-// 222, 555, 999, CCC, FFF, // grey
-// 607, A0A, E0F, E5F, EAF, // rose
-// 029, 04B, 36E, 69F, BCF, // blue
-// 072, 5A0, 7E0, BF4, CF9, // green
-// 903, C05, F06, F68, FBC, // red
-// 630, 940, D83, FC7, EDC  // gold
+
+/* ---  # old default preset 1
+$color-preset: (
+  'grey'   ('222', '555', '999', 'CCC', 'FFF'),
+  'gold'   ('630', 'A51', 'D94', 'FC7', 'FEC'),
+  'red'    ('903', 'C05', 'F06', 'F69', 'FCD'),
+  'rose'   ('607', 'A0A', 'D0F', 'E5F', 'EAF'),
+  'violet' ('408', '71B', 'A2F', 'B5F', 'CAF'),
+  'blue'   ('029', '04B', '26E', '59F', 'ACF'),
+  'green'  ('072', '5B0', '5E0', 'AF4', 'CF9')
+);
+*/
+
+/* --- # old default preset 2
+$color-preset: (
+  'grey'  ('222', '555', '999', 'CCC', 'FFF'),
+  'rose'  ('607', 'A0A', 'E0F', 'E5F', 'EAF'),
+  'blue'  ('029', '04B', '36E', '69F', 'BCF'),
+  'green' ('072', '5A0', '7E0', 'BF4', 'CF9'),
+  'red'   ('903', 'C05', 'F06', 'F68', 'FBC'),
+  'gold'  ('630', '940', 'D83', 'FC7', 'EDC')
+);
+*/
 
 // Enables color-generator (will override custom color-preset above)
 // Note: this creates many color code classes if all red green blue steps are chosen below.
@@ -70,28 +82,31 @@ $enable-generator: no;
 
 // Generator basis of Traditional 3-digit hex code "Web safe" color palette of
 // 216 colors in 6 bit steps from 0 to F in 3 channels.
+// Reduce the "step" settings to have a smaller footprint and less altering classes.
 $red:   (0 3 6 9 C F);
 $green: (0 3 6 9 C F);
 $blue:  (0 3 6 9 C F);
 
-// Choose if color classes should target containing header elements.
-// Creates additional header color classes with a trailing <h> element target
-// in the selector so that you can color all headers in the inner elements group.
-// Hint: small headers like h5, h6 barely stand out or need to be colored.
-// Use $colored-headers: null to turn it off.
+/* --- Key color targets:
+ Choose if color classes added to an outer element should target specific inner elements.
+ This is the different attempt of JASS on primary theme colors.
+ For example: Color classes with a trailing -h2 added to the body would color theme header,
+ -a for links, and so on, without the need of primary and secondary colors defined fixed.
+
+ Use null or no to turn it off.
+ */
 $colored-headers: ('h1','h2','h3');
-
-// Creates additional link color classes with a trailing <a> element target
-// in the selector so that you can color all links in the inner elements group.
 $colored-links: yes;
-
-// Creates additional inline element color classes with a trailing element target
-// in the selector so that you can color them in the inner elements group.
-// use $colored-inline-elements: null  to turn off.
+$disable-colored-links-on-headers: yes;
 $colored-inline-elements: ('strong', 'em', 'b', 'i', 'q', 'mark');
 
-// Not recommended settings for big components like color:
-$enable-child-selectors: no; // yes/no (default:no)
+/* -- Child selectors
+Enables trailing class addition for child elements.
+@TODO: Can be set for each color component separately in future.
+Choose between yes / no (default:no)
+*/
+$enable-child-selectors: no;
+
 $override: no; // yes/no > !important  (default:no)
 
 // short/long (long are better readable class names, short are faster)

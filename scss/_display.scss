@@ -6,14 +6,15 @@ $o: null;
   $o: !important;
 }
 
+// child-selectors (will be added via &#{$c} { @extend .class; }
 $c: null;
 @if display_settings.$enable-child-selectors == yes {
   $c: jass_settings.$child-selector-extension
 }
 
-.center-, .c {
-  &x { margin: 0 auto $o; float: none $o; display: block $o; &#{$c} { @extend .cx; }}
-  &y { position: absolute $o; top: 50% $o;  transform: translateY(-50%) $o; &#{$c} { @extend .cy; } }
+.align-center-, .ac {
+  &x { margin: 0 auto $o; float: none $o; display: block $o; &#{$c} { @extend .acx; }}
+  &y { position: absolute $o; top: 50% $o;  transform: translateY(-50%) $o; &#{$c} { @extend .acy; } }
   // y requires parent to be pos-relative
 }
 
@@ -25,7 +26,7 @@ $c: null;
 
 .cfx {
   display: block $o; clear: both $o; float: none $o;  &#{$c} { @extend .cfx; }
-  &a::after { content: " " $o; clear: both $o; display: table $o; }
+  &::after { content: " " $o; clear: both $o; display: table $o; }
 }
 
 .float-, .f {
@@ -39,10 +40,12 @@ $c: null;
 .z-auto, .za     { z-index: auto $o;     &#{$c} { @extend .za  } }
 
 .pos-, .p {
-  &static, &stc   { position: static $o;   &#{$c} { @extend .pstc } }
-  &relative, &rel { position: relative $o; &#{$c} { @extend .prel } }
-  &fixed, &fxd    { position: fixed $o;    &#{$c} { @extend .pfxd } }
-  &absolute, &abs { position: absolute $o; &#{$c} { @extend .pabs } }
-  &sticky, &sty   { position: sticky $o;   &#{$c} { @extend .psty } }
-  &inherit, &ih   { position: inherit $o;  &#{$c} { @extend .pih } }
+  &static, &stc     { position: static $o;   &#{$c} { @extend .pstc } }
+  &relative, &rel   { position: relative $o; &#{$c} { @extend .prel } }
+  &fixed, &fxd      { position: fixed $o;    &#{$c} { @extend .pfxd } }
+  &fixed-top, &fxdt    { position: fixed $o; top: 0 $o;    &#{$c} { @extend .pfxd } }
+  &fixed-bottom, &fxdb { position: fixed $o; bottom: 0 $o; &#{$c} { @extend .pfxd } }
+  &absolute, &abs   { position: absolute $o; &#{$c} { @extend .pabs } }
+  &sticky, &sty     { position: sticky $o;   &#{$c} { @extend .psty } }
+  &inherit, &ih     { position: inherit $o;  &#{$c} { @extend .pih } }
 }
