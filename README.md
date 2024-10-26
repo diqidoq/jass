@@ -10,6 +10,8 @@ Development started in 2012 formerly named as QCSS. Refactored in 2023 and renam
 
 An easy out-of-the-box styling layer from the bottom up by using a creative class group naming approach, easy to learn and to reuse for each project, no matter how the markup is structured. With a footprint of only 70kb by settings limited to mid-range use (~200kb on max).
 
+> Read more about the term "Jasm" and where the term Jazz (music) comes from: https://en.wikipedia.org/wiki/Jazz_(word)
+
 Components:
 
  - borders: width, radius, directions and smart variations.
@@ -25,9 +27,7 @@ Components:
  - optional print style setting per component (classes with trailing --p), default: no. (off)
  - @todo: rtl support.
 
-Corresponding [Drupal CMS theme based on JASS](https://www.drupal.org/project/jass).
-
- > Read more about the term "Jasm" and where the term Jazz (music) comes from: https://en.wikipedia.org/wiki/Jazz_(word)
+Corresponding [Drupal CMS theme based on JASS](https://www.drupal.org/project/jass) under development.
 
 > [!NOTE]
 > Great to see that the margin/padding altering extension classes (e.g. mr1, pr2) based on the grid space have found its way into **Bootstrap v4 and v5**. And great to see that a CSS framework like **tailwindcss** has taken over this utility first approach here into a fully-fledged CSS framework in 2017. Just would have been nice to credit it all somewhere. I published this qcss idea in 2012. :) Without maintaining it carefully enough. So it's OK ;-)
